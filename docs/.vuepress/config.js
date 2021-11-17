@@ -15,12 +15,7 @@ module.exports = {
 		sidebarDepth: 1,
 		lastUpdated: 'Last Updated',
 		searchMaxSuggestoins: 10,
-		serviceWorker:{
-			uodatePopup: {
-				message: "有新的内容",
-				buttonText: '更新'
-			}
-		},
+		
 		editLinks: true,
 		editLinkText: '草泥马'
 	},

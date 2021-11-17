@@ -1,5 +1,5 @@
 module.exports = {
-	title: '随笔',
+	title: 'Java笔记',
 	description: 'I LOVE CHINA',
 	dest: './dist',
 	port: '7000',
