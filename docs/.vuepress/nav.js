@@ -8,7 +8,7 @@ module.exports = [
 			{text:'各种模板',link: '/utilse/gist/notes/jdbc.html'},
 		]
 	},
-	{
+	/*{
 		text:'第一阶段',//link: '/one-stage/',
 		items: [
 			{text:'Java',link: '/one-stage/guava/'},
@@ -65,5 +65,5 @@ module.exports = [
 			{text:'Docker安装软件',link: '/five-stage/gist'},
 		]
 	},
-	{}
+	{}*/
 ]
