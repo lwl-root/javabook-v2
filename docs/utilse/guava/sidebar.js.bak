@@ -8,10 +8,8 @@ module.exports = [
 			'guava/notes/集合工具类',
 			'guava/notes/转换',
 			'guava/notes/新集合',
-			'guava/notes/迭代器工具类',
-			'guava/notes/校验工具',
-			'guava/notes/文件',
-			'guava/notes/charMatcher',
+			'guava/notes/集合工具类',
+			'guava/notes/集合工具类',
 		]
 	},
 	

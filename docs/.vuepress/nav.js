@@ -2,7 +2,7 @@ module.exports = [
 	{
 		text:'工具库',
 		items: [
-			{text:'Guava工具库',link: '/utilse/guava/'},
+			{text:'Guava工具库',link: '/utilse/guava/notes/字符串工具类.html'},
 			{text:'Spring内置工具库',link: '/utilse/spring-util/'},
 			{text:'其他工具库',link: '/utilse/else/notes/slf4j.html'},
 			{text:'各种模板',link: '/utilse/gist/'},
