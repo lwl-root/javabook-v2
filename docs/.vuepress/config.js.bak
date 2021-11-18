@@ -2,7 +2,7 @@ module.exports = {
 	title: 'Java笔记',
 	description: 'I LOVE CHINA',
 	dest: './dist',
-	port: '80',
+	port: '7000',
 	head: [
 		['link',{rel: 'icon', href: '/hero.jpg'}]
 		],
