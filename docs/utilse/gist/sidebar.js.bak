@@ -9,7 +9,6 @@ module.exports = [
 			'gist/notes/mybatis-xml',
 			'gist/notes/ssm-java',
 			'gist/notes/docker-compose',
-			'gist/notes/git常用命令汇总',
 		]
 	},
 	

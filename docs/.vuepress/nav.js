@@ -5,7 +5,7 @@ module.exports = [
 			{text:'Guava工具库',link: '/utilse/guava/notes/字符串工具类.html'},
 			{text:'Spring内置工具库',link: '/utilse/spring-utils/notes/top-4.html'},
 			{text:'其他工具库',link: '/utilse/else/notes/slf4j.html'},
-			{text:'各种模板',link: '/utilse/gist/'},
+			{text:'各种模板',link: '/utilse/gist/notes/jdbc.html'},
 		]
 	},
 	{
