@@ -15,8 +15,5 @@ module.exports = {
 		sidebarDepth: 1,
 		lastUpdated: 'Last Updated',
 		searchMaxSuggestoins: 10,
-		
-		editLinks: true,
-		editLinkText: '草泥马'
 	},
 }
