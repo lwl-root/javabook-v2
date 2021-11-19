@@ -8,10 +8,10 @@ module.exports = [
 			{text:'各种模板',link: '/utilse/gist/notes/jdbc.html'},
 		]
 	},
-	/*{
-		text:'第一阶段',//link: '/one-stage/',
+	{
+		text:'第一阶段',
 		items: [
-			{text:'Java',link: '/one-stage/guava/'},
+			{text:'Java',link: '/one-stage/java/notes/java语法汇总.html'},
 			{text:'Java多线程',link: '/one-stage/spring-util/'},
 			{text:'线程安全',link: '/one-stage/else/'},
 			{text:'JDK8新特性',link: '/one-stage/gist'},
@@ -19,7 +19,7 @@ module.exports = [
 			{text:'JDBC操作数据库',link: '/one-stage/gist'},
 		]
 	},
-	{
+	/*{
 		text:'第二阶段',//link: '/two-stage/',
 		items: [
 			{text:'前端基础',link: '/two-stage/guava/'},
