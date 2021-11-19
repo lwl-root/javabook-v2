@@ -15,6 +15,5 @@ module.exports = {
 		sidebarDepth: 1,
 		lastUpdated: 'Last Updated',
 		searchMaxSuggestoins: 10,
-
 	},
 }

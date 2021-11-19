@@ -12,7 +12,7 @@ module.exports = [
 		text:'第一阶段',
 		items: [
 			{text:'Java',link: '/one-stage/java/notes/java语法汇总.html'},
-			{text:'Java多线程',link: '/one-stage/spring-util/'},
+			{text:'Java多线程',link: '/one-stage/javathread/notes/多进程.html'},
 			{text:'线程安全',link: '/one-stage/else/'},
 			{text:'JDK8新特性',link: '/one-stage/gist'},
 			{text:'MySQL数据库',link: '/one-stage/gist'},
