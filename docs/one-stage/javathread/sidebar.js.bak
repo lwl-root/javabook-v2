@@ -3,8 +3,8 @@ module.exports = [
 		title:'多线程',
 		collapsable: false,
 		children:[
-			'javathread/notes/a00.多进程',
-			'javathread/notes/a00.多线程',
+			'javathread/notes/多进程',
+			'javathread/notes/多线程',
 			'javathread/notes/thread',
 			'javathread/notes/runnable',
 			'javathread/notes/线程的状态',
@@ -16,6 +16,9 @@ module.exports = [
 		title:'线程池',
 		collapsable: false,
 		children:[
+			'javathread/notes/线程池',
+			'javathread/notes/ThreadPoolExecutor',
+			'javathread/notes/Executors',
 			
 		]
 	}

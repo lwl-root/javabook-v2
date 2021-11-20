@@ -5,7 +5,10 @@ module.exports = {
 	'/utilse/else': require('../utilse/else/sidebar'),
 	'/utilse/gist': require('../utilse/gist/sidebar'),
 	
-	'/one-stage/java': require('../one-stage/java/sidebar'),
+	'/one-stage/threadsafe': require('../one-stage/threadsafe/sidebar'),
 	'/one-stage/javathread': require('../one-stage/javathread/sidebar'),
+	'/one-stage/java': require('../one-stage/java/sidebar'),
+	
+	
 
 }

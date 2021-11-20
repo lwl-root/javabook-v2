@@ -13,7 +13,7 @@ module.exports = [
 		items: [
 			{text:'Java',link: '/one-stage/java/notes/java语法汇总.html'},
 			{text:'Java多线程',link: '/one-stage/javathread/notes/多进程.html'},
-			{text:'线程安全',link: '/one-stage/else/'},
+			{text:'线程安全',link: '/one-stage/threadsafe/notes/线程安全.html'},
 			{text:'JDK8新特性',link: '/one-stage/gist'},
 			{text:'MySQL数据库',link: '/one-stage/gist'},
 			{text:'JDBC操作数据库',link: '/one-stage/gist'},

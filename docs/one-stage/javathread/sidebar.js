@@ -16,7 +16,9 @@ module.exports = [
 		title:'线程池',
 		collapsable: false,
 		children:[
-			
+			'javathread/notes/线程池',
+			'javathread/notes/ThreadPoolExecutor',
+			'javathread/notes/Executors',
 		]
 	}
 	
