@@ -12,9 +12,6 @@ module.exports = [
 			'mysql/notes/视图',
 			'mysql/notes/索引和数据库优化',
 			'mysql/notes/用户和权限管理',
-			'mysql/notes/数据库素材1',
-			'mysql/notes/数据库素材2',
-			'mysql/notes/数据库素材3',
 		]
 	},
 	
