@@ -8,8 +8,10 @@ module.exports = {
 	
 	'/one-stage/javathread': require('../one-stage/javathread/sidebar'),
 	'/one-stage/java8': require('../one-stage/java8/sidebar'),
+	'/one-stage/myjdbc': require('../one-stage/myjdbc/sidebar'),
 	'/one-stage/java': require('../one-stage/java/sidebar'),
+		
 	'/one-stage/threadsafe': require('../one-stage/threadsafe/sidebar'),
 	'/one-stage/mysql': require('../one-stage/mysql/sidebar'),
-	'/one-stage/myjdbc': require('../one-stage/myjdbc/sidebar'),
+	
 }

@@ -16,7 +16,7 @@ module.exports = [
 			{text:'线程安全',link: '/one-stage/threadsafe/notes/a01.线程安全.html'},
 			{text:'JDK8新特性',link: '/one-stage/java8/notes/lambda.html'},
 			{text:'MySQL数据库',link: '/one-stage/mysql/notes/操作Database.html'},
-			{text:'JDBC操作数据库',link: '/one-stage/myjdbc/notes/JDBC基础.html'},
+			{text:'JDBC操作数据库',link: '/one-stage/myjdbc/notes/01.JDBC基础.html'},
 		]
 	},
 	/*{
