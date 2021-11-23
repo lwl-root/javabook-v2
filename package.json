@@ -8,7 +8,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vue-cli-service build --max_old_space_size=10240",
   },
   "author": "lwl",
   "license": "ISC",
