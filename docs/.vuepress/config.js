@@ -19,6 +19,6 @@ module.exports = {
 		sidebarDepth: 1,
 		lastUpdated: 'Last Updated',
 		searchMaxSuggestoins: 10,
-		
+		music: 'http://music.163.com/#/song?id=1415663223',
 	},
 }

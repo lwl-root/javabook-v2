@@ -10,5 +10,3 @@ features:
 footer: lwl | CHINA © 2021-11-11
 ---
 
-<Meting server="netease" type="playlist" mid="2539599584" :lrc-type="3"/>
-
