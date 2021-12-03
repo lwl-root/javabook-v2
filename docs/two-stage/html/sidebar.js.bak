@@ -10,5 +10,35 @@ module.exports = [
 			'html/notes/05.元素的分类',
 		]
 	},
-	
+	{
+		title:'CSS',
+		collapsable: false,
+		children:[
+			'html/notes/01.CSS选择器',
+			'html/notes/02.Flex布局（上）',
+			'html/notes/03.Flex布局（下）',
+			'html/notes/04.CSS3新发现',
+		]
+	},
+    {
+		title:'JavaScript',
+		collapsable: false,
+		children:[
+			'html/notes/01.JavaScript编程基础',
+			'html/notes/02.JavaScript面向对象编程',
+			'html/notes/03.BOM和DOM',
+			'html/notes/04.js-utils',
+		]
+	},
+	{
+		title:'ECMAScript6',
+		collapsable: false,
+		children:[
+			'html/notes/01.ES6新特性',
+			'html/notes/02.模块化',
+			'html/notes/03.promise对象',
+			'html/notes/04.HTML5的web storage',
+		]
+	},
+			
 ]
