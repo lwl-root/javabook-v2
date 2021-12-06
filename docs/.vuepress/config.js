@@ -4,7 +4,6 @@ module.exports = {
 	dest: './dist',
 	port: '4950',
 	head: [
-		['link',{rel: 'icon', href: '/hero.jpg'}],
 		[
             'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
             { rel: 'icon', href: 'logo.png' }
