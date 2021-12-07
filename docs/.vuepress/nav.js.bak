@@ -6,7 +6,6 @@ module.exports = [
 			{text:'Spring内置工具库',link: '/utilse/spring-utils/notes/top-4.html'},
 			{text:'其他工具库',link: '/utilse/else/notes/slf4j.html'},
 			{text:'各种模板',link: '/utilse/gist/notes/jdbc.html'},
-			{text:'markdown使用',link: '/utilse/markdown/notes/Markdown基本使用.html'},
 		]
 	},
 	{
