@@ -5,6 +5,7 @@ module.exports = {
 	'/utilse/else': require('../utilse/else/sidebar'),
 	'/utilse/gist': require('../utilse/gist/sidebar'),
 	'/utilse/markdown': require('../utilse/markdown/sidebar'),
+	'/utilse/docker': require('../utilse/docker/sidebar'),
 	
 	'/one-stage/javathread': require('../one-stage/javathread/sidebar'),
 	'/one-stage/java8': require('../one-stage/java8/sidebar'),

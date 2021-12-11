@@ -7,6 +7,7 @@ module.exports = [
 			{text:'其他工具库',link: '/utilse/else/notes/slf4j.html'},
 			{text:'各种模板',link: '/utilse/gist/notes/jdbc.html'},
 			{text:'markdown使用',link: '/utilse/markdown/notes/Markdown基本使用.html'},
+			{text:'docker搭建常用容器',link: '/utilse/docker/notes/docker搭建常用容器.html'},
 		]
 	},
 	{
@@ -66,5 +67,13 @@ module.exports = [
 			{text:'Docker安装软件',link: '/five-stage/gist'},
 		]
 	},
-	{}*/
+	{}
+	{
+		text:'面试',//link: '/four-stage/',
+		items: [
+			{text:'java初级',link: '/four-stage/guava/'},
+			{text:'java中级',link: '/four-stage/guava/'},
+			{text:'java高级',link: '/four-stage/guava/'},
+		]
+	},*/
 ]
