@@ -25,7 +25,7 @@ module.exports = [
 		text:'第二阶段',
 		items: [
 			{text:'前端基础',link: '/two-stage/html/notes/01.基本概念和结构.html'},
-			//{text:'Servlet',link: '/two-stage/spring-util/'},
+			{text:'Servlet',link: '/two-stage/servlet/notes/HTTP概述.html'},
 			//{text:'JUnit',link: '/two-stage/else/'},
 			//{text:'MyBatis',link: '/two-stage/gist'},
 			//{text:'AJAX请求及相关',link: '/two-stage/gist'},

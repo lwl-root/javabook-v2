@@ -15,4 +15,5 @@ module.exports = {
 	'/one-stage/mysql': require('../one-stage/mysql/sidebar'),
 	
 	'/two-stage/html': require('../two-stage/html/sidebar'),
+	'/two-stage/servlet': require('../two-stage/servlet/sidebar'),
 }
