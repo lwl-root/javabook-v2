@@ -13,14 +13,20 @@ module.exports = [
 		title:'进阶',
 		collapsable: false,
 		children:[
-			
+			'mybatis/notes/02.动态SQL',
+			'mybatis/notes/02.注解的简单使用',
+			'mybatis/notes/02.映射结果集（基本）',
+			'mybatis/notes/02.同用两种配置',
+			'mybatis/notes/02.映射结果集（高级）',
+			'mybatis/notes/02.注解中的结果集映射',
+			'mybatis/notes/02.mybatis分页',
 		]
 	},
 	{
 		title:'高级',
 		collapsable: false,
 		children:[
-			
+			'mybatis/notes/03.MyBatis Generator',
 		]
 	},
 	{
