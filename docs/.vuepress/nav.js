@@ -26,8 +26,8 @@ module.exports = [
 		items: [
 			{text:'前端基础',link: '/two-stage/html/notes/01.基本概念和结构.html'},
 			{text:'Servlet',link: '/two-stage/servlet/notes/HTTP概述.html'},
-			//{text:'JUnit',link: '/two-stage/else/'},
-			//{text:'MyBatis',link: '/two-stage/gist'},
+			{text:'JUnit',link: '/two-stage/junit/notes/基本概念.html'},
+			{text:'MyBatis',link: '/two-stage/mybatis/notes/01.关于mybatis.html'},
 			//{text:'AJAX请求及相关',link: '/two-stage/gist'},
 			//{text:'vue.js',link: '/two-stage/gist'},
 			//{text:'vue专项问题',link: '/two-stage/gist'},

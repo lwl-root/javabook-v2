@@ -1,0 +1,32 @@
+module.exports = [
+	{
+		title:'基础',
+		collapsable: false,
+		children:[
+			'mybatis/notes/01.关于mybatis',
+			'mybatis/notes/01.基本概念',
+			'mybatis/notes/01.执行SQL语句',
+		]
+	},
+	{
+		title:'进阶',
+		collapsable: false,
+		children:[
+			
+		]
+	},
+	{
+		title:'高级',
+		collapsable: false,
+		children:[
+			
+		]
+	},
+	{
+		title:'扩展',
+		collapsable: false,
+		children:[
+			
+		]
+	},
+]
