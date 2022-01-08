@@ -58,12 +58,12 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1641659480000,
+    "updatedTime": 1641659655000,
     "contributors": [
       {
         "name": "卢文龙",
         "email": "1251601077@qq.com",
-        "commits": 1
+        "commits": 2
       },
       {
         "name": "卢文龙",
