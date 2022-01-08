@@ -1,0 +1,45 @@
+<template><h1 id="注解的简单使用" tabindex="-1"><a class="header-anchor" href="#注解的简单使用" aria-hidden="true">#</a> 注解的简单使用</h1>
+<h2 id="_1-注解实现简单增删改查" tabindex="-1"><a class="header-anchor" href="#_1-注解实现简单增删改查" aria-hidden="true">#</a> 1. 注解实现简单增删改查</h2>
+<p>在 MyBatis 的核心配置文件中，你需要配置的不是 mapper 映射文件，而是 Mapper 接口所在的包路径。</p>
+<div class="language-xml ext-xml line-numbers-mode"><pre v-pre class="language-xml"><code><span class="token comment">&lt;!-- 在配置文件中 关联包下的 接口类--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>package</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.example.dao<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>另外，我们也不再需要 mapper 映射文件。对于 DAO 中的方法所对应的 SQL 语句，我们直接以注解的形式标注在方法上。</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">DepartmentMapper</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">"select * from dept where deptno = #{id}"</span><span class="token punctuation">)</span>
+    <span class="token class-name">Department</span> <span class="token function">selectByPK</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">"select * from dept"</span><span class="token punctuation">)</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Department</span><span class="token punctuation">></span></span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Delete</span><span class="token punctuation">(</span><span class="token string">"delete from dept where deptno = #{id}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">int</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Insert</span><span class="token punctuation">(</span><span class="token string">"insert into dept values(NULL, #{name}, #{location})"</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Options</span><span class="token punctuation">(</span>useGeneratedKeys <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span> keyProperty <span class="token operator">=</span> <span class="token string">"id"</span><span class="token punctuation">,</span> keyColumn <span class="token operator">=</span> <span class="token string">"deptno"</span><span class="token punctuation">)</span>
+    <span class="token keyword">int</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">Department</span> dept<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>上述代码中的注解很好理解。唯一需要注意的是，如果在执行 insert 语句时，需要启用 MyBatis 的 “主键回填” 功能，需要多使用一个 <strong>@Options</strong> 注解。</p>
+<p>其实上面的接口的定义中所使用的注解的作用显而易见，本质上就是把你曾经写在 XML 配置文件中的 SQL 语句 “搬” 到了 Java 代码中。</p>
+<h2 id="_2-selectprovider-单独提供-sql" tabindex="-1"><a class="header-anchor" href="#_2-selectprovider-单独提供-sql" aria-hidden="true">#</a> 2. @SelectProvider 单独提供 SQL</h2>
+<p>@SelectProvider 功能就是用来单独写一个类与方法，用来提供一些 XML 或者注解中不好写的 SQL 。</p>
+<p>写一个简单的 @SelectProvider 的用法，新建类，添加一个方法，这个方法返回你 “心里想要” 执行的 SQL 语句：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MySelectSqlProvider</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">selectByPK</span><span class="token punctuation">(</span><span class="token class-name">Long</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"SELECT * FROM department where "</span> <span class="token operator">+</span>
+                <span class="token string">"id = "</span> <span class="token operator">+</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>我们在这里直接返回了一个 String，当然你开可以用 StringBuffer 对象来拼接一个 SQL 语句，这样可读性更好一些。</p>
+<p>更多、更优雅的写法是：通过 MyBatis 中的 SQL Builder 的拼接一个 SQL 语句。SQL Builder 写法在<a href="http://www.mybatis.org/mybatis-3/zh/statement-builders.html" target="_blank" rel="noopener noreferrer">官方网站地址 (opens new window)<ExternalLinkIcon/></a>。当然，这种写法就比较装逼了。mybatis-generator 生成 Example 对象时所自动生成的 Provider 的写法就是这种高端写法。</p>
+<p>DepartmentMapper/DepartmentDao 中使用它:</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@SelectProvider</span><span class="token punctuation">(</span>type <span class="token operator">=</span> <span class="token class-name">MySelectSqlProvider</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token string">"selectByPK"</span><span class="token punctuation">)</span>
+<span class="token class-name">Department</span> <span class="token function">selectDepartmentByPK</span><span class="token punctuation">(</span><span class="token keyword">long</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="custom-container warning"><p class="custom-container-title">注意</p>
+<p>在使用 @SelectProvider 时，我们在 XML 中没有对应的 SQL（甚至 myabtis 甚至都不知道有 XML 配置文件的存在，因为我们在核心配置文件中映射的是 dao 接口所在的包，而不是 Mapper.xml 配置文件），而且我们在接口的查询方法上也没有 @Select 注解修饰，只有 @SelectProvider 注解，@SelectProvider 中两个属性：<strong>type</strong> 为提供 SQL 语句（字符串）的类，method 指定提供 SQL 语句（字符串）的具体方法。</p>
+</div>
+<p>另外，除了有 @SelectProvider 之外，还有 <strong>@InsertProvider</strong> 、<strong>@UpdateProvider</strong> 、<strong>@DeleteProvider</strong> ，这里就不一一举例了。</p>
+</template>

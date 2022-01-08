@@ -1,0 +1,45 @@
+<template><h1 id="锁" tabindex="-1"><a class="header-anchor" href="#锁" aria-hidden="true">#</a> 锁</h1>
+<p>Java 并发 API 对『<strong>锁</strong>』提供了支持。锁是一些对象，它们为 synchronized 提供了替代方案。</p>
+<p><strong>锁（Lock）</strong> 不仅能实现 synchronized 的互斥功能，还能进一步实现线程间的同步功能。</p>
+<p>锁的工作原理如下：在访问共享资源之前，申请用于保护资源的锁；当资源访问结束完成时，释放锁。当某个线程正在使用锁时，如果另一个线程尝试申请锁，那么后者将会阻塞等待，直到锁被前者释放位置。</p>
+<blockquote>
+<p>锁的作用，逻辑上，就是一个令牌、通行证。持有这个令牌、通行证的线程才能继续执行。没有这个令牌、通行证的线程，无法继续执行，直到令牌的持有者放下令牌，而被它拿到后，它才能继续执行。</p>
+</blockquote>
+<p>所有的锁都要实现 <strong>Lock</strong> 接口，最常用的 Lock 接口的实现类是 <strong>ReentrantLock</strong> 。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void lock()</td>
+<td>进行等待，直到可以获得锁为止</td>
+</tr>
+<tr>
+<td>void lockInterruptibly() throws ...</td>
+<td>除非被中断，否则进行等待，直到可以获得锁为止</td>
+</tr>
+<tr>
+<td>Condition newCondition()</td>
+<td>返回与调用锁关联的 Condition 对象</td>
+</tr>
+<tr>
+<td>boolean tryLock()</td>
+<td>尝试获得锁，如果锁不可获得，立即返回 false；如果可获得，返回 true</td>
+</tr>
+<tr>
+<td>boolean tryLock(long wait, TimeUnit unit) throws ...</td>
+<td>在指定时间内，尝试获得锁。如果超出时间后仍无法获得，则返回 false；如果可获得，则返回 true</td>
+</tr>
+<tr>
+<td>void unlock()</td>
+<td>释放锁</td>
+</tr>
+</tbody>
+</table>
+<p>ReentrantLock 实现了一种可重入锁，当前持有锁的线程能够重复进入这种锁。当然，对于线程重入锁而言，所有 lock ( ) 调用必须有相同数量的 unlock ( ) 调用进行抵消。</p>
+<p>更多关于锁、同步、互斥、线程安全的内容参看《Java 线程安全》章节。</p>
+</template>

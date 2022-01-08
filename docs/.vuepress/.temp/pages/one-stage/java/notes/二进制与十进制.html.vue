@@ -1,0 +1,166 @@
+<template><h1 id="二进制与十进制" tabindex="-1"><a class="header-anchor" href="#二进制与十进制" aria-hidden="true">#</a> 二进制与十进制</h1>
+<h2 id="_1-十进制基本概念" tabindex="-1"><a class="header-anchor" href="#_1-十进制基本概念" aria-hidden="true">#</a> 1. 十进制基本概念</h2>
+<p>145，被理解为“一百四十五” ，但是145并不是一个“数”，而只是一个数的代码，是这个数的*“书写方式”*</p>
+<p>三、叁、three、3、|||、III、***、 丙、等等很多书写方式，其实都可以表达同样的数学上的数字概念。</p>
+<p>阿拉伯数字用10，而罗马数字用X，来表达同一个数学概念。</p>
+<p>我们所说的“一百四十五”，其实只是一种表达方式：阿拉伯式的表达，也即使十进制。</p>
+<h2 id="_2-十进制规则总结" tabindex="-1"><a class="header-anchor" href="#_2-十进制规则总结" aria-hidden="true">#</a> 2. 十进制规则总结</h2>
+<p>归纳起来： 十进制数使用数字 0~9 每一位的【权】是$10^n$。 用两位数可表示的最大数为99。也就是说，用n位数表示的范围是：0 ... n个9。共10的n次方个。</p>
+<p>十进制的普及不是偶然的，但是我们可以使用不同的进制。</p>
+<p><code>注</code>，进制不同，只是书写效果的不同。不同的书写方式，可以表达同一个“数”的数学概念。</p>
+<h2 id="_3-进制规则的推广" tabindex="-1"><a class="header-anchor" href="#_3-进制规则的推广" aria-hidden="true">#</a> 3. 进制规则的推广</h2>
+<p>按照十进制中总结的数学规则，可以这样描述 <strong>八进制</strong>： 可用的数字为 0~7 各位的权是$8^n$：$8^0$，$8^1$，$8^2$，$8^3$，$8^4$ 等。 用两位数可表示的最大数为77。也就是说，用n位八进制数表示的范围是：0 ... n个7，共$8^n$个。</p>
+<p><code>练习</code>，描述六进、七进制和九进制。</p>
+<p><strong>十进制</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">位数</th>
+<th style="text-align:center">第4位</th>
+<th style="text-align:center">第3位</th>
+<th style="text-align:center">第2位</th>
+<th style="text-align:center">第1位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">位权</td>
+<td style="text-align:center">$10^3$</td>
+<td style="text-align:center">$10^2$</td>
+<td style="text-align:center">$10^1$</td>
+<td style="text-align:center">$10^0$</td>
+</tr>
+<tr>
+<td style="text-align:center">值</td>
+<td style="text-align:center">1000</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>七进制</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">位</th>
+<th style="text-align:center">第4位</th>
+<th style="text-align:center">第3位</th>
+<th style="text-align:center">第2位</th>
+<th style="text-align:center">第1位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">位权</td>
+<td style="text-align:center">$7^3$</td>
+<td style="text-align:center">$7^2$</td>
+<td style="text-align:center">$7^1$</td>
+<td style="text-align:center">$7^0$</td>
+</tr>
+<tr>
+<td style="text-align:center">等价十进制</td>
+<td style="text-align:center">343</td>
+<td style="text-align:center">49</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4-重点结论" tabindex="-1"><a class="header-anchor" href="#_4-重点结论" aria-hidden="true">#</a> 4. 重点结论</h2>
+<p>同样的书写方式 <code>200</code>：</p>
+<ul>
+<li>十进制表示的数值是 2 个 100，而</li>
+<li>七进制表示的数值 2 个 49</li>
+</ul>
+<p>为了表达 <code>50</code> 这个数值：</p>
+<ul>
+<li>十进制的书写格式是 50 ，而</li>
+<li>七进制的书写格式是 101 ，</li>
+<li>八进制的书写方式是 62</li>
+</ul>
+<p>所以：</p>
+<ul>
+<li><strong>在不同的进制之间，同样的『书写方式』表达的数学值并不一样</strong>；</li>
+<li><strong>而要表达同样的数学值，『书写方式』是不一样的</strong>。</li>
+</ul>
+<h2 id="_5-二进制" tabindex="-1"><a class="header-anchor" href="#_5-二进制" aria-hidden="true">#</a> 5. 二进制</h2>
+<p>二进制是这一概念推广的最终产物。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">位</th>
+<th style="text-align:center">第8位</th>
+<th style="text-align:center">第7位</th>
+<th style="text-align:center">第6位</th>
+<th style="text-align:center">第5位</th>
+<th style="text-align:center">第4位</th>
+<th style="text-align:center">第3位</th>
+<th style="text-align:center">第2位</th>
+<th style="text-align:center">第位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">位权</td>
+<td style="text-align:center">$2^7$</td>
+<td style="text-align:center">$2^6$</td>
+<td style="text-align:center">$2^5$</td>
+<td style="text-align:center">$2^4$</td>
+<td style="text-align:center">$2^3$</td>
+<td style="text-align:center">$2^2$</td>
+<td style="text-align:center">$2^1$</td>
+<td style="text-align:center">$2^0$</td>
+</tr>
+<tr>
+<td style="text-align:center">等价十进制</td>
+<td style="text-align:center">128</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p>计算机根本不认识字母、数字、指令或程序，在它的内部只是一些电路，某个电路的节点上要么有很多电，要么几乎没有电。</p>
+<p>在硬件上，硬件工程师不太容易表示：<code>少点电</code> - <code>一些点</code> - <code>较多电 </code>- <code>许多电</code> - <code>大量电</code> 这样的多状态。 反而很容易也更稳妥地实现：<code>有电</code> - <code>没电</code> 的两状态。所以二进制的本质就是：用 1 和 0 可以代表每一段电路的真实状态。</p>
+<p>因为早期的计算机一次处理 8 位，所以很自然的将 8 位大小的长度称为 <strong>字节</strong>。</p>
+<p>用 8 位二进制数可以表示 256 个不同的值。如果 8 位都为 1，则对应的十进制值是 255；如果 8 为都是 0，则对应的十进制值是 0，从 0~255 一共有 256 种可能的状态（数据）。</p>
+<p>1 <strong>byte</strong> = 8 <strong>bit</strong> 1 <strong>KB</strong> = $2^{10}$ byte 1 <strong>MB</strong> = $2^{10}$ KB = $2^{20}$ byte 1 <strong>GB</strong> = $2^{10}$ MB = $2^{20}$ KB = $2^{30}$ byte</p>
+<p>$2^{10}$ = 1024</p>
+<h2 id="_6-十六进制" tabindex="-1"><a class="header-anchor" href="#_6-十六进制" aria-hidden="true">#</a> 6. 十六进制</h2>
+<p>因为二进制数难于阅读，于是人们想出了一种更为简单的方式来表达相同的值。 从二进制转换成十进制设计到大量的数的操作，但是从二进制转换成十六进制就很简单。</p>
+<p>十六进制中有十六个数字：0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f。 用a表示比9大1的数，其值相当于十进制中的10 用b表示比a大1的数，其值相当于十进制中的11 用c表示比b大1的数，其值相当于十进制中的12 用d表示比c大1的数，其值相当于十进制中的13 用e表示比d大1的数，其值相当于十进制中的14 用f表示比e大1的数，其值相当于十进制中的15</p>
+<p>也就是说，有些数学概念上的数值，十进制中需要用两位数表示，但是十六进制用一位数就能表示</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">位</th>
+<th style="text-align:center">第4位</th>
+<th style="text-align:center">第3位</th>
+<th style="text-align:center">第2位</th>
+<th style="text-align:center">第1位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">位权</td>
+<td style="text-align:center">$16^3$</td>
+<td style="text-align:center">$16^2$</td>
+<td style="text-align:center">$16^1$</td>
+<td style="text-align:center">$16^0$</td>
+</tr>
+<tr>
+<td style="text-align:center">等价十进制</td>
+<td style="text-align:center">4096</td>
+<td style="text-align:center">256</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><code>诀窍</code>：一个字节中的 8 位 2 进制数，分成两组 4 位，正好每一组 4 位二进制数等价于 1 位十六进制数。</p>
+</template>

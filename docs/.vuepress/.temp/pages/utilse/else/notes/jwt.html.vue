@@ -1,0 +1,246 @@
+<template><h1 id="操作-jwt-nimbus-jose-jwt-库" tabindex="-1"><a class="header-anchor" href="#操作-jwt-nimbus-jose-jwt-库" aria-hidden="true">#</a> 操作 JWT：nimbus-jose-jwt 库</h1>
+<p>nimbus-jose-jwt、jose4j、java-jwt 和 jjwt 是几个 Java 中常见的操作 JWT 的库。就使用细节而言，nimbus-jos-jwt（和jose4j）要好于 java-jwt 和 jjwt 。</p>
+<p><a href="https://connect2id.com/products/nimbus-jose-jwt" target="_blank" rel="noopener noreferrer">nimbus-jose-jwt 官网open in new window<ExternalLinkIcon/></a></p>
+<div class="language-xml ext-xml line-numbers-mode"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.nimbusds<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>nimbus-jose-jwt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>9.11.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_1-相关概念" tabindex="-1"><a class="header-anchor" href="#_1-相关概念" aria-hidden="true">#</a> 1. 相关概念</h2>
+<h3 id="jwt-和-jws" tabindex="-1"><a class="header-anchor" href="#jwt-和-jws" aria-hidden="true">#</a> JWT 和 JWS</h3>
+<p>这里我们需要了解下 JWT、JWS、JWE 三者之间的关系：</p>
+<ul>
+<li>JWT（JSON Web Token）指的是一种规范，这种规范允许我们使用 JWT 在两个组织之间传递安全可靠的信息。</li>
+<li><strong>JWS</strong>（JSON Web Signature）和 JWE（JSON Web Encryption）是 JWT 规范的两种不同实现，我们平时最常使用的实现就是 JWS 。</li>
+</ul>
+<p>简单来说，JWT 和 JWS、JWE 类似于接口与实现类。由于，<strong>我们使用的是 JWS</strong> ，所以，后续内容中，就直接列举 JWS 相关类，不再细分 JWS 和 JWE 了，numbus-jose-jwt 中的 JWE 相关类和接口我们也不会使用到。</p>
+<h3 id="加密算法" tabindex="-1"><a class="header-anchor" href="#加密算法" aria-hidden="true">#</a> 加密算法</h3>
+<p>另外，还有一对可能会涉及的概念：对称加密和非对称加密：</p>
+<ul>
+<li>『<strong>对称加密</strong>』指的是使用相同的秘钥来进行加密和解密，如果你的秘钥不想暴露给解密方，考虑使用非对称加密。在加密方和解密方是同一个人（或利益关系紧密）的情况下可以使用它。</li>
+<li>『<strong>非对称加密</strong>』指的是使用公钥和私钥来进行加密解密操作。对于加密操作，公钥负责加密，私钥负责解密，对于签名操作，私钥负责签名，公钥负责验证。非对称加密在 JWT 中的使用显然属于签名操作。在加密方和解密方是不同人（或不同利益方）的情况下可以使用它。</li>
+</ul>
+<p>nimbus-jose-jwt 支持的算法都在它的 <strong>JWSAlgorithm</strong> 和 JWEAlgorithm 类中有定义。</p>
+<p>例如：<code>JWSAlgorithm algorithm = JWSAlgorithm.HS256</code></p>
+<h2 id="_2-核心-api-介绍" tabindex="-1"><a class="header-anchor" href="#_2-核心-api-介绍" aria-hidden="true">#</a> 2. 核心 API 介绍</h2>
+<h3 id="加密过程" tabindex="-1"><a class="header-anchor" href="#加密过程" aria-hidden="true">#</a> 加密过程</h3>
+<ul>
+<li>
+<p>在 nimbus-jose-jwt 中，使用 Header 类代表 JWT 的头部，不过，Header 类是一个抽象类，我们使用的是它的子类 <strong>JWSHeader</strong> 。</p>
+<p>创建头部对象：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">JWSHeader</span> jwsHeader <span class="token operator">=</span> 
+      <span class="token keyword">new</span> <span class="token class-name">JWSHeader<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span>algorithm<span class="token punctuation">)</span>       <span class="token comment">// 加密算法</span>
+                   <span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span><span class="token class-name">JOSEObjectType</span><span class="token punctuation">.</span>JWT<span class="token punctuation">)</span> <span class="token comment">// 静态常量</span>
+                   <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>另外，你可以通过 <code>.getParsedBase64URL()</code> 方法求得头部信息的 Base64 形式（这也是 JWT 中的实际头部信息）：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>header<span class="token punctuation">.</span><span class="token function">getParsedBase64URL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li>
+<li>
+<p>使用 <strong>Payload</strong> 类的代表 JWT 的荷载部分，</p>
+<p>创建荷载部对象</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">Payload</span> payload <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Payload</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里还可以传 JSON 串，或 Map 。</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>另外，你可以通过 <code>.toBase64URL()</code> 方法求得荷载部信息的 Base64 形式（这也是 JWT 中的实际荷载部信息）：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>payload<span class="token punctuation">.</span><span class="token function">toBase64URL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li>
+<li>
+<p>签名部分没有专门的类表示，只有通用类 <strong>Base64URL</strong> ，而且签名部分并非你自己创建出来的，而是靠 <code>头部 + 荷载部 + 加密算法</code> 算出来的。</p>
+<p>在 nimbus-jose-jwt 中，签名算法由 <strong>JWSAlgorithm</strong> 表示。</p>
+<div class="custom-container warning"><p class="custom-container-title">WARNING</p>
+<p>在创建 JWSHeader 对象时就需要指定签名算法，因为在标准中，头部需要保存签名算法名字。</p>
+</div>
+<p>用头部和荷载部分，再加上指定的签名算法和密钥来生成签名部分的过程，在 nimbus-jose-jwt 中被称为『<strong>签名</strong>（sign）』。</p>
+<p>nimbus-jose-jwt 专门提供了一个签名器 <strong>JWSSigner</strong> ，用来参与到签名过程中。密钥就是在创建签名器的时候指定的：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">JWSSigner</span> jwsSigner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MACSigner</span><span class="token punctuation">(</span>secret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li>
+<li>
+<p>最终，整个 JWT 由一个 <strong>JWSObject</strong> 对象表示：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">JWSObject</span> jwsObject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JWSObject</span><span class="token punctuation">(</span>jwsHeader<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 进行签名（根据前两部分生成第三部分）</span>
+jwsObject<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span>jwsSigner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>在 nimbus-jose-jwt 中 JWSObject 是有状态的：未签名、已签名和签名中。很显然，在执行外 <code>.sign()</code> 方法之后，JWSObject 对象就变成了已签名状态。</p>
+<p>当然，我们最终『要』的是 JWT 字符串，而不是对象，这里接着对代表 JWT 的 JWSObject 对象调用 <code>.serialize()</code> 方法即可：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">String</span> token <span class="token operator">=</span> jwsObject<span class="token punctuation">.</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li>
+</ul>
+<h3 id="解密" tabindex="-1"><a class="header-anchor" href="#解密" aria-hidden="true">#</a> 解密</h3>
+<p>反向的解密和验证过程核心 API 就 2 个：JWSObject 的静态方法 <strong>parse</strong> 方法和验证其 JWSVerifier 对象。</p>
+<p><code>JWSObject.parse()</code> 方法是上面的 serialize 方法的反向操作，它可以通过一个 JWT 串生成 JWSObject 。有了 JWObject 之后，你就可以获得 header 和 payload 部分了。</p>
+<p>如果你想直接验证 JWSObject 对象的合法性，你需要创建一个 <strong>JWSVerifier</strong> 对象。</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">JWSVerifier</span> jwsVerifier <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MACVerifier</span><span class="token punctuation">(</span>secret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>然后直接调用 jwsObject 对象的 <strong>verify</strong> 方法：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>jwsObject<span class="token punctuation">.</span><span class="token function">verify</span><span class="token punctuation">(</span>jwsVerifier<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"token 签名不合法！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="官网的-hs256-示例" tabindex="-1"><a class="header-anchor" href="#官网的-hs256-示例" aria-hidden="true">#</a> 官网的 HS256 示例</h2>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>security<span class="token punctuation">.</span></span><span class="token class-name">SecureRandom</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>nimbusds<span class="token punctuation">.</span>jose<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>nimbusds<span class="token punctuation">.</span>jose<span class="token punctuation">.</span>crypto<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// Generate random 256-bit (32-byte) shared secret</span>
+<span class="token class-name">SecureRandom</span> random <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SecureRandom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sharedSecret <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+random<span class="token punctuation">.</span><span class="token function">nextBytes</span><span class="token punctuation">(</span>sharedSecret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Create HMAC signer</span>
+<span class="token class-name">JWSSigner</span> signer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MACSigner</span><span class="token punctuation">(</span>sharedSecret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Prepare JWS object with "Hello, world!" payload</span>
+<span class="token class-name">JWSObject</span> jwsObject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JWSObject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">JWSHeader</span><span class="token punctuation">(</span><span class="token class-name">JWSAlgorithm</span><span class="token punctuation">.</span>HS256<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Payload</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Apply the HMAC</span>
+jwsObject<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span>signer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// To serialize to compact form, produces something like</span>
+<span class="token comment">// eyJhbGciOiJIUzI1NiJ9.SGVsbG8sIHdvcmxkIQ.onO9Ihudz3WkiauDO2Uhyuz0Y18UASXlSc1eS0NkWyA</span>
+<span class="token class-name">String</span> s <span class="token operator">=</span> jwsObject<span class="token punctuation">.</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// To parse the JWS and verify it, e.g. on client-side</span>
+jwsObject <span class="token operator">=</span> <span class="token class-name">JWSObject</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">JWSVerifier</span> verifier <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MACVerifier</span><span class="token punctuation">(</span>sharedSecret<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">assertTrue</span><span class="token punctuation">(</span>jwsObject<span class="token punctuation">.</span><span class="token function">verify</span><span class="token punctuation">(</span>verifier<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">,</span> jwsObject<span class="token punctuation">.</span><span class="token function">getPayload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h2 id="在-payload-中存对象" tabindex="-1"><a class="header-anchor" href="#在-payload-中存对象" aria-hidden="true">#</a> 在 Payload 中存对象</h2>
+<p>在上例（和官方示例中）payload 中存放的是简单的字符串，其实，更方便更有使用价值的是存入一个 json 串。所以，我们可以自定义专本用于存入 payload 中的 javabean，例如：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token annotation punctuation">@AllArgsConstructor</span>
+<span class="token annotation punctuation">@Builder</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Claims</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// "主题"</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> sub<span class="token punctuation">;</span>
+
+    <span class="token comment">// "签发时间"</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> iat<span class="token punctuation">;</span>
+
+    <span class="token comment">// 过期时间</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> exp<span class="token punctuation">;</span>
+
+    <span class="token comment">// JWT的ID</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> jti<span class="token punctuation">;</span>
+
+    <span class="token comment">// "用户名称"</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> username<span class="token punctuation">;</span>
+
+    <span class="token comment">// "用户拥有的权限"</span>
+    <span class="token comment">//private List&lt;String> authorities;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>这样在创建 Payload 时，需要多一步转换操作：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">ObjectMapper</span> mapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 这里使用的是 Jackson 库</span>
+<span class="token comment">// 将负载信息封装到Payload中</span>
+<span class="token class-name">Payload</span> payload <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Payload</span><span class="token punctuation">(</span>mapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>claims<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>反向的取出内容时，也是一样的道理。</p>
+<h2 id="非对称加密-rsa" tabindex="-1"><a class="header-anchor" href="#非对称加密-rsa" aria-hidden="true">#</a> 非对称加密（RSA）</h2>
+<p>上面，我们使用的是对称加密算法。而非对称加密指的是分别使用『公钥』和『私钥』来进行加密、解密操作。私钥负责加密，负责生成 JWT 的签名部分；公钥负责解密，负责验证 JWT 是否是伪造的。</p>
+<p>要使用 RSA ，我们需要生成一个『证书文件』，这里将使用 Java 自带的 <code>keytool</code> 工具来生成 <strong>jks</strong> 证书文件，该工具在 JDK 的 bin 目录下。</p>
+<p>打开 CMD 命令界面，使用如下命令生成证书文件，设置别名为 jwt ，文件名为 <code>jwt.jks</code> ：</p>
+<p>语法规则：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>keytool -genkey -alias <span class="token operator">&lt;</span>证书别名<span class="token operator">></span> -keyalg <span class="token operator">&lt;</span>密钥算法<span class="token operator">></span> -keystore <span class="token operator">&lt;</span>证书库的位置和名称<span class="token operator">></span> -keysize <span class="token operator">&lt;</span>密钥长度<span class="token operator">></span> -validity <span class="token operator">&lt;</span>证书有效期（天数）<span class="token operator">></span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>例子：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>keytool -genkey -alias jwt -keyalg RSA -keystore jwt.jks
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>3 点注意事项</p>
+<ol>
+<li>有可能你会遇到 <code>keytool 错误: java.io.FileNotFoundException: jwt.jks (拒绝访问。)</code> 问题。以防万一使用管理员身份启动 CMD 命令行。</li>
+<li>生成的 jwt.jks 文件在你命令行的当前目录下，请务必知道你自己在哪，别找不到生成的 jwt.jks 文件。</li>
+<li>在开发、演示过程中，生成 jwt.jks 时所使用的密码尽量简单易记，以免自己忘记了。</li>
+</ol>
+<p>你会看到类似如下内容：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>D:\>keytool -genkey -alias jwt -keyalg RSA -keystore jwt.jks
+输入密钥库口令:
+再次输入新口令:
+您的名字与姓氏是什么?
+  [Unknown]:
+您的组织单位名称是什么?
+  [Unknown]:
+您的组织名称是什么?
+  [Unknown]:
+您所在的城市或区域名称是什么?
+  [Unknown]:
+您所在的省/市/自治区名称是什么?
+  [Unknown]:
+该单位的双字母国家/地区代码是什么?
+  [Unknown]:
+CN=Unknown, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown是否正确?
+  [否]:  y
+
+输入 &lt;jwt> 的密钥口令
+        (如果和密钥库口令相同, 按回车):
+再次输入新口令:
+
+Warning:
+JKS 密钥库使用专用格式。建议使用 "keytool -importkeystore -srckeystore jwt.jks -destkeystore jwt.jks -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>将证书文件 <code>jwt.jks</code> 复制到项目的 resource 目录下，然后需要从证书文件中读取 RSAKey ，这里我们需要在 pom.xml 中添加一个 Spring Security 的 RSA 依赖；</p>
+<div class="language-xml ext-xml line-numbers-mode"><pre v-pre class="language-xml"><code><span class="token comment">&lt;!-- Spring Security RSA 含有相关工具类 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.security<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-security-rsa<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- spring-cloud-commons-dependencies 已含有版本信息 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>关于引入 spring-security-rsa 包</p>
+<p>其实，我们引入 spring-security-rsa 是因为我们要用到它里面的一个名为 <strong>KeyStoreKeyFactory</strong> 的工具类。考虑到 KeyStoreKeyFactory 工具类也没有引来 spring-security-rsa 中的其它的任何东西，所以，我们也可以把 KeyStoreKeyFactory 单独地摘出来。</p>
+<ul>
+<li>
+<p>从 <code>jwt.jks</code> 文件生成 RSAKey 对象：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token class-name">RSAKey</span> <span class="token function">generateRsaKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 从 classpath 下获取 RSA 秘钥对</span>
+    <span class="token class-name">KeyStoreKeyFactory</span> keyStoreKeyFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">KeyStoreKeyFactory</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ClassPathResource</span><span class="token punctuation">(</span><span class="token string">"jwt.jks"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"123456"</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">KeyPair</span> keyPair <span class="token operator">=</span> keyStoreKeyFactory<span class="token punctuation">.</span><span class="token function">getKeyPair</span><span class="token punctuation">(</span><span class="token string">"jwt"</span><span class="token punctuation">,</span> <span class="token string">"123456"</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 获取 RSA 公钥</span>
+    <span class="token class-name">RSAPublicKey</span> publicKey <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">RSAPublicKey</span><span class="token punctuation">)</span> keyPair<span class="token punctuation">.</span><span class="token function">getPublic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 获取 RSA 私钥</span>
+    <span class="token class-name">RSAPrivateKey</span> privateKey <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">RSAPrivateKey</span><span class="token punctuation">)</span> keyPair<span class="token punctuation">.</span><span class="token function">getPrivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">RSAKey</span> rsaKey <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RSAKey<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span>publicKey<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">privateKey</span><span class="token punctuation">(</span>privateKey<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> rsaKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li>
+<li>
+<p>根据 RSAKey 对象生成 JWT/JWS 字符串：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">RSAKey</span> rsaKey <span class="token operator">=</span> <span class="token function">generateRsaKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// JWS 头</span>
+<span class="token class-name">JWSHeader</span> jwsHeader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JWSHeader
+              <span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span><span class="token class-name">JWSAlgorithm</span><span class="token punctuation">.</span>RS256<span class="token punctuation">)</span>    <span class="token comment">// 指定 RSA 算法</span>
+              <span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span><span class="token class-name">JOSEObjectType</span><span class="token punctuation">.</span>JWT<span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// JWS 荷载</span>
+<span class="token class-name">Payload</span> payload <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Payload</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// JWS 签名</span>
+<span class="token class-name">JWSObject</span> jwsObject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JWSObject</span><span class="token punctuation">(</span>jwsHeader<span class="token punctuation">,</span> payload<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">JWSSigner</span> jwsSigner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RSASSASigner</span><span class="token punctuation">(</span>rsaKey<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// rsaKey 生成签名器</span>
+jwsObject<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span>jwsSigner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// JWT/JWS 字符串</span>
+<span class="token class-name">String</span> jwt <span class="token operator">=</span> jwsObject<span class="token punctuation">.</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>jwt<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></li>
+<li>
+<p>根据 RSAKey 对象（的公钥）解析 JWT/JWS 字符串：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// JWT/JWS 字符串转 JWSObject 对象</span>
+<span class="token class-name">String</span> token <span class="token operator">=</span> <span class="token string">"..."</span><span class="token punctuation">;</span>
+<span class="token class-name">JWSObject</span> jwsObject <span class="token operator">=</span> <span class="token class-name">JWSObject</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 根据公要生成验证器</span>
+<span class="token class-name">RSAKey</span> rsaKey <span class="token operator">=</span> <span class="token function">generateRsaKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">RSAKey</span> publicRsaKey <span class="token operator">=</span> rsaKey<span class="token punctuation">.</span><span class="token function">toPublicJWK</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>publicRsaKey<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// show 公钥</span>
+<span class="token class-name">JWSVerifier</span> jwsVerifier <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RSASSAVerifier</span><span class="token punctuation">(</span>publicRsaKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 使用校验器校验 JWSObject 对象的合法性</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>jwsObject<span class="token punctuation">.</span><span class="token function">verify</span><span class="token punctuation">(</span>jwsVerifier<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"token签名不合法！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 拆解 JWT/JWS，获得荷载中的内容</span>
+<span class="token class-name">String</span> payload <span class="token operator">=</span> jwsObject<span class="token punctuation">.</span><span class="token function">getPayload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// show 荷载</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></li>
+</ul>
+</template>

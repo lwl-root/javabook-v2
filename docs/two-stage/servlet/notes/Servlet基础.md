@@ -1,0 +1,510 @@
+# Servlet 基础
+
+## 1. Servlet API
+
+### 概述
+
+Servlet API 是你的 Java Web 程序与 Servlet 容器（例如，Tomcat）之间的『约定』。
+
+::: warning 注意
+
+Servlet 容器有且不仅只有 Tomcat 一种。后续内容就不再强调 Servlet 容器和 Tomcat 之间的关系，但凡提到 Tomcat 容器的场景，使用其它的 Servlet 容器也是可以的。
+
+:::
+
+这个约定归结起来就是，**Tomcat 将 Servlet 类载入内存，并由 Tomcat 调用 Servlet 对象的具体的方法** 。这些方法所需的参数也是由 Tomcat 准备并传入的。
+
+> 简单来说就是一句话，你按照某种特定规则写好代码『放在这里等着』Tomcat 来调用。
+
+Servlet 技术的核心是 Servlet 接口：
+
+```text
+Servlet 接口
+└── GenericServlet 抽象类
+    └── HttpServlet 
+```
+
+你的 Servlet 类必须直接或间接实现的 Servlet 接口。通常，我们是继承 HttpServlet，从而间接实现 Servlet 接口。
+
+```java
+// 直接实现 Servlet 接口
+public class AServlet implements Servlet { ... }
+
+// 间接实现 Servlet 接口
+public class BServlet extends GenericServlet { ... }
+
+// 间接实现 Servlet 接口
+public class CServlet extends HttpServlet { ... }
+```
+
+### 相关对象概述
+
+在 web 项目运行期间，每个 Servlet 类最多只能有一个对象。它们都是『**单例**』的，它们都是（被动地）由 Tomcat 创建的。
+
+如果你是直接实现的 Servlet 接口， Tomcat 在调用你的 Servlet 的 ***.service*** 方法时，会传入两个参数：
+
+- **ServletRequest** 其中封装了当前的 HTTP 请求，因此，Servlet 开发人员不必解析和操作原始的 HTTP 数据。
+- **ServletResponse** 表示对当前用户的 HTTP 响应，它使得将响应发回给用户变得十分容易。
+
+如果你是间接实现的 Servlet 接口，本质上也是如此。
+
+ServletRequest 和 ServletResponse 对象是『**多实例**』的。
+
+对于每一个 WebApp，Tomcat 还会创建一个 **ServletContext** 实例，它也是『**单例**』的。这个对象中中封装了上下文的环境详情。
+
+每个 Servlet 实例也都有一个封装 Servlet 配置的 **ServletCongfig** ，Servlet 和 ServletConfig 是『**一一对应**』的。
+
+总结：一个 WebApp 在运行时，有：
+
+- 1 个 ServletContext 实例
+- N 个 Servlet 实例 （取决于 Servlet 类的数量）
+- N 个 ServletConfig 实例 （取决于 Servlet 类的数量）
+- 任意个 HTTPRequest / HTTPResponse 实例 （取决于用户请求的次数）
+
+### Servlet 接口
+
+Servlet 接口中定义了 5 个方法：
+
+|  #   | 方法                  | 说明                                                         |
+| :--: | :-------------------- | :----------------------------------------------------------- |
+|  1   | ***.init***           | 在 Servlet 第一次被请求时，被 Servlet 容器调用。 Tomcat 调用 ***.init*** 时，容器会传入一个 **ServletConfig** 对象。 |
+|  2   | ***.service***        | 在每次用户发起请求时，被容器调用。 Tomcat 调用 ***.service*** 时，容器会传入代表用户请求和相应的 **HTTPRequest** 对象和 **HTTPResponse** 对象。 |
+|  3   | ***.destroy***        | 在销毁 Servlet 时，被 Tomcat 调用。一般发生在卸载 WebApp 或关闭容器时。 |
+|  4   | ***.getServletInfo*** | 这个方法返回一个用于描述 Servlet 的字符串。                  |
+|  5   | ***.getServlet***     | 这个方法用于返回由 Servlet 传给 ***.init*** 方法的 **ServletConfig** 对象。 |
+
+***.init***、***.service*** 和 ***.destroy*** 方法是 Servlet 的生命周期方法，另外两个方法是非生命周期方法。
+
+### GenericServlet 抽象类
+
+GenericServlet 抽象类实现了 Servlet 接口，它为这些方法提供了默认的实现，并新增了一个 **servletConfig** 实例变量，用于在 **init()** 方法中将容器传入的 ServletConfig 对象保存起来。
+
+### HTTPServlet 类
+
+HTTPServlet 在其父类 GenericServlet 的基础上进一步简化了实现了 Servlet 接口的工作。
+
+HTTPServlet 有两个特性是 GenericServlet 所不具备的：
+
+1. 不用 Override **service()** 方法，而是 Override `doGet()` 或者 `doPost()` 方法。
+2. 使用 HttpServletRequest/HttpServletResponse，而非 ServletRequest/ServletResponse。
+
+### ServletRequest 和 HTTPServletRequest
+
+每当 Tomcat 调用你的 Servlet 的 service 方法时，它都会创建一对新的 Request 和 Response 对象传入其中。
+
+> Tomcat 何时会调用你的Servlet 的 service 方法？
+
+**`getParameter()`** 方法是 ServletRequest 中最常用的方法，该方法用于从 Request 对象中获取请求参数的值。
+
+除了 `getParameter()` 外，类似用于获取请求参数的值的方法还有：
+
+- **`getParameterNames()`**
+- **`getParameterMap()`**
+- **`getParameterValues()`**
+
+### HttpServletRequest
+
+> 由于我们更长使用的是 HTTPServlet 类，而不是 Servlet 接口，因此，我们更多地是接触并使用 HttpServletRequest，而不是 ServletRequest 。
+
+HTTPServletRequest 实现并扩展了 ServletRequest 接口。
+
+HttpServletRequest 扩展的常用方法有：
+
+- Stirng getRequestURL( )
+- Stirng getRequestURI( )
+- Stirng getContextPath( )
+- String getMethod( )
+- Cookie[] getCookies( )
+- HttpSession getSession( )
+
+### ServletResponse 和 HTTPServletResponse
+
+Tomcat 在调用你的 Servlet 的 `service()` / `doGet()` / `doPost()` 方法时，除了会传入要给 Request 对象，还会传入一个 Response 对象：**ServletResponse** / **HttpServletResponse** 。
+
+ServletResponse 隐藏了向浏览器发送响应的复杂过程。
+
+在 ServletResponse 所有的方法中，最常用的方法之一是 **`getWriter()`** 方法，它返回一个可以向客户端发送文本的 **`java.io.PrintWriter`** 对象。默认情况下，PrintWriter 对象使用 ISO-8859-1 编码。
+
+::: warning 注意
+
+有另外的一个向浏览器发送数据的方法叫 `getOutputStream()`，但这个方法是用于发送二进制数据的。因此大多数情况下使用的是 `getWriter()`，而非 `getOutPutStream()`。不要调用错了方法。
+
+:::
+
+大多数情况下，你的 Servlet 通过 Tomcat 向客户端发送响应数据应该是一个 HTML 格式的字符串。
+
+在发送这个 HTML 格式字符串前，应该先调用 **`setContentType()`** 方法，设置响应的内容类型，并将 **`text/html`** 作为参数传入。这是告诉浏览器，所发送给它的数据内容是 HTML 格式内容。
+
+HTTPServletResponse 实现并扩展了 ServletResponse 接口。它所扩展的常用的方法有：
+
+- void addCookie ( Cookie cookie )
+- void sendRedirect ( String location )
+
+### ServletConfig 和 ServletContext
+
+当 Tomcat 创建出你的 Servlet 的单例对象后，它会调用你的 Servlet 的 `init()` 方法，并传入一个 **ServletConfig** 对象。
+
+**ServletConfig** 对象中封装这由 **`@WebServlet`** 注解或者 **部署描述符** 传给 Servlet 的配置信息。
+
+> 这样传入的每一条信息就叫做 **初始化参数**，一个初始化参数由 key 和 value 组成。
+
+```java
+@WebServlet(name="HelloServlet",
+            urlPatterns = {"/hello.do"},
+            initParams = {
+                @WebInitParam(name="author", value="ben"),
+                @WebInitParam(name="email", value = "hemiao3000@126.com")
+})
+```
+
+为了获得 Servlet 的初始化参数，可以从容器传给 Servlet 的 ServletConfig 对象中调用 **`getInitParameter()`** 方法来获得。
+
+------
+
+**ServletContext** 代表着 WebbApp。每个 WebApp 只有一个 **ServletContext** 对象。
+
+通过调用 **ServletConfig** 实例的 **getServletContext()** 方法，可以获得该 Servlet 所属的 WebApp 的 ServietContext 对象。
+
+### 部署描述符
+
+在 servlet 3.0 之前，不支持注解的形式来配置 servlet，而是在 `web.xml` 中使用配置描述符。
+
+```xml
+<servlet>
+  <servlet-name>HelloServlet</servlet-name>
+  <servlet-class>HelloServlet</servlet-class>
+  <init-param>
+    <param-name>author</param-name>
+    <param-value>ben</param-value>
+  </init-param>
+  <init-param>
+    <param-name>email</param-name>
+    <param-value>hemiao3000@126.com</param-value>
+  </init-param>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>HelloServlet</servlet-name>
+  <url-pattern>/HelloWorld/hello.do</url-pattern>
+</servlet-mapping>
+```
+
+## 2. 配置 Servlet 及其映射
+
+不同版本的 Sevlet 的 *`web.xml`* 配置文件的头部信息是不一样的。不建议使用 Servlet 3.0 和 3.0 以下版本，太过于老旧了。建议使用 3.1 和 4.0 版本。
+
+> Tomcat 8 支持 Servlet 3.1；Tomcat 9 支持 Servlet 4.0。
+
+### 老式配置：web.xml 配置
+
+Servlet 3.0 以下版本，配置 Servlet 及其映射关系，只能在 ***web.xml*** 中配置。
+
+语法如下：
+
+```xml
+<servlet>
+  <servlet-name>字符串</servlet-name>
+  <servlet-class>Servlet 类的完全限定名</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>字符串</servlet-name>
+  <url-pattern>url 匹配规则</url-pattern>
+</servlet-mapping>
+```
+
+配置一个 Servlet 需要出现一对 *`servlet`* 和 *`servlet-mapping`*。简而言之，*`servlet`* 和 *`servlet-mapping`* 总是成对出现的。
+
+配对的 *`servlet`* 和 *`servelt-mapping`* 中的 *`servlet-name`* **必须一样** 。
+
+### 新式配置：注解配置
+
+Servlet 3.0 开始支持注解配置。语法如下：
+
+```java
+@WebServlet(urlPatterns = "url匹配规则")
+public class XxxServlet extends HttpServlet {
+    ...
+}  
+```
+
+### URL 匹配规则
+
+#### 首先需要明确几个容易混淆的规则：
+
+- servlet 容器中的匹配规则既不是简单的通配，也不是正则表达式，而是特定的规则。所以不要用通配符或者正则表达式的匹配规则来看待 servlet 的 *`url-pattern`* 。
+- Servlet 2.5 开始，一个 servlet 可以使用多个 url-pattern 规则，*`<servlet-mapping>`* 标签声明了与该 servlet 相应的匹配规则，每个 *`<url-pattern>`* 标签代表 1 个匹配规则；
+- 当 servlet 容器接收到浏览器发起的一个 url 请求后，容器会用 url 减去当前应用的上下文路径，以剩余的字符串作为 servlet 映射，假如 url 是 *`http://localhost:8080/appDemo/index.html`*，其应用上下文是 appDemo，容器会将 *`http://localhost:8080/appDemo`* 去掉，用剩下的 *`/index.html`* 部分拿来做 servlet 的映射匹配
+- url-pattern 映射匹配过程是 **有优先顺序** 的，而且当有一个 servlet 匹配成功以后，就不会去理会剩下的 servlet了。
+
+#### 精确匹配
+
+精确匹配是优先级最高，最不会产生歧义的匹配。
+
+```xml
+<servlet-mapping>
+  <servlet-name>...</servlet-name>
+  <url-pattern>/user/users.html</url-pattern>
+  <url-pattern>/index.html</url-pattern>
+  <url-pattern>/user/addUser.action</url-pattern>
+</servlet-mapping>
+```
+
+当在浏览器中输入如下几种 url 时，都会被匹配到该 servlet
+
+```text
+http://localhost:8080/appDemo/user/users.html
+http://localhost:8080/appDemo/index.html
+http://localhost:8080/appDemo/user/addUser.action
+```
+
+::: warning 注意
+
+`http://localhost:8080/appDemo/user/addUser/`（最后有斜杠符）是非法的 url，不会被当作 `http://localhost:8081/appDemo/user/addUser`（最后没有斜杠府）识别。
+
+:::
+
+另外上述 url 后面可以跟任意的查询条件，都会被匹配，如
+
+`http://localhost:8080/appDemo/user/addUser?username=Tom&age=23` 会被匹配。
+
+#### 路径匹配
+
+路径匹配的优先级仅次于精确匹配。
+
+以 `/` 字符开头，并以 `/*` 结尾的字符串都表示是路径匹配。
+
+```xml
+<servlet-mapping>
+    <servlet-name>...</servlet-name>
+    <url-pattern>/user/*</url-pattern>
+</servlet-mapping>
+```
+
+上述规则表示 URL 以 `/user` 开始，后面的路径可以任意。比如下面的 url 都会被匹配。
+
+```text
+http://localhost:8080/appDemo/user/users.html
+http://localhost:8080/appDemo/user/addUser.action
+http://localhost:8080/appDemo/user/updateUser.do 
+```
+
+#### 扩展名匹配
+
+也叫 **后缀匹配** 。
+
+以 `*.` 开头的字符串被用于扩展名匹配
+
+```xml
+<servlet-mapping>
+    <servlet-name>...</servlet-name>
+    <url-pattern>*.jsp</url-pattern>
+    <url-pattern>*.action</url-pattern>
+</servlet-mapping>
+```
+
+则任何扩展名为 jsp 或 action 的 url 请求都会匹配，比如下面的 url 都会被匹配
+
+```text
+http://localhost:8080/appDemo/user/users.jsp
+http://localhost:8080/appDemo/toHome.action
+```
+
+#### 缺省匹配
+
+缺省匹配也是“兜底”的匹配，一个 url 不符合精确匹配、路径匹配、扩展品匹配的任何一种情况，那么它所触发的 Servlet 就是由缺省匹配决定。
+
+```xml
+<servlet-mapping>
+    <servlet-name>...</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+```
+
+#### 注意事项 1：匹配规则不能混用
+
+匹配规则不是正则表达式规则，不要想当然的使用通配符：精确匹配、路径匹配、后缀匹配 三者 **不能混用** 。
+
+- 要么以 `/` 开头，并以 `/*` 结尾，表示路径匹配。
+- 要么以 `*.` 开头，表示后缀匹配。
+- 要么就是精确匹配。
+
+例如：
+
+- `<url-pattern>/user/*.action</url-pattern>` 是非法的
+
+另外：
+
+- `<url-pattern>/aa/*/bb</url-pattern>` 是合法的。是精确匹配，合法，
+
+#### 注意事项 2：`/*` 和 `/` 含义并不相同
+
+**`/\*`** 属于路径匹配，**`/`** 属于 default 匹配。`.jsp` 的访问（JSP Servlet）的优先级刚好『卡』在它们俩的中间！
+
+**`/\*`** 会拦截你对 .jsp 页面的访问，**`/`** 则不会。很多 404 错误均由此引起。
+
+除非是真的需要，否则不要使用 `/*` ！
+
+除非是真的需要，否则不要使用 `/*` ！
+
+除非是真的需要，否则不要使用 `/*` ！
+
+从效果上看，`/*` 和 `/` 均会拦截对静态资源的访问请求，需要特别注意。
+
+## 3. JSP
+
+Servlet 有两个缺点无法克服：
+
+- 写在 Servlet 中的所有 HTML 标签必须包含 Java 字符串，这使得处理 HTTP 响应报文的工作十分繁琐。
+- 所有的文本和 HTML 标记是硬编码的，这导致即使是表现层的微小变化，也需要重新编译代码。
+
+JSP 技术解决了上述两个问题。
+
+### JSP 概述
+
+JSP 页面本质上是一个 Servlet。当一个 JSP 页面第一次被请求时，容器（Tomcat）会将 JSP 页面转换成 Servlet 代码，如果转换成功，容器随后编译该 Servlet 类，并实例化该 Servlet 的对象，之后就是 Servlet 代码执行正常流程。
+
+```xml
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.DateFormat" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<%
+    DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.LONG);
+    String s = dateFormat.format(new Date());
+    out.println("Today is " + s);
+%>
+
+</body>
+</html>
+```
+
+在 JSP 页面中可以使用 Java 代码来生成动态页面。Java 代码可以出现在 JSP 页面中的任何位置，并通过 `<%` 和 `%>` 包括起来。其次可以使用 `page` 指令的 `import` 属性导入在 JSP 页面中使用的 Java 类型。
+
+`<% ... %>` 块被称为 **scriplet** 。
+
+在 JSP 页面中，可以使用 HTML 注释，也可以使用 JSP 特有的注释，它以 `<%--` 开始，以 `--%>` 结束。
+
+### 隐式对象
+
+对于容器传入给 Servlet 的对象，在 JSP 中，可以通过 **隐式对象** 来访问。
+
+| JSP隐式对象 | 类型                |
+| :---------- | :------------------ |
+| request     | HttpServletRequest  |
+| response    | HttpservletResponse |
+| out         | JspWriter           |
+| session     | HttpSession         |
+| application | ServletContext      |
+| config      | ServletConfig       |
+| pageContext | PageContext         |
+| page        | HttpJspPage         |
+| exception   | Throwable           |
+
+pageContext 它提供了有用的上下文信息，并通过它的方法可以获得用各种 Servlet 对象。如：`getRequest()`、`getResponse()`、`getServletContext()`、`getServletConfig()` 和 `getSession()`。
+
+此外，pageContext 中提供了另一组有趣/有用的方法：用于获取和设置**属性**的方法，即 `getAttribute()` 和 `setAttribute()` 方法。属性值可以被存储于4个范围之一：页面（Page）、请求（Request）、会话（Session）和应用程序（Application）。
+
+隐式对象 `out` 引用了一个 JspWriter 对象，它相当于 Servlet 中通过 `response.getWriter()` 方法获得的 PrintWriter 对象。
+
+### 指令
+
+指令是 JSP 语法元素的第一种类型。它们指示 JSP 如何翻译为 Servlet 。JSP 2.2 中定义了多个指令，其中以 page 最为重要。
+
+page 指令的语法如下 ：
+
+```
+<%@ page 属性1="值1" 属性2="值2" ... %>
+```
+
+**@** 和 **page** 之间的空格不是必须的。**page** 指令的常用属性如下：
+
+| 指令         | 说明                                                         | 默认值                                      |
+| :----------- | :----------------------------------------------------------- | :------------------------------------------ |
+| import       | 定义一个或多个页面中将被导入和使用的 java 类型。 如果需要同时导入多个 java 类型时，用 “,” 分隔。 | 默认值：无                                  |
+| session      | 指定本页面是否参与一个 HTTP 会话， 即，当前页面中 session 对象是否可用。 | 默认值：`true`                              |
+| pageEncoding | 指定本页面的字符编码                                         | 默认值是：`ISO-8859-1`                      |
+| contentType  | 定义隐式对象 response 的内容内省                             | 默认值：`text/html`                         |
+| errorPage    | 定义当发生错误时用来处理错误/展现错误信息的页面              | 默认值：无                                  |
+| isErrorPage  | 标识本页面是否是一个处理错误/展现错误信息的页面              | 默认值：false                               |
+| isELIgnored  | 配置是否在本页面中略 EL 表达式                               | 默认值："fasle"                             |
+| language     | 定义本页面中的脚本语言类型。                                 | 默认值：java，这也是 JSP 2.2 中唯一的选项。 |
+
+### 脚本元素
+
+一个脚本程序是一个 Java 代码块，以 `<%` 开始， 以 `%>` 结束。
+
+> 脚本元素是早期的 JSP 解决方案，随着技术的发展，在 JSP 页面中嵌入大段的 Java 代码表现出了很大的局限性，随之而来的替代方案是『**表达式**』和『**动作**』。而再往后，更新、更方便的『**EL 表达式**』又进一步替代了『表达式』和『动作』。
+
+每个 **表达式** 都会被容器执行，并使用隐式对象 out 的打印方法输出结果。
+
+表达式以 `<%=` 开始，以 `%>` 结束。`注意`，表达式必须无分号结尾。
+
+在JSP页面中，可以 **声明** 能在JSP页面中使用的变量和方法。声明以 `<%!` 开始，并以 `%>` 结束。
+
+在JSP页面中，一个生命可以出现在任何地方，并且一个页面可以有多个声明。
+
+### 动作（了解、自学）
+
+『**动作**』的目的是简化常见 scriplet 代码，将其“浓缩”成一个标签。它是早期用于分离表示层和业务层的手段，但随着其他技术的法阵（EL表达式），现在很少使用**动作**了。
+
+`<jsp:useBean>` 本质上是创建一个Java对象，“变量名”为其id属性的值，变量类型为其class属性的值。该变量在当前JSP页面可用。
+
+`<jsp:setProperty>` 和 `<jsp:getProperty>` 本质上就是调用已知对象的get/set方法，以为其设置属性值。被设置的变量由其name属性值决定，被设置的属性由其property属性决定。另外，`<jsp:setProperty>` 还需要靠value属性值来决定设置的值。
+
+`<jsp:include page="">` 动作用来动态地引用另一个资源，“另一个资源”可以是另一个 JSP 页面，或一个静态的 HTML 页面。
+
+通过其子元素 `<jsp:param name="" value="">` 可以在引入另一个 JSP 页面时，向其传参。
+
+`<jsp:forward page="">` 将当前页转向其他资源。类似于`<jsp:include>`，通过其子元素 `<jsp:param>`可以向转向的页面传参。
+
+## 4. Servlet 版本和 web.xml
+
+### Servlet 的版本和对应的 Tomcat
+
+| Tomcat 版本 | Servlet 版本 | JSP 版本 | EL 版本 | WebSocket 版本 |
+| :---------- | :----------- | :------- | :------ | :------------- |
+| 9.0.x       | 4.0          | 2.4      | 3.1     | 1.2            |
+| 8.0.x       | 3.1          | 2.3      | 3.0     | 1.1            |
+| 7.0.x       | 3.0          | 2.2      | 2.2     | 1.1            |
+| 6.0.x       | 2.5          | 2.1      | 2.1     | N/A            |
+
+不同的 Servelt 版本会影响到 **`web.xml`** 配置文件中的头部的声明。越高版本的 Servlet 功能越丰富也越强大。
+
+### 不同版本的 web.xml 声明
+
+- Servlet 3.1
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+    http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    version="3.1">
+        
+    <display-name>Servlet 3.1 Web Application</display-name>  
+  
+  </web-app>
+      
+  ```
+
+- Servlet 4.0
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee  
+    http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+    version="4.0" >
+        
+    <display-name>Servlet 4.0 Web Application</display-name>  
+  
+  </web-app>
+  ```
