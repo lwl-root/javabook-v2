@@ -268,14 +268,14 @@ docker cp 容器id:/usr/share/nginx/html/50x.html /mnt/nginx/html  //把默认�
 
 部署命令
 
-```
+```shell
 docker run -d 
 -p 80:80 
 --name nginx 
 -v /mnt/nginx/html:/usr/share/nginx/html 
--v /mnt/nginx/conf/nginx.conf:/etc/nginx/nginx.conf 
+-v /mnt/nginx/nginx.conf:/etc/nginx/nginx.conf 
 -v /mnt/nginx/logs:/var/log/nginx 
--v /mnt/nginx/conf/conf.d:/etc/nginx/conf.d 
+-v /mnt/nginx/conf/conf:/etc/nginx/conf.d 
 nginx
 ```
 

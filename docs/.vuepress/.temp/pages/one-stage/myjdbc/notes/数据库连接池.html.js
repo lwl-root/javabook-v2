@@ -77,14 +77,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1641659655000,
-    "contributors": [
-      {
-        "name": "卢文龙",
-        "email": "1251601077@qq.com",
-        "commits": 3
-      }
-    ]
+    "updatedTime": 1641659655000
   },
   "filePathRelative": "one-stage/myjdbc/notes/数据库连接池.md"
 }

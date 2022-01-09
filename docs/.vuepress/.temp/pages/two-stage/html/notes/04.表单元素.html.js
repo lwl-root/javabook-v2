@@ -32,14 +32,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1641659655000,
-    "contributors": [
-      {
-        "name": "卢文龙",
-        "email": "1251601077@qq.com",
-        "commits": 5
-      }
-    ]
+    "updatedTime": 1641659655000
   },
   "filePathRelative": "two-stage/html/notes/04.表单元素.md"
 }

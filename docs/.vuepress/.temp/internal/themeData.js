@@ -1,6 +1,6 @@
 export const themeData = {
-  "search": true,
   "logo": "logo.png",
+  "contributors": false,
   "sidebarDepth": 1,
   "lastUpdated": "Last Updated",
   "navbar": [
@@ -445,7 +445,6 @@ export const themeData = {
   "editLink": true,
   "editLinkText": "Edit this page",
   "lastUpdatedText": "Last Updated",
-  "contributors": true,
   "contributorsText": "Contributors",
   "notFound": [
     "There's nothing here.",

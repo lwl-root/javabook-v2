@@ -7,14 +7,7 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": 1641659655000,
-    "contributors": [
-      {
-        "name": "卢文龙",
-        "email": "1251601077@qq.com",
-        "commits": 4
-      }
-    ]
+    "updatedTime": 1641659655000
   },
   "filePathRelative": "two-stage/html/notes/02.单标签元素与双标签元素.md"
 }

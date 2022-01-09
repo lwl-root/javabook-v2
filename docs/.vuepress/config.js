@@ -17,8 +17,8 @@ module.exports = {
   // 主题和它的配置
   theme: '@vuepress/theme-default',
   themeConfig: {
-    search: true,
     logo: 'logo.png',
+    contributors: false,
     sidebarDepth: 1,
     lastUpdated: 'Last Updated',
 	  navbar: require("./nav.js"),
