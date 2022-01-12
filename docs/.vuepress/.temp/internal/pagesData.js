@@ -113,6 +113,74 @@ export const pagesData = {
   "v-43c5f0ee": () => import(/* webpackChunkName: "v-43c5f0ee" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/threadsafe/notes/c00.atomic.html.js").then(({ data }) => data),
   // path: /one-stage/threadsafe/notes/c02.CAS.html
   "v-32a88122": () => import(/* webpackChunkName: "v-32a88122" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/threadsafe/notes/c02.CAS.html.js").then(({ data }) => data),
+  // path: /pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
+  "v-5379c221": () => import(/* webpackChunkName: "v-5379c221" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/数据结构与算法入门.html.js").then(({ data }) => data),
+  // path: /utilse/docker/notes/docker%E6%90%AD%E5%BB%BA%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8.html
+  "v-fe97d6ec": () => import(/* webpackChunkName: "v-fe97d6ec" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/docker/notes/docker搭建常用容器.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/bucket4j.html
+  "v-055517d7": () => import(/* webpackChunkName: "v-055517d7" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/bucket4j.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/datasource.html
+  "v-6a80355c": () => import(/* webpackChunkName: "v-6a80355c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/datasource.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/jackson.html
+  "v-048b6a88": () => import(/* webpackChunkName: "v-048b6a88" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/jackson.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/javatuples.html
+  "v-3e9ae04a": () => import(/* webpackChunkName: "v-3e9ae04a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/javatuples.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/jwt.html
+  "v-730966d8": () => import(/* webpackChunkName: "v-730966d8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/jwt.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/lombok.html
+  "v-794893c3": () => import(/* webpackChunkName: "v-794893c3" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/lombok.html.js").then(({ data }) => data),
+  // path: /utilse/else/notes/slf4j.html
+  "v-49be7490": () => import(/* webpackChunkName: "v-49be7490" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/slf4j.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/docker-compose.html
+  "v-b88c0688": () => import(/* webpackChunkName: "v-b88c0688" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/docker-compose.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html
+  "v-1beec3fe": () => import(/* webpackChunkName: "v-1beec3fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/git常用命令汇总.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/jdbc.html
+  "v-127a7c66": () => import(/* webpackChunkName: "v-127a7c66" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/jdbc.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/logback.html
+  "v-ce851a34": () => import(/* webpackChunkName: "v-ce851a34" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/logback.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/maven-xml.html
+  "v-515ed708": () => import(/* webpackChunkName: "v-515ed708" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/maven-xml.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/mybatis-xml.html
+  "v-7615db34": () => import(/* webpackChunkName: "v-7615db34" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/mybatis-xml.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/ssm-java.html
+  "v-0dcf05df": () => import(/* webpackChunkName: "v-0dcf05df" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/ssm-java.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/charMatcher.html
+  "v-2edd9dbe": () => import(/* webpackChunkName: "v-2edd9dbe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/charMatcher.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B7%A5%E5%85%B7%E7%B1%BB.html
+  "v-b8c4f246": () => import(/* webpackChunkName: "v-b8c4f246" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/字符串工具类.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E6%95%B0%E7%BB%84%E5%B7%A5%E5%85%B7%E7%B1%BB.html
+  "v-05800ab6": () => import(/* webpackChunkName: "v-05800ab6" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/数组工具类.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E6%96%87%E4%BB%B6.html
+  "v-308591a8": () => import(/* webpackChunkName: "v-308591a8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/文件.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E6%96%B0%E9%9B%86%E5%90%88.html
+  "v-7dadfefa": () => import(/* webpackChunkName: "v-7dadfefa" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/新集合.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E6%A0%A1%E9%AA%8C%E5%B7%A5%E5%85%B7.html
+  "v-00d658d2": () => import(/* webpackChunkName: "v-00d658d2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/校验工具.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E8%BD%AC%E6%8D%A2.html
+  "v-4b259c56": () => import(/* webpackChunkName: "v-4b259c56" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/转换.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%B7%A5%E5%85%B7%E7%B1%BB.html
+  "v-276c1774": () => import(/* webpackChunkName: "v-276c1774" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/迭代器工具类.html.js").then(({ data }) => data),
+  // path: /utilse/guava/notes/%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB.html
+  "v-4cdf575b": () => import(/* webpackChunkName: "v-4cdf575b" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/集合工具类.html.js").then(({ data }) => data),
+  // path: /utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html
+  "v-6b5b42fa": () => import(/* webpackChunkName: "v-6b5b42fa" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/markdown/notes/Markdown基本使用.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/Base64Util.html
+  "v-4d1116be": () => import(/* webpackChunkName: "v-4d1116be" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/Base64Util.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/EventBus.html
+  "v-0b934dc9": () => import(/* webpackChunkName: "v-0b934dc9" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/EventBus.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/FileCopyUtils.html
+  "v-38a0cfc3": () => import(/* webpackChunkName: "v-38a0cfc3" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/FileCopyUtils.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/ReflectionUtils.html
+  "v-51b7e446": () => import(/* webpackChunkName: "v-51b7e446" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/ReflectionUtils.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/ResolvableType.html
+  "v-411902e2": () => import(/* webpackChunkName: "v-411902e2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/ResolvableType.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/Resource.html
+  "v-06ba977e": () => import(/* webpackChunkName: "v-06ba977e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/Resource.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/StreamUtils.html
+  "v-0512401c": () => import(/* webpackChunkName: "v-0512401c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/StreamUtils.html.js").then(({ data }) => data),
+  // path: /utilse/spring-utils/notes/top-4.html
+  "v-500d3cf2": () => import(/* webpackChunkName: "v-500d3cf2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/top-4.html.js").then(({ data }) => data),
   // path: /two-stage/html/notes/01.CSS%E9%80%89%E6%8B%A9%E5%99%A8.html
   "v-9fcfdbe8": () => import(/* webpackChunkName: "v-9fcfdbe8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/html/notes/01.CSS选择器.html.js").then(({ data }) => data),
   // path: /two-stage/html/notes/01.ES6%E6%96%B0%E7%89%B9%E6%80%A7.html
@@ -193,72 +261,8 @@ export const pagesData = {
   "v-232e0f13": () => import(/* webpackChunkName: "v-232e0f13" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/servlet/notes/javaWeb高级.html.js").then(({ data }) => data),
   // path: /two-stage/servlet/notes/Servlet%E5%9F%BA%E7%A1%80.html
   "v-1debbfc2": () => import(/* webpackChunkName: "v-1debbfc2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/servlet/notes/Servlet基础.html.js").then(({ data }) => data),
-  // path: /utilse/docker/notes/docker%E6%90%AD%E5%BB%BA%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8.html
-  "v-fe97d6ec": () => import(/* webpackChunkName: "v-fe97d6ec" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/docker/notes/docker搭建常用容器.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/bucket4j.html
-  "v-055517d7": () => import(/* webpackChunkName: "v-055517d7" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/bucket4j.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/datasource.html
-  "v-6a80355c": () => import(/* webpackChunkName: "v-6a80355c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/datasource.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/jackson.html
-  "v-048b6a88": () => import(/* webpackChunkName: "v-048b6a88" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/jackson.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/javatuples.html
-  "v-3e9ae04a": () => import(/* webpackChunkName: "v-3e9ae04a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/javatuples.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/jwt.html
-  "v-730966d8": () => import(/* webpackChunkName: "v-730966d8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/jwt.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/lombok.html
-  "v-794893c3": () => import(/* webpackChunkName: "v-794893c3" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/lombok.html.js").then(({ data }) => data),
-  // path: /utilse/else/notes/slf4j.html
-  "v-49be7490": () => import(/* webpackChunkName: "v-49be7490" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/slf4j.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/docker-compose.html
-  "v-b88c0688": () => import(/* webpackChunkName: "v-b88c0688" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/docker-compose.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html
-  "v-1beec3fe": () => import(/* webpackChunkName: "v-1beec3fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/git常用命令汇总.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/jdbc.html
-  "v-127a7c66": () => import(/* webpackChunkName: "v-127a7c66" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/jdbc.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/logback.html
-  "v-ce851a34": () => import(/* webpackChunkName: "v-ce851a34" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/logback.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/maven-xml.html
-  "v-515ed708": () => import(/* webpackChunkName: "v-515ed708" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/maven-xml.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/mybatis-xml.html
-  "v-7615db34": () => import(/* webpackChunkName: "v-7615db34" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/mybatis-xml.html.js").then(({ data }) => data),
-  // path: /utilse/gist/notes/ssm-java.html
-  "v-0dcf05df": () => import(/* webpackChunkName: "v-0dcf05df" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/ssm-java.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/charMatcher.html
-  "v-2edd9dbe": () => import(/* webpackChunkName: "v-2edd9dbe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/charMatcher.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B7%A5%E5%85%B7%E7%B1%BB.html
-  "v-b8c4f246": () => import(/* webpackChunkName: "v-b8c4f246" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/字符串工具类.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E6%95%B0%E7%BB%84%E5%B7%A5%E5%85%B7%E7%B1%BB.html
-  "v-05800ab6": () => import(/* webpackChunkName: "v-05800ab6" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/数组工具类.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E6%96%87%E4%BB%B6.html
-  "v-308591a8": () => import(/* webpackChunkName: "v-308591a8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/文件.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E6%96%B0%E9%9B%86%E5%90%88.html
-  "v-7dadfefa": () => import(/* webpackChunkName: "v-7dadfefa" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/新集合.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E6%A0%A1%E9%AA%8C%E5%B7%A5%E5%85%B7.html
-  "v-00d658d2": () => import(/* webpackChunkName: "v-00d658d2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/校验工具.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E8%BD%AC%E6%8D%A2.html
-  "v-4b259c56": () => import(/* webpackChunkName: "v-4b259c56" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/转换.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%B7%A5%E5%85%B7%E7%B1%BB.html
-  "v-276c1774": () => import(/* webpackChunkName: "v-276c1774" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/迭代器工具类.html.js").then(({ data }) => data),
-  // path: /utilse/guava/notes/%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB.html
-  "v-4cdf575b": () => import(/* webpackChunkName: "v-4cdf575b" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/集合工具类.html.js").then(({ data }) => data),
-  // path: /utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html
-  "v-6b5b42fa": () => import(/* webpackChunkName: "v-6b5b42fa" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/markdown/notes/Markdown基本使用.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/Base64Util.html
-  "v-4d1116be": () => import(/* webpackChunkName: "v-4d1116be" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/Base64Util.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/EventBus.html
-  "v-0b934dc9": () => import(/* webpackChunkName: "v-0b934dc9" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/EventBus.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/FileCopyUtils.html
-  "v-38a0cfc3": () => import(/* webpackChunkName: "v-38a0cfc3" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/FileCopyUtils.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/ReflectionUtils.html
-  "v-51b7e446": () => import(/* webpackChunkName: "v-51b7e446" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/ReflectionUtils.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/ResolvableType.html
-  "v-411902e2": () => import(/* webpackChunkName: "v-411902e2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/ResolvableType.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/Resource.html
-  "v-06ba977e": () => import(/* webpackChunkName: "v-06ba977e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/Resource.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/StreamUtils.html
-  "v-0512401c": () => import(/* webpackChunkName: "v-0512401c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/StreamUtils.html.js").then(({ data }) => data),
-  // path: /utilse/spring-utils/notes/top-4.html
-  "v-500d3cf2": () => import(/* webpackChunkName: "v-500d3cf2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/top-4.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
+  // path: /pascal/basics/notes/.~%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
+  "v-6e60ce9e": () => import(/* webpackChunkName: "v-6e60ce9e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/.~数据结构与算法入门.html.js").then(({ data }) => data),
 }

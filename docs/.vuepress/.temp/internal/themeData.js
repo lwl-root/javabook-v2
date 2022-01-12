@@ -78,6 +78,15 @@ export const themeData = {
           "link": "/two-stage/mybatis/notes/01.关于mybatis.html"
         }
       ]
+    },
+    {
+      "text": "数据结构与算法",
+      "children": [
+        {
+          "text": "入门",
+          "link": "/pascal/basics/notes/数据结构与算法入门.html"
+        }
+      ]
     }
   ],
   "sidebar": {
@@ -430,6 +439,16 @@ export const themeData = {
         "text": "扩展",
         "collapsable": false,
         "children": []
+      }
+    ],
+    "/pascal/basics": [
+      {
+        "text": "数据结构与算法",
+        "collapsable": false,
+        "link": "/pascal/basics/notes/数据结构与算法入门.html",
+        "children": [
+          "数据结构与算法入门.html"
+        ]
       }
     ]
   },

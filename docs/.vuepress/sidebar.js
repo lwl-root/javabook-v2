@@ -18,4 +18,6 @@ module.exports = {
 	'/two-stage/servlet': require('../two-stage/servlet/sidebar'),
 	'/two-stage/junit': require('../two-stage/junit/sidebar'),
 	'/two-stage/mybatis': require('../two-stage/mybatis/sidebar'),
+
+	'/pascal/basics': require('../pascal/basics/sidebar'),
 }
