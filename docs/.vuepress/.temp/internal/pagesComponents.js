@@ -51,6 +51,36 @@ export const pagesComponents = {
   "v-bc1582fe": defineAsyncComponent(() => import(/* webpackChunkName: "v-bc1582fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/java8/notes/stream.html.vue")),
   // path: /one-stage/java8/notes/%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95.html
   "v-761b9821": defineAsyncComponent(() => import(/* webpackChunkName: "v-761b9821" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/java8/notes/默认方法.html.vue")),
+  // path: /one-stage/myjdbc/notes/JDBC%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html
+  "v-5bdb09f2": defineAsyncComponent(() => import(/* webpackChunkName: "v-5bdb09f2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/JDBC中的事务.html.vue")),
+  // path: /one-stage/myjdbc/notes/JDBC%E5%9F%BA%E7%A1%80.html
+  "v-75aaab3e": defineAsyncComponent(() => import(/* webpackChunkName: "v-75aaab3e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/JDBC基础.html.vue")),
+  // path: /one-stage/myjdbc/notes/JDBC%E9%AB%98%E7%BA%A7.html
+  "v-5c5cdfa2": defineAsyncComponent(() => import(/* webpackChunkName: "v-5c5cdfa2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/JDBC高级.html.vue")),
+  // path: /one-stage/myjdbc/notes/Service%E5%B1%82%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html
+  "v-5056613c": defineAsyncComponent(() => import(/* webpackChunkName: "v-5056613c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/Service层中的事务.html.vue")),
+  // path: /one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html
+  "v-52458d85": defineAsyncComponent(() => import(/* webpackChunkName: "v-52458d85" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/数据库连接池.html.vue")),
+  // path: /one-stage/mysql/notes/CUD.html
+  "v-1280e213": defineAsyncComponent(() => import(/* webpackChunkName: "v-1280e213" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/CUD.html.vue")),
+  // path: /one-stage/mysql/notes/%E4%BA%8B%E5%8A%A1.html
+  "v-0adb6560": defineAsyncComponent(() => import(/* webpackChunkName: "v-0adb6560" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/事务.html.vue")),
+  // path: /one-stage/mysql/notes/%E6%93%8D%E4%BD%9CDatabase.html
+  "v-bcf5f2c4": defineAsyncComponent(() => import(/* webpackChunkName: "v-bcf5f2c4" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/操作Database.html.vue")),
+  // path: /one-stage/mysql/notes/%E6%93%8D%E4%BD%9CTable.html
+  "v-61a82f6b": defineAsyncComponent(() => import(/* webpackChunkName: "v-61a82f6b" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/操作Table.html.vue")),
+  // path: /one-stage/mysql/notes/%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5.html
+  "v-0fd891fe": defineAsyncComponent(() => import(/* webpackChunkName: "v-0fd891fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/查询语句.html.vue")),
+  // path: /one-stage/mysql/notes/%E7%94%A8%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86.html
+  "v-410d869e": defineAsyncComponent(() => import(/* webpackChunkName: "v-410d869e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/用户和权限管理.html.vue")),
+  // path: /one-stage/mysql/notes/%E7%B4%A2%E5%BC%95.html
+  "v-ef30a69a": defineAsyncComponent(() => import(/* webpackChunkName: "v-ef30a69a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/索引.html.vue")),
+  // path: /one-stage/mysql/notes/%E7%B4%A2%E5%BC%95%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96.html
+  "v-13adc9fb": defineAsyncComponent(() => import(/* webpackChunkName: "v-13adc9fb" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/索引和数据库优化.html.vue")),
+  // path: /one-stage/mysql/notes/%E8%A7%86%E5%9B%BE.html
+  "v-5ae4f91e": defineAsyncComponent(() => import(/* webpackChunkName: "v-5ae4f91e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/视图.html.vue")),
+  // path: /pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
+  "v-5379c221": defineAsyncComponent(() => import(/* webpackChunkName: "v-5379c221" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/数据结构与算法入门.html.vue")),
   // path: /one-stage/javathread/notes/Executors.html
   "v-ba83890e": defineAsyncComponent(() => import(/* webpackChunkName: "v-ba83890e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/javathread/notes/Executors.html.vue")),
   // path: /one-stage/javathread/notes/runnable.html
@@ -71,36 +101,6 @@ export const pagesComponents = {
   "v-58b96cce": defineAsyncComponent(() => import(/* webpackChunkName: "v-58b96cce" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/javathread/notes/线程的调用.html.vue")),
   // path: /one-stage/javathread/notes/%E9%94%81.html
   "v-8a66f9bc": defineAsyncComponent(() => import(/* webpackChunkName: "v-8a66f9bc" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/javathread/notes/锁.html.vue")),
-  // path: /one-stage/myjdbc/notes/JDBC%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html
-  "v-5bdb09f2": defineAsyncComponent(() => import(/* webpackChunkName: "v-5bdb09f2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/JDBC中的事务.html.vue")),
-  // path: /one-stage/myjdbc/notes/JDBC%E5%9F%BA%E7%A1%80.html
-  "v-75aaab3e": defineAsyncComponent(() => import(/* webpackChunkName: "v-75aaab3e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/JDBC基础.html.vue")),
-  // path: /one-stage/myjdbc/notes/JDBC%E9%AB%98%E7%BA%A7.html
-  "v-5c5cdfa2": defineAsyncComponent(() => import(/* webpackChunkName: "v-5c5cdfa2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/JDBC高级.html.vue")),
-  // path: /one-stage/myjdbc/notes/Service%E5%B1%82%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html
-  "v-5056613c": defineAsyncComponent(() => import(/* webpackChunkName: "v-5056613c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/Service层中的事务.html.vue")),
-  // path: /one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html
-  "v-52458d85": defineAsyncComponent(() => import(/* webpackChunkName: "v-52458d85" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/myjdbc/notes/数据库连接池.html.vue")),
-  // path: /pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
-  "v-5379c221": defineAsyncComponent(() => import(/* webpackChunkName: "v-5379c221" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/数据结构与算法入门.html.vue")),
-  // path: /one-stage/mysql/notes/CUD.html
-  "v-1280e213": defineAsyncComponent(() => import(/* webpackChunkName: "v-1280e213" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/CUD.html.vue")),
-  // path: /one-stage/mysql/notes/%E4%BA%8B%E5%8A%A1.html
-  "v-0adb6560": defineAsyncComponent(() => import(/* webpackChunkName: "v-0adb6560" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/事务.html.vue")),
-  // path: /one-stage/mysql/notes/%E6%93%8D%E4%BD%9CDatabase.html
-  "v-bcf5f2c4": defineAsyncComponent(() => import(/* webpackChunkName: "v-bcf5f2c4" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/操作Database.html.vue")),
-  // path: /one-stage/mysql/notes/%E6%93%8D%E4%BD%9CTable.html
-  "v-61a82f6b": defineAsyncComponent(() => import(/* webpackChunkName: "v-61a82f6b" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/操作Table.html.vue")),
-  // path: /one-stage/mysql/notes/%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5.html
-  "v-0fd891fe": defineAsyncComponent(() => import(/* webpackChunkName: "v-0fd891fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/查询语句.html.vue")),
-  // path: /one-stage/mysql/notes/%E7%94%A8%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86.html
-  "v-410d869e": defineAsyncComponent(() => import(/* webpackChunkName: "v-410d869e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/用户和权限管理.html.vue")),
-  // path: /one-stage/mysql/notes/%E7%B4%A2%E5%BC%95.html
-  "v-ef30a69a": defineAsyncComponent(() => import(/* webpackChunkName: "v-ef30a69a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/索引.html.vue")),
-  // path: /one-stage/mysql/notes/%E7%B4%A2%E5%BC%95%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96.html
-  "v-13adc9fb": defineAsyncComponent(() => import(/* webpackChunkName: "v-13adc9fb" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/索引和数据库优化.html.vue")),
-  // path: /one-stage/mysql/notes/%E8%A7%86%E5%9B%BE.html
-  "v-5ae4f91e": defineAsyncComponent(() => import(/* webpackChunkName: "v-5ae4f91e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/mysql/notes/视图.html.vue")),
   // path: /one-stage/threadsafe/notes/a01.%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8.html
   "v-314f110d": defineAsyncComponent(() => import(/* webpackChunkName: "v-314f110d" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/threadsafe/notes/a01.线程安全.html.vue")),
   // path: /one-stage/threadsafe/notes/a02.ThreadLocal.html
