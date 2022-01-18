@@ -12,7 +12,7 @@
 <h3 id="强类型语言-变量的类型" tabindex="-1"><a class="header-anchor" href="#强类型语言-变量的类型" aria-hidden="true">#</a> 强类型语言：变量的类型</h3>
 <p>C（以及 C++、Java 等）语言都是『强类型』语言。所谓的强类型语言的标志就是『变量是有类型的』，也就是说，变量的类型和变量中所存储的值必须一致。</p>
 <p>以上面类比的『盒子』为例，这相当于说，这是一个放苹果的盒子，那么，无论未来这个盒子中放的是一个大苹果，还是一个小苹果，放的是一个红苹果，还是一个绿苹果，放的是一个进口苹果，还是一个本地苹果，这都是次要问题，最最基本一个问题是：是这个盒子里必须放苹果！放橘子、橙子、梨子、香蕉都不行。</p>
-<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span> <span class="token comment">// 此处会报语法错误</span>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token char">'a'</span><span class="token punctuation">;</span> <span class="token comment">// 此处会报语法错误</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>以具体的代码为例，上述代码就是错误的：变量 i 的类型是 int 类型，那么变量 i 中必须存放整型的数据，例如：10，9527，10086 等，而你将一个字符 'a' 赋值给它，那么值的类型和变量的类型不一样，这就是一个语法错误。</p>
 <h3 id="特殊类型的变量-指针变量" tabindex="-1"><a class="header-anchor" href="#特殊类型的变量-指针变量" aria-hidden="true">#</a> 特殊类型的变量：指针变量</h3>
 <p>上面说到过，变量就代表着一块内存空间，变量名就相当于是这块内存空间的代号。除了通过变量名能让你找到那块内存，进而操作它之外，还有一样东西能让你找到这块内存，进而操作它：<strong>内存的地址</strong> 。</p>

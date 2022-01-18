@@ -56,8 +56,8 @@ obj<span class="token punctuation">.</span><span class="token function-variable 
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="对象字面量" tabindex="-1"><a class="header-anchor" href="#对象字面量" aria-hidden="true">#</a> 对象字面量</h3>
 <p>还可以使用 <strong><code>{ }</code></strong> 语法创建对象（及对象字面量语法），此时可以直接为对象属性和方法赋值：</p>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">var</span> obje <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name <span class="token operator">:</span> <span class="token string">"tom"</span><span class="token punctuation">,</span>
-  age<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">"tom"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
   <span class="token function-variable function">sayHello</span> <span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>

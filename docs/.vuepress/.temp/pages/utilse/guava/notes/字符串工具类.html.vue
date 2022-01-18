@@ -84,14 +84,14 @@
 <p>通过 <em>CharMatcher</em> 对字符串进行操作（包括但不仅包括『替换』），也是分为两个步：选中、匹配字符串中的某部分，而后进行某种操作。</p>
 <p>伪代码：</p>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// 结果："hell wrld"</span>
-<span class="token class-name">CharMatcher</span><span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token string">'o'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeFrom</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span>
+<span class="token class-name">CharMatcher</span><span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token char">'o'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeFrom</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul>
 <li><strong>is</strong> 方法表示所需要选中、匹配的内容</li>
 <li><strong>removeFrom</strong> 表示对目标字符串中所选中的内容进行的操作。上例中是删除。</li>
 </ul>
 <p>伪代码：</p>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">// 结果："heLLo worLd" </span>
-<span class="token class-name">CharMatcher</span><span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token string">'l'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceFrom</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">,</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
+<span class="token class-name">CharMatcher</span><span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token char">'l'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceFrom</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">,</span> <span class="token char">'L'</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>CharMatcher 提供的选中、匹配方法包括但不仅包括 <strong>is</strong> 方法，提供的操作方法包括但不仅包括 <strong>removeFrom</strong> 方法和 <strong>replaceFrom</strong> 方法。</p>
 <p>更多关于 CharMatcher 对字符串的匹配功能，见另一篇笔记。</p>
 </template>

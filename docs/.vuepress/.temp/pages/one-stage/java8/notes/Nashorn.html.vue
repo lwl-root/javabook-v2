@@ -14,7 +14,7 @@ jjs<span class="token operator">></span> <span class="token function">quit</span
 <p>打开控制台，输入以下命令：</p>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>$ jjs <span class="token operator">--</span> a b c
 jjs<span class="token operator">></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'字母: '</span> <span class="token operator">+</span>arguments<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">", "</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-字母<span class="token operator">:</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c
+<span class="token literal-property property">字母</span><span class="token operator">:</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="jjs-执行-js-文件" tabindex="-1"><a class="header-anchor" href="#jjs-执行-js-文件" aria-hidden="true">#</a> jjs 执行 .js 文件</h2>
 <p>例如，我们创建一个具有如下内容的 sample.js 文件：</p>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

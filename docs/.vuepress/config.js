@@ -23,5 +23,15 @@ module.exports = {
         lastUpdated: 'Last Updated',
         navbar: require("./nav.js"),
         sidebar: require("./sidebar.js"),
-    }
+
+    },
+
+    plugins: [
+        [
+            '@vuepress/plugin-search',
+            {
+                maxSuggestions: 10,
+            },
+        ],
+    ],
 }
