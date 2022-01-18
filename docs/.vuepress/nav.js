@@ -34,7 +34,7 @@ module.exports = [
 		]
 	},
 	/*{
-		text:'第三阶段',//link: '/three-stage/',
+		text:'三',//link: '/three-stage/',
 		items: [
 			{text:'Maven',link: '/three-stage/guava/'},
 			{text:'Spring',link: '/three-stage/spring-util/'},
@@ -48,7 +48,7 @@ module.exports = [
 		]
 	},
 	{
-		text:'第四阶段',//link: '/four-stage/',
+		text:'四',//link: '/four-stage/',
 		items: [
 			{text:'SpringCloud',link: '/four-stage/guava/'},
 			{text:'RabbitMQ',link: '/four-stage/spring-util/'},
@@ -79,7 +79,13 @@ module.exports = [
 	{
 		text:'数据结构与算法',
 		children: [
-			{text:'入门',link: '/pascal/basics/notes/数据结构与算法入门.html'},
+			{text:'入门',link: '/pascal/list/notes/数据结构与算法入门.html'},
+		]
+	},
+	{
+		text:'日常积累',
+		children: [
+			{text:'集合相关',link: '/demo/list/notes/List去重.html'},
 		]
 	},
 ]

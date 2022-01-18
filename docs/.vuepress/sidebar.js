@@ -20,4 +20,6 @@ module.exports = {
 	'/two-stage/mybatis': require('../two-stage/mybatis/sidebar'),
 
 	'/pascal/basics': require('../pascal/basics/sidebar'),
+
+	'/demo/list': require('../demo/list/sidebar'),
 }

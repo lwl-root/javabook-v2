@@ -84,7 +84,16 @@ export const themeData = {
       "children": [
         {
           "text": "入门",
-          "link": "/pascal/basics/notes/数据结构与算法入门.html"
+          "link": "/pascal/list/notes/数据结构与算法入门.html"
+        }
+      ]
+    },
+    {
+      "text": "日常积累",
+      "children": [
+        {
+          "text": "集合相关",
+          "link": "/demo/list/notes/List去重.html"
         }
       ]
     }
@@ -445,9 +454,19 @@ export const themeData = {
       {
         "text": "数据结构与算法",
         "collapsable": false,
-        "link": "/pascal/basics/notes/数据结构与算法入门.html",
+        "link": "/pascal/list/notes/数据结构与算法入门.html",
         "children": [
           "数据结构与算法入门.html"
+        ]
+      }
+    ],
+    "/demo/list": [
+      {
+        "text": "集合相关",
+        "collapsable": false,
+        "link": "/demo/list/notes/List去重.html",
+        "children": [
+          "List去重.html"
         ]
       }
     ]
