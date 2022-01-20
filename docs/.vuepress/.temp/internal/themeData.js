@@ -94,6 +94,10 @@ export const themeData = {
         {
           "text": "集合相关",
           "link": "/demo/list/notes/List去重.html"
+        },
+        {
+          "text": "反射相关",
+          "link": "/demo/reflect/notes/动态代理.html"
         }
       ]
     }
@@ -467,6 +471,16 @@ export const themeData = {
         "link": "/demo/list/notes/List去重.html",
         "children": [
           "List去重.html"
+        ]
+      }
+    ],
+    "/demo/reflect": [
+      {
+        "text": "反射相关",
+        "collapsable": false,
+        "link": "/demo/list/notes/动态代理.html",
+        "children": [
+          "动态代理.html"
         ]
       }
     ]

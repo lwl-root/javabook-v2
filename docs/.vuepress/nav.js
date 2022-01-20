@@ -86,6 +86,7 @@ module.exports = [
         text: '日常积累',
         children: [
             {text: '集合相关', link: '/demo/list/notes/List去重.html'},
+            {text: '反射相关', link: '/demo/reflect/notes/动态代理.html'},
         ]
     },
 ]

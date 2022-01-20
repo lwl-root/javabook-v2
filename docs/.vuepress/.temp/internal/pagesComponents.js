@@ -5,6 +5,8 @@ export const pagesComponents = {
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/index.html.vue")),
   // path: /demo/list/notes/list%E5%8E%BB%E9%87%8D.html
   "v-414c719e": defineAsyncComponent(() => import(/* webpackChunkName: "v-414c719e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/list/notes/list去重.html.vue")),
+  // path: /demo/reflect/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html
+  "v-3433a9cc": defineAsyncComponent(() => import(/* webpackChunkName: "v-3433a9cc" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/reflect/notes/动态代理.html.vue")),
   // path: /one-stage/java/notes/classpath.html
   "v-2bdc2934": defineAsyncComponent(() => import(/* webpackChunkName: "v-2bdc2934" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/java/notes/classpath.html.vue")),
   // path: /one-stage/java/notes/java%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB.html
@@ -119,20 +121,6 @@ export const pagesComponents = {
   "v-32a88122": defineAsyncComponent(() => import(/* webpackChunkName: "v-32a88122" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/threadsafe/notes/c02.CAS.html.vue")),
   // path: /pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
   "v-5379c221": defineAsyncComponent(() => import(/* webpackChunkName: "v-5379c221" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/数据结构与算法入门.html.vue")),
-  // path: /two-stage/junit/notes/mockito.html
-  "v-02e683d9": defineAsyncComponent(() => import(/* webpackChunkName: "v-02e683d9" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/mockito.html.vue")),
-  // path: /two-stage/junit/notes/MockMvc.html
-  "v-05633ea3": defineAsyncComponent(() => import(/* webpackChunkName: "v-05633ea3" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/MockMvc.html.vue")),
-  // path: /two-stage/junit/notes/spring-@sql.html
-  "v-3fe6d4e5": defineAsyncComponent(() => import(/* webpackChunkName: "v-3fe6d4e5" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/spring-@sql.html.vue")),
-  // path: /two-stage/junit/notes/spring-boot.html
-  "v-1559a3fe": defineAsyncComponent(() => import(/* webpackChunkName: "v-1559a3fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/spring-boot.html.vue")),
-  // path: /two-stage/junit/notes/spring-test-junit5.html
-  "v-7ee3e55d": defineAsyncComponent(() => import(/* webpackChunkName: "v-7ee3e55d" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/spring-test-junit5.html.vue")),
-  // path: /two-stage/junit/notes/TDD.html
-  "v-175b241f": defineAsyncComponent(() => import(/* webpackChunkName: "v-175b241f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/TDD.html.vue")),
-  // path: /two-stage/junit/notes/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html
-  "v-116e98e2": defineAsyncComponent(() => import(/* webpackChunkName: "v-116e98e2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/基本概念.html.vue")),
   // path: /two-stage/html/notes/01.CSS%E9%80%89%E6%8B%A9%E5%99%A8.html
   "v-9fcfdbe8": defineAsyncComponent(() => import(/* webpackChunkName: "v-9fcfdbe8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/html/notes/01.CSS选择器.html.vue")),
   // path: /two-stage/html/notes/01.ES6%E6%96%B0%E7%89%B9%E6%80%A7.html
@@ -167,6 +155,20 @@ export const pagesComponents = {
   "v-62385c62": defineAsyncComponent(() => import(/* webpackChunkName: "v-62385c62" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/html/notes/04.表单元素.html.vue")),
   // path: /two-stage/html/notes/05.%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB.html
   "v-5578d55c": defineAsyncComponent(() => import(/* webpackChunkName: "v-5578d55c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/html/notes/05.元素的分类.html.vue")),
+  // path: /two-stage/junit/notes/mockito.html
+  "v-02e683d9": defineAsyncComponent(() => import(/* webpackChunkName: "v-02e683d9" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/mockito.html.vue")),
+  // path: /two-stage/junit/notes/MockMvc.html
+  "v-05633ea3": defineAsyncComponent(() => import(/* webpackChunkName: "v-05633ea3" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/MockMvc.html.vue")),
+  // path: /two-stage/junit/notes/spring-@sql.html
+  "v-3fe6d4e5": defineAsyncComponent(() => import(/* webpackChunkName: "v-3fe6d4e5" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/spring-@sql.html.vue")),
+  // path: /two-stage/junit/notes/spring-boot.html
+  "v-1559a3fe": defineAsyncComponent(() => import(/* webpackChunkName: "v-1559a3fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/spring-boot.html.vue")),
+  // path: /two-stage/junit/notes/spring-test-junit5.html
+  "v-7ee3e55d": defineAsyncComponent(() => import(/* webpackChunkName: "v-7ee3e55d" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/spring-test-junit5.html.vue")),
+  // path: /two-stage/junit/notes/TDD.html
+  "v-175b241f": defineAsyncComponent(() => import(/* webpackChunkName: "v-175b241f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/TDD.html.vue")),
+  // path: /two-stage/junit/notes/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html
+  "v-116e98e2": defineAsyncComponent(() => import(/* webpackChunkName: "v-116e98e2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/junit/notes/基本概念.html.vue")),
   // path: /two-stage/mybatis/notes/01.SqlSession%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98.html
   "v-4d7b5dc6": defineAsyncComponent(() => import(/* webpackChunkName: "v-4d7b5dc6" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/two-stage/mybatis/notes/01.SqlSession线程安全问题.html.vue")),
   // path: /two-stage/mybatis/notes/01.%E5%85%B3%E4%BA%8Emybatis.html
