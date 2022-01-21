@@ -24,6 +24,7 @@ module.exports = {
         navbar: require("./nav.js"),
         sidebar: require("./sidebar.js"),
 
+
     },
 
     plugins: [
