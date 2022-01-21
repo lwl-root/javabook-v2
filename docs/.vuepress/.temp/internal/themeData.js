@@ -92,12 +92,8 @@ export const themeData = {
       "text": "日常积累",
       "children": [
         {
-          "text": "集合相关",
-          "link": "/demo/list/notes/List去重.html"
-        },
-        {
-          "text": "反射相关",
-          "link": "/demo/reflect/notes/动态代理.html"
+          "text": "Java相关",
+          "link": "/demo/Java/notes/List去重.html"
         },
         {
           "text": "框架相关",
@@ -468,22 +464,13 @@ export const themeData = {
         ]
       }
     ],
-    "/demo/list": [
+    "/demo/Java": [
       {
-        "text": "集合相关",
+        "text": "Java相关",
         "collapsable": false,
-        "link": "/demo/list/notes/List去重.html",
+        "link": "/demo/Java/notes/List去重.html",
         "children": [
-          "List去重.html"
-        ]
-      }
-    ],
-    "/demo/reflect": [
-      {
-        "text": "反射相关",
-        "collapsable": false,
-        "link": "/demo/reflect/notes/动态代理.html",
-        "children": [
+          "List去重.html",
           "动态代理.html"
         ]
       }

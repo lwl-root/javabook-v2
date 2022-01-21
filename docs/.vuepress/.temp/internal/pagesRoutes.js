@@ -3,7 +3,8 @@ import { Vuepress } from '@vuepress/client/lib/components/Vuepress'
 const routeItems = [
   ["v-8daa1a0e","/",{"title":""},["/index.html","/README.md"]],
   ["v-39fc678e","/demo/frame/notes/swagger2.html",{"title":"SpringBoot集成Swagger"},["/demo/frame/notes/swagger2","/demo/frame/notes/swagger2.md"]],
-  ["v-414c719e","/demo/list/notes/list%E5%8E%BB%E9%87%8D.html",{"title":"List集合去重"},["/demo/list/notes/list去重.html","/demo/list/notes/list%E5%8E%BB%E9%87%8D","/demo/list/notes/list去重.md","/demo/list/notes/list%E5%8E%BB%E9%87%8D.md"]],
+  ["v-0fc9cbd5","/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",{"title":"List集合去重"},["/demo/Java/notes/list去重.html","/demo/Java/notes/list%E5%8E%BB%E9%87%8D","/demo/Java/notes/list去重.md","/demo/Java/notes/list%E5%8E%BB%E9%87%8D.md"]],
+  ["v-db4ffdb6","/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",{"title":"什么是动态代理"},["/demo/Java/notes/动态代理.html","/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86","/demo/Java/notes/动态代理.md","/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.md"]],
   ["v-2bdc2934","/one-stage/java/notes/classpath.html",{"title":"Classpath 在哪？"},["/one-stage/java/notes/classpath","/one-stage/java/notes/classpath.md"]],
   ["v-e0b5b3ec","/one-stage/java/notes/java%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB.html",{"title":"知识点汇总"},["/one-stage/java/notes/java语法汇总.html","/one-stage/java/notes/java%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB","/one-stage/java/notes/java语法汇总.md","/one-stage/java/notes/java%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB.md"]],
   ["v-1f104ba2","/one-stage/java/notes/UML.html",{"title":"每一个开发人员都应该懂的 UML 规范"},["/one-stage/java/notes/UML","/one-stage/java/notes/UML.md"]],
@@ -135,7 +136,6 @@ const routeItems = [
   ["v-0512401c","/utilse/spring-utils/notes/StreamUtils.html",{"title":"StreamUtils"},["/utilse/spring-utils/notes/StreamUtils","/utilse/spring-utils/notes/StreamUtils.md"]],
   ["v-500d3cf2","/utilse/spring-utils/notes/top-4.html",{"title":"Spring 中最常用的四个工具类"},["/utilse/spring-utils/notes/top-4","/utilse/spring-utils/notes/top-4.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
-  ["v-30a228fe","/demo/list/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",{"title":"什么是动态代理"},["/demo/list/notes/动态代理.html","/demo/list/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86","/demo/list/notes/动态代理.md","/demo/list/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.md"]],
 ]
 
 export const pagesRoutes = routeItems.reduce(
