@@ -10,7 +10,7 @@ export const data = {
     "features": [
       {
         "title": "善良",
-        "details": "夫民劳则思,思则善心生;逸则淫,淫则忘善;忘善则恶心生。 先秦·佚名《敬姜论劳逸》"
+        "details": "夫民劳则思，思则善心生；逸则淫，淫则忘善；忘善则恶心生。 先秦·佚名《敬姜论劳逸》"
       },
       {
         "title": "高贵",
@@ -22,7 +22,7 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": 1641659655000
+    "updatedTime": 1642729122000
   },
   "filePathRelative": "README.md"
 }

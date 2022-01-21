@@ -10,7 +10,7 @@
 <hr>
 <p>在 Maven 中，有一个名为 <strong>mybatis-generator-maven-plugin</strong> 的第三方插件，它能够将 mybatis-genetrator 的功能纳入到 Maven 体系中，允许你通过一条 maven 命令去生成相关的 JaveBean、DAO 接口和 Mapper 映射文件，以简化对 mytabis-generator 的使用。</p>
 <h2 id="pom-xml-配置" tabindex="-1"><a class="header-anchor" href="#pom-xml-配置" aria-hidden="true">#</a> pom.xml 配置</h2>
-<p>具体配置见《模板》。</p>
+<p><RouterLink to="/utilse/gist/notes/mybatis-xml.html" title="具体配置见模板">具体配置模板</RouterLink></p>
 <p>mybatis-generator-maven-plugin 依赖于两个包：</p>
 <ul>
 <li>
@@ -24,5 +24,5 @@
 </ul>
 <p>mybatis-generator 要能正常工作，需要你提供一个配置文件。在这个配置文件中，你去『告诉』mybatis-generator 去『自动生成』时的相关细节。</p>
 <h2 id="mybatis-generator-config-xml-配置" tabindex="-1"><a class="header-anchor" href="#mybatis-generator-config-xml-配置" aria-hidden="true">#</a> mybatis-generator-config.xml 配置</h2>
-<p>具体配置内容见《模板》。</p>
+<p>具体配置内容见<RouterLink to="/utilse/gist/notes/mybatis-xml.html#_3-mybatis-generator-config-xml-%E9%85%8D%E7%BD%AE">模板</RouterLink></p>
 </template>
