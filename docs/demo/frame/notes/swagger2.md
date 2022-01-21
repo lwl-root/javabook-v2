@@ -2,7 +2,7 @@
 
 ## 1、添加pom依赖
 
-```java
+```xml
 <dependencies>
     <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
     <dependency>
