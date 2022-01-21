@@ -20,7 +20,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1641659655000
+    "updatedTime": 1642731100000
   },
   "filePathRelative": "two-stage/mybatis/notes/03.MyBatis Generator.md"
 }
