@@ -30,7 +30,7 @@ module.exports = {
         [
             '@vuepress/plugin-search',
             {
-                maxSuggestions: 10,
+                maxSuggestions: 22,
             },
         ],
     ],
