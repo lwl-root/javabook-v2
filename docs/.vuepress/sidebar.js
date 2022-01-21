@@ -21,6 +21,6 @@ module.exports = {
 
     '/pascal/basics': require('../pascal/basics/sidebar'),
 
-    '/demo/list': require('../demo/list/sidebar'),
-    '/demo/reflect': require('../demo/reflect/sidebar'),
+    '/demo/Java': require('../demo/Java/sidebar'),
+    '/demo/frame': require('../demo/frame/sidebar'),
 }

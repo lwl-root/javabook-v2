@@ -85,8 +85,8 @@ module.exports = [
     {
         text: '日常积累',
         children: [
-            {text: '集合相关', link: '/demo/list/notes/List去重.html'},
-            {text: '反射相关', link: '/demo/reflect/notes/动态代理.html'},
+            {text: 'Java相关', link: '/demo/Java/notes/List去重.html'},
+            {text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
         ]
     },
 ]

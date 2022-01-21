@@ -1,9 +1,10 @@
 module.exports = [
 	{
-		text:'反射相关',
+		text:'Java相关',
 		collapsable: false,
-		link:'/demo/reflect/notes/动态代理.html',
+		link:'/demo/list/notes/List去重.html',
 		children:[
+			'List去重.html',
 			'动态代理.html',
 		]
 	},

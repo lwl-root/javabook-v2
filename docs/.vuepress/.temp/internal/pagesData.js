@@ -1,10 +1,10 @@
 export const pagesData = {
   // path: /
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
+  // path: /demo/frame/notes/swagger2.html
+  "v-39fc678e": () => import(/* webpackChunkName: "v-39fc678e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.js").then(({ data }) => data),
   // path: /demo/list/notes/list%E5%8E%BB%E9%87%8D.html
   "v-414c719e": () => import(/* webpackChunkName: "v-414c719e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/list/notes/list去重.html.js").then(({ data }) => data),
-  // path: /demo/reflect/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html
-  "v-3433a9cc": () => import(/* webpackChunkName: "v-3433a9cc" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/reflect/notes/动态代理.html.js").then(({ data }) => data),
   // path: /one-stage/java/notes/classpath.html
   "v-2bdc2934": () => import(/* webpackChunkName: "v-2bdc2934" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/java/notes/classpath.html.js").then(({ data }) => data),
   // path: /one-stage/java/notes/java%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB.html
@@ -267,4 +267,6 @@ export const pagesData = {
   "v-500d3cf2": () => import(/* webpackChunkName: "v-500d3cf2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/top-4.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
+  // path: /demo/list/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html
+  "v-30a228fe": () => import(/* webpackChunkName: "v-30a228fe" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/list/notes/动态代理.html.js").then(({ data }) => data),
 }

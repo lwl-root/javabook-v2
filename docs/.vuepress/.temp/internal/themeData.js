@@ -98,6 +98,10 @@ export const themeData = {
         {
           "text": "反射相关",
           "link": "/demo/reflect/notes/动态代理.html"
+        },
+        {
+          "text": "框架相关",
+          "link": "/demo/frame/notes/swagger2.html"
         }
       ]
     }
@@ -481,6 +485,16 @@ export const themeData = {
         "link": "/demo/reflect/notes/动态代理.html",
         "children": [
           "动态代理.html"
+        ]
+      }
+    ],
+    "/demo/frame": [
+      {
+        "text": "框架相关",
+        "collapsable": false,
+        "link": "/demo/frame/notes/swagger2.html",
+        "children": [
+          "swagger2.html"
         ]
       }
     ]
