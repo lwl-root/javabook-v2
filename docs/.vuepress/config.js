@@ -9,7 +9,17 @@ module.exports = {
         [
             'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
             {rel: 'icon', href: 'logo.png'}
-        ]
+        ],
+        [
+            'script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?f1bb2cadd6233359a7e375f48570aab5";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        `],
     ],
     markdown: {
         lineNumbers: true
