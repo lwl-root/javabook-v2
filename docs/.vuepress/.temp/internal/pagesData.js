@@ -3,6 +3,8 @@ export const pagesData = {
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /demo/frame/notes/swagger2.html
   "v-39fc678e": () => import(/* webpackChunkName: "v-39fc678e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.js").then(({ data }) => data),
+  // path: /demo/Java/notes/java%E5%8F%8D%E5%B0%84.html
+  "v-5251ac7f": () => import(/* webpackChunkName: "v-5251ac7f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/java反射.html.js").then(({ data }) => data),
   // path: /demo/Java/notes/list%E5%8E%BB%E9%87%8D.html
   "v-0fc9cbd5": () => import(/* webpackChunkName: "v-0fc9cbd5" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/list去重.html.js").then(({ data }) => data),
   // path: /demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html
