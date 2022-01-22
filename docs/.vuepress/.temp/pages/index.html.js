@@ -17,7 +17,7 @@ export const data = {
         "details": "关关雎鸠，在河之洲。窈窕淑女，君子好逑。 先秦·佚名《关雎》"
       }
     ],
-    "footer": "lwl | CHINA © 2021-11-11"
+    "footer": "Copyright ©2021-11-11 lwl 版权所有"
   },
   "excerpt": "",
   "headers": [],

@@ -471,8 +471,8 @@ export const themeData = {
         "link": "/demo/Java/notes/List去重.html",
         "children": [
           "List去重.html",
-          "动态代理.html",
-          "java反射.html"
+          "java反射.html",
+          "动态代理.html"
         ]
       }
     ],
