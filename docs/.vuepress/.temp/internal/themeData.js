@@ -100,6 +100,15 @@ export const themeData = {
           "link": "/demo/frame/notes/swagger2.html"
         }
       ]
+    },
+    {
+      "text": "c-book",
+      "children": [
+        {
+          "text": "spring-security",
+          "link": "/c-book/spring-security/notes/spring-security.html"
+        }
+      ]
     }
   ],
   "sidebar": {
@@ -483,6 +492,16 @@ export const themeData = {
         "link": "/demo/frame/notes/swagger2.html",
         "children": [
           "swagger2.html"
+        ]
+      }
+    ],
+    "/c-book/spring-security": [
+      {
+        "text": "spring-security",
+        "collapsable": false,
+        "link": "/c-book/spring-security/notes/spring-security.html",
+        "children": [
+          "spring-security.html"
         ]
       }
     ]
