@@ -89,4 +89,11 @@ module.exports = [
             {text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
         ]
     },
+	{
+	    text: 'c-book',
+	    children: [
+	        {text: 'spring-security', link: '/c-book/spring-security/notes/spring-security.html'},
+	        //{text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
+	    ]
+	},
 ]
