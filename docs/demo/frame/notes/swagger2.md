@@ -143,3 +143,116 @@ Swagger 通过注解定制接口对外展示的信息，这些信息包括接口
 SpringBoot启动成功后，访问http://localhost:8080/swagger-ui.html
 
 <img src="/images/swagger2.png">
+
+
+
+## 5、对swgager文档的美化框架（2次封装）
+
+### 5.1、依赖(只需要这一个依赖即可，里面包含有swagger的依赖)
+```java
+	<!--文档框架 knife4j 美化接口文档-->
+	<dependency>
+		<groupId>com.github.xiaoymin</groupId>
+		<artifactId>knife4j-spring-boot-starter</artifactId>
+		<version>3.0.3</version>
+	</dependency>
+
+```
+
+### 5.2、配置
+
+```java
+
+@Configuration
+@EnableKnife4j //看这
+public class SwaggerConfig
+{
+
+    /** 系统基础配置-配置文件中的属性 */
+    @Autowired
+    private RuoYiConfig ruoyiConfig;
+
+    /** 是否开启swagger */
+    @Value("${swagger.enabled}")
+    private boolean enabled;
+
+    /** 设置请求的统一前缀 */
+    @Value("${swagger.pathMapping}")
+    private String pathMapping;
+
+    @Bean
+    public Docket defaultApi2() {
+        Docket docket=new Docket(DocumentationType.SWAGGER_2)
+                .enable(enabled)
+                .apiInfo(apiInfo())
+                .select()
+                // 扫描所有有注解的api，用这种方式更灵活
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                .paths(PathSelectors.any())
+                .build()
+                /* 设置安全模式，swagger可以设置访问token */
+                .securitySchemes(securitySchemes())
+                .securityContexts(securityContexts())
+                .pathMapping(pathMapping);
+        return docket;
+    }
+
+    /**
+     * 安全模式，这里指定token通过Authorization头请求头传递
+     */
+    private List<SecurityScheme> securitySchemes()
+    {
+        List<SecurityScheme> apiKeyList = new ArrayList<SecurityScheme>();
+        apiKeyList.add(new ApiKey("Authorization", "Authorization", In.HEADER.toValue()));
+        return apiKeyList;
+    }
+
+    /**
+     * 安全上下文
+     */
+    private List<SecurityContext> securityContexts()
+    {
+        List<SecurityContext> securityContexts = new ArrayList<>();
+        securityContexts.add(
+                SecurityContext.builder()
+                        .securityReferences(defaultAuth())
+                        .operationSelector(o -> o.requestMappingPattern().matches("/.*"))
+                        .build());
+        return securityContexts;
+    }
+
+    /**
+     * 默认的安全上引用
+     */
+    private List<SecurityReference> defaultAuth()
+    {
+        AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
+        AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
+        authorizationScopes[0] = authorizationScope;
+        List<SecurityReference> securityReferences = new ArrayList<>();
+        securityReferences.add(new SecurityReference("Authorization", authorizationScopes));
+        return securityReferences;
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("xxx接口文档")
+                .description("xxx说明")
+                .termsOfServiceUrl("http://localhost:88888/")
+                // 作者信息
+                .contact("xxx", null, null))
+                // 版本
+                .version("版本号:" + ruoyiConfig.getVersion())
+                .build();
+    }
+}
+```
+
+### 5.3、打开地址及页面效果
+
+```java
+http://ip:端口/doc.html
+```
+
+<img src="/images/接口文档.png">
+
