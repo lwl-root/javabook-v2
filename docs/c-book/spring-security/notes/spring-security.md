@@ -20,6 +20,7 @@
 ### 2.3  根据用户名查询
 
 <img src="/images/security/查询用户.png">
+
 ::: warning 注意
 
 用户实体类需实现 UserDetails 接口
