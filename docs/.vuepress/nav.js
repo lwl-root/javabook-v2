@@ -87,7 +87,7 @@ module.exports = [
         children: [
             {text: 'Java相关', link: '/demo/Java/notes/List去重.html'},
             {text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
-            {text: '数据库', link: '/demo/frame/notes/swagger2.html'},
+            {text: '数据库', link: '/demo/databases/notes/数据库test.html'},
         ]
     },
 	{
