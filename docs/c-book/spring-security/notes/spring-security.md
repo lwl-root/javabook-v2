@@ -20,20 +20,25 @@
 ### 2.3  根据用户名查询
 
 <img src="/images/security/查询用户.png">
+::: warning 注意
 
-注：用户实体类需实现 UserDetails 接口
+用户实体类需实现 UserDetails 接口
+
+:::
 
 ### 2.4 密码校验
 
 <img src="/images/security/密码效验.png">
 
-注：
+::: warning 注意
 
 security推荐使用 BCryptPasswordEncoder 密码器
 
 明文密码器：NoOpPasswordEncoder（过时的）
 
 也可自定义密码器
+
+:::
 
 ```java
    /**
@@ -168,53 +173,66 @@ https://www.jianshu.com/p/7b87ec108405?utm_campaign=maleskine&utm_content=note&u
 ### 4.1 SecurityContextHolder
 
 ```js
-SecurityContextHolder它持有的是安全上下文（security context）的信息。当前操作的用户是谁，该用户是否已经被认证，他拥有哪些角色权等等，这些都被保存在SecurityContextHolder中。SecurityContextHolder默认使用ThreadLocal 策略来存储认证信息。看到ThreadLocal 也就意味着，这是一种与线程绑定的策略。在web环境下，Spring Security在用户登录时自动绑定认证信息到当前线程，在用户退出时，自动清除当前线程的认证信息。
+SecurityContextHolder它持有的是安全上下文（security context）的信息。
+当前操作的用户是谁，该用户是否已经被认证，他拥有哪些角色权等等，这些都被保存在SecurityContextHolder中。
+SecurityContextHolder默认使用ThreadLocal 策略来存储认证信息。看到ThreadLocal 也就意味着，这是一种与线程绑定的策略。
+在web环境下，Spring Security在用户登录时自动绑定认证信息到当前线程，在用户退出时，自动清除当前线程的认证信息。
 例如获取用户信息。
 ```
 
 ### 4.2 SecurityContext
 
 ```js
-安全上下文，主要持有Authentication对象，如果用户未鉴权，那Authentication对象将会是空的。该示例可以通过SecurityContextHolder.getContext静态方法获取。
+安全上下文，主要持有Authentication对象，如果用户未鉴权，那Authentication对象将会是空的。
+该示例可以通过SecurityContextHolder.getContext静态方法获取。
 ```
 
 ### 4.3 Authentication
 
 ```js
-鉴权对象，该对象主要包含了用户的详细信息（UserDetails）和用户鉴权时所需要的信息，如用户提交的用户名密码、Remember-me Token，或者digest hash值等，按不同鉴权方式使用不同的Authentication实现。
+鉴权对象，该对象主要包含了用户的详细信息（UserDetails）和用户鉴权时所需要的信息，
+如用户提交的用户名密码、Remember-me Token，或者digest hash值等，按不同鉴权方式使用不同的Authentication实现。
 ```
 
 ### 4.4 GrantedAuthority
 
 ```js
-该接口表示了当前用户所拥有的权限（或者角色）信息。这些信息由授权负责对象AccessDecisionManager来使用，并决定最终用户是否可以访问某资源（URL或方法调用或域对象）。鉴权时并不会使用到该对象。
+
+该接口表示了当前用户所拥有的权限（或者角色）信息。这些信息由授权负责对象AccessDecisionManager来使用，
+并决定最终用户是否可以访问某资源（URL或方法调用或域对象）。鉴权时并不会使用到该对象。
+
 ```
 
 ### 4.5 UserDetails
 
 ```js
-这个接口规范了用户详细信息所拥有的字段，譬如用户名、密码、账号是否过期、是否锁定等。在Spring Security中，获取当前登录的用户的信息,一般情况是需要在这个接口上面进行扩展，用来对接自己系统的用户。
+这个接口规范了用户详细信息所拥有的字段，譬如用户名、密码、账号是否过期、是否锁定等。在Spring Security中，
+获取当前登录的用户的信息,一般情况是需要在这个接口上面进行扩展，用来对接自己系统的用户。
 ```
 
 ### 4.6 UserDetailsService
 
 ```js
-这个接口只提供一个接口loadUserByUsername(String username)，通过扩展这个接口来显示获取我们的用户信息，用户登陆时传递的用户名和密码也是通过这里这查找出来的用户名和密码进行校验，但是真正的校验不在这里，而是由AuthenticationManager以及AuthenticationProvider负责的。
+这个接口只提供一个接口loadUserByUsername(String username)，通过扩展这个接口来显示获取我们的用户信息，
+用户登陆时传递的用户名和密码也是通过这里这查找出来的用户名和密码进行校验，但是真正的校验不在这里，
+而是由AuthenticationManager以及AuthenticationProvider负责的。
 ```
 
 ### 4.7 AuthenticationManager
 
 ```js
-AuthenticationManager（接口）是认证相关的核心接口，也是发起认证的出发点，因为在实际需求中，我们可能会允许用户使用用户名+密码登录，同时允许用户使用邮箱+密码，手机号码+密码登录，所以说AuthenticationManager一般不直接认证，AuthenticationManager接口的常用实现类ProviderManager 内部会维护一个List<AuthenticationProvider>列表，存放多种认证方式，实际上这是委托者模式的应用（Delegate）。也就是说，核心的认证入口始终只有一个：AuthenticationManager，不同的认证方式：用户名+密码（UsernamePasswordAuthenticationToken），邮箱+密码，手机号码+密码登录则对应了三个AuthenticationProvider。其中有一个重要的实现类是ProviderManager。ProviderManager 有一个配置好的认证提供者列表(AuthenticationProvider), ProviderManager 会把收到的 UsernamePasswordAuthenticationToken 对象传递给列表中的每一个 AuthenticationProvider 进行认证.
+AuthenticationManager（接口）是认证相关的核心接口，也是发起认证的出发点，因为在实际需求中，
+我们可能会允许用户使用用户名+密码登录，同时允许用户使用邮箱+密码，手机号码+密码登录，
+所以说AuthenticationManager一般不直接认证，AuthenticationManager接口的常用实现类ProviderManager 内部会维护一个List<AuthenticationProvider>列表，存放多种认证方式，实际上这是委托者模式的应用（Delegate）。也就是说，核心的认证入口始终只有一个：AuthenticationManager，不同的认证方式：用户名+密码（UsernamePasswordAuthenticationToken），邮箱+密码，手机号码+密码登录则对应了三个AuthenticationProvider。其中有一个重要的实现类是ProviderManager。ProviderManager 有一个配置好的认证提供者列表(AuthenticationProvider), ProviderManager 会把收到的 UsernamePasswordAuthenticationToken 对象传递给列表中的每一个 AuthenticationProvider 进行认证.
 ```
 
 ### 4.8 DaoAuthenticationProvider
 
 ```js
-AuthenticationProvider最常用的一个实现便是DaoAuthenticationProvider。顾名思义，Dao正是数据访问层的缩写，也暗示了这个身份认证器的实现思路。主要作用：它获取用户提交的用户名和密码，比对其正确性，如果正确，返回一个数据库中的用户信息。
+AuthenticationProvider最常用的一个实现便是DaoAuthenticationProvider。
+顾名思义，Dao正是数据访问层的缩写，也暗示了这个身份认证器的实现思路。
+主要作用：它获取用户提交的用户名和密码，比对其正确性，如果正确，返回一个数据库中的用户信息。
 ```
-
-
 
 ## 5.相关注解
 
@@ -261,17 +279,19 @@ AuthenticationProvider最常用的一个实现便是DaoAuthenticationProvider。
 antMatchers("/user").hasAuthority("sys:user")
 ```
 
-1. 拥有 sys:role 权限的用户，可以访问 get 请求方式的 /role
+2. 拥有 sys:role 权限的用户，可以访问 get 请求方式的 /role
 
 ```java
 antMatchers(HttpMethod.GET, "/role").hasAuthority("sys:role")
 ```
 
-1. 如果想同时满足多个表达式权限，要使用 access 方法来指定表达式
+3. 如果想同时满足多个表达式权限，要使用 access 方法来指定表达式
    如：拥有 sys:permission 权限或 ADMIN 角色，可以访问 get 请求方式的 /permission
+::: warning 注意
 
-**注意：指定角色标识后，底层会自动加上前缀 ROLE_ ，所以在给用户授权角色时需要加上前缀**
+**指定角色标识后，底层会自动加上前缀 ROLE_ ，所以在给用户授权角色时需要加上前缀**
 
+:::
 ```JAVA
 antMatchers(HttpMethod.GET, "/permission").access("hasAuthority('sys:permission') or  hasAnyRole('ADMIN')") //角色会加上前缀 ROLE_，即真实是 ROLE_ADMIN
 ```
