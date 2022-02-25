@@ -167,8 +167,8 @@ public class CustomPasswordEncoder implements PasswordEncoder {
 
 
 ## 4.核心组件
-
-https://www.jianshu.com/p/7b87ec108405?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+[核心组件介绍](https://www.jianshu.com/p/7b87ec108405?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+)
 
 ### 4.1 SecurityContextHolder
 
