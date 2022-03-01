@@ -41,7 +41,7 @@ module.exports = {
         [
             '@vuepress/plugin-search',
             {
-                maxSuggestions: 22,
+                maxSuggestions: 21,
             },
         ],
     ],
