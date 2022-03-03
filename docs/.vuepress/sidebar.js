@@ -24,7 +24,8 @@ module.exports = {
     '/demo/Java': require('../demo/Java/sidebar'),
     '/demo/frame': require('../demo/frame/sidebar'),
     '/demo/databases': require('../demo/databases/sidebar'),
-	
+
+    '/c-book/gof23-单例模式': require('../c-book/gof23-单例模式/sidebar'),
 	'/c-book/spring-security': require('../c-book/spring-security/sidebar'),
-	'/c-book/gof23-单例模式': require('../c-book/gof23-单例模式/sidebar'),
+
 }
