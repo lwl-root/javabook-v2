@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		text:'gof23',
+		text:'av',
 		collapsable: false,
 		link:'/c-book/gof23-单例模式/notes/单例模式.html',
 		children:[
