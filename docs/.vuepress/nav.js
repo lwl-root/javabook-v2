@@ -98,7 +98,8 @@ module.exports = [
 	    text: 'c-book',
 	    children: [
 	        {text: 'spring-security', link: '/c-book/spring-security/notes/spring-security.html'},
-	        //{text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
+			 {text: 'gof23-单例模式', link: '/c-book/gof23-单例模式/notes/单例模式.html'},
+	        //{text: 'gof23-工厂模式', link: '/c-book/gof23-工厂模式/notes/工厂模式.html'},
 	    ]
 	},
 ]
