@@ -87,19 +87,20 @@ module.exports = [
         children: [
             {text: 'Java相关', link: '/demo/Java/notes/List去重.html'},
             {text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
-            {text: '数据库一级', link: '/demo/databases/notes/数据库test.html',
+            {
+                text: '数据库一级', link: '/demo/databases/notes/数据库test.html',
                 children: [
                     {text: '数据库二级', link: '/demo/databases/notes/数据库test.html'}
                 ],
             },
         ]
     },
-	{
-	    text: 'c-book',
-	    children: [
-	        {text: 'spring-security', link: '/c-book/spring-security/notes/spring-security.html'},
-			 {text: 'gof23-单例模式', link: '/c-book/gof23-单例模式/notes/单例模式.html'},
-	        //{text: 'gof23-工厂模式', link: '/c-book/gof23-工厂模式/notes/工厂模式.html'},
-	    ]
-	},
+    {
+        text: 'c-book',
+        children: [
+            {text: 'spring-security', link: '/c-book/spring-security/notes/spring-security.html'},
+            {text: 'gof23', link: '/c-book/gof23/notes/单例模式.html'},
+            //{text: 'gof23-工厂模式', link: '/c-book/gof23-工厂模式/notes/工厂模式.html'},
+        ],
+    },
 ]
