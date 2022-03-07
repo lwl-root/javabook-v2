@@ -98,6 +98,16 @@ export const themeData = {
         {
           "text": "框架相关",
           "link": "/demo/frame/notes/swagger2.html"
+        },
+        {
+          "text": "数据库一级",
+          "link": "/demo/databases/notes/数据库test.html",
+          "children": [
+            {
+              "text": "数据库二级",
+              "link": "/demo/databases/notes/数据库test.html"
+            }
+          ]
         }
       ]
     },
@@ -107,6 +117,10 @@ export const themeData = {
         {
           "text": "spring-security",
           "link": "/c-book/spring-security/notes/spring-security.html"
+        },
+        {
+          "text": "gof23",
+          "link": "/c-book/gof23/notes/单例模式.html"
         }
       ]
     }
@@ -491,7 +505,31 @@ export const themeData = {
         "collapsable": false,
         "link": "/demo/frame/notes/swagger2.html",
         "children": [
-          "swagger2.html"
+          "swagger2.html",
+          {
+            "text": "SpringBoot中junit问题",
+            "link": "/demo/frame/notes/junitTest.html"
+          }
+        ]
+      }
+    ],
+    "/demo/databases": [
+      {
+        "text": "数据库相关",
+        "collapsable": false,
+        "link": "/demo/databases/notes/数据库test.html",
+        "children": [
+          "数据库test.html"
+        ]
+      }
+    ],
+    "/c-book/gof23": [
+      {
+        "text": "gof23",
+        "collapsable": false,
+        "link": "/c-book/gof23/notes/单例模式.html",
+        "children": [
+          "单例模式.html"
         ]
       }
     ],
