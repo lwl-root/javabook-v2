@@ -57,7 +57,6 @@ import {
   isReadonly,
   isRef,
   isRuntimeOnly,
-  isShallow,
   isVNode,
   markRaw,
   mergeDefaults,
@@ -136,7 +135,7 @@ import {
   withMemo,
   withModifiers,
   withScopeId
-} from "./chunk-HWHQSGBT.js";
+} from "./chunk-WLDU4JTM.js";
 import {
   camelize,
   capitalize,
@@ -145,16 +144,14 @@ import {
   normalizeStyle,
   toDisplayString,
   toHandlerKey
-} from "./chunk-SXCLZZEH.js";
+} from "./chunk-SXNMMXQR.js";
 import {
-  init_define_EXTERNAL_LINK_ICON_LOCALES,
   init_define_MZ_ZOOM_OPTIONS,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-FN6J7K7N.js";
+} from "./chunk-SMMSCRG2.js";
 
 // dep:vue
-init_define_EXTERNAL_LINK_ICON_LOCALES();
 init_define_MZ_ZOOM_OPTIONS();
 init_define_SEARCH_HOT_KEYS();
 init_define_SEARCH_LOCALES();
@@ -219,7 +216,6 @@ export {
   isReadonly,
   isRef,
   isRuntimeOnly,
-  isShallow,
   isVNode,
   markRaw,
   mergeDefaults,
