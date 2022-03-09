@@ -40,413 +40,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [
-      {
-        "level": 3,
-        "title": "什么是 MQ",
-        "slug": "什么是-mq",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "有 Broker 的 MQ",
-        "slug": "有-broker-的-mq",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "重 Topic",
-        "slug": "重-topic",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "轻 Topic",
-        "slug": "轻-topic",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "无 Broker 的 MQ",
-        "slug": "无-broker-的-mq",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.Kafka的使用场景",
-        "slug": "_1-kafka的使用场景",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.Kafka基本概念",
-        "slug": "_2-kafka基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.安装前的环境准备",
-        "slug": "_1-安装前的环境准备",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.启动kafka服务器",
-        "slug": "_2-启动kafka服务器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.创建主题topic",
-        "slug": "_3-创建主题topic",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.发送消息",
-        "slug": "_4-发送消息",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.消费消息",
-        "slug": "_5-消费消息",
-        "children": [
-          {
-            "level": 3,
-            "title": "几个注意点：",
-            "slug": "几个注意点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1.消息的顺序存储",
-        "slug": "_1-消息的顺序存储",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 单播消息的实现",
-        "slug": "_2-单播消息的实现",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.多播消息的实现",
-        "slug": "_3-多播消息的实现",
-        "children": [
-          {
-            "level": 3,
-            "title": "在一些业务场景中需要让一条消息被多个消费者消费，那么就可以使用多播模式。",
-            "slug": "在一些业务场景中需要让一条消息被多个消费者消费-那么就可以使用多播模式。",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.查看消费组及信息",
-        "slug": "_4-查看消费组及信息",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.主题Topic",
-        "slug": "_1-主题topic",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.partition分区",
-        "slug": "_2-partition分区",
-        "children": [
-          {
-            "level": 3,
-            "title": "为一个主题创建多个分区",
-            "slug": "为一个主题创建多个分区",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "分区的作用：",
-            "slug": "分区的作用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1.搭建kafka集群， 3 个broker",
-        "slug": "_1-搭建kafka集群-3-个broker",
-        "children": [
-          {
-            "level": 3,
-            "title": "使用如下命令来启动 3 台服务器",
-            "slug": "使用如下命令来启动-3-台服务器",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2.副本的概念",
-        "slug": "_2-副本的概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.broker、主题、分区、副本",
-        "slug": "_3-broker、主题、分区、副本",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.kafka集群消息的发送",
-        "slug": "_4-kafka集群消息的发送",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.kafka集群消息的消费",
-        "slug": "_5-kafka集群消息的消费",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.关于分区消费组消费者的细节",
-        "slug": "_6-关于分区消费组消费者的细节",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.引入依赖",
-        "slug": "_1-引入依赖",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.生产者发送消息的基本实现",
-        "slug": "_2-生产者发送消息的基本实现",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.发送消息到指定分区上",
-        "slug": "_3-发送消息到指定分区上",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.未指定分区，则会通过业务key的hash运算，算出消息往哪个分区上发",
-        "slug": "_4-未指定分区-则会通过业务key的hash运算-算出消息往哪个分区上发",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.同步发送",
-        "slug": "_5-同步发送",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.异步发消息",
-        "slug": "_6-异步发消息",
-        "children": [
-          {
-            "level": 3,
-            "title": "生产者发消息，发送完后不用等待broker给回复，直接执行下面的业务逻辑。可以提供callback，让broker异步的调用callback，告知生产者，消息发送的结果",
-            "slug": "生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "7.关于生产者的ack参数配置",
-        "slug": "_7-关于生产者的ack参数配置",
-        "children": [
-          {
-            "level": 3,
-            "title": "在同步发消息的场景下：生产者发动broker上后，ack会有 3 种不同的选择：",
-            "slug": "在同步发消息的场景下-生产者发动broker上后-ack会有-3-种不同的选择",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "code:",
-            "slug": "code",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8.其他一些细节",
-        "slug": "_8-其他一些细节",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.消费者消费消息的基本实现",
-        "slug": "_1-消费者消费消息的基本实现",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.自动提交offset",
-        "slug": "_2-自动提交offset",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.手动提交offset",
-        "slug": "_3-手动提交offset",
-        "children": [
-          {
-            "level": 3,
-            "title": "在消费完消息后进行手动提交",
-            "slug": "在消费完消息后进行手动提交",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4.消费者poll消息的过程",
-        "slug": "_4-消费者poll消息的过程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.指定分区消费",
-        "slug": "_5-指定分区消费",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6.消息回溯消费",
-        "slug": "_6-消息回溯消费",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7.指定offset消费",
-        "slug": "_7-指定offset消费",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8.从指定时间点消费",
-        "slug": "_8-从指定时间点消费",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9.新消费组的消费偏移量",
-        "slug": "_9-新消费组的消费偏移量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.引入依赖",
-        "slug": "_1-引入依赖-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.配置文件",
-        "slug": "_2-配置文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.消息生产者",
-        "slug": "_3-消息生产者",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.消息消费者",
-        "slug": "_4-消息消费者",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.Controller",
-        "slug": "_1-controller",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.Rebalance机制",
-        "slug": "_2-rebalance机制",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.HW和LEO",
-        "slug": "_3-hw和leo",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.如何防止消息丢失",
-        "slug": "_1-如何防止消息丢失",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.如何防止消息的重复消费",
-        "slug": "_2-如何防止消息的重复消费",
-        "children": [
-          {
-            "level": 3,
-            "title": "幂等性如何保证：",
-            "slug": "幂等性如何保证",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3.如何做到顺序消费RocketMQ",
-        "slug": "_3-如何做到顺序消费rocketmq",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.解决消息积压问题",
-        "slug": "_4-解决消息积压问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.延迟队列",
-        "slug": "_5-延迟队列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装Kafka-eagle",
-        "slug": "安装kafka-eagle",
-        "children": [
-          {
-            "level": 3,
-            "title": "官网下载压缩包",
-            "slug": "官网下载压缩包",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/c-book/kafka/notes/kafka.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "spring security",
     "headers": [
       {
@@ -616,6 +209,255 @@ export const searchIndex = [
       }
     ],
     "path": "/c-book/spring-security/notes/spring-security.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据库test",
+    "headers": [],
+    "path": "/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
+    "headers": [],
+    "path": "/demo/frame/notes/junitTest.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot集成Swagger",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、添加pom依赖",
+        "slug": "_1、添加pom依赖",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、创建Swagger2Configuration.java",
+        "slug": "_2、创建swagger2configuration-java",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、API接口编写（Controller）",
+        "slug": "_3、api接口编写-controller",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、启动SpringBoot应用",
+        "slug": "_4、启动springboot应用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5、对swgager文档的美化框架（2次封装）",
+        "slug": "_5、对swgager文档的美化框架-2次封装",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1、依赖(只需要这一个依赖即可，里面包含有swagger的依赖)",
+            "slug": "_5-1、依赖-只需要这一个依赖即可-里面包含有swagger的依赖",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.2、配置",
+            "slug": "_5-2、配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.3、打开地址及页面效果",
+            "slug": "_5-3、打开地址及页面效果",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/frame/notes/swagger2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Java反射基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "使用步骤",
+        "slug": "使用步骤",
+        "children": [
+          {
+            "level": 3,
+            "title": "1、获取目标类型的Class对象",
+            "slug": "_1、获取目标类型的class对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2、通过 Class 对象分别获取Constructor类对象、Method类对象 & Field 类对象",
+            "slug": "_2、通过-class-对象分别获取constructor类对象、method类对象-field-类对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3、通过 Constructor类对象、Method类对象 & Field类对象分别创建对象、调用方法、成员变量赋值",
+            "slug": "_3、通过-constructor类对象、method类对象-field类对象分别创建对象、调用方法、成员变量赋值",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "反射使用",
+        "slug": "反射使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "业务类",
+            "slug": "业务类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "非反射方法",
+            "slug": "非反射方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "反射方法",
+            "slug": "反射方法",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/Java/notes/java%E5%8F%8D%E5%B0%84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "List集合去重",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前置知识",
+        "slug": "前置知识",
+        "children": [
+          {
+            "level": 3,
+            "title": "无序集合",
+            "slug": "无序集合",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序集合",
+            "slug": "有序集合",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序和无序",
+            "slug": "有序和无序",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "方法1：contains判断去重(有序)",
+        "slug": "方法1-contains判断去重-有序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法2：迭代器去重(无序)",
+        "slug": "方法2-迭代器去重-无序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法3：HashSet去重(无序)",
+        "slug": "方法3-hashset去重-无序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法4：LinkedHashSet去重(有序)",
+        "slug": "方法4-linkedhashset去重-有序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法5：TreeSet去重(无序)",
+        "slug": "方法5-treeset去重-无序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法6：Stream去重(有序)",
+        "slug": "方法6-stream去重-有序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "children": []
+      }
+    ],
+    "path": "/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "什么是动态代理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、介绍",
+        "slug": "一、介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、静态代理",
+        "slug": "二、静态代理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、动态代理",
+        "slug": "三、动态代理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "四、静态织入",
+        "slug": "四、静态织入",
+        "children": [
+          {
+            "level": 3,
+            "title": "五、小结",
+            "slug": "五、小结",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "六、参考",
+            "slug": "六、参考",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1539,175 +1381,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Executors",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. FixedThreadPool 使用",
-        "slug": "_1-fixedthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. CachedThreadPool 使用",
-        "slug": "_2-cachedthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. SingleThreadExecutor 使用",
-        "slug": "_4-singlethreadexecutor-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. ScheduledThreadPool 使用",
-        "slug": "_5-scheduledthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. SingleThreadScheduledExecutor 使用",
-        "slug": "_6-singlethreadscheduledexecutor-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. WorkStealingPool 使用",
-        "slug": "_7-workstealingpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 总结",
-        "slug": "_8-总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 其它",
-        "slug": "_9-其它",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/Executors.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Runnable 接口创建线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/runnable.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Thread 类创建线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/thread.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "ThreadPoolExecutor",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. ThreadPoolExecutor 的使用",
-        "slug": "_1-threadpoolexecutor-的使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 线程池执行方法",
-        "slug": "_2-线程池执行方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 线程池关闭方法",
-        "slug": "_3-线程池关闭方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 总结",
-        "slug": "_4-总结",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/ThreadPoolExecutor.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "多线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "多进程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E5%A4%9A%E8%BF%9B%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程池",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程的状态",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程的调用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 线程的优先级（了解、自学）",
-        "slug": "_1-线程的优先级-了解、自学",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 实现线程调度的方法",
-        "slug": "_2-实现线程调度的方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 线程的同步与互斥",
-        "slug": "_3-线程的同步与互斥",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. synchronized 关键字",
-        "slug": "_4-synchronized-关键字",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%B0%83%E7%94%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "锁",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E9%94%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Java8 四大函数式接口",
     "headers": [
       {
@@ -2112,6 +1785,424 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/java8/notes/%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Executors",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. FixedThreadPool 使用",
+        "slug": "_1-fixedthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. CachedThreadPool 使用",
+        "slug": "_2-cachedthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. SingleThreadExecutor 使用",
+        "slug": "_4-singlethreadexecutor-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. ScheduledThreadPool 使用",
+        "slug": "_5-scheduledthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. SingleThreadScheduledExecutor 使用",
+        "slug": "_6-singlethreadscheduledexecutor-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. WorkStealingPool 使用",
+        "slug": "_7-workstealingpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 总结",
+        "slug": "_8-总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 其它",
+        "slug": "_9-其它",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/Executors.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "使用 Runnable 接口创建线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/runnable.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "使用 Thread 类创建线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/thread.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "ThreadPoolExecutor",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. ThreadPoolExecutor 的使用",
+        "slug": "_1-threadpoolexecutor-的使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 线程池执行方法",
+        "slug": "_2-线程池执行方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 线程池关闭方法",
+        "slug": "_3-线程池关闭方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 总结",
+        "slug": "_4-总结",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/ThreadPoolExecutor.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多进程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E5%A4%9A%E8%BF%9B%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程池",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程的状态",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程的调用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 线程的优先级（了解、自学）",
+        "slug": "_1-线程的优先级-了解、自学",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 实现线程调度的方法",
+        "slug": "_2-实现线程调度的方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 线程的同步与互斥",
+        "slug": "_3-线程的同步与互斥",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. synchronized 关键字",
+        "slug": "_4-synchronized-关键字",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%B0%83%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "锁",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E9%94%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "事务",
+    "headers": [
+      {
+        "level": 2,
+        "title": "事务的 ACID 属性",
+        "slug": "事务的-acid-属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三大问题",
+        "slug": "三大问题",
+        "children": [
+          {
+            "level": 3,
+            "title": "脏读问题",
+            "slug": "脏读问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不可重复读问题",
+            "slug": "不可重复读问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "幻读问题",
+            "slug": "幻读问题",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "四个隔离级别",
+        "slug": "四个隔离级别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JDBC 事务的自动提交和隔离级别",
+        "slug": "jdbc-事务的自动提交和隔离级别",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/JDBC%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JDBC 基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本概念",
+        "slug": "基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "常用的 JDBC API",
+        "slug": "常用的-jdbc-api",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JDBC 数据库访问步骤",
+        "slug": "jdbc-数据库访问步骤",
+        "children": [
+          {
+            "level": 3,
+            "title": "加载数据库驱动程序",
+            "slug": "加载数据库驱动程序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "MySQL 6+ 驱动的使用要求",
+            "slug": "mysql-6-驱动的使用要求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "建立数据库连接",
+            "slug": "建立数据库连接",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建执行 SQL 语句的 Statement 对象",
+            "slug": "创建执行-sql-语句的-statement-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "发送 SQL 执行语句",
+            "slug": "发送-sql-执行语句",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结果集对象遍历",
+            "slug": "结果集对象遍历",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "关闭对象",
+            "slug": "关闭对象",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/JDBC%E5%9F%BA%E7%A1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JDBC 高级",
+    "headers": [
+      {
+        "level": 2,
+        "title": "获取插入数据的主键",
+        "slug": "获取插入数据的主键",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "设值 NULL",
+        "slug": "设值-null",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "处理 Blob（选学）",
+        "slug": "处理-blob-选学",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/JDBC%E9%AB%98%E7%BA%A7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Service 层中使用事务",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "通过参数传递",
+        "slug": "通过参数传递",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "利用 ThreadLocal",
+        "slug": "利用-threadlocal",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/Service%E5%B1%82%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据库连接池",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本概念",
+        "slug": "基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "选择哪个数据库连接池",
+        "slug": "选择哪个数据库连接池",
+        "children": [
+          {
+            "level": 3,
+            "title": "不选择 C3P0 的原因：",
+            "slug": "不选择-c3p0-的原因",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不选择 DBCP2 的原因：",
+            "slug": "不选择-dbcp2-的原因",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Druid",
+        "slug": "druid",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单使用",
+            "slug": "简单使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结合配置文件使用",
+            "slug": "结合配置文件使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Druid 中的工具类：JdbcUtils",
+            "slug": "druid-中的工具类-jdbcutils",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "HikariCP",
+        "slug": "hikaricp",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单使用",
+            "slug": "简单使用-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配合配置文件使用",
+            "slug": "配合配置文件使用",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2634,255 +2725,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "事务",
-    "headers": [
-      {
-        "level": 2,
-        "title": "事务的 ACID 属性",
-        "slug": "事务的-acid-属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三大问题",
-        "slug": "三大问题",
-        "children": [
-          {
-            "level": 3,
-            "title": "脏读问题",
-            "slug": "脏读问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不可重复读问题",
-            "slug": "不可重复读问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "幻读问题",
-            "slug": "幻读问题",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "四个隔离级别",
-        "slug": "四个隔离级别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JDBC 事务的自动提交和隔离级别",
-        "slug": "jdbc-事务的自动提交和隔离级别",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/JDBC%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JDBC 基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本概念",
-        "slug": "基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "常用的 JDBC API",
-        "slug": "常用的-jdbc-api",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JDBC 数据库访问步骤",
-        "slug": "jdbc-数据库访问步骤",
-        "children": [
-          {
-            "level": 3,
-            "title": "加载数据库驱动程序",
-            "slug": "加载数据库驱动程序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "MySQL 6+ 驱动的使用要求",
-            "slug": "mysql-6-驱动的使用要求",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "建立数据库连接",
-            "slug": "建立数据库连接",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "创建执行 SQL 语句的 Statement 对象",
-            "slug": "创建执行-sql-语句的-statement-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "发送 SQL 执行语句",
-            "slug": "发送-sql-执行语句",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结果集对象遍历",
-            "slug": "结果集对象遍历",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "关闭对象",
-            "slug": "关闭对象",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/JDBC%E5%9F%BA%E7%A1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JDBC 高级",
-    "headers": [
-      {
-        "level": 2,
-        "title": "获取插入数据的主键",
-        "slug": "获取插入数据的主键",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "设值 NULL",
-        "slug": "设值-null",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "处理 Blob（选学）",
-        "slug": "处理-blob-选学",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/JDBC%E9%AB%98%E7%BA%A7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Service 层中使用事务",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "通过参数传递",
-        "slug": "通过参数传递",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "利用 ThreadLocal",
-        "slug": "利用-threadlocal",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/Service%E5%B1%82%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据库连接池",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本概念",
-        "slug": "基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "选择哪个数据库连接池",
-        "slug": "选择哪个数据库连接池",
-        "children": [
-          {
-            "level": 3,
-            "title": "不选择 C3P0 的原因：",
-            "slug": "不选择-c3p0-的原因",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不选择 DBCP2 的原因：",
-            "slug": "不选择-dbcp2-的原因",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Druid",
-        "slug": "druid",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单使用",
-            "slug": "简单使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结合配置文件使用",
-            "slug": "结合配置文件使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Druid 中的工具类：JdbcUtils",
-            "slug": "druid-中的工具类-jdbcutils",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "HikariCP",
-        "slug": "hikaricp",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单使用",
-            "slug": "简单使用-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "配合配置文件使用",
-            "slug": "配合配置文件使用",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "线程安全",
     "headers": [
       {
@@ -3044,255 +2886,6 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/threadsafe/notes/c02.CAS.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据库test",
-    "headers": [],
-    "path": "/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
-    "headers": [],
-    "path": "/demo/frame/notes/junitTest.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SpringBoot集成Swagger",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、添加pom依赖",
-        "slug": "_1、添加pom依赖",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、创建Swagger2Configuration.java",
-        "slug": "_2、创建swagger2configuration-java",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、API接口编写（Controller）",
-        "slug": "_3、api接口编写-controller",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4、启动SpringBoot应用",
-        "slug": "_4、启动springboot应用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5、对swgager文档的美化框架（2次封装）",
-        "slug": "_5、对swgager文档的美化框架-2次封装",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.1、依赖(只需要这一个依赖即可，里面包含有swagger的依赖)",
-            "slug": "_5-1、依赖-只需要这一个依赖即可-里面包含有swagger的依赖",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.2、配置",
-            "slug": "_5-2、配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.3、打开地址及页面效果",
-            "slug": "_5-3、打开地址及页面效果",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/frame/notes/swagger2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java反射基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "使用步骤",
-        "slug": "使用步骤",
-        "children": [
-          {
-            "level": 3,
-            "title": "1、获取目标类型的Class对象",
-            "slug": "_1、获取目标类型的class对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2、通过 Class 对象分别获取Constructor类对象、Method类对象 & Field 类对象",
-            "slug": "_2、通过-class-对象分别获取constructor类对象、method类对象-field-类对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3、通过 Constructor类对象、Method类对象 & Field类对象分别创建对象、调用方法、成员变量赋值",
-            "slug": "_3、通过-constructor类对象、method类对象-field类对象分别创建对象、调用方法、成员变量赋值",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "反射使用",
-        "slug": "反射使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "业务类",
-            "slug": "业务类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "非反射方法",
-            "slug": "非反射方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射方法",
-            "slug": "反射方法",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/Java/notes/java%E5%8F%8D%E5%B0%84.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "List集合去重",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前置知识",
-        "slug": "前置知识",
-        "children": [
-          {
-            "level": 3,
-            "title": "无序集合",
-            "slug": "无序集合",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序集合",
-            "slug": "有序集合",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序和无序",
-            "slug": "有序和无序",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "方法1：contains判断去重(有序)",
-        "slug": "方法1-contains判断去重-有序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法2：迭代器去重(无序)",
-        "slug": "方法2-迭代器去重-无序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法3：HashSet去重(无序)",
-        "slug": "方法3-hashset去重-无序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法4：LinkedHashSet去重(有序)",
-        "slug": "方法4-linkedhashset去重-有序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法5：TreeSet去重(无序)",
-        "slug": "方法5-treeset去重-无序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法6：Stream去重(有序)",
-        "slug": "方法6-stream去重-有序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "总结",
-        "slug": "总结",
-        "children": []
-      }
-    ],
-    "path": "/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "什么是动态代理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、介绍",
-        "slug": "一、介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、静态代理",
-        "slug": "二、静态代理",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、动态代理",
-        "slug": "三、动态代理",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "四、静态织入",
-        "slug": "四、静态织入",
-        "children": [
-          {
-            "level": 3,
-            "title": "五、小结",
-            "slug": "五、小结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "六、参考",
-            "slug": "六、参考",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",
     "pathLocale": "/",
     "extraFields": []
   },
