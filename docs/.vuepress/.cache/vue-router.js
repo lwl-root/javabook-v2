@@ -1,7 +1,4 @@
 import {
-  setupDevtoolsPlugin
-} from "./chunk-QVJXXLQQ.js";
-import {
   computed,
   defineComponent,
   getCurrentInstance,
@@ -18,26 +15,209 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-HWHQSGBT.js";
-import "./chunk-SXCLZZEH.js";
+} from "./chunk-WLDU4JTM.js";
+import "./chunk-SXNMMXQR.js";
 import {
-  init_define_EXTERNAL_LINK_ICON_LOCALES,
   init_define_MZ_ZOOM_OPTIONS,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-FN6J7K7N.js";
+} from "./chunk-SMMSCRG2.js";
 
 // dep:vue-router
-init_define_EXTERNAL_LINK_ICON_LOCALES();
 init_define_MZ_ZOOM_OPTIONS();
 init_define_SEARCH_HOT_KEYS();
 init_define_SEARCH_LOCALES();
 
 // node_modules/vue-router/dist/vue-router.esm-bundler.js
-init_define_EXTERNAL_LINK_ICON_LOCALES();
 init_define_MZ_ZOOM_OPTIONS();
 init_define_SEARCH_HOT_KEYS();
 init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/index.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/env.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+function getDevtoolsGlobalHook() {
+  return getTarget().__VUE_DEVTOOLS_GLOBAL_HOOK__;
+}
+function getTarget() {
+  return typeof navigator !== "undefined" && typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : {};
+}
+var isProxyAvailable = typeof Proxy === "function";
+
+// node_modules/@vue/devtools-api/lib/esm/const.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+var HOOK_SETUP = "devtools-plugin:setup";
+var HOOK_PLUGIN_SETTINGS_SET = "plugin:settings:set";
+
+// node_modules/@vue/devtools-api/lib/esm/proxy.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+var ApiProxy = class {
+  constructor(plugin, hook) {
+    this.target = null;
+    this.targetQueue = [];
+    this.onQueue = [];
+    this.plugin = plugin;
+    this.hook = hook;
+    const defaultSettings = {};
+    if (plugin.settings) {
+      for (const id in plugin.settings) {
+        const item = plugin.settings[id];
+        defaultSettings[id] = item.defaultValue;
+      }
+    }
+    const localSettingsSaveId = `__vue-devtools-plugin-settings__${plugin.id}`;
+    let currentSettings = Object.assign({}, defaultSettings);
+    try {
+      const raw = localStorage.getItem(localSettingsSaveId);
+      const data = JSON.parse(raw);
+      Object.assign(currentSettings, data);
+    } catch (e) {
+    }
+    this.fallbacks = {
+      getSettings() {
+        return currentSettings;
+      },
+      setSettings(value) {
+        try {
+          localStorage.setItem(localSettingsSaveId, JSON.stringify(value));
+        } catch (e) {
+        }
+        currentSettings = value;
+      }
+    };
+    if (hook) {
+      hook.on(HOOK_PLUGIN_SETTINGS_SET, (pluginId, value) => {
+        if (pluginId === this.plugin.id) {
+          this.fallbacks.setSettings(value);
+        }
+      });
+    }
+    this.proxiedOn = new Proxy({}, {
+      get: (_target, prop) => {
+        if (this.target) {
+          return this.target.on[prop];
+        } else {
+          return (...args) => {
+            this.onQueue.push({
+              method: prop,
+              args
+            });
+          };
+        }
+      }
+    });
+    this.proxiedTarget = new Proxy({}, {
+      get: (_target, prop) => {
+        if (this.target) {
+          return this.target[prop];
+        } else if (prop === "on") {
+          return this.proxiedOn;
+        } else if (Object.keys(this.fallbacks).includes(prop)) {
+          return (...args) => {
+            this.targetQueue.push({
+              method: prop,
+              args,
+              resolve: () => {
+              }
+            });
+            return this.fallbacks[prop](...args);
+          };
+        } else {
+          return (...args) => {
+            return new Promise((resolve) => {
+              this.targetQueue.push({
+                method: prop,
+                args,
+                resolve
+              });
+            });
+          };
+        }
+      }
+    });
+  }
+  async setRealTarget(target) {
+    this.target = target;
+    for (const item of this.onQueue) {
+      this.target.on[item.method](...item.args);
+    }
+    for (const item of this.targetQueue) {
+      item.resolve(await this.target[item.method](...item.args));
+    }
+  }
+};
+
+// node_modules/@vue/devtools-api/lib/esm/api/index.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/api/api.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/api/app.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/api/component.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/api/context.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/api/hooks.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/api/util.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/plugin.js
+init_define_MZ_ZOOM_OPTIONS();
+init_define_SEARCH_HOT_KEYS();
+init_define_SEARCH_LOCALES();
+
+// node_modules/@vue/devtools-api/lib/esm/index.js
+function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
+  const target = getTarget();
+  const hook = getDevtoolsGlobalHook();
+  const enableProxy = isProxyAvailable && pluginDescriptor.enableEarlyProxy;
+  if (hook && (target.__VUE_DEVTOOLS_PLUGIN_API_AVAILABLE__ || !enableProxy)) {
+    hook.emit(HOOK_SETUP, pluginDescriptor, setupFn);
+  } else {
+    const proxy = enableProxy ? new ApiProxy(pluginDescriptor, hook) : null;
+    const list = target.__VUE_DEVTOOLS_PLUGINS__ = target.__VUE_DEVTOOLS_PLUGINS__ || [];
+    list.push({
+      pluginDescriptor,
+      setupFn,
+      proxy
+    });
+    if (proxy)
+      setupFn(proxy.proxiedTarget);
+  }
+}
+
+// node_modules/vue-router/dist/vue-router.esm-bundler.js
 var hasSymbol = typeof Symbol === "function" && typeof Symbol.toStringTag === "symbol";
 var PolySymbol = (name) => hasSymbol ? Symbol(true ? "[vue-router]: " + name : name) : (true ? "[vue-router]: " : "_vr_") + name;
 var matchedRouteKey = PolySymbol(true ? "router view location matched" : "rvlm");
@@ -225,7 +405,7 @@ function getScrollKey(path, delta) {
   const position = history.state ? history.state.position - delta : -1;
   return position + path;
 }
-var scrollPositions = /* @__PURE__ */ new Map();
+var scrollPositions = new Map();
 function saveScrollPosition(key, scrollPosition) {
   scrollPositions.set(key, scrollPosition);
 }
@@ -826,7 +1006,7 @@ function tokenizePath(path) {
 function createRouteRecordMatcher(record, parent, options) {
   const parser = tokensToParser(tokenizePath(record.path), options);
   if (true) {
-    const existingKeys = /* @__PURE__ */ new Set();
+    const existingKeys = new Set();
     for (const key of parser.keys) {
       if (existingKeys.has(key.name))
         warn(`Found duplicated params with name "${key.name}" for path "${record.path}". Only the last one will be available on "$route.params".`);
@@ -847,7 +1027,7 @@ function createRouteRecordMatcher(record, parent, options) {
 }
 function createRouterMatcher(routes, globalOptions) {
   const matchers = [];
-  const matcherMap = /* @__PURE__ */ new Map();
+  const matcherMap = new Map();
   globalOptions = mergeOptions({ strict: false, end: true, sensitive: false }, globalOptions);
   function getRecordMatcher(name) {
     return matcherMap.get(name);
@@ -1012,8 +1192,8 @@ function normalizeRouteRecord(record) {
     props: normalizeRecordProps(record),
     children: record.children || [],
     instances: {},
-    leaveGuards: /* @__PURE__ */ new Set(),
-    updateGuards: /* @__PURE__ */ new Set(),
+    leaveGuards: new Set(),
+    updateGuards: new Set(),
     enterCallbacks: {},
     components: "components" in record ? record.components || {} : { default: record.component }
   };
@@ -2257,7 +2437,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   }
   const go = (delta) => routerHistory.go(delta);
   let started;
-  const installedApps = /* @__PURE__ */ new Set();
+  const installedApps = new Set();
   const router = {
     currentRoute,
     addRoute,

@@ -1,14 +1,13 @@
-<template><h1 id="" tabindex="-1"><a class="header-anchor" href="#" aria-hidden="true">#</a> </h1>
-<h1 id="消息队列的流派" tabindex="-1"><a class="header-anchor" href="#消息队列的流派" aria-hidden="true">#</a> 消息队列的流派</h1>
-<h3 id="什么是-mq" tabindex="-1"><a class="header-anchor" href="#什么是-mq" aria-hidden="true">#</a> 什么是 MQ</h3>
+<template><h1 id="消息队列的流派" tabindex="-1"><a class="header-anchor" href="#消息队列的流派" aria-hidden="true">#</a> 消息队列的流派</h1>
+<h4 id="什么是-mq" tabindex="-1"><a class="header-anchor" href="#什么是-mq" aria-hidden="true">#</a> 什么是 MQ</h4>
 <blockquote>
 <p>Message Queue（MQ），消息队列中间件。很多人都说：MQ 通过将消息的发送和接收分离来实现应用程序的异步和解偶，这个给人的直觉是——MQ 是异步的，用来解耦的，但是这个只是 MQ 的效果而不是目的。MQ 真正的目的是为了通讯，屏蔽底层复杂的通讯协议，定义了一套应用层的、更加简单的通讯协议。一个分布式系统中两个模块之间通讯要么是HTTP，要么是自己开发的（rpc） TCP，但是这两种协议其实都是原始的协议。HTTP 协议很难实现两端通讯——模块 A 可以调用 B，B 也可以主动调用 A，如果要做到这个两端都要背上WebServer，而且还不支持⻓连接（HTTP 2.0 的库根本找不到）。TCP 就更加原始了，粘包、心跳、私有的协议，想一想头皮就发麻。MQ 所要做的就是在这些协议之上构建一个简单的“协议”——生产者/消费者模型。MQ 带给我的“协议”不是具体的通讯协议，而是更高层次通讯模型。它定义了两个对象——发送数据的叫生产者；接收数据的叫消费者， 提供一个SDK 让我们可以定义自己的生产者和消费者实现消息通讯而无视底层通讯协议</p>
 </blockquote>
-<h3 id="有-broker-的-mq" tabindex="-1"><a class="header-anchor" href="#有-broker-的-mq" aria-hidden="true">#</a> 有 Broker 的 MQ</h3>
+<h4 id="有-broker-的-mq" tabindex="-1"><a class="header-anchor" href="#有-broker-的-mq" aria-hidden="true">#</a> 有 Broker 的 MQ</h4>
 <blockquote>
 <p>这个流派通常有一台服务器作为 Broker，所有的消息都通过它中转。生产者把消息发送给它就结束自己的任务了，Broker 则把消息主动推送给消费者（或者消费者主动轮询）</p>
 </blockquote>
-<h3 id="重-topic" tabindex="-1"><a class="header-anchor" href="#重-topic" aria-hidden="true">#</a> 重 Topic</h3>
+<h4 id="重-topic" tabindex="-1"><a class="header-anchor" href="#重-topic" aria-hidden="true">#</a> 重 Topic</h4>
 <blockquote>
 <p>kafka、JMS（ActiveMQ）就属于这个流派，生产者会发送 key 和数据到 Broker，由 Broker比较 key 之后决定给哪个消费者。这种模式是我们最常⻅的模式，是我们对 MQ 最多的印象。在这种模式下一个 topic 往往是一个比较大的概念，甚至一个系统中就可能只有一个topic，topic 某种意义上就是 queue，生产者发送 key 相当于说：“hi，把数据放到 key 的队列中”</p>
 </blockquote>
@@ -18,7 +17,7 @@
 <blockquote>
 <p>虽然架构一样但是 kafka 的性能要比 jms 的性能不知道高到多少倍，所以基本这种类型的MQ 只有 kafka 一种备选方案。如果你需要一条暴力的数据流（在乎性能而非灵活性）那么kafka 是最好的选择</p>
 </blockquote>
-<h3 id="轻-topic" tabindex="-1"><a class="header-anchor" href="#轻-topic" aria-hidden="true">#</a> 轻 Topic</h3>
+<h4 id="轻-topic" tabindex="-1"><a class="header-anchor" href="#轻-topic" aria-hidden="true">#</a> 轻 Topic</h4>
 <blockquote>
 <p>这种的代表是 RabbitMQ（或者说是 AMQP）。生产者发送 key 和数据，消费者定义订阅的队列，Broker 收到数据之后会通过一定的逻辑计算出 key 对应的队列，然后把数据交给队列</p>
 </blockquote>
@@ -34,7 +33,7 @@
 <li>queue（AMQP 头部元数据非常丰富而且可以自定义）</li>
 </ul>
 <p>这种结构的架构给通讯带来了很大的灵活性，我们能想到的通讯方式都可以用这四种exchange 表达出来。如果你需要一个企业数据总线（在乎灵活性）那么 RabbitMQ 绝对的值得一用</p>
-<h3 id="无-broker-的-mq" tabindex="-1"><a class="header-anchor" href="#无-broker-的-mq" aria-hidden="true">#</a> 无 Broker 的 MQ</h3>
+<h4 id="无-broker-的-mq" tabindex="-1"><a class="header-anchor" href="#无-broker-的-mq" aria-hidden="true">#</a> 无 Broker 的 MQ</h4>
 <blockquote>
 <p>无 Broker 的 MQ 的代表是 ZeroMQ。该作者非常睿智，他非常敏锐的意识到——MQ 是更高级的 Socket，它是解决通讯问题的。所以 ZeroMQ 被设计成了一个“库”而不是一个中间件，这种实现也可以达到——没有 Broker 的目的</p>
 </blockquote>
@@ -44,7 +43,7 @@
 <blockquote>
 <p>ZeroMQ 其实就是一个跨语言的、重量级的 Actor 模型邮箱库。你可以把自己的程序想象成一个 Actor，ZeroMQ 就是提供邮箱功能的库；ZeroMQ 可以实现同一台机器的 RPC 通讯也可以实现不同机器的 TCP、UDP 通讯，如果你需要一个强大的、灵活、野蛮的通讯能力，别犹豫 ZeroMQ</p>
 </blockquote>
-<h1 id="一、kafka介绍" tabindex="-1"><a class="header-anchor" href="#一、kafka介绍" aria-hidden="true">#</a> 一、Kafka介绍</h1>
+<h2 id="一、kafka介绍" tabindex="-1"><a class="header-anchor" href="#一、kafka介绍" aria-hidden="true">#</a> 一、Kafka介绍</h2>
 <blockquote>
 <p>Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的
 （replica），基于zookeeper协调的分布式消息系统，它的最大的特性就是可以实时的处理
@@ -52,7 +51,7 @@
 Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等等，用scala语言编
 写，Linkedin于 2010 年贡献给了Apache基金会并成为顶级开源 项目。</p>
 </blockquote>
-<h2 id="_1-kafka的使用场景" tabindex="-1"><a class="header-anchor" href="#_1-kafka的使用场景" aria-hidden="true">#</a> 1.Kafka的使用场景</h2>
+<h3 id="_1-kafka的使用场景" tabindex="-1"><a class="header-anchor" href="#_1-kafka的使用场景" aria-hidden="true">#</a> 1.Kafka的使用场景</h3>
 <blockquote>
 <p>日志收集：一个公司可以用Kafka收集各种服务的log，通过kafka以统一接口服务的方式
 开放给各种consumer，例如hadoop、Hbase、Solr等。
@@ -64,7 +63,7 @@ Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等
 运营指标：Kafka也经常用来记录运营监控数据。包括收集各种分布式应用的数据，生产
 各种操作的集中反馈，比如报警和报告。</p>
 </blockquote>
-<h2 id="_2-kafka基本概念" tabindex="-1"><a class="header-anchor" href="#_2-kafka基本概念" aria-hidden="true">#</a> 2.Kafka基本概念</h2>
+<h3 id="_2-kafka基本概念" tabindex="-1"><a class="header-anchor" href="#_2-kafka基本概念" aria-hidden="true">#</a> 2.Kafka基本概念</h3>
 <blockquote>
 <p>kafka是一个分布式的，分区的消息(官方称之为commit log)服务。它提供一个消息系统应该
 具备的功能，但是确有着独特的设计。可以这样来说，Kafka借鉴了JMS规范的思想，但是确
@@ -109,8 +108,8 @@ Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等
 来进行消费，如下图：
 <img src="@source/c-book/kafka/notes/images/QQ截图20220110112502.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
 <p>服务端(brokers)和客户端(producer、consumer)之间通信通过 <strong>TCP协议</strong> 来完成。</p>
-<h1 id="二、kafka基本使用" tabindex="-1"><a class="header-anchor" href="#二、kafka基本使用" aria-hidden="true">#</a> 二、kafka基本使用</h1>
-<h2 id="_1-安装前的环境准备" tabindex="-1"><a class="header-anchor" href="#_1-安装前的环境准备" aria-hidden="true">#</a> 1.安装前的环境准备</h2>
+<h2 id="二、kafka基本使用" tabindex="-1"><a class="header-anchor" href="#二、kafka基本使用" aria-hidden="true">#</a> 二、kafka基本使用</h2>
+<h3 id="_1-安装前的环境准备" tabindex="-1"><a class="header-anchor" href="#_1-安装前的环境准备" aria-hidden="true">#</a> 1.安装前的环境准备</h3>
 <ul>
 <li>安装jdk</li>
 <li>安装zk</li>
@@ -129,7 +128,7 @@ broker.id<span class="token operator">=</span> <span class="token number">0</spa
 log.dir<span class="token operator">=</span>/usr/local/data/kafka-logs
 <span class="token comment">#kafka连接zookeeper的地址</span>
 zookeeper.connect<span class="token operator">=</span> <span class="token number">192.168</span>.65.60:2181
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_2-启动kafka服务器" tabindex="-1"><a class="header-anchor" href="#_2-启动kafka服务器" aria-hidden="true">#</a> 2.启动kafka服务器</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_2-启动kafka服务器" tabindex="-1"><a class="header-anchor" href="#_2-启动kafka服务器" aria-hidden="true">#</a> 2.启动kafka服务器</h3>
 <p>进入到bin目录下。使用命令来启动</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-server-start.sh -daemon<span class="token punctuation">..</span>/config/server.properties
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>验证是否启动成功：</p>
@@ -192,7 +191,7 @@ zookeeper.connect<span class="token operator">=</span> <span class="token number
 </tr>
 </tbody>
 </table>
-<h2 id="_3-创建主题topic" tabindex="-1"><a class="header-anchor" href="#_3-创建主题topic" aria-hidden="true">#</a> 3.创建主题topic</h2>
+<h3 id="_3-创建主题topic" tabindex="-1"><a class="header-anchor" href="#_3-创建主题topic" aria-hidden="true">#</a> 3.创建主题topic</h3>
 <blockquote>
 <p>topic是什么概念？topic可以实现消息的分类，不同消费者订阅不同的topic。</p>
 </blockquote>
@@ -201,12 +200,12 @@ zookeeper.connect<span class="token operator">=</span> <span class="token number
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-topics.sh --create --zookeeper <span class="token number">172.16</span>.253.35:2181 --replication-factor <span class="token number">1</span> --partitions <span class="token number">1</span> --topic <span class="token builtin class-name">test</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>查看当前kafka内有哪些topic</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-topics.sh --list --zookeeper <span class="token number">172.16</span>.253.35:2181
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_4-发送消息" tabindex="-1"><a class="header-anchor" href="#_4-发送消息" aria-hidden="true">#</a> 4.发送消息</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_4-发送消息" tabindex="-1"><a class="header-anchor" href="#_4-发送消息" aria-hidden="true">#</a> 4.发送消息</h3>
 <blockquote>
 <p>kafka自带了一个producer命令客户端，可以从本地文件中读取内容，或者我们也可以以命令行中直接输入内容，并将这些内容以消息的形式发送到kafka集群中。在默认情况下，每一个行会被当做成一个独立的消息。使用kafka的发送消息的客户端，指定发送到的kafka服务器地址和topic</p>
 </blockquote>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-producer.sh --broker-list <span class="token number">172.16</span>.253.38:9092 --topic <span class="token builtin class-name">test</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_5-消费消息" tabindex="-1"><a class="header-anchor" href="#_5-消费消息" aria-hidden="true">#</a> 5.消费消息</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_5-消费消息" tabindex="-1"><a class="header-anchor" href="#_5-消费消息" aria-hidden="true">#</a> 5.消费消息</h3>
 <p>对于consumer，kafka同样也携带了一个命令行客户端，会将获取到内容在命令中进行输
 出， <strong>默认是消费最新的消息</strong> 。使用kafka的消费者消息的客户端，从指定kafka服务器的指定
 topic中消费消息</p>
@@ -214,30 +213,30 @@ topic中消费消息</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-consumer.sh --bootstrap-server <span class="token number">172.16</span>.253.38:9092 --topic <span class="token builtin class-name">test</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>方式二：从头开始消费</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-consumer.sh --bootstrap-server <span class="token number">172.16</span>.253.38:9092 --from-beginning --topic <span class="token builtin class-name">test</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="几个注意点" tabindex="-1"><a class="header-anchor" href="#几个注意点" aria-hidden="true">#</a> 几个注意点：</h3>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h4 id="几个注意点" tabindex="-1"><a class="header-anchor" href="#几个注意点" aria-hidden="true">#</a> 几个注意点：</h4>
 <ul>
 <li>消息会被存储</li>
 <li>消息是顺序存储</li>
 <li>消息是有偏移量的</li>
 <li>消费时可以指明偏移量进行消费</li>
 </ul>
-<h1 id="三、kafka中的关键细节" tabindex="-1"><a class="header-anchor" href="#三、kafka中的关键细节" aria-hidden="true">#</a> 三、Kafka中的关键细节</h1>
-<h2 id="_1-消息的顺序存储" tabindex="-1"><a class="header-anchor" href="#_1-消息的顺序存储" aria-hidden="true">#</a> 1.消息的顺序存储</h2>
+<h2 id="三、kafka中的关键细节" tabindex="-1"><a class="header-anchor" href="#三、kafka中的关键细节" aria-hidden="true">#</a> 三、Kafka中的关键细节</h2>
+<h3 id="_1-消息的顺序存储" tabindex="-1"><a class="header-anchor" href="#_1-消息的顺序存储" aria-hidden="true">#</a> 1.消息的顺序存储</h3>
 <blockquote>
 <p>消息的发送方会把消息发送到broker中，broker会存储消息，消息是按照发送的顺序进行存储。因此消费者在消费消息时可以指明主题中消息的偏移量。默认情况下，是从最后一个消息的下一个偏移量开始消费。</p>
 </blockquote>
-<h2 id="_2-单播消息的实现" tabindex="-1"><a class="header-anchor" href="#_2-单播消息的实现" aria-hidden="true">#</a> 2. 单播消息的实现</h2>
+<h3 id="_2-单播消息的实现" tabindex="-1"><a class="header-anchor" href="#_2-单播消息的实现" aria-hidden="true">#</a> 2. 单播消息的实现</h3>
 <blockquote>
 <p>单播消息：一个消费组里 只会有一个消费者能消费到某一个topic中的消息。于是可以创建多个消费者，这些消费者在同一个消费组中。</p>
 </blockquote>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-consumer.sh --bootstrap-server <span class="token number">10.31</span>.167.10:9092 --consumer-property group.id<span class="token operator">=</span>testGroup --topic <span class="token builtin class-name">test</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_3-多播消息的实现" tabindex="-1"><a class="header-anchor" href="#_3-多播消息的实现" aria-hidden="true">#</a> 3.多播消息的实现</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_3-多播消息的实现" tabindex="-1"><a class="header-anchor" href="#_3-多播消息的实现" aria-hidden="true">#</a> 3.多播消息的实现</h3>
 <h3 id="在一些业务场景中需要让一条消息被多个消费者消费-那么就可以使用多播模式。" tabindex="-1"><a class="header-anchor" href="#在一些业务场景中需要让一条消息被多个消费者消费-那么就可以使用多播模式。" aria-hidden="true">#</a> 在一些业务场景中需要让一条消息被多个消费者消费，那么就可以使用多播模式。</h3>
 <p>kafka实现多播，只需要让不同的消费者处于不同的消费组即可。</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-consumer.sh --bootstrap-server <span class="token number">10.31</span>.167.10:9092 --consumer-property group.id<span class="token operator">=</span>testGroup1 --topic <span class="token builtin class-name">test</span>
 
 ./kafka-console-consumer.sh --bootstrap-server <span class="token number">10.31</span>.167.10:9092 --consumer-property group.id<span class="token operator">=</span>testGroup2 --topic <span class="token builtin class-name">test</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="_4-查看消费组及信息" tabindex="-1"><a class="header-anchor" href="#_4-查看消费组及信息" aria-hidden="true">#</a> 4.查看消费组及信息</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_4-查看消费组及信息" tabindex="-1"><a class="header-anchor" href="#_4-查看消费组及信息" aria-hidden="true">#</a> 4.查看消费组及信息</h3>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 查看当前主题下有哪些消费组</span>
 ./kafka-consumer-groups.sh --bootstrap-server <span class="token number">10.31</span>.167.10:9092 --list
 <span class="token comment"># 查看消费组中的具体信息：比如当前偏移量、最后一条消息的偏移量、堆积的消息数量</span>
@@ -248,10 +247,10 @@ topic中消费消息</p>
 <li>Log-end-offset: 主题对应分区消息的结束偏移量(HW)</li>
 <li>Lag: 当前消费组未消费的消息数</li>
 </ul>
-<h1 id="四、主题、分区的概念" tabindex="-1"><a class="header-anchor" href="#四、主题、分区的概念" aria-hidden="true">#</a> 四、主题、分区的概念</h1>
-<h2 id="_1-主题topic" tabindex="-1"><a class="header-anchor" href="#_1-主题topic" aria-hidden="true">#</a> 1.主题Topic</h2>
+<h2 id="四、主题、分区的概念" tabindex="-1"><a class="header-anchor" href="#四、主题、分区的概念" aria-hidden="true">#</a> 四、主题、分区的概念</h2>
+<h3 id="_1-主题topic" tabindex="-1"><a class="header-anchor" href="#_1-主题topic" aria-hidden="true">#</a> 1.主题Topic</h3>
 <p>?主题Topic可以理解成是一个类别的名称。</p>
-<h2 id="_2-partition分区" tabindex="-1"><a class="header-anchor" href="#_2-partition分区" aria-hidden="true">#</a> 2.partition分区</h2>
+<h3 id="_2-partition分区" tabindex="-1"><a class="header-anchor" href="#_2-partition分区" aria-hidden="true">#</a> 2.partition分区</h3>
 <p><img src="@source/c-book/kafka/notes/images/QQ截图20220110125413.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
 <blockquote>
 <p>一个主题中的消息量是非常大的，因此可以通过分区的设置，来分布式存储这些消息。比如一个topic创建了 3 个分区。那么topic中的消息就会分别存放在这三个分区中。</p>
@@ -260,7 +259,7 @@ topic中消费消息</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-topics.sh --create --zookeeper localhost:2181 --partitions <span class="token number">2</span> --topic test1
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p><strong>可以通过这样的命令查看topic的分区信息</strong></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-topics.sh --describe --zookeeper localhost:2181 --topic test1
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="分区的作用" tabindex="-1"><a class="header-anchor" href="#分区的作用" aria-hidden="true">#</a> 分区的作用：</h3>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h4 id="分区的作用" tabindex="-1"><a class="header-anchor" href="#分区的作用" aria-hidden="true">#</a> 分区的作用：</h4>
 <ul>
 <li>可以分布式存储</li>
 <li>可以并行写</li>
@@ -276,8 +275,8 @@ topic中消费消息</p>
 通过如下公式可以选出consumer消费的offset要提交到__consumer_offsets的哪个分区
 公式：hash(consumerGroupId) % __consumer_offsets主题的分区数</p>
 </blockquote>
-<h1 id="五、kafka集群及副本的概念" tabindex="-1"><a class="header-anchor" href="#五、kafka集群及副本的概念" aria-hidden="true">#</a> 五、Kafka集群及副本的概念</h1>
-<h2 id="_1-搭建kafka集群-3-个broker" tabindex="-1"><a class="header-anchor" href="#_1-搭建kafka集群-3-个broker" aria-hidden="true">#</a> 1.搭建kafka集群， 3 个broker</h2>
+<h2 id="五、kafka集群及副本的概念" tabindex="-1"><a class="header-anchor" href="#五、kafka集群及副本的概念" aria-hidden="true">#</a> 五、Kafka集群及副本的概念</h2>
+<h3 id="_1-搭建kafka集群-3-个broker" tabindex="-1"><a class="header-anchor" href="#_1-搭建kafka集群-3-个broker" aria-hidden="true">#</a> 1.搭建kafka集群， 3 个broker</h3>
 <p>准备 3 个server.properties文件</p>
 <p>每个文件中的这些内容要调整</p>
 <ul>
@@ -303,7 +302,7 @@ log.dir<span class="token operator">=</span>/usr/local/data/kafka-logs-
 ./kafka-server-start.sh -daemon<span class="token punctuation">..</span>/config/server1.properties
 ./kafka-server-start.sh -daemon<span class="token punctuation">..</span>/config/server2.properties
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>搭建完后通过查看zk中的/brokers/ids 看是否启动成功</p>
-<h2 id="_2-副本的概念" tabindex="-1"><a class="header-anchor" href="#_2-副本的概念" aria-hidden="true">#</a> 2.副本的概念</h2>
+<h3 id="_2-副本的概念" tabindex="-1"><a class="header-anchor" href="#_2-副本的概念" aria-hidden="true">#</a> 2.副本的概念</h3>
 <blockquote>
 <p>副本是对分区的备份。在集群中，不同的副本会被部署在不同的broker上。下面例子：创建 1个主题， 2 个分区、 3 个副本。</p>
 </blockquote>
@@ -329,30 +328,30 @@ log.dir<span class="token operator">=</span>/usr/local/data/kafka-logs-
 ./kafka-topics.sh --describe --zookeeper <span class="token number">172.16</span>.253.35:2181 --topic my-replicated-topic
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>isr：
 可以同步的broker节点和已同步的broker节点，存放在isr集合中。</p>
-<h2 id="_3-broker、主题、分区、副本" tabindex="-1"><a class="header-anchor" href="#_3-broker、主题、分区、副本" aria-hidden="true">#</a> 3.broker、主题、分区、副本</h2>
+<h3 id="_3-broker、主题、分区、副本" tabindex="-1"><a class="header-anchor" href="#_3-broker、主题、分区、副本" aria-hidden="true">#</a> 3.broker、主题、分区、副本</h3>
 <ul>
 <li>kafka集群中由多个broker组成</li>
 <li>一个broker中存放一个topic的不同partition——副本</li>
 </ul>
 <p><img src="@source/c-book/kafka/notes/images/QQ截图20220110134554.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
-<h2 id="_4-kafka集群消息的发送" tabindex="-1"><a class="header-anchor" href="#_4-kafka集群消息的发送" aria-hidden="true">#</a> 4.kafka集群消息的发送</h2>
+<h3 id="_4-kafka集群消息的发送" tabindex="-1"><a class="header-anchor" href="#_4-kafka集群消息的发送" aria-hidden="true">#</a> 4.kafka集群消息的发送</h3>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-producer.sh --broker-list <span class="token number">172.16</span>.253.38:9092,172.16.253.38:9093,172.16.253.38:9094 --topic my-replicated-topic
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_5-kafka集群消息的消费" tabindex="-1"><a class="header-anchor" href="#_5-kafka集群消息的消费" aria-hidden="true">#</a> 5.kafka集群消息的消费</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_5-kafka集群消息的消费" tabindex="-1"><a class="header-anchor" href="#_5-kafka集群消息的消费" aria-hidden="true">#</a> 5.kafka集群消息的消费</h3>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-consumer.sh --bootstrap-server <span class="token number">172.16</span>.253.38:9092,172.16.253.38:9093,172.16.253.38:9094 --from-beginning --topic my-replicated-topic
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_6-关于分区消费组消费者的细节" tabindex="-1"><a class="header-anchor" href="#_6-关于分区消费组消费者的细节" aria-hidden="true">#</a> 6.关于分区消费组消费者的细节</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_6-关于分区消费组消费者的细节" tabindex="-1"><a class="header-anchor" href="#_6-关于分区消费组消费者的细节" aria-hidden="true">#</a> 6.关于分区消费组消费者的细节</h3>
 <p><img src="@source/c-book/kafka/notes/images/QQ截图20220110134734.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
 <blockquote>
 <p>图中Kafka集群有两个broker，每个broker中有多个partition。一个partition只能被一个消费组里的某一个消费者消费，从而保证消费顺序。Kafka只在partition的范围内保证消息消费的局部顺序性，不能在同一个topic中的多个partition中保证总的消费顺序性。一个消费者可以消费多个partition。</p>
 </blockquote>
 <p><code>消费组中消费者的数量不能比一个topic中的partition数量多，否则多出来的消费者消费不到消息。</code></p>
-<h1 id="六、kafka的java客户端-生产者" tabindex="-1"><a class="header-anchor" href="#六、kafka的java客户端-生产者" aria-hidden="true">#</a> 六、Kafka的Java客户端-生产者</h1>
-<h2 id="_1-引入依赖" tabindex="-1"><a class="header-anchor" href="#_1-引入依赖" aria-hidden="true">#</a> 1.引入依赖</h2>
+<h2 id="六、kafka的java客户端-生产者" tabindex="-1"><a class="header-anchor" href="#六、kafka的java客户端-生产者" aria-hidden="true">#</a> 六、Kafka的Java客户端-生产者</h2>
+<h3 id="_1-引入依赖" tabindex="-1"><a class="header-anchor" href="#_1-引入依赖" aria-hidden="true">#</a> 1.引入依赖</h3>
 <div class="language-xml ext-xml line-numbers-mode"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.apache.kafka<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>kafka-clients<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.4.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_2-生产者发送消息的基本实现" tabindex="-1"><a class="header-anchor" href="#_2-生产者发送消息的基本实现" aria-hidden="true">#</a> 2.生产者发送消息的基本实现</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_2-生产者发送消息的基本实现" tabindex="-1"><a class="header-anchor" href="#_2-生产者发送消息的基本实现" aria-hidden="true">#</a> 2.生产者发送消息的基本实现</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>#### <span class="token comment">//消息的发送方</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyProducer</span> <span class="token punctuation">{</span>
 
@@ -373,19 +372,19 @@ props<span class="token punctuation">.</span><span class="token function">put</s
 <span class="token class-name">RecordMetadata</span> metadata <span class="token operator">=</span> producer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>producerRecord<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//=====阻塞=======</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"同步方式发送消息结果："</span> <span class="token operator">+</span> <span class="token string">"topic-"</span> <span class="token operator">+</span>metadata<span class="token punctuation">.</span><span class="token function">topic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|partition-"</span><span class="token operator">+</span> metadata<span class="token punctuation">.</span><span class="token function">partition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|offset-"</span> <span class="token operator">+</span>metadata<span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="_3-发送消息到指定分区上" tabindex="-1"><a class="header-anchor" href="#_3-发送消息到指定分区上" aria-hidden="true">#</a> 3.发送消息到指定分区上</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="_3-发送消息到指定分区上" tabindex="-1"><a class="header-anchor" href="#_3-发送消息到指定分区上" aria-hidden="true">#</a> 3.发送消息到指定分区上</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">ProducerRecord</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span> producerRecord <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ProducerRecord</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">,</span> order<span class="token punctuation">.</span><span class="token function">getOrderId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_4-未指定分区-则会通过业务key的hash运算-算出消息往哪个分区上发" tabindex="-1"><a class="header-anchor" href="#_4-未指定分区-则会通过业务key的hash运算-算出消息往哪个分区上发" aria-hidden="true">#</a> 4.未指定分区，则会通过业务key的hash运算，算出消息往哪个分区上发</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_4-未指定分区-则会通过业务key的hash运算-算出消息往哪个分区上发" tabindex="-1"><a class="header-anchor" href="#_4-未指定分区-则会通过业务key的hash运算-算出消息往哪个分区上发" aria-hidden="true">#</a> 4.未指定分区，则会通过业务key的hash运算，算出消息往哪个分区上发</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">//未指定发送分区，具体发送的分区计算公式：hash(key)%partitionNum</span>
 <span class="token class-name">ProducerRecord</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span> producerRecord <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ProducerRecord</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> order<span class="token punctuation">.</span><span class="token function">getOrderId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> JSON<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_5-同步发送" tabindex="-1"><a class="header-anchor" href="#_5-同步发送" aria-hidden="true">#</a> 5.同步发送</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_5-同步发送" tabindex="-1"><a class="header-anchor" href="#_5-同步发送" aria-hidden="true">#</a> 5.同步发送</h3>
 <p>生产者同步发消息，在收到kafka的ack告知发送成功之前一直处于阻塞状态</p>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">//等待消息发送成功的同步阻塞方法</span>
 <span class="token class-name">RecordMetadata</span> metadata <span class="token operator">=</span> producer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>producerRecord<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"同步方式发送消息结果："</span> <span class="token operator">+</span> <span class="token string">"topic-"</span> <span class="token operator">+</span>metadata<span class="token punctuation">.</span><span class="token function">topic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|partition-"</span><span class="token operator">+</span> metadata<span class="token punctuation">.</span><span class="token function">partition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|offset-"</span> <span class="token operator">+</span>metadata<span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><img src="@source/c-book/kafka/notes/images/QQ截图20220110142708.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
-<h2 id="_6-异步发消息" tabindex="-1"><a class="header-anchor" href="#_6-异步发消息" aria-hidden="true">#</a> 6.异步发消息</h2>
-<h3 id="生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果" tabindex="-1"><a class="header-anchor" href="#生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果" aria-hidden="true">#</a> 生产者发消息，发送完后不用等待broker给回复，直接执行下面的业务逻辑。可以提供callback，让broker异步的调用callback，告知生产者，消息发送的结果</h3>
+<h3 id="_6-异步发消息" tabindex="-1"><a class="header-anchor" href="#_6-异步发消息" aria-hidden="true">#</a> 6.异步发消息</h3>
+<h4 id="生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果" tabindex="-1"><a class="header-anchor" href="#生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果" aria-hidden="true">#</a> 生产者发消息，发送完后不用等待broker给回复，直接执行下面的业务逻辑。可以提供callback，让broker异步的调用callback，告知生产者，消息发送的结果</h4>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">//要发送 5 条消息</span>
 <span class="token class-name">Order</span> order <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Order</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span> i<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//指定发送分区</span>
@@ -402,22 +401,22 @@ producer<span class="token punctuation">.</span><span class="token function">sen
          <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="_7-关于生产者的ack参数配置" tabindex="-1"><a class="header-anchor" href="#_7-关于生产者的ack参数配置" aria-hidden="true">#</a> 7.关于生产者的ack参数配置</h2>
-<h3 id="在同步发消息的场景下-生产者发动broker上后-ack会有-3-种不同的选择" tabindex="-1"><a class="header-anchor" href="#在同步发消息的场景下-生产者发动broker上后-ack会有-3-种不同的选择" aria-hidden="true">#</a> 在同步发消息的场景下：生产者发动broker上后，ack会有 3 种不同的选择：</h3>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="_7-关于生产者的ack参数配置" tabindex="-1"><a class="header-anchor" href="#_7-关于生产者的ack参数配置" aria-hidden="true">#</a> 7.关于生产者的ack参数配置</h3>
+<h4 id="在同步发消息的场景下-生产者发动broker上后-ack会有-3-种不同的选择" tabindex="-1"><a class="header-anchor" href="#在同步发消息的场景下-生产者发动broker上后-ack会有-3-种不同的选择" aria-hidden="true">#</a> 在同步发消息的场景下：生产者发动broker上后，ack会有 3 种不同的选择：</h4>
 <ul>
 <li>（ 1 ）acks=0： 表示producer不需要等待任何broker确认收到消息的回复，就可以继续发送下一条消息。性能最高，但是最容易丢消息。</li>
 <li>（ 2 ）acks=1： 至少要等待leader已经成功将数据写入本地log，但是不需要等待所有follower是否成功写入。就可以继续发送下一条消息。这种情况下，如果follower没有成功备份数据，而此时leader又挂掉，则消息会丢失。</li>
 <li>（ 3 ）acks=-1或all： 需要等待 min.insync.replicas(默认为 1 ，推荐配置大于等于2) 这个参数配置的副本个数都成功写入日志，这种策略会保证只要有一个备份存活就不会丢失数据。这是最强的数据保证。一般除非是金融级别，或跟钱打交道的场景才会使用这种配置。</li>
 </ul>
-<h3 id="code" tabindex="-1"><a class="header-anchor" href="#code" aria-hidden="true">#</a> code:</h3>
+<h4 id="code" tabindex="-1"><a class="header-anchor" href="#code" aria-hidden="true">#</a> code:</h4>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>props<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">ProducerConfig</span><span class="token punctuation">.</span>ACKS_CONFIG<span class="token punctuation">,</span> <span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_8-其他一些细节" tabindex="-1"><a class="header-anchor" href="#_8-其他一些细节" aria-hidden="true">#</a> 8.其他一些细节</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_8-其他一些细节" tabindex="-1"><a class="header-anchor" href="#_8-其他一些细节" aria-hidden="true">#</a> 8.其他一些细节</h3>
 <ul>
 <li>发送会默认会重试 3 次，每次间隔100ms</li>
 <li>发送的消息会先进入到本地缓冲区（32mb），kakfa会跑一个线程，该线程去缓冲区中取16k的数据，发送到kafka，如果到 10 毫秒数据没取满16k，也会发送一次。</li>
 </ul>
-<h1 id="七、消费者" tabindex="-1"><a class="header-anchor" href="#七、消费者" aria-hidden="true">#</a> 七、消费者</h1>
-<h2 id="_1-消费者消费消息的基本实现" tabindex="-1"><a class="header-anchor" href="#_1-消费者消费消息的基本实现" aria-hidden="true">#</a> 1.消费者消费消息的基本实现</h2>
+<h2 id="七、消费者" tabindex="-1"><a class="header-anchor" href="#七、消费者" aria-hidden="true">#</a> 七、消费者</h2>
+<h3 id="_1-消费者消费消息的基本实现" tabindex="-1"><a class="header-anchor" href="#_1-消费者消费消息的基本实现" aria-hidden="true">#</a> 1.消费者消费消息的基本实现</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyConsumer</span> <span class="token punctuation">{</span>
 <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">static</span> <span class="token class-name">String</span> TOPIC_NAME <span class="token operator">=</span> <span class="token string">"my-replicated-topic"</span><span class="token punctuation">;</span>
 <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token keyword">static</span> <span class="token class-name">String</span> CONSUMER_GROUP_NAME <span class="token operator">=</span> <span class="token string">"testGroup"</span><span class="token punctuation">;</span>
@@ -445,7 +444,7 @@ consumer<span class="token punctuation">.</span><span class="token function">sub
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="_2-自动提交offset" tabindex="-1"><a class="header-anchor" href="#_2-自动提交offset" aria-hidden="true">#</a> 2.自动提交offset</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="_2-自动提交offset" tabindex="-1"><a class="header-anchor" href="#_2-自动提交offset" aria-hidden="true">#</a> 2.自动提交offset</h3>
 <ul>
 <li>设置自动提交参数 - 默认</li>
 </ul>
@@ -455,12 +454,12 @@ props<span class="token punctuation">.</span><span class="token function">put</s
 props<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">ConsumerConfig</span><span class="token punctuation">.</span>AUTO_COMMIT_INTERVAL_MS_CONFIG<span class="token punctuation">,</span> <span class="token string">"1000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>消费者poll到消息后默认情况下，会自动向broker的_consumer_offsets主题提交当前主题-分区消费的偏移量。</p>
 <p>自动提交会丢消息： 因为如果消费者还没消费完poll下来的消息就自动提交了偏移量，那么此 时消费者挂了，于是下一个消费者会从已提交的offset的下一个位置开始消费消息。之前未被消费的消息就丢失掉了。</p>
-<h2 id="_3-手动提交offset" tabindex="-1"><a class="header-anchor" href="#_3-手动提交offset" aria-hidden="true">#</a> 3.手动提交offset</h2>
+<h3 id="_3-手动提交offset" tabindex="-1"><a class="header-anchor" href="#_3-手动提交offset" aria-hidden="true">#</a> 3.手动提交offset</h3>
 <ul>
 <li>设置手动提交参数</li>
 </ul>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>props<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">ConsumerConfig</span><span class="token punctuation">.</span>ENABLE_AUTO_COMMIT_CONFIG<span class="token punctuation">,</span> <span class="token string">"false"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="在消费完消息后进行手动提交" tabindex="-1"><a class="header-anchor" href="#在消费完消息后进行手动提交" aria-hidden="true">#</a> 在消费完消息后进行手动提交</h3>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h4 id="在消费完消息后进行手动提交" tabindex="-1"><a class="header-anchor" href="#在消费完消息后进行手动提交" aria-hidden="true">#</a> 在消费完消息后进行手动提交</h4>
 <ul>
 <li>手动同步提交</li>
 </ul>
@@ -484,7 +483,7 @@ consumer<span class="token punctuation">.</span><span class="token function">com
          <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="_4-消费者poll消息的过程" tabindex="-1"><a class="header-anchor" href="#_4-消费者poll消息的过程" aria-hidden="true">#</a> 4.消费者poll消息的过程</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_4-消费者poll消息的过程" tabindex="-1"><a class="header-anchor" href="#_4-消费者poll消息的过程" aria-hidden="true">#</a> 4.消费者poll消息的过程</h3>
 <ul>
 <li>消费者建立了与broker之间的⻓连接，开始poll消息。</li>
 <li>默认一次poll 500条消息</li>
@@ -499,15 +498,15 @@ consumer<span class="token punctuation">.</span><span class="token function">com
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>props<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">ConsumerConfig</span><span class="token punctuation">.</span>HEARTBEAT_INTERVAL_MS_CONFIG<span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>kafka如果超过 10 秒没有收到消费者的心跳，则会把消费者踢出消费组，进行rebalance，把分区分配给其他消费者。</p>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>props<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">ConsumerConfig</span><span class="token punctuation">.</span>SESSION_TIMEOUT_MS_CONFIG<span class="token punctuation">,</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token number">1000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_5-指定分区消费" tabindex="-1"><a class="header-anchor" href="#_5-指定分区消费" aria-hidden="true">#</a> 5.指定分区消费</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_5-指定分区消费" tabindex="-1"><a class="header-anchor" href="#_5-指定分区消费" aria-hidden="true">#</a> 5.指定分区消费</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>consumer<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TopicPartition</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_6-消息回溯消费" tabindex="-1"><a class="header-anchor" href="#_6-消息回溯消费" aria-hidden="true">#</a> 6.消息回溯消费</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_6-消息回溯消费" tabindex="-1"><a class="header-anchor" href="#_6-消息回溯消费" aria-hidden="true">#</a> 6.消息回溯消费</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>consumer<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TopicPartition</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 consumer<span class="token punctuation">.</span><span class="token function">seekToBeginning</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TopicPartition</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span><span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_7-指定offset消费" tabindex="-1"><a class="header-anchor" href="#_7-指定offset消费" aria-hidden="true">#</a> 7.指定offset消费</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_7-指定offset消费" tabindex="-1"><a class="header-anchor" href="#_7-指定offset消费" aria-hidden="true">#</a> 7.指定offset消费</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>consumer<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TopicPartition</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 consumer<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TopicPartition</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_8-从指定时间点消费" tabindex="-1"><a class="header-anchor" href="#_8-从指定时间点消费" aria-hidden="true">#</a> 8.从指定时间点消费</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_8-从指定时间点消费" tabindex="-1"><a class="header-anchor" href="#_8-从指定时间点消费" aria-hidden="true">#</a> 8.从指定时间点消费</h3>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PartitionInfo</span><span class="token punctuation">></span></span> topicPartitions <span class="token operator">=</span>consumer<span class="token punctuation">.</span><span class="token function">partitionsFor</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//从 1 小时前开始消费</span>
 <span class="token keyword">long</span> fetchDataTime <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token punctuation">;</span>
@@ -529,7 +528,7 @@ consumer<span class="token punctuation">.</span><span class="token function">see
         consumer<span class="token punctuation">.</span><span class="token function">seek</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> offset<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="_9-新消费组的消费偏移量" tabindex="-1"><a class="header-anchor" href="#_9-新消费组的消费偏移量" aria-hidden="true">#</a> 9.新消费组的消费偏移量</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_9-新消费组的消费偏移量" tabindex="-1"><a class="header-anchor" href="#_9-新消费组的消费偏移量" aria-hidden="true">#</a> 9.新消费组的消费偏移量</h3>
 <blockquote>
 <p>当消费主题的是一个新的消费组，或者指定offset的消费方式，offset不存在，那么应该如何消费?</p>
 </blockquote>
@@ -538,13 +537,13 @@ consumer<span class="token punctuation">.</span><span class="token function">see
 <li>earliest：第一次从头开始消费，以后按照消费offset记录继续消费，这个需要区别于consumer.seekToBeginning(每次都从头开始消费)</li>
 </ul>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>props.put<span class="token punctuation">(</span>ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, <span class="token string">"earliest"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h1 id="八-、springboot中使用kafka" tabindex="-1"><a class="header-anchor" href="#八-、springboot中使用kafka" aria-hidden="true">#</a> 八 、Springboot中使用Kafka</h1>
-<h2 id="_1-引入依赖-1" tabindex="-1"><a class="header-anchor" href="#_1-引入依赖-1" aria-hidden="true">#</a> 1.引入依赖</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="八-、springboot中使用kafka" tabindex="-1"><a class="header-anchor" href="#八-、springboot中使用kafka" aria-hidden="true">#</a> 八 、Springboot中使用Kafka</h2>
+<h3 id="_1-引入依赖-1" tabindex="-1"><a class="header-anchor" href="#_1-引入依赖-1" aria-hidden="true">#</a> 1.引入依赖</h3>
 <div class="language-xml ext-xml line-numbers-mode"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.kafka<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-kafka<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_2-配置文件" tabindex="-1"><a class="header-anchor" href="#_2-配置文件" aria-hidden="true">#</a> 2.配置文件</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_2-配置文件" tabindex="-1"><a class="header-anchor" href="#_2-配置文件" aria-hidden="true">#</a> 2.配置文件</h3>
 <div class="language-yaml ext-yml line-numbers-mode"><pre v-pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
     <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
 <span class="token key atrule">spring</span><span class="token punctuation">:</span>
@@ -583,7 +582,7 @@ consumer<span class="token punctuation">.</span><span class="token function">see
             <span class="token key atrule">ack-mode</span><span class="token punctuation">:</span> MANUAL_IMMEDIATE
     <span class="token key atrule">redis</span><span class="token punctuation">:</span>
         <span class="token key atrule">host</span><span class="token punctuation">:</span> 172.16.253.21
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h2 id="_3-消息生产者" tabindex="-1"><a class="header-anchor" href="#_3-消息生产者" aria-hidden="true">#</a> 3.消息生产者</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h3 id="_3-消息生产者" tabindex="-1"><a class="header-anchor" href="#_3-消息生产者" aria-hidden="true">#</a> 3.消息生产者</h3>
 <ul>
 <li>发送消息到指定topic</li>
 </ul>
@@ -597,7 +596,7 @@ consumer<span class="token punctuation">.</span><span class="token function">see
         kafkaTemplate<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>TOPIC_NAME<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">,</span> <span class="token string">"key"</span><span class="token punctuation">,</span> <span class="token string">"this is a msg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="_4-消息消费者" tabindex="-1"><a class="header-anchor" href="#_4-消息消费者" aria-hidden="true">#</a> 4.消息消费者</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_4-消息消费者" tabindex="-1"><a class="header-anchor" href="#_4-消息消费者" aria-hidden="true">#</a> 4.消息消费者</h3>
 <ul>
 <li>设置消费组，消费指定topic</li>
 </ul>
@@ -623,8 +622,8 @@ consumer<span class="token punctuation">.</span><span class="token function">see
     <span class="token comment">//手动提交offset</span>
     ack<span class="token punctuation">.</span><span class="token function">acknowledge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h1 id="九、kafka集群controller、rebalance和hw" tabindex="-1"><a class="header-anchor" href="#九、kafka集群controller、rebalance和hw" aria-hidden="true">#</a> 九、Kafka集群Controller、Rebalance和HW</h1>
-<h2 id="_1-controller" tabindex="-1"><a class="header-anchor" href="#_1-controller" aria-hidden="true">#</a> 1.Controller</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="九、kafka集群controller、rebalance和hw" tabindex="-1"><a class="header-anchor" href="#九、kafka集群controller、rebalance和hw" aria-hidden="true">#</a> 九、Kafka集群Controller、Rebalance和HW</h2>
+<h3 id="_1-controller" tabindex="-1"><a class="header-anchor" href="#_1-controller" aria-hidden="true">#</a> 1.Controller</h3>
 <ul>
 <li>Kafka集群中的broker在zk中创建临时序号节点，序号最小的节点（最先创建的节点）将作为集群的controller，负责管理整个集群中的所有分区和副本的状态：
 <ul>
@@ -634,7 +633,7 @@ consumer<span class="token punctuation">.</span><span class="token function">see
 </ul>
 </li>
 </ul>
-<h2 id="_2-rebalance机制" tabindex="-1"><a class="header-anchor" href="#_2-rebalance机制" aria-hidden="true">#</a> 2.Rebalance机制</h2>
+<h3 id="_2-rebalance机制" tabindex="-1"><a class="header-anchor" href="#_2-rebalance机制" aria-hidden="true">#</a> 2.Rebalance机制</h3>
 <p>前提是：消费者没有指明分区消费。当消费组里消费者和分区的关系发生变化，那么就会触发rebalance机制。</p>
 <p>这个机制会重新调整消费者消费哪个分区。</p>
 <p>在触发rebalance机制之前，消费者消费哪个分区有三种策略：</p>
@@ -643,17 +642,17 @@ consumer<span class="token punctuation">.</span><span class="token function">see
 <li>轮询：大家轮着消费</li>
 <li>sticky：在触发了rebalance后，在消费者消费的原分区不变的基础上进行调整。</li>
 </ul>
-<h2 id="_3-hw和leo" tabindex="-1"><a class="header-anchor" href="#_3-hw和leo" aria-hidden="true">#</a> 3.HW和LEO</h2>
+<h3 id="_3-hw和leo" tabindex="-1"><a class="header-anchor" href="#_3-hw和leo" aria-hidden="true">#</a> 3.HW和LEO</h3>
 <blockquote>
 <p>HW俗称高水位，HighWatermark的缩写，取一个partition对应的ISR中最小的LEO(log-end-offset)作为HW，consumer最多只能消费到HW所在的位置。另外每个replica都有HW,leader和follower各自负责更新自己的HW的状态。对于leader新写入的消息，consumer不能立刻消费，leader会等待该消息被所有ISR中的replicas同步后更新HW，此时消息才能被consumer消费。这样就保证了如果leader所在的broker失效，该消息仍然可以从新选举的leader中获取。</p>
 </blockquote>
-<h1 id="十、kafka线上问题优化" tabindex="-1"><a class="header-anchor" href="#十、kafka线上问题优化" aria-hidden="true">#</a> 十、Kafka线上问题优化</h1>
-<h2 id="_1-如何防止消息丢失" tabindex="-1"><a class="header-anchor" href="#_1-如何防止消息丢失" aria-hidden="true">#</a> 1.如何防止消息丢失</h2>
+<h2 id="十、kafka线上问题优化" tabindex="-1"><a class="header-anchor" href="#十、kafka线上问题优化" aria-hidden="true">#</a> 十、Kafka线上问题优化</h2>
+<h3 id="_1-如何防止消息丢失" tabindex="-1"><a class="header-anchor" href="#_1-如何防止消息丢失" aria-hidden="true">#</a> 1.如何防止消息丢失</h3>
 <ul>
 <li>发送方： ack是 1 或者-1/all 可以防止消息丢失，如果要做到99.9999%，ack设成all，把min.insync.replicas配置成分区备份数</li>
 <li>消费方：把自动提交改为手动提交。</li>
 </ul>
-<h2 id="_2-如何防止消息的重复消费" tabindex="-1"><a class="header-anchor" href="#_2-如何防止消息的重复消费" aria-hidden="true">#</a> 2.如何防止消息的重复消费</h2>
+<h3 id="_2-如何防止消息的重复消费" tabindex="-1"><a class="header-anchor" href="#_2-如何防止消息的重复消费" aria-hidden="true">#</a> 2.如何防止消息的重复消费</h3>
 <blockquote>
 <p>一条消息被消费者消费多次。如果为了消息的不重复消费，而把生产端的重试机制关闭、消费端的手动提交改成自动提交，这样反而会出现消息丢失，那么可以直接在防治消息丢失的手段上再加上消费消息时的幂等性保证，就能解决消息的重复消费问题。</p>
 </blockquote>
@@ -662,12 +661,12 @@ consumer<span class="token punctuation">.</span><span class="token function">see
 <li>mysql 插入业务id作为主键，主键是唯一的，所以一次只能插入一条</li>
 <li>使用redis或zk的分布式锁（主流的方案）</li>
 </ul>
-<h2 id="_3-如何做到顺序消费rocketmq" tabindex="-1"><a class="header-anchor" href="#_3-如何做到顺序消费rocketmq" aria-hidden="true">#</a> 3.如何做到顺序消费RocketMQ</h2>
+<h3 id="_3-如何做到顺序消费rocketmq" tabindex="-1"><a class="header-anchor" href="#_3-如何做到顺序消费rocketmq" aria-hidden="true">#</a> 3.如何做到顺序消费RocketMQ</h3>
 <ul>
 <li>发送方：在发送时将ack不能设置 0 ，关闭重试，使用同步发送，等到发送成功再发送下一条。确保消息是顺序发送的。</li>
 <li>接收方：消息是发送到一个分区中，只能有一个消费组的消费者来接收消息。因此，kafka的顺序消费会牺牲掉性能。</li>
 </ul>
-<h2 id="_4-解决消息积压问题" tabindex="-1"><a class="header-anchor" href="#_4-解决消息积压问题" aria-hidden="true">#</a> 4.解决消息积压问题</h2>
+<h3 id="_4-解决消息积压问题" tabindex="-1"><a class="header-anchor" href="#_4-解决消息积压问题" aria-hidden="true">#</a> 4.解决消息积压问题</h3>
 <blockquote>
 <p>消息积压会导致很多问题，比如磁盘被打满、生产端发消息导致kafka性能过慢，就容易出现服务雪崩，就需要有相应的手段：</p>
 </blockquote>
@@ -676,7 +675,7 @@ consumer<span class="token punctuation">.</span><span class="token function">see
 <li>方案二：如果方案一还不够的话，这个时候可以启动多个消费者，多个消费者部署在不同的服务器上。其实多个消费者部署在同一服务器上也可以提高消费能力——充分利用服务器的cpu资源。</li>
 <li>方案三：让一个消费者去把收到的消息往另外一个topic上发，另一个topic设置多个分区和多个消费者 ，进行具体的业务消费。</li>
 </ul>
-<h2 id="_5-延迟队列" tabindex="-1"><a class="header-anchor" href="#_5-延迟队列" aria-hidden="true">#</a> 5.延迟队列</h2>
+<h3 id="_5-延迟队列" tabindex="-1"><a class="header-anchor" href="#_5-延迟队列" aria-hidden="true">#</a> 5.延迟队列</h3>
 <p>延迟队列的应用场景：在订单创建成功后如果超过 30 分钟没有付款，则需要取消订单，此时可用延时队列来实现</p>
 <ul>
 <li>
@@ -699,9 +698,9 @@ consumer<span class="token punctuation">.</span><span class="token function">see
 </ul>
 </li>
 </ul>
-<h1 id="十一、kafka-eagle监控平台" tabindex="-1"><a class="header-anchor" href="#十一、kafka-eagle监控平台" aria-hidden="true">#</a> 十一、Kafka-eagle监控平台</h1>
-<h2 id="安装kafka-eagle" tabindex="-1"><a class="header-anchor" href="#安装kafka-eagle" aria-hidden="true">#</a> 安装Kafka-eagle</h2>
-<h3 id="官网下载压缩包" tabindex="-1"><a class="header-anchor" href="#官网下载压缩包" aria-hidden="true">#</a> 官网下载压缩包</h3>
+<h2 id="十一、kafka-eagle监控平台" tabindex="-1"><a class="header-anchor" href="#十一、kafka-eagle监控平台" aria-hidden="true">#</a> 十一、Kafka-eagle监控平台</h2>
+<h3 id="安装kafka-eagle" tabindex="-1"><a class="header-anchor" href="#安装kafka-eagle" aria-hidden="true">#</a> 安装Kafka-eagle</h3>
+<h4 id="官网下载压缩包" tabindex="-1"><a class="header-anchor" href="#官网下载压缩包" aria-hidden="true">#</a> 官网下载压缩包</h4>
 <p>http://www.kafka-eagle.org/</p>
 <ul>
 <li>安装jdk</li>
