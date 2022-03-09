@@ -27,5 +27,5 @@ module.exports = {
 
     '/c-book/gof23': require('../c-book/gof23/sidebar'),
 	'/c-book/spring-security': require('../c-book/spring-security/sidebar'),
-
+    '/c-book/kafka': require('../c-book/kafka/sidebar'),
 }

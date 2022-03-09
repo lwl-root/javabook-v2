@@ -121,6 +121,10 @@ export const themeData = {
         {
           "text": "gof23",
           "link": "/c-book/gof23/notes/单例模式.html"
+        },
+        {
+          "text": "kafka",
+          "link": "/c-book/kafka/notes/kafka.html"
         }
       ]
     }
@@ -540,6 +544,16 @@ export const themeData = {
         "link": "/c-book/spring-security/notes/spring-security.html",
         "children": [
           "spring-security.html"
+        ]
+      }
+    ],
+    "/c-book/kafka": [
+      {
+        "text": "kafka",
+        "collapsable": false,
+        "link": "/c-book/kafka/notes/kafka.html",
+        "children": [
+          "kafka.html"
         ]
       }
     ]
