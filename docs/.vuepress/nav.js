@@ -100,6 +100,7 @@ module.exports = [
         children: [
             {text: 'spring-security', link: '/c-book/spring-security/notes/spring-security.html'},
             {text: 'gof23', link: '/c-book/gof23/notes/单例模式.html'},
+            {text: 'kafka', link: '/c-book/kafka/notes/kafka.html'},
             //{text: 'gof23-工厂模式', link: '/c-book/gof23-工厂模式/notes/工厂模式.html'},
         ],
     },
