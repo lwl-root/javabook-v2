@@ -5,7 +5,7 @@ const routeItems = [
   ["v-69c975ef","/c-book/gof23/notes/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html",{"title":"单例模式"},["/c-book/gof23/notes/单例模式.html","/c-book/gof23/notes/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F","/c-book/gof23/notes/单例模式.md","/c-book/gof23/notes/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.md"]],
   ["v-5e80146d","/c-book/kafka/notes/kafka.html",{"title":"消息队列的流派"},["/c-book/kafka/notes/kafka","/c-book/kafka/notes/kafka.md"]],
   ["v-7dbf770e","/c-book/spring-security/notes/spring-security.html",{"title":"spring security"},["/c-book/spring-security/notes/spring-security","/c-book/spring-security/notes/spring-security.md"]],
-  ["v-b7107516","/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.html",{"title":"数据库test"},["/demo/databases/notes/数据库test.html","/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test","/demo/databases/notes/数据库test.md","/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.md"]],
+  ["v-b7107516","/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.html",{"title":"MySql中的子查询"},["/demo/databases/notes/数据库test.html","/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test","/demo/databases/notes/数据库test.md","/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.md"]],
   ["v-1e023788","/demo/frame/notes/junitTest.html",{"title":"junit-vintage-engine和junit-jupiter-engine之间的区别"},["/demo/frame/notes/junitTest","/demo/frame/notes/junitTest.md"]],
   ["v-39fc678e","/demo/frame/notes/swagger2.html",{"title":"SpringBoot集成Swagger"},["/demo/frame/notes/swagger2","/demo/frame/notes/swagger2.md"]],
   ["v-5251ac7f","/demo/Java/notes/java%E5%8F%8D%E5%B0%84.html",{"title":"Java反射基础"},["/demo/Java/notes/java反射.html","/demo/Java/notes/java%E5%8F%8D%E5%B0%84","/demo/Java/notes/java反射.md","/demo/Java/notes/java%E5%8F%8D%E5%B0%84.md"]],
