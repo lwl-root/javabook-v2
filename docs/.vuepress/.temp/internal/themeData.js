@@ -100,14 +100,8 @@ export const themeData = {
           "link": "/demo/frame/notes/swagger2.html"
         },
         {
-          "text": "数据库一级",
-          "link": "/demo/databases/notes/数据库test.html",
-          "children": [
-            {
-              "text": "数据库二级",
-              "link": "/demo/databases/notes/数据库test.html"
-            }
-          ]
+          "text": "数据库相关",
+          "link": "/demo/databases/notes/数据库test.html"
         }
       ]
     },
