@@ -1,7 +1,7 @@
 export const data = {
   "key": "v-b7107516",
   "path": "/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.html",
-  "title": "MySql中的子查询",
+  "title": "Oracle中的子查询",
   "lang": "zh-CN",
   "frontmatter": {},
   "excerpt": "",
@@ -74,7 +74,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1646100896000
+    "updatedTime": 1647398229000
   },
   "filePathRelative": "demo/databases/notes/数据库test.md"
 }

@@ -43,5 +43,5 @@ module.exports = [
 			'03.promise对象.html',
 			'04.HTML5的web storage.html',
 		]
-	},	
+	},
 ]

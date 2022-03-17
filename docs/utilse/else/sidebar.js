@@ -1,6 +1,15 @@
 module.exports = [
 	{
-		text:'其他工具库',
+		text:'常用工具库',
+		collapsable: false,
+		link:'/utilse/else/notes/assert.html',
+		children:[
+			'assert.html',
+			'字符串操作.html',
+		]
+	},
+	{
+		text:'第三方工具库',
 		collapsable: false,
 		link:'/utilse/else/notes/slf4j.html',
 		children:[

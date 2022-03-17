@@ -1,4 +1,4 @@
-<template><h1 id="mysql中的子查询" tabindex="-1"><a class="header-anchor" href="#mysql中的子查询" aria-hidden="true">#</a> MySql中的子查询</h1>
+<template><h1 id="oracle中的子查询" tabindex="-1"><a class="header-anchor" href="#oracle中的子查询" aria-hidden="true">#</a> Oracle中的子查询</h1>
 <p>在平时的工作中mysql的子查询十分常见，下面就子查询的注意事项进行总结。</p>
 <h2 id="子查询使用场景" tabindex="-1"><a class="header-anchor" href="#子查询使用场景" aria-hidden="true">#</a> 子查询使用场景</h2>
 <p>一般在不能一步求解的时候用到子查询</p>

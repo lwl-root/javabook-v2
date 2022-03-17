@@ -2,12 +2,22 @@ module.exports = [
     {
         text: '工具库',
         children: [
-            {text: 'Guava工具库', link: '/utilse/guava/notes/字符串工具类.html'},
-            {text: 'Spring内置工具库', link: '/utilse/spring-utils/notes/top-4.html'},
-            {text: '其他工具库', link: '/utilse/else/notes/slf4j.html'},
-            {text: '各种模板', link: '/utilse/gist/notes/jdbc.html'},
-            // {text:'markdown使用',link: '/utilse/markdown/notes/Markdown基本使用.html'},
-            {text: 'docker搭建常用容器', link: '/utilse/docker/notes/docker搭建常用容器.html'},
+            {
+                text: '工具类库',
+                children: [
+                    {text: '常用工具类', link: '/utilse/else/notes/slf4j.html'},
+                    {text: 'Guava工具库', link: '/utilse/guava/notes/字符串工具类.html'},
+                    {text: 'Spring内置工具库', link: '/utilse/spring-utils/notes/top-4.html'},
+                ],
+            },
+            {
+                text: '模板', link: '/utilse/gist/notes/jdbc.html',
+                children: [
+                    {text: '各种模板', link: '/utilse/gist/notes/jdbc.html'},
+                    //{text:'markdown使用',link: '/utilse/markdown/notes/Markdown基本使用.html'},
+                    {text: 'docker搭建常用容器', link: '/utilse/docker/notes/docker搭建常用容器.html'},
+                ],
+            },
         ]
     },
     {
