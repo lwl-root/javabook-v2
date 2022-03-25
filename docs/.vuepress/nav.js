@@ -5,7 +5,7 @@ module.exports = [
             {
                 text: '工具类库',
                 children: [
-                    {text: '常用工具类', link: '/utilse/else/notes/slf4j.html'},
+                    {text: '常用工具类', link: '/utilse/else/notes/assert.html'},
                     {text: 'Guava工具库', link: '/utilse/guava/notes/字符串工具类.html'},
                     {text: 'Spring内置工具库', link: '/utilse/spring-utils/notes/top-4.html'},
                 ],

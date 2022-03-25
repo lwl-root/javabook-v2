@@ -5682,8 +5682,8 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "7. Collection 转 String[]",
-        "slug": "_7-collection-转-string",
+        "title": "7. Collection<String> 转 String[]",
+        "slug": "_7-collection-string-转-string",
         "children": []
       },
       {
