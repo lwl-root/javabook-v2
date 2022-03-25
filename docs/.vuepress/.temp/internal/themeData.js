@@ -12,7 +12,7 @@ export const themeData = {
           "children": [
             {
               "text": "常用工具类",
-              "link": "/utilse/else/notes/slf4j.html"
+              "link": "/utilse/else/notes/assert.html"
             },
             {
               "text": "Guava工具库",
