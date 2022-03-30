@@ -28,7 +28,7 @@
 <li>导入模块成员使用 <strong>import</strong> 关键字</li>
 <li>暴露模块成员使用 <strong>export</strong> 关键字</li>
 </ul>
-<div class="custom-container tip"><p class="custom-container-title">TIP</p>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
 <p>『<strong>暴露模块成员</strong>』这个说法有些奇怪，但是其它语言也实现了同样的功能，只不过不是叫这个名字。例如，C++ 和 Java 是以『<strong>访问权限</strong>』实现的类似功能，而 C 语言是以『<strong>本地（静态）变量</strong>』实现的类似功能。</p>
 </div>
 <h2 id="_3-export-命令" tabindex="-1"><a class="header-anchor" href="#_3-export-命令" aria-hidden="true">#</a> 3. export 命令</h2>

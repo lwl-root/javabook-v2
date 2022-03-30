@@ -1,5 +1,5 @@
 <template><h1 id="事务" tabindex="-1"><a class="header-anchor" href="#事务" aria-hidden="true">#</a> 事务</h1>
-<div class="custom-container warning"><p class="custom-container-title">WARNING</p>
+<div class="custom-container warning"><p class="custom-container-title">注意</p>
 <p>『<strong>事务</strong>』本身是数据库领域中的概念，而非编程语言（如 Java）中的概念！是因为我们要在代码中去操作数据库，因此，我们的代码中『才会涉及』、『才有了事务』的概念。不要搞错了因果关系！</p>
 </div>
 <h2 id="事务的-acid-属性" tabindex="-1"><a class="header-anchor" href="#事务的-acid-属性" aria-hidden="true">#</a> 事务的 ACID 属性</h2>
