@@ -2279,6 +2279,175 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Executors",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. FixedThreadPool 使用",
+        "slug": "_1-fixedthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. CachedThreadPool 使用",
+        "slug": "_2-cachedthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. SingleThreadExecutor 使用",
+        "slug": "_4-singlethreadexecutor-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. ScheduledThreadPool 使用",
+        "slug": "_5-scheduledthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. SingleThreadScheduledExecutor 使用",
+        "slug": "_6-singlethreadscheduledexecutor-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. WorkStealingPool 使用",
+        "slug": "_7-workstealingpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 总结",
+        "slug": "_8-总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 其它",
+        "slug": "_9-其它",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/Executors.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "使用 Runnable 接口创建线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/runnable.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "使用 Thread 类创建线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/thread.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "ThreadPoolExecutor",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. ThreadPoolExecutor 的使用",
+        "slug": "_1-threadpoolexecutor-的使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 线程池执行方法",
+        "slug": "_2-线程池执行方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 线程池关闭方法",
+        "slug": "_3-线程池关闭方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 总结",
+        "slug": "_4-总结",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/ThreadPoolExecutor.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多进程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E5%A4%9A%E8%BF%9B%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程池",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程的状态",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程的调用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 线程的优先级（了解、自学）",
+        "slug": "_1-线程的优先级-了解、自学",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 实现线程调度的方法",
+        "slug": "_2-实现线程调度的方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 线程的同步与互斥",
+        "slug": "_3-线程的同步与互斥",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. synchronized 关键字",
+        "slug": "_4-synchronized-关键字",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%B0%83%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "锁",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E9%94%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "事务",
     "headers": [
       {
@@ -3046,175 +3215,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Executors",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. FixedThreadPool 使用",
-        "slug": "_1-fixedthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. CachedThreadPool 使用",
-        "slug": "_2-cachedthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. SingleThreadExecutor 使用",
-        "slug": "_4-singlethreadexecutor-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. ScheduledThreadPool 使用",
-        "slug": "_5-scheduledthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. SingleThreadScheduledExecutor 使用",
-        "slug": "_6-singlethreadscheduledexecutor-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. WorkStealingPool 使用",
-        "slug": "_7-workstealingpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 总结",
-        "slug": "_8-总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 其它",
-        "slug": "_9-其它",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/Executors.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Runnable 接口创建线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/runnable.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Thread 类创建线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/thread.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "ThreadPoolExecutor",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. ThreadPoolExecutor 的使用",
-        "slug": "_1-threadpoolexecutor-的使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 线程池执行方法",
-        "slug": "_2-线程池执行方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 线程池关闭方法",
-        "slug": "_3-线程池关闭方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 总结",
-        "slug": "_4-总结",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/ThreadPoolExecutor.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "多线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "多进程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E5%A4%9A%E8%BF%9B%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程池",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程的状态",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程的调用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 线程的优先级（了解、自学）",
-        "slug": "_1-线程的优先级-了解、自学",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 实现线程调度的方法",
-        "slug": "_2-实现线程调度的方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 线程的同步与互斥",
-        "slug": "_3-线程的同步与互斥",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. synchronized 关键字",
-        "slug": "_4-synchronized-关键字",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%B0%83%E7%94%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "锁",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E9%94%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "线程安全",
     "headers": [
       {
@@ -3409,6 +3409,342 @@ export const searchIndex = [
       }
     ],
     "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SqlSession 线程安全问题",
+    "headers": [],
+    "path": "/three-stage/mybatis/notes/01.SqlSession%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "关于 MyBatis",
+    "headers": [],
+    "path": "/three-stage/mybatis/notes/01.%E5%85%B3%E4%BA%8Emybatis.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "基本概念",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. MyBatis 的体系结构",
+        "slug": "_1-mybatis-的体系结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 使用 XML 构建 SqlSessionFactory",
+        "slug": "_2-使用-xml-构建-sqlsessionfactory",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. SqlSession",
+        "slug": "_3-sqlsession",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 默认的别名",
+        "slug": "_4-默认的别名",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 补充",
+        "slug": "_5-补充",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/01.%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "执行 SQL 语句",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 增删改操作",
+        "slug": "_1-增删改操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "insert 元素",
+            "slug": "insert-元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "insert 过程中的主键回填",
+            "slug": "insert-过程中的主键回填",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "delete 元素 和 update 元素",
+            "slug": "delete-元素-和-update-元素",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. getMapper 方法",
+        "slug": "_2-getmapper-方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 查操作",
+        "slug": "_3-查操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "select 元素",
+            "slug": "select-元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "select 与 聚合函数",
+            "slug": "select-与-聚合函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. 传递多个参数",
+        "slug": "_4-传递多个参数",
+        "children": [
+          {
+            "level": 3,
+            "title": "使用 Map 传递多参数",
+            "slug": "使用-map-传递多参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 JavaBean 传递多参",
+            "slug": "使用-javabean-传递多参",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用注解方式传递多参数",
+            "slug": "使用注解方式传递多参数",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/01.%E6%89%A7%E8%A1%8CSQL%E8%AF%AD%E5%8F%A5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "分页",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. RowBounds 分页",
+        "slug": "_1-rowbounds-分页",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. PageHelper 分页",
+        "slug": "_2-pagehelper-分页",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. PageInfo 对象属性描述",
+        "slug": "_3-pageinfo-对象属性描述",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/02.mybatis%E5%88%86%E9%A1%B5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "动态SQL",
+    "headers": [
+      {
+        "level": 2,
+        "title": "if 元素",
+        "slug": "if-元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "choose-when-otherwise 元素",
+        "slug": "choose-when-otherwise-元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "where 元素",
+        "slug": "where-元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "set 元素",
+        "slug": "set-元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "foreach 元素",
+        "slug": "foreach-元素",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/02.%E5%8A%A8%E6%80%81SQL.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "同时启用配置文件和注解两种配置方式",
+    "headers": [],
+    "path": "/three-stage/mybatis/notes/02.%E5%90%8C%E7%94%A8%E4%B8%A4%E7%A7%8D%E9%85%8D%E7%BD%AE.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "映射结果集（基本）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. <resultMap>",
+        "slug": "_1-resultmap",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. <id> 和 <result>",
+        "slug": "_2-id-和-result",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. jdbcType",
+        "slug": "_3-jdbctype",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 自动映射原理",
+        "slug": "_4-自动映射原理",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/02.%E6%98%A0%E5%B0%84%E7%BB%93%E6%9E%9C%E9%9B%86%EF%BC%88%E5%9F%BA%E6%9C%AC%EF%BC%89.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "映射结果集（高级）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 一对一映射",
+        "slug": "_1-一对一映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 一对多映射",
+        "slug": "_2-一对多映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 多对多映射",
+        "slug": "_3-多对多映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. <resultMap> 的继承",
+        "slug": "_4-resultmap-的继承",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/02.%E6%98%A0%E5%B0%84%E7%BB%93%E6%9E%9C%E9%9B%86%EF%BC%88%E9%AB%98%E7%BA%A7%EF%BC%89.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "注解中的结果集映射",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 结果集映射",
+        "slug": "_1-结果集映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 关系映射",
+        "slug": "_2-关系映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 常用功能注解汇总",
+        "slug": "_3-常用功能注解汇总",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/02.%E6%B3%A8%E8%A7%A3%E4%B8%AD%E7%9A%84%E7%BB%93%E6%9E%9C%E9%9B%86%E6%98%A0%E5%B0%84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "注解的简单使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 注解实现简单增删改查",
+        "slug": "_1-注解实现简单增删改查",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. @SelectProvider 单独提供 SQL",
+        "slug": "_2-selectprovider-单独提供-sql",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/02.%E6%B3%A8%E8%A7%A3%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Mybatis Generator",
+    "headers": [
+      {
+        "level": 2,
+        "title": "pom.xml 配置",
+        "slug": "pom-xml-配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "mybatis-generator-config.xml 配置",
+        "slug": "mybatis-generator-config-xml-配置",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/03.MyBatis%20Generator.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4388,342 +4724,6 @@ export const searchIndex = [
       }
     ],
     "path": "/two-stage/junit/notes/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SqlSession 线程安全问题",
-    "headers": [],
-    "path": "/two-stage/mybatis/notes/01.SqlSession%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "关于 MyBatis",
-    "headers": [],
-    "path": "/two-stage/mybatis/notes/01.%E5%85%B3%E4%BA%8Emybatis.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "基本概念",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. MyBatis 的体系结构",
-        "slug": "_1-mybatis-的体系结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 使用 XML 构建 SqlSessionFactory",
-        "slug": "_2-使用-xml-构建-sqlsessionfactory",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. SqlSession",
-        "slug": "_3-sqlsession",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 默认的别名",
-        "slug": "_4-默认的别名",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 补充",
-        "slug": "_5-补充",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/01.%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "执行 SQL 语句",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 增删改操作",
-        "slug": "_1-增删改操作",
-        "children": [
-          {
-            "level": 3,
-            "title": "insert 元素",
-            "slug": "insert-元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "insert 过程中的主键回填",
-            "slug": "insert-过程中的主键回填",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "delete 元素 和 update 元素",
-            "slug": "delete-元素-和-update-元素",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. getMapper 方法",
-        "slug": "_2-getmapper-方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 查操作",
-        "slug": "_3-查操作",
-        "children": [
-          {
-            "level": 3,
-            "title": "select 元素",
-            "slug": "select-元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "select 与 聚合函数",
-            "slug": "select-与-聚合函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. 传递多个参数",
-        "slug": "_4-传递多个参数",
-        "children": [
-          {
-            "level": 3,
-            "title": "使用 Map 传递多参数",
-            "slug": "使用-map-传递多参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用 JavaBean 传递多参",
-            "slug": "使用-javabean-传递多参",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用注解方式传递多参数",
-            "slug": "使用注解方式传递多参数",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/01.%E6%89%A7%E8%A1%8CSQL%E8%AF%AD%E5%8F%A5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "分页",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. RowBounds 分页",
-        "slug": "_1-rowbounds-分页",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. PageHelper 分页",
-        "slug": "_2-pagehelper-分页",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. PageInfo 对象属性描述",
-        "slug": "_3-pageinfo-对象属性描述",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/02.mybatis%E5%88%86%E9%A1%B5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "动态SQL",
-    "headers": [
-      {
-        "level": 2,
-        "title": "if 元素",
-        "slug": "if-元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "choose-when-otherwise 元素",
-        "slug": "choose-when-otherwise-元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "where 元素",
-        "slug": "where-元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "set 元素",
-        "slug": "set-元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "foreach 元素",
-        "slug": "foreach-元素",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/02.%E5%8A%A8%E6%80%81SQL.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "同时启用配置文件和注解两种配置方式",
-    "headers": [],
-    "path": "/two-stage/mybatis/notes/02.%E5%90%8C%E7%94%A8%E4%B8%A4%E7%A7%8D%E9%85%8D%E7%BD%AE.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "映射结果集（基本）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. <resultMap>",
-        "slug": "_1-resultmap",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. <id> 和 <result>",
-        "slug": "_2-id-和-result",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. jdbcType",
-        "slug": "_3-jdbctype",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 自动映射原理",
-        "slug": "_4-自动映射原理",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/02.%E6%98%A0%E5%B0%84%E7%BB%93%E6%9E%9C%E9%9B%86%EF%BC%88%E5%9F%BA%E6%9C%AC%EF%BC%89.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "映射结果集（高级）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 一对一映射",
-        "slug": "_1-一对一映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 一对多映射",
-        "slug": "_2-一对多映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 多对多映射",
-        "slug": "_3-多对多映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. <resultMap> 的继承",
-        "slug": "_4-resultmap-的继承",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/02.%E6%98%A0%E5%B0%84%E7%BB%93%E6%9E%9C%E9%9B%86%EF%BC%88%E9%AB%98%E7%BA%A7%EF%BC%89.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "注解中的结果集映射",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 结果集映射",
-        "slug": "_1-结果集映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 关系映射",
-        "slug": "_2-关系映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 常用功能注解汇总",
-        "slug": "_3-常用功能注解汇总",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/02.%E6%B3%A8%E8%A7%A3%E4%B8%AD%E7%9A%84%E7%BB%93%E6%9E%9C%E9%9B%86%E6%98%A0%E5%B0%84.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "注解的简单使用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 注解实现简单增删改查",
-        "slug": "_1-注解实现简单增删改查",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. @SelectProvider 单独提供 SQL",
-        "slug": "_2-selectprovider-单独提供-sql",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/02.%E6%B3%A8%E8%A7%A3%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Mybatis Generator",
-    "headers": [
-      {
-        "level": 2,
-        "title": "pom.xml 配置",
-        "slug": "pom-xml-配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "mybatis-generator-config.xml 配置",
-        "slug": "mybatis-generator-config-xml-配置",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/mybatis/notes/03.MyBatis%20Generator.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6464,6 +6464,111 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "首页",
+    "headers": [
+      {
+        "level": 2,
+        "title": "使用说明",
+        "slug": "使用说明",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二级标题",
+        "slug": "二级标题",
+        "children": [
+          {
+            "level": 3,
+            "title": "三级标题",
+            "slug": "三级标题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "无序列表",
+            "slug": "无序列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序列表",
+            "slug": "有序列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "嵌套列表",
+            "slug": "嵌套列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "引用说明",
+            "slug": "引用说明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "嵌套区块",
+            "slug": "嵌套区块",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码块（单行代码）",
+            "slug": "代码块-单行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多行代码",
+            "slug": "多行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "链接（行内式）",
+            "slug": "链接-行内式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参数式",
+            "slug": "参数式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "图片",
+            "slug": "图片",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "分割线",
+            "slug": "分割线",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字体",
+            "slug": "字体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "表格",
+            "slug": "表格",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Base64Utils",
     "headers": [],
     "path": "/utilse/spring-utils/notes/Base64Util.html",
@@ -6841,111 +6946,6 @@ export const searchIndex = [
       }
     ],
     "path": "/utilse/spring-utils/notes/top-4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "首页",
-    "headers": [
-      {
-        "level": 2,
-        "title": "使用说明",
-        "slug": "使用说明",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二级标题",
-        "slug": "二级标题",
-        "children": [
-          {
-            "level": 3,
-            "title": "三级标题",
-            "slug": "三级标题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "无序列表",
-            "slug": "无序列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序列表",
-            "slug": "有序列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "嵌套列表",
-            "slug": "嵌套列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "引用说明",
-            "slug": "引用说明",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "嵌套区块",
-            "slug": "嵌套区块",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "代码块（单行代码）",
-            "slug": "代码块-单行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多行代码",
-            "slug": "多行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "链接（行内式）",
-            "slug": "链接-行内式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "参数式",
-            "slug": "参数式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "图片",
-            "slug": "图片",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "分割线",
-            "slug": "分割线",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字体",
-            "slug": "字体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "表格",
-            "slug": "表格",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
