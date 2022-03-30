@@ -1,7 +1,5 @@
 # Executors
 
-TIP
-
 逻辑上，Executors 是 ThreadPoolExecutor 的工具类。
 
 Executors 可以创建以下 6 种线程池。

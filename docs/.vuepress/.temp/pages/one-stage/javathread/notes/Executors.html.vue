@@ -1,5 +1,4 @@
 <template><h1 id="executors" tabindex="-1"><a class="header-anchor" href="#executors" aria-hidden="true">#</a> Executors</h1>
-<p>TIP</p>
 <p>逻辑上，Executors 是 ThreadPoolExecutor 的工具类。</p>
 <p>Executors 可以创建以下 6 种线程池。</p>
 <table>

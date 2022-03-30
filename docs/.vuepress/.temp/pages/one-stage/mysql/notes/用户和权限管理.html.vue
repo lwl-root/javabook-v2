@@ -4,7 +4,7 @@
 <h2 id="用户管理" tabindex="-1"><a class="header-anchor" href="#用户管理" aria-hidden="true">#</a> 用户管理</h2>
 <p>使用 <strong>CREATE USER</strong> 语句可以创建新账户。</p>
 <div class="language-sql ext-sql line-numbers-mode"><pre v-pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">USER</span> 用户名 IDENTIFIED <span class="token keyword">BY</span> <span class="token string">'密码'</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><div class="custom-container warning"><p class="custom-container-title">WARNING</p>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><div class="custom-container warning"><p class="custom-container-title">警告</p>
 <p>不要使用其它的、间接的方式来创建型账户。</p>
 </div>
 <p>如果需要删除已有用户账户，使用 <strong>DROP USER</strong> 语句：</p>
