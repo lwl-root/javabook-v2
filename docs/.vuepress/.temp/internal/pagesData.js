@@ -239,6 +239,8 @@ export const pagesData = {
   "v-c476a590": () => import(/* webpackChunkName: "v-c476a590" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/数组操作.html.js").then(({ data }) => data),
   // path: /utilse/else/notes/%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C.html
   "v-4122ba1a": () => import(/* webpackChunkName: "v-4122ba1a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/else/notes/集合操作.html.js").then(({ data }) => data),
+  // path: /utilse/gist/notes/axios.html
+  "v-0013797b": () => import(/* webpackChunkName: "v-0013797b" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/axios.html.js").then(({ data }) => data),
   // path: /utilse/gist/notes/docker-compose.html
   "v-b88c0688": () => import(/* webpackChunkName: "v-b88c0688" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/gist/notes/docker-compose.html.js").then(({ data }) => data),
   // path: /utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html

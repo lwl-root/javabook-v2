@@ -15,11 +15,11 @@ export const themeData = {
               "link": "/utilse/else/notes/assert.html"
             },
             {
-              "text": "Guava工具库",
+              "text": "Guava 工具库",
               "link": "/utilse/guava/notes/字符串工具类.html"
             },
             {
-              "text": "Spring内置工具库",
+              "text": "Spring 内置工具库",
               "link": "/utilse/spring-utils/notes/top-4.html"
             }
           ]
@@ -32,7 +32,7 @@ export const themeData = {
               "link": "/utilse/gist/notes/jdbc.html"
             },
             {
-              "text": "docker搭建常用容器",
+              "text": "docker 搭建常用容器",
               "link": "/utilse/docker/notes/docker搭建常用容器.html"
             }
           ]
@@ -43,14 +43,14 @@ export const themeData = {
       "text": "Java & MySQL",
       "children": [
         {
-          "text": "Java基础",
+          "text": "Java 基础",
           "children": [
             {
               "text": "Java",
               "link": "/one-stage/java/notes/java语法汇总.html"
             },
             {
-              "text": "Java多线程",
+              "text": "Java 多线程",
               "link": "/one-stage/javathread/notes/多进程.html"
             },
             {
@@ -58,20 +58,20 @@ export const themeData = {
               "link": "/one-stage/threadsafe/notes/a01.线程安全.html"
             },
             {
-              "text": "JDK8新特性",
+              "text": "JDK8 新特性",
               "link": "/one-stage/java8/notes/lambda.html"
             }
           ]
         },
         {
-          "text": "MySQL数据库",
+          "text": "MySQL 数据库",
           "children": [
             {
-              "text": "MySQL数据库",
+              "text": "MySQL 数据库",
               "link": "/one-stage/mysql/notes/操作Database.html"
             },
             {
-              "text": "JDBC操作数据库",
+              "text": "JDBC 操作数据库",
               "link": "/one-stage/myjdbc/notes/JDBC基础.html"
             }
           ]
@@ -121,7 +121,7 @@ export const themeData = {
       "text": "日常积累",
       "children": [
         {
-          "text": "Java相关",
+          "text": "Java 相关",
           "link": "/demo/Java/notes/List去重.html"
         },
         {
@@ -133,7 +133,7 @@ export const themeData = {
           "link": "/demo/databases/notes/数据库test.html"
         },
         {
-          "text": "server相关",
+          "text": "server 相关",
           "link": "/demo/server/notes/ssh公钥.html"
         }
       ]
@@ -221,7 +221,7 @@ export const themeData = {
     ],
     "/utilse/gist": [
       {
-        "text": "各种模板",
+        "text": "配置模板",
         "collapsable": false,
         "link": "/utilse/gist/notes/jdbc.html",
         "children": [
@@ -242,6 +242,17 @@ export const themeData = {
             "link": "/utilse/gist/notes/mybatis-xml.html"
           },
           {
+            "text": "模板 for Git",
+            "link": "/utilse/gist/notes/git常用命令汇总.html"
+          }
+        ]
+      },
+      {
+        "text": "代码模板",
+        "collapsable": false,
+        "link": "/utilse/gist/notes/ssm-java.html",
+        "children": [
+          {
             "text": "模板 for SSM整合(代码配置)",
             "link": "/utilse/gist/notes/ssm-java.html"
           },
@@ -250,8 +261,8 @@ export const themeData = {
             "link": "/utilse/gist/notes/docker-compose.html"
           },
           {
-            "text": "模板 for Git",
-            "link": "/utilse/gist/notes/git常用命令汇总.html"
+            "text": "模板 for axios",
+            "link": "/utilse/gist/notes/axios.html"
           }
         ]
       }
