@@ -112,6 +112,10 @@ export const themeData = {
         {
           "text": "数据库相关",
           "link": "/demo/databases/notes/数据库test.html"
+        },
+        {
+          "text": "server相关",
+          "link": "/demo/server/notes/ssh公钥.html"
         }
       ]
     },
@@ -539,6 +543,16 @@ export const themeData = {
         "link": "/demo/databases/notes/数据库test.html",
         "children": [
           "数据库test.html"
+        ]
+      }
+    ],
+    "/demo/server": [
+      {
+        "text": "server相关",
+        "collapsable": false,
+        "link": "/demo/server/notes/ssh公钥.html",
+        "children": [
+          "ssh公钥.html"
         ]
       }
     ],
