@@ -40,36 +40,46 @@ export const themeData = {
       ]
     },
     {
-      "text": "一",
+      "text": "Java & MySQL",
       "children": [
         {
-          "text": "Java",
-          "link": "/one-stage/java/notes/java语法汇总.html"
-        },
-        {
-          "text": "Java多线程",
-          "link": "/one-stage/javathread/notes/多进程.html"
-        },
-        {
-          "text": "线程安全",
-          "link": "/one-stage/threadsafe/notes/a01.线程安全.html"
-        },
-        {
-          "text": "JDK8新特性",
-          "link": "/one-stage/java8/notes/lambda.html"
+          "text": "Java基础",
+          "children": [
+            {
+              "text": "Java",
+              "link": "/one-stage/java/notes/java语法汇总.html"
+            },
+            {
+              "text": "Java多线程",
+              "link": "/one-stage/javathread/notes/多进程.html"
+            },
+            {
+              "text": "线程安全",
+              "link": "/one-stage/threadsafe/notes/a01.线程安全.html"
+            },
+            {
+              "text": "JDK8新特性",
+              "link": "/one-stage/java8/notes/lambda.html"
+            }
+          ]
         },
         {
           "text": "MySQL数据库",
-          "link": "/one-stage/mysql/notes/操作Database.html"
-        },
-        {
-          "text": "JDBC操作数据库",
-          "link": "/one-stage/myjdbc/notes/JDBC基础.html"
+          "children": [
+            {
+              "text": "MySQL数据库",
+              "link": "/one-stage/mysql/notes/操作Database.html"
+            },
+            {
+              "text": "JDBC操作数据库",
+              "link": "/one-stage/myjdbc/notes/JDBC基础.html"
+            }
+          ]
         }
       ]
     },
     {
-      "text": "二",
+      "text": "servlet & 前端",
       "children": [
         {
           "text": "前端基础",
@@ -82,12 +92,21 @@ export const themeData = {
         {
           "text": "JUnit",
           "link": "/two-stage/junit/notes/基本概念.html"
-        },
-        {
-          "text": "MyBatis",
-          "link": "/two-stage/mybatis/notes/01.关于mybatis.html"
         }
       ]
+    },
+    {
+      "text": "SSM & SpringBoot",
+      "children": [
+        {
+          "text": "MyBatis",
+          "link": "/three-stage/mybatis/notes/01.关于mybatis.html"
+        }
+      ]
+    },
+    {
+      "text": "微服务 & 中间件",
+      "children": []
     },
     {
       "text": "数据结构与算法",
@@ -460,11 +479,11 @@ export const themeData = {
         ]
       }
     ],
-    "/two-stage/mybatis": [
+    "/three-stage/mybatis": [
       {
         "text": "基础",
         "collapsable": false,
-        "link": "/two-stage/mybatis/notes/01.关于mybatis.html",
+        "link": "/three-stage/mybatis/notes/01.关于mybatis.html",
         "children": [
           "01.关于mybatis.html",
           "01.基本概念.html",
@@ -475,7 +494,7 @@ export const themeData = {
       {
         "text": "进阶",
         "collapsable": false,
-        "link": "/two-stage/mybatis/notes/02.动态SQL.html",
+        "link": "/three-stage/mybatis/notes/02.动态SQL.html",
         "children": [
           "02.动态SQL.html",
           "02.注解的简单使用.html",
@@ -489,7 +508,7 @@ export const themeData = {
       {
         "text": "高级",
         "collapsable": false,
-        "link": "/two-stage/mybatis/notes/03.MyBatis Generator.html",
+        "link": "/three-stage/mybatis/notes/03.MyBatis Generator.html",
         "children": [
           "03.MyBatis Generator.html"
         ]
