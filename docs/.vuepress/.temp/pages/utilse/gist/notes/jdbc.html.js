@@ -5,7 +5,20 @@ export const data = {
   "lang": "zh-CN",
   "frontmatter": {},
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "1、自定义的 .properties 配置",
+      "slug": "_1、自定义的-properties-配置",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "2、Spring Boot 项目中的配置",
+      "slug": "_2、spring-boot-项目中的配置",
+      "children": []
+    }
+  ],
   "git": {
     "updatedTime": 1641659655000
   },

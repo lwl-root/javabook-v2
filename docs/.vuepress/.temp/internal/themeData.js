@@ -26,7 +26,6 @@ export const themeData = {
         },
         {
           "text": "模板",
-          "link": "/utilse/gist/notes/jdbc.html",
           "children": [
             {
               "text": "各种模板",
@@ -177,7 +176,9 @@ export const themeData = {
         "link": "/utilse/else/notes/assert.html",
         "children": [
           "assert.html",
-          "字符串操作.html"
+          "字符串操作.html",
+          "数组操作.html",
+          "集合操作.html"
         ]
       },
       {

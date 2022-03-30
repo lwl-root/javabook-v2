@@ -11,7 +11,7 @@ module.exports = [
                 ],
             },
             {
-                text: '模板', link: '/utilse/gist/notes/jdbc.html',
+                text: '模板',// link: '/utilse/gist/notes/jdbc.html',
                 children: [
                     {text: '各种模板', link: '/utilse/gist/notes/jdbc.html'},
                     //{text:'markdown使用',link: '/utilse/markdown/notes/Markdown基本使用.html'},

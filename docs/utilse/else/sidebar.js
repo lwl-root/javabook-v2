@@ -6,6 +6,8 @@ module.exports = [
 		children:[
 			'assert.html',
 			'字符串操作.html',
+			'数组操作.html',
+			'集合操作.html',
 		]
 	},
 	{

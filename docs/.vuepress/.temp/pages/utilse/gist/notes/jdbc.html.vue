@@ -1,8 +1,7 @@
 <template><h1 id="jdbc-properties" tabindex="-1"><a class="header-anchor" href="#jdbc-properties" aria-hidden="true">#</a> jdbc.properties</h1>
 <p><strong>.properties</strong> 和命令行类似，原则上一行就是一个键值对，如果因为值太长需要折行继续编写，那么上一行的行尾需要加 <code>\</code> 表示本行还未结束，下一行的内容和本行算同一行 。</p>
-<div class="custom-container tip"><p class="custom-container-title">提示</p>
-<p><code>\</code> 被称作续行符。</p>
-</div>
+<Badge type="tip" text="提示" vertical="middle" />   \ 被称作<b>“续行符”</b>
+<h2 id="_1、自定义的-properties-配置" tabindex="-1"><a class="header-anchor" href="#_1、自定义的-properties-配置" aria-hidden="true">#</a> 1、自定义的 .properties 配置</h2>
 <CodeGroup>
 <CodeGroupItem title="jdbc.properties 版本">
 <div class="language-properties ext-properties line-numbers-mode"><pre v-pre class="language-properties"><code><span class="token attr-name">datasource.driver-class-name</span><span class="token punctuation">=</span><span class="token attr-value">com.mysql.cj.jdbc.Driver</span>
@@ -14,6 +13,9 @@
 <span class="token attr-name">datasource.username</span><span class="token punctuation">=</span><span class="token attr-value">&lt;用户名></span>
 <span class="token attr-name">datasource.password</span><span class="token punctuation">=</span><span class="token attr-value">&lt;密码></span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></CodeGroupItem>
+</CodeGroup>
+<h2 id="_2、spring-boot-项目中的配置" tabindex="-1"><a class="header-anchor" href="#_2、spring-boot-项目中的配置" aria-hidden="true">#</a> 2、Spring Boot 项目中的配置</h2>
+<CodeGroup>
 <CodeGroupItem title="application.properties 版本">
 <div class="language-properties ext-properties line-numbers-mode"><pre v-pre class="language-properties"><code><span class="token attr-name">spring.datasource.driver-class-name</span><span class="token punctuation">=</span><span class="token attr-value">com.mysql.cj.jdbc.Driver</span>
 <span class="token attr-name">spring.datasource.url</span><span class="token punctuation">=</span><span class="token attr-value">jdbc:mysql://127.0.0.1:3306/&lt;数据库>\
