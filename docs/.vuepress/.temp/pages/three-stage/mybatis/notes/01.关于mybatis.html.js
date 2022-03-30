@@ -7,7 +7,7 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648625977000
   },
   "filePathRelative": "three-stage/mybatis/notes/01.关于mybatis.md"
 }

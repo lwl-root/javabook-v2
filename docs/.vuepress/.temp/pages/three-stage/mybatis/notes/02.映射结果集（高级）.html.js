@@ -32,7 +32,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648625977000
   },
   "filePathRelative": "three-stage/mybatis/notes/02.映射结果集（高级）.md"
 }
