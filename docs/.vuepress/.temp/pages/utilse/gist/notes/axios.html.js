@@ -1,40 +1,40 @@
 export const data = {
-  "key": "v-7067633a",
-  "path": "/three-stage/mybatis/notes/02.%E6%98%A0%E5%B0%84%E7%BB%93%E6%9E%9C%E9%9B%86%EF%BC%88%E5%9F%BA%E6%9C%AC%EF%BC%89.html",
-  "title": "映射结果集（基本）",
+  "key": "v-0013797b",
+  "path": "/utilse/gist/notes/axios.html",
+  "title": "Axios 发起AJAX请求模板",
   "lang": "zh-CN",
   "frontmatter": {},
   "excerpt": "",
   "headers": [
     {
       "level": 2,
-      "title": "1. <resultMap>",
-      "slug": "_1-resultmap",
+      "title": "1、html页面引入Axios（使用CDN）",
+      "slug": "_1、html页面引入axios-使用cdn",
       "children": []
     },
     {
       "level": 2,
-      "title": "2. <id> 和 <result>",
-      "slug": "_2-id-和-result",
+      "title": "2、发起AJAX GET 请求",
+      "slug": "_2、发起ajax-get-请求",
       "children": []
     },
     {
       "level": 2,
-      "title": "3. jdbcType",
-      "slug": "_3-jdbctype",
+      "title": "3、发起AJAX POST 请求",
+      "slug": "_3、发起ajax-post-请求",
       "children": []
     },
     {
       "level": 2,
-      "title": "4. 自动映射原理",
-      "slug": "_4-自动映射原理",
+      "title": "4、发起AJAX POST 请求",
+      "slug": "_4、发起ajax-post-请求",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1648625977000
+    "updatedTime": null
   },
-  "filePathRelative": "three-stage/mybatis/notes/02.映射结果集（基本）.md"
+  "filePathRelative": "utilse/gist/notes/axios.md"
 }
 
 if (import.meta.webpackHot) {

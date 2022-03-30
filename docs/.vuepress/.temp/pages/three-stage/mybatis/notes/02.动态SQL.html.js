@@ -38,7 +38,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648625977000
   },
   "filePathRelative": "three-stage/mybatis/notes/02.动态SQL.md"
 }

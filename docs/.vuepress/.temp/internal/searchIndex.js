@@ -5806,6 +5806,26 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Axios 发起AJAX请求模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、html页面引入Axios（使用CDN）：",
+        "slug": "_1、html页面引入axios-使用cdn",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、发起AJAX GET 请求",
+        "slug": "_2、发起ajax-get-请求",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/axios.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "docker-compose.yml 模板",
     "headers": [
       {
