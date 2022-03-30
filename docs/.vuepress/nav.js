@@ -103,6 +103,7 @@ module.exports = [
                     {text: '数据库二级', link: '/demo/databases/notes/数据库test.html'}
                 ],*/
             },
+            {text: 'server相关', link: '/demo/server/notes/ssh公钥.html'},
         ]
     },
     {
