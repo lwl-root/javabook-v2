@@ -1,5 +1,5 @@
 <template><h1 id="原子值-atomic" tabindex="-1"><a class="header-anchor" href="#原子值-atomic" aria-hidden="true">#</a> 原子值：Atomic</h1>
-<div class="custom-container tip"><p class="custom-container-title">TIP</p>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
 <p>原子值（atomic）也是 JDK 1.5 的 J.U.C 特性引入的知识点。</p>
 </div>
 <p>如果多个线程更新一个共享计数器，那么你就需要保证更新操作是以线程安全的方式进行的。因为 <code>i++</code> 、<code>i--</code> 这样的操作是非原子性的，它们是线程不安全的。</p>

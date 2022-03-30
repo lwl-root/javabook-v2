@@ -100,7 +100,7 @@
 <p>为了从结果集中对查询结果数据记性处理，需要调用 ResultSet 结果集对象的 getString 、getInt、getDate 等方法对结果集当前行的指定列进行读取处理。</p>
 <h3 id="关闭对象" tabindex="-1"><a class="header-anchor" href="#关闭对象" aria-hidden="true">#</a> 关闭对象</h3>
 <p>当完成数据库操作访问后，需要关闭 Java 程序中为访问数据库所创建的各种对象：</p>
-<div class="custom-container warning"><p class="custom-container-title">WARNING</p>
+<div class="custom-container warning"><p class="custom-container-title">注意</p>
 <p>关闭顺序是『先创建的后关闭，后创建的先关闭』。</p>
 </div>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code>rs<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 关闭 ResultSet 对象</span>
