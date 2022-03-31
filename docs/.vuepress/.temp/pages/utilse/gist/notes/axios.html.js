@@ -32,7 +32,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648627709000
   },
   "filePathRelative": "utilse/gist/notes/axios.md"
 }
