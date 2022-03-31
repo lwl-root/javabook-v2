@@ -15,9 +15,11 @@ module.exports = {
     '/one-stage/mysql': require('../one-stage/mysql/sidebar'),
 
     '/two-stage/html': require('../two-stage/html/sidebar'),
+    '/two-stage/js': require('../two-stage/js/sidebar'),
+    '/two-stage/ajax': require('../two-stage/ajax/sidebar'),
     '/two-stage/servlet': require('../two-stage/servlet/sidebar'),
-    '/two-stage/junit': require('../two-stage/junit/sidebar'),
 
+    '/three-stage/junit': require('../three-stage/junit/sidebar'),
     '/three-stage/mybatis': require('../three-stage/mybatis/sidebar'),
 
     '/pascal/basics': require('../pascal/basics/sidebar'),

@@ -1,0 +1,109 @@
+# 在 vue-cli 中使用 axios
+## 1. 安装 axios
+有 2 种安装方式：
+
+```shell
+# 方式一（推荐）：使用 vue-cli 命令安装
+vue add axios
+
+# 方式二：使用 npm 命令安装
+npm install axios
+```
+
+建议使用 “**方式一**” 。因为方式一通过 vue-cli 安装的是 ·vue-cli-plugin-axios· 插件，当插件安装成功之后，会去执行插件的代码逻辑，而插件的代码则会再去安装 axios 。之所以这么 “绕” 了一步是因为 vue-cli-plugin-axios 除了安装 axios 之外，它还帮我们生成了一些代码，也就是在项目中所看到的 “多” 出来的 **plugins/axios.js** 文件。
+
+当然，你不需要 vue-cli-plugin-axios “帮忙” 也可以。那么，就使用 “方式二” 直接通过 npm 安装，然后自己去写那些代码。
+
+<Badge type="tip" text="补充" vertical="middle" /> vue-router、element-ui 也是这么个安装思路。
+
+## 2. vue-cli 中的跨域问题的解决
+详情见 vue-cli 的第一篇笔记。
+
+## 3. vue-cli 中引入并使用 axios
+1. 如果实在不知道要在 package.json 的 dependencies 部分写什么的话，可以通过 vue ui 命令，打开 @vue/cli 的新特性：项目仪表盘。通过它来向我们的项目添加 axios 依赖。
+
+2. 在你需要发送 ajax 请求的 .vue 中，引入 axios：
+
+```js
+import axios from 'axios'
+```
+
+3. 在你的 .vue 代码中，使用 axios 发送 ajax 请求。
+
+上述写法是 100% 没毛病的，但是有一个可以偷懒的地方：有太多的地方要写 import ，我们可以想办法只 import 一次。
+
+这种『偷懒』的写法如下：
+
+1. 在项目入口 main.js 中 import axios（只 import 这一次）
+```js
+import axios from 'axios'
+```
+
+2. 在 main.js 中，把 axios 变量绑定到 Vue 的一个原型属性上<small>（原则上，属性名任意，不和已有属性名冲突就行）</small>。
+```js
+Vue.prototype.$http= axios;
+```
+
+3. 在你需要发送 ajax 请求的 .vue 中，使用 this.$http 就是在使用 axios 变量。无需再次 import axios 了。
+## 4. 关于 vue-cli 中的 Vue.use()
+在 vue-cli 项目中，很多人在使用别人的组件时，会用到 Vue.use() 。例如：Vue.use(VueRouter)、Vue.use(Vuex)、Vue.use(Element)。但是用 axios 时，就不需要用 Vue.use(axios)，就能直接使用。那这是为什么呢？
+
+因为 axios 没有 **install** 。
+
+当你在执行 `Vue.use(xxx)` 的时候，Vue 会去调用 xxx 的 `install` 方法<small>（前提是它得有这么个方法）</small>。借用这种机制，你可以将你对 xxx 插件/组件的初始化的代码放在 install 方法里面。
+
+因此，你可以单独地创建一个 .js 文件，在其中创建、配置 axios 对象，并绑定到 Vue 全局和实例变量上，然后，再在 main.js 中通过 Vue.use() 来触发这段代码的执行。
+
+例如，对 axios 的初始化：
+
+```js
+import Vue from 'vue';
+import axios from "axios";
+
+let config = {};
+
+const _axios = axios.create(config);
+
+_axios.interceptors.request.use(
+function (config) {
+return config;
+},
+function (error) {
+return Promise.reject(error);
+}
+);
+
+_axios.interceptors.response.use(
+function (response) {
+return response;
+},
+function (error) {
+return Promise.reject(error);
+}
+);
+
+/* 2. 利用 Vue 的插件机制：你（程序员）提前写好一个 install 方法，放在这里，等着 Vue 来调用。*/
+const Axios = {
+install:
+function (Vue, options) {
+Vue.axios = _axios;
+window.axios = _axios;
+Object.defineProperties(Vue.prototype, {
+axios: {
+get() {
+return _axios;
+}
+},
+$axios: {
+get() {
+return _axios;
+}
+},
+});
+}
+}
+
+Vue.use(Axios); // 你甚至可以就在这里执行 Vue.use()，只需要在 main.js 中 import 这个配置 js 即可。
+
+export default Axios;
+```
