@@ -83,15 +83,24 @@ export const themeData = {
       "children": [
         {
           "text": "前端基础",
-          "link": "/two-stage/html/notes/01.基本概念和结构.html"
+          "children": [
+            {
+              "text": "HTML 和 CSS",
+              "link": "/two-stage/html/notes/01.基本概念和结构.html"
+            },
+            {
+              "text": "JS 和 ES6",
+              "link": "/two-stage/js/notes/01.JavaScript编程基础.html"
+            },
+            {
+              "text": "AJAX 和 Axios",
+              "link": "/two-stage/ajax/notes/RestClient.html"
+            }
+          ]
         },
         {
           "text": "Servlet",
           "link": "/two-stage/servlet/notes/HTTP概述.html"
-        },
-        {
-          "text": "JUnit",
-          "link": "/two-stage/junit/notes/基本概念.html"
         }
       ]
     },
@@ -101,6 +110,10 @@ export const themeData = {
         {
           "text": "MyBatis",
           "link": "/three-stage/mybatis/notes/01.关于mybatis.html"
+        },
+        {
+          "text": "JUnit",
+          "link": "/three-stage/junit/notes/基本概念.html"
         }
       ]
     },
@@ -437,11 +450,13 @@ export const themeData = {
           "03.Flex布局（下）.html",
           "04.CSS3新发现.html"
         ]
-      },
+      }
+    ],
+    "/two-stage/js": [
       {
         "text": "JavaScript",
         "collapsable": false,
-        "link": "/two-stage/html/notes/01.JavaScript编程基础.html",
+        "link": "/two-stage/js/notes/01.JavaScript编程基础.html",
         "children": [
           "01.JavaScript编程基础.html",
           "02.JavaScript面向对象编程.html",
@@ -452,12 +467,35 @@ export const themeData = {
       {
         "text": "ECMAScript6",
         "collapsable": false,
-        "link": "/two-stage/html/notes/01.ES6新特性.html",
+        "link": "/two-stage/js/notes/01.ES6新特性.html",
         "children": [
           "01.ES6新特性.html",
           "02.模块化.html",
           "03.promise对象.html",
           "04.HTML5的web storage.html"
+        ]
+      }
+    ],
+    "/two-stage/ajax": [
+      {
+        "text": "AJAX",
+        "collapsable": false,
+        "link": "/two-stage/js/notes/01.JavaScript编程基础.html",
+        "children": [
+          "RestClient.html",
+          "content-type.html",
+          "基础.html",
+          "Servlet.html",
+          "SpringMVC.html"
+        ]
+      },
+      {
+        "text": "Axios",
+        "collapsable": false,
+        "link": "/two-stage/js/notes/01.ES6新特性.html",
+        "children": [
+          "axios.html",
+          "for-vue-cli.html"
         ]
       }
     ],
@@ -474,11 +512,11 @@ export const themeData = {
         ]
       }
     ],
-    "/two-stage/junit": [
+    "/three-stage/junit": [
       {
         "text": "JUnit",
         "collapsable": false,
-        "link": "/two-stage/junit/notes/基本概念.html",
+        "link": "/three-stage/junit/notes/基本概念.html",
         "children": [
           "基本概念.html",
           "spring-test-junit5.html",

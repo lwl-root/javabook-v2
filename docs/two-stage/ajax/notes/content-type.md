@@ -1,0 +1,86 @@
+# HTTP Request 中的 content-type 请求头
+
+::: tip 提示
+结合 vscode httpclient 验证本章节内容。
+:::
+
+## 1. content-type 请求头
+在 HTTP 请求的请求头中，有一个 content-type 请求头，它和它的值对于我们后续的学习、使用有至关重要的作用。
+
+当你向后台（Servlet、Controller）发起 HTTP 请求并要传递参数时，HTTP 请求的 content-type 请求头的值决定、呼应了你的请求参数的格式。
+
+它的值常见有 2 个：
+
+| # | content-type |
+|:--- |---|
+| 1 | application/x-www-form-urlencoded |
+| 2 | application/json |
+
+::: warning 注意
+截止目前为止，我们直接或间接发出的 HTTP 请求中的 content-type 的值都是 application/x-www-form-urlencoded（文件上传功能除外），我们还没有遇到过 content-type 的值是 application/json 的情况。
+:::
+
+## 2. Query String 格式的请求参数
+如果，你的 HTTP 请求头中的 `content-type` 的值为 `application/x-www-form-urlencoded` 。那么，你的登录请求的请求参数<small>（用户名和密码）</small>，就应该是 **Query String** 形式。形如：
+
+```http request
+username=tom&password=123456
+```
+
+通过 httpclient 发出 query-string 格式的 post 请求类似如下：
+
+```http request
+### Send POST request with body as parameters
+POST http://httpbin.org/post
+Content-Type: application/x-www-form-urlencoded
+
+id=999&value=content
+```
+截止到目前位置，在此之前，我们发出的 HTTP 请求的参数都是 query-string 。
+
+query-string 格式的参数意味着后台 Servlet 要通过 `request.getParameter()` 来获取参数数据。
+
+## 3. 常见请求方式一
+**通过页面上的 `<form>` 表单提交数据**。<small>发出的是 POST 请求，请求参数以 query-string 格式携带在 HTTP 请求体中，向后端传递。</small>
+
+其本质如下<small>（以登录请求为例）</small>：
+
+```http request
+POST http://127.0.0.1:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+username=tom&password=123
+```
+
+## 4. 常见请求方式二
+**在浏览器地址栏直接输入访问地址和请求参数，并按下回车。** <small>发出的是 GET 请求，请求参数以 query-string 格式携带在请求行中，向后端传递。</small>
+
+其本质如下<small>（以登录请求为例）</small>：
+
+```http request
+GET http://127.0.0.1:8080/login?username=tom&password=123
+```
+
+## 5. 常见请求方式三
+**点击页面上的 `<link>` 接链，本质上等同于上面的** `常见请求方式二 `。其本质如下：
+
+```http request
+GET http://127.0.0.1:8080/login?username=tom&password=123
+```
+
+::: tip 提示
+
+你一定注意到了，无论是 GET 方式，还是 POST 方式，都可以向后端传递 query-string 格式的参数。
+::: 
+
+## 6. GET 请求的一点点小特殊
+GET 请求的数据包中 **“没有请求体”** <small>（ 逻辑上，你也可以认为 GET 请求的 **“请求体是空的”** ）</small>。这也是为什么 GET 请求的请求头中没有 content-type 。
+
+HTTP 请求头中的 content-type 就是用来指定请求体中的数据<small>（ 即，请求参数 ）</small>的格式，而 GET 请求压根就没有请求体，因此 content-type 请求头在 GET 请求中自然就没有了用武之地，而 GET 请求的请求头中所以也就用不上 content-type 。
+
+GET 请求向后台传递的 query-string 是 “追加” 在请求路径 URI 中的，而请求路径 URI 在 HTTP 请求的数据包中，是存放在请求行中的，因此，GET 请求的 query-string 格式参数是携带在请求行中，传递到后台的。
+
+请求路径 URI 的后面可以 “追加” query-string 格式字符串，但是不能 “追加” json-string 格式字符串，因此，这也是为什么说 GET 请求向后台传递的都是 query-string 格式参数。
+
+## 7. JSON String 格式的参数
+见下一章节
