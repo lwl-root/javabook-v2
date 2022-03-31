@@ -5,7 +5,7 @@ module.exports = [
 		link:'/demo/server/notes/ssh公钥.html',
 		children:[
 			'ssh公钥.html',
-			
+			'内网穿透.html',
 		]
 	},
 	

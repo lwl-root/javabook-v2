@@ -952,6 +952,13 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "配置 FRP 实现内网穿透",
+    "headers": [],
+    "path": "/demo/server/notes/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Classpath 在哪？",
     "headers": [
       {
@@ -3215,6 +3222,39 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "线程安全",
     "headers": [
       {
@@ -3376,39 +3416,6 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/threadsafe/notes/c02.CAS.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据结构与算法入门",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5810,7 +5817,7 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
-        "title": "1、html页面引入Axios（使用CDN）：",
+        "title": "1、html页面引入Axios（使用CDN）",
         "slug": "_1、html页面引入axios-使用cdn",
         "children": []
       },
@@ -5818,6 +5825,18 @@ export const searchIndex = [
         "level": 2,
         "title": "2、发起AJAX GET 请求",
         "slug": "_2、发起ajax-get-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、发起AJAX POST 请求",
+        "slug": "_3、发起ajax-post-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、发起AJAX POST 请求",
+        "slug": "_4、发起ajax-post-请求",
         "children": []
       }
     ],
