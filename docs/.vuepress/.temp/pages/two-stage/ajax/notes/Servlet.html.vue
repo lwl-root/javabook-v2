@@ -1,0 +1,12 @@
+<template><h1 id="ajax-和-servlet" tabindex="-1"><a class="header-anchor" href="#ajax-和-servlet" aria-hidden="true">#</a> AJAX 和 Servlet</h1>
+<p>由于 Servlet 中的 <strong>request.getParameter(&quot;...&quot;)</strong> 只对 <strong>content-type</strong> 值为 <strong>application/x-www-form-urlencoded</strong> 的情况有效有效。</p>
+<p>当你的请求参数风格是 json-string 风格，即，HTTP 请求头的content-type 值为 application/json 时，你的 Servlet 中的 <strong>request.getParameter(&quot;...&quot;)</strong> 方法的值为 <strong>null</strong>，是获取不到页面提交的参数的。</p>
+<p>这种情况下，你需要自己“想办法”从 HTTP 请求的 Body 中，将请求参数取出来：</p>
+<div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token class-name">BufferedReader</span> br <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> str<span class="token punctuation">,</span> wholeStr <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>str <span class="token operator">=</span> br<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+wholeStr <span class="token operator">+=</span> str<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>wholeStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></template>
