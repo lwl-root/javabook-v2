@@ -54,8 +54,15 @@ module.exports = [
                     {text: 'AJAX 和 Axios', link: '/two-stage/ajax/notes/RestClient.html'},
                 ],
             },
+            {
+                text: "Servlet",
+                children: [
+                    {text: 'Java Web', link: '/two-stage/servlet/notes/HTTP概述.html'},
+
+                ],
+            },
             // {text: '前端基础', link: '/two-stage/html/notes/01.基本概念和结构.html'},
-            {text: 'Servlet', link: '/two-stage/servlet/notes/HTTP概述.html'},
+            // {text: 'Java Web', link: '/two-stage/servlet/notes/HTTP概述.html'},
 
         ]
     },
