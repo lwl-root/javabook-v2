@@ -32,7 +32,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648716082000
   },
   "filePathRelative": "two-stage/ajax/notes/for-vue-cli.md"
 }

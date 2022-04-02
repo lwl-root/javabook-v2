@@ -6,7 +6,8 @@ module.exports = [
 		children:[
 			'ssh公钥.html',
 			'内网穿透.html',
+			'轻量与ECS.html',
 		]
 	},
-	
+
 ]

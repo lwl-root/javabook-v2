@@ -7,7 +7,7 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648716082000
   },
   "filePathRelative": "two-stage/js/notes/03.promise对象.md"
 }
