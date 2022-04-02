@@ -25,8 +25,8 @@ export const pagesComponents = {
   "v-248d4c1e": defineAsyncComponent(() => import(/* webpackChunkName: "v-248d4c1e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/server/notes/ssh公钥.html.vue")),
   // path: /demo/server/notes/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.html
   "v-260e80e6": defineAsyncComponent(() => import(/* webpackChunkName: "v-260e80e6" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/server/notes/内网穿透.html.vue")),
-  // path: /pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
-  "v-5379c221": defineAsyncComponent(() => import(/* webpackChunkName: "v-5379c221" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/数据结构与算法入门.html.vue")),
+  // path: /demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html
+  "v-0939e576": defineAsyncComponent(() => import(/* webpackChunkName: "v-0939e576" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/server/notes/轻量与ECS.html.vue")),
   // path: /one-stage/java/notes/classpath.html
   "v-2bdc2934": defineAsyncComponent(() => import(/* webpackChunkName: "v-2bdc2934" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/java/notes/classpath.html.vue")),
   // path: /one-stage/java/notes/java%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB.html
@@ -139,6 +139,8 @@ export const pagesComponents = {
   "v-43c5f0ee": defineAsyncComponent(() => import(/* webpackChunkName: "v-43c5f0ee" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/threadsafe/notes/c00.atomic.html.vue")),
   // path: /one-stage/threadsafe/notes/c02.CAS.html
   "v-32a88122": defineAsyncComponent(() => import(/* webpackChunkName: "v-32a88122" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/one-stage/threadsafe/notes/c02.CAS.html.vue")),
+  // path: /pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html
+  "v-5379c221": defineAsyncComponent(() => import(/* webpackChunkName: "v-5379c221" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/pascal/basics/notes/数据结构与算法入门.html.vue")),
   // path: /three-stage/junit/notes/mockito.html
   "v-b43b27f2": defineAsyncComponent(() => import(/* webpackChunkName: "v-b43b27f2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/three-stage/junit/notes/mockito.html.vue")),
   // path: /three-stage/junit/notes/MockMvc.html

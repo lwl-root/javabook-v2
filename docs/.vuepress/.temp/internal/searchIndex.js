@@ -1010,35 +1010,22 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据结构与算法入门",
+    "title": "轻量应用服务器与ECS服务器的区别",
     "headers": [
       {
         "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
+        "title": "1、两种服务器面向群体不同",
+        "slug": "_1、两种服务器面向群体不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、用处不同",
+        "slug": "_2、用处不同",
+        "children": []
       }
     ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
+    "path": "/demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3471,6 +3458,39 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "使用 Mockito 伪造对象",
     "headers": [],
     "path": "/three-stage/junit/notes/mockito.html",
@@ -4038,8 +4058,52 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
+    "title": "vue axios",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 在页面上引入",
+        "slug": "_1-在页面上引入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. axios() 方法",
+        "slug": "_2-axios-方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "axios 方法发起 GET 请求",
+            "slug": "axios-方法发起-get-请求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "axios 方法发起 POST 请求",
+            "slug": "axios-方法发起-post-请求",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. get() 方法和 post() 方法",
+        "slug": "_3-get-方法和-post-方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. post() 方法和 @RequestParam",
+        "slug": "_4-post-方法和-requestparam",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 执行多个并发请求",
+        "slug": "_5-执行多个并发请求",
+        "children": []
+      }
+    ],
     "path": "/two-stage/ajax/notes/axios.html",
     "pathLocale": "/",
     "extraFields": []
@@ -4095,8 +4159,33 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
+    "title": "在 vue-cli 中使用 axios",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 安装 axios",
+        "slug": "_1-安装-axios",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. vue-cli 中的跨域问题的解决",
+        "slug": "_2-vue-cli-中的跨域问题的解决",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. vue-cli 中引入并使用 axios",
+        "slug": "_3-vue-cli-中引入并使用-axios",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 关于 vue-cli 中的 Vue.use()",
+        "slug": "_4-关于-vue-cli-中的-vue-use",
+        "children": []
+      }
+    ],
     "path": "/two-stage/ajax/notes/for-vue-cli.html",
     "pathLocale": "/",
     "extraFields": []
@@ -4128,22 +4217,97 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "AJAX 和 Servlet",
     "headers": [],
     "path": "/two-stage/ajax/notes/Servlet.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
+    "title": "AJAX 和 Spring MVC",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. AJAX 请求和 Spring MVC 的参数绑定",
+        "slug": "_1-ajax-请求和-spring-mvc-的参数绑定",
+        "children": [
+          {
+            "level": 3,
+            "title": "AJAX 发送简单类型参数",
+            "slug": "ajax-发送简单类型参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ajax() 发送简单类型数组的一个坑",
+            "slug": "ajax-发送简单类型数组的一个坑",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ajax 发送 application/json 参数类型的请求",
+            "slug": "ajax-发送-application-json-参数类型的请求",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. Spring MVC 响应 AJAX 请求",
+        "slug": "_2-spring-mvc-响应-ajax-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. @RestController 注解",
+        "slug": "_3-restcontroller-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 背后功臣 HttpMessageConverter",
+        "slug": "_4-背后功臣-httpmessageconverter",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. StringHttpMessageConverter 乱码问题",
+        "slug": "_5-stringhttpmessageconverter-乱码问题",
+        "children": []
+      }
+    ],
     "path": "/two-stage/ajax/notes/SpringMVC.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
+    "title": "AJAX 基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. JSON String 格式的请求参数",
+        "slug": "_1-json-string-格式的请求参数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. X-String 格式的请求参数总结",
+        "slug": "_2-x-string-格式的请求参数总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. AJAX 基本概念",
+        "slug": "_3-ajax-基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 原生 AJAX 请求",
+        "slug": "_4-原生-ajax-请求",
+        "children": []
+      }
+    ],
     "path": "/two-stage/ajax/notes/%E5%9F%BA%E7%A1%80.html",
     "pathLocale": "/",
     "extraFields": []
