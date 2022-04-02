@@ -100,7 +100,12 @@ export const themeData = {
         },
         {
           "text": "Servlet",
-          "link": "/two-stage/servlet/notes/HTTP概述.html"
+          "children": [
+            {
+              "text": "Java Web",
+              "link": "/two-stage/servlet/notes/HTTP概述.html"
+            }
+          ]
         }
       ]
     },
@@ -621,7 +626,8 @@ export const themeData = {
         "link": "/demo/server/notes/ssh公钥.html",
         "children": [
           "ssh公钥.html",
-          "内网穿透.html"
+          "内网穿透.html",
+          "轻量与ECS.html"
         ]
       }
     ],

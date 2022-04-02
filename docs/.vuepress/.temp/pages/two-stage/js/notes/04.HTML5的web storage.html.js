@@ -20,7 +20,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1648716082000
   },
   "filePathRelative": "two-stage/js/notes/04.HTML5的web storage.md"
 }
