@@ -14,8 +14,8 @@ export const data = {
     },
     {
       "level": 2,
-      "title": "2、创建Swagger2Configuration.java",
-      "slug": "_2、创建swagger2configuration-java",
+      "title": "2、创建SwaggerConfiguration.java",
+      "slug": "_2、创建swaggerconfiguration-java",
       "children": []
     },
     {

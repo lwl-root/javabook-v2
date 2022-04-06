@@ -707,8 +707,8 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "2、创建Swagger2Configuration.java",
-        "slug": "_2、创建swagger2configuration-java",
+        "title": "2、创建SwaggerConfiguration.java",
+        "slug": "_2、创建swaggerconfiguration-java",
         "children": []
       },
       {
@@ -1023,6 +1023,31 @@ export const searchIndex = [
         "title": "2、用处不同",
         "slug": "_2、用处不同",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、计费标准不同",
+        "slug": "_3、计费标准不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.两种服务器的性质不同",
+        "slug": "_4-两种服务器的性质不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.两种服务器管理方式不同",
+        "slug": "_5-两种服务器管理方式不同",
+        "children": [
+          {
+            "level": 3,
+            "title": "什么是轻量应用服务器（TencentCloud Lighthouse）？",
+            "slug": "什么是轻量应用服务器-tencentcloud-lighthouse",
+            "children": []
+          }
+        ]
       }
     ],
     "path": "/demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html",
