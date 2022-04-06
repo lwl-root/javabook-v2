@@ -1,26 +1,44 @@
 # SpringBoot集成Swagger
 
+相对于swagger2的依赖，swagger3只需要一个依赖
+
 ## 1、添加pom依赖
 
+:::: code-group
+::: code-group-item swagger2
+
 ```xml
-<dependencies>
-    <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-    <dependency>
-        <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger-ui</artifactId>
-        <version>2.9.2</version>
-    </dependency>
- 	<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-    <dependency>
-       <groupId>io.springfox</groupId>
-       <artifactId>springfox-swagger2</artifactId>
-       <version>2.9.2</version>
-    </dependency>
-</dependencies>
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.9.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+```
+:::
+::: code-group-item swagger3
+
+```xml
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-boot-starter</artifactId>
+    <version>3.0.0</version>
+</dependency>
 ```
 
-## 2、创建Swagger2Configuration.java
+:::
+::::
 
+## 2、创建SwaggerConfiguration.java
+:::: code-group
+::: code-group-item Swagger2Configuration
 ```java
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,7 +51,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@Configuration  
+@Configuration 
 @EnableSwagger2
 public class Swagger2Configuration {
 
@@ -57,17 +75,66 @@ public class Swagger2Configuration {
                    .title("XXX服务") //设置文档的标题
                    .description("XXX服务 API 接口文档") // 设置文档的描述
                    .version(VERSION) // 设置文档的版本信息-> 1.0.0 Version information
-                   .termsOfServiceUrl("http://www.XXX.com") // 设置文档的License信息->1.3 License information
+                   .termsOfServiceUrl("http://lwl1121.xyz/demo/frame/notes/swagger2.html") // 设置文档的License信息->1.3 License information
                    .build();
    }
 }
 ```
+:::
+::: code-group-item Swagger3Configuration
+```java
+package com.lp.config;
 
-**Swagger2Configuration.java** 配置类的内容不多，配置完成后也很少变化，简单了解即可。
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.oas.annotations.EnableOpenApi;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
 
-如上代码所示，通过 `@Configuration` 注解，让 Spring 加载该配置类。再通过 `@EnableSwagger2` 注解来启用Swagger2。成员方法 `createRestApi` 函数创建 `Docket` 的Bean之后，`apiInfo()` 用来创建该 Api 的基本信息（这些基本信息会展现在文档页面中）。`select()` 函数返回一个 `ApiSelectorBuilder`实例用来控制哪些接口暴露给 Swagger 来展现，本例采用指定扫描的包路径来定义，Swagger 会扫描该包下所有 Controller 定义的 API，并产生文档内容（除了被 `@ApiIgnore` 指定的请求）。
+@Configuration
+@EnableOpenApi
+public class Swagger3Config {
+    //api接口包扫描路径controller
+    public static final String SWAGGER_SCAN_BASE_PACKAGE = "com.lp.inlet.controller";
+    //接口文档版本号
+    public static final String VERSION = "1.0.0";
+
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.OAS_30)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage(SWAGGER_SCAN_BASE_PACKAGE))
+                .paths(PathSelectors.any()) // 可以根据url路径设置哪些请求加入文档，忽略哪些请求
+                .build();
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("lp_live") //设置文档的标题
+                .description("lp_live API 接口文档") // 设置文档的描述
+                .version(VERSION) // 设置文档的版本信息-> 1.0.0 Version information
+                .termsOfServiceUrl("http://lwl1121.xyz/demo/frame/notes/swagger2.html") // 设置文档的License信息->1.3 License information
+                .build();
+    }
+}
+
+```
+:::
+::::
+
+**SwaggerConfiguration.java** 配置类的内容不多，配置完成后也很少变化，简单了解即可。
+
+如上代码所示，通过 `@Configuration` 注解，让 Spring 加载该配置类。再通过 `@EnableSwagger2`或`@EnableOpenApi` 注解来启用Swagger。成员方法 `createRestApi` 函数创建 `Docket`
+的Bean之后，`apiInfo()` 用来创建该 Api 的基本信息（这些基本信息会展现在文档页面中）。`select()` 函数返回一个 `ApiSelectorBuilder`实例用来控制哪些接口暴露给 Swagger
+来展现，本例采用指定扫描的包路径来定义，Swagger 会扫描该包下所有 Controller 定义的 API，并产生文档内容（除了被 `@ApiIgnore` 指定的请求）。
 
 ## 3、API接口编写（Controller）
+<Badge type="tip" text="提示" vertical="middle" /> v2 和 v3 使用的文档注解都是相同的
 
 ```java
 @Api(description = "生产者进程API接口")
@@ -120,8 +187,6 @@ public class ActiveMQProducer {
 // 本接口示例了 @ApiOperation 和 @ApiImplicitParam 两个注解的使用。
 ```
 
-
-
 Swagger 通过注解定制接口对外展示的信息，这些信息包括接口名、请求方法、参数、返回信息等。
 
 更多注解类型：
@@ -139,16 +204,33 @@ Swagger 通过注解定制接口对外展示的信息，这些信息包括接口
 - @ApiImplicitParams：描述由多个 @ApiImplicitParam 注解的参数组成的请求参数列表
 
 ## 4、启动SpringBoot应用
+:::: code-group
+::: code-group-item swagger2启动
+
+<br/>
 
 SpringBoot启动成功后，访问http://localhost:8080/swagger-ui.html
 
+
 <img src="/images/swagger2.png">
+:::
 
+::: code-group-item swagger3启动
 
+<br/>
+
+SpringBoot启动成功后，访问http://localhost:8080/swagger-ui/
+
+<Badge type="warning" text="注意" vertical="middle" /> 最后的 / 不能省略
+
+<img src="/images/swagger3.png">
+:::
+::::
 
 ## 5、对swgager文档的美化框架（2次封装）
 
 ### 5.1、依赖(只需要这一个依赖即可，里面包含有swagger的依赖)
+
 ```java
 	<!--文档框架 knife4j 美化接口文档-->
 	<dependency>
