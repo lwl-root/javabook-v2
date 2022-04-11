@@ -10,11 +10,11 @@ export const data = {
     "features": [
       {
         "title": "善良",
-        "details": "夫民劳则思，思则善心生；逸则淫，淫则忘善；忘善则恶心生。 先秦·佚名《敬姜论劳逸》"
+        "details": "夫民劳则思，思则善心生；逸则淫，淫则忘善；忘善则恶心生。 《敬姜论劳逸》"
       },
       {
-        "title": "高贵",
-        "details": "关关雎鸠，在河之洲。窈窕淑女，君子好逑。 先秦·佚名《关雎》"
+        "title": "勤奋",
+        "details": "日拱一卒无有尽，功不唐捐终入海。 《法华经》"
       }
     ],
     "footer": "Copyright ©2021-11-11 lwl 版权所有"
@@ -22,7 +22,7 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": 1642860834000
+    "updatedTime": 1649234722000
   },
   "filePathRelative": "README.md"
 }
