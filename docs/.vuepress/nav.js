@@ -82,12 +82,12 @@ module.exports = [
         ]
     },
 
-    {
+    /*{
         text: '数据结构与算法',
         children: [
             {text: '入门', link: '/pascal/basics/notes/数据结构与算法入门.html'},
         ]
-    },
+    },*/
 
     {
         text: '日常积累',
