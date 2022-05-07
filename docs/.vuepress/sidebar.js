@@ -18,6 +18,7 @@ module.exports = {
     '/two-stage/js': require('../two-stage/js/sidebar'),
     '/two-stage/ajax': require('../two-stage/ajax/sidebar'),
     '/two-stage/servlet': require('../two-stage/servlet/sidebar'),
+    '/two-stage/npm': require('../two-stage/npm/sidebar'),
 
     '/three-stage/junit': require('../three-stage/junit/sidebar'),
     '/three-stage/mybatis': require('../three-stage/mybatis/sidebar'),

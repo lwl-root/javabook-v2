@@ -106,6 +106,15 @@ export const themeData = {
               "link": "/two-stage/servlet/notes/HTTP概述.html"
             }
           ]
+        },
+        {
+          "text": "VUE",
+          "children": [
+            {
+              "text": "NPM",
+              "link": "/two-stage/npm/notes/npm.html"
+            }
+          ]
         }
       ]
     },
@@ -125,15 +134,6 @@ export const themeData = {
     {
       "text": "微服务 & 中间件",
       "children": []
-    },
-    {
-      "text": "数据结构与算法",
-      "children": [
-        {
-          "text": "入门",
-          "link": "/pascal/basics/notes/数据结构与算法入门.html"
-        }
-      ]
     },
     {
       "text": "日常积累",
@@ -517,6 +517,16 @@ export const themeData = {
         ]
       }
     ],
+    "/two-stage/npm": [
+      {
+        "text": "npm的使用",
+        "collapsable": false,
+        "link": "/two-stage/npm/notes/npm.html",
+        "children": [
+          "npm.html"
+        ]
+      }
+    ],
     "/three-stage/junit": [
       {
         "text": "JUnit",
@@ -591,7 +601,8 @@ export const themeData = {
         "children": [
           "List去重.html",
           "java反射.html",
-          "动态代理.html"
+          "动态代理.html",
+          "BigDecimal.html"
         ]
       }
     ],

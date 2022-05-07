@@ -61,6 +61,13 @@ module.exports = [
 
                 ],
             },
+            {
+                text: "VUE",
+                children: [
+                    {text: 'NPM', link: '/two-stage/npm/notes/npm.html'},
+
+                ],
+            },
             // {text: '前端基础', link: '/two-stage/html/notes/01.基本概念和结构.html'},
             // {text: 'Java Web', link: '/two-stage/servlet/notes/HTTP概述.html'},
 

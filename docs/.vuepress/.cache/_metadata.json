@@ -1,30 +1,35 @@
 {
-  "hash": "db8423f0",
-  "browserHash": "55fdf3fb",
+  "hash": "28182fcf",
+  "browserHash": "82181757",
   "optimized": {
     "vue": {
-      "file": "D:/学习/项目/my_book/javaBook/docs/.vuepress/.cache/vue.js",
-      "src": "D:/学习/项目/my_book/javaBook/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "file": "C:/javaBook/javaBook/docs/.vuepress/.cache/vue.js",
+      "src": "C:/javaBook/javaBook/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
       "needsInterop": false
     },
     "vue-router": {
-      "file": "D:/学习/项目/my_book/javaBook/docs/.vuepress/.cache/vue-router.js",
-      "src": "D:/学习/项目/my_book/javaBook/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "file": "C:/javaBook/javaBook/docs/.vuepress/.cache/vue-router.js",
+      "src": "C:/javaBook/javaBook/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "needsInterop": false
+    },
+    "@vue/devtools-api": {
+      "file": "C:/javaBook/javaBook/docs/.vuepress/.cache/@vue_devtools-api.js",
+      "src": "C:/javaBook/javaBook/node_modules/@vue/devtools-api/lib/esm/index.js",
       "needsInterop": false
     },
     "@vueuse/core": {
-      "file": "D:/学习/项目/my_book/javaBook/docs/.vuepress/.cache/@vueuse_core.js",
-      "src": "D:/学习/项目/my_book/javaBook/node_modules/@vuepress/theme-default/node_modules/@vueuse/core/index.mjs",
+      "file": "C:/javaBook/javaBook/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "C:/javaBook/javaBook/node_modules/@vueuse/core/index.mjs",
       "needsInterop": false
     },
     "nprogress": {
-      "file": "D:/学习/项目/my_book/javaBook/docs/.vuepress/.cache/nprogress.js",
-      "src": "D:/学习/项目/my_book/javaBook/node_modules/nprogress/nprogress.js",
+      "file": "C:/javaBook/javaBook/docs/.vuepress/.cache/nprogress.js",
+      "src": "C:/javaBook/javaBook/node_modules/nprogress/nprogress.js",
       "needsInterop": true
     },
     "@vuepress/shared": {
-      "file": "D:/学习/项目/my_book/javaBook/docs/.vuepress/.cache/@vuepress_shared.js",
-      "src": "D:/学习/项目/my_book/javaBook/node_modules/@vuepress/shared/lib/esm/index.js",
+      "file": "C:/javaBook/javaBook/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "C:/javaBook/javaBook/node_modules/@vuepress/shared/lib/esm/index.js",
       "needsInterop": false
     }
   }

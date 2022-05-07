@@ -754,6 +754,44 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "BigDecimal使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、常用方法详解",
+        "slug": "_1、常用方法详解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、BigDecimal格式化",
+        "slug": "_2、bigdecimal格式化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、BigDecimal常见异常",
+        "slug": "_3、bigdecimal常见异常",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、工具类",
+        "slug": "_4、工具类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5、总结",
+        "slug": "_5、总结",
+        "children": []
+      }
+    ],
+    "path": "/demo/Java/notes/BigDecimal.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Java反射基础",
     "headers": [
       {
@@ -5082,6 +5120,44 @@ export const searchIndex = [
       }
     ],
     "path": "/two-stage/js/notes/04.js-utils.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "NPM 的使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "npm 的全局安装和局部安装",
+        "slug": "npm-的全局安装和局部安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "npm 全局安装包及使用",
+        "slug": "npm-全局安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "npm 局部安装包及使用",
+        "slug": "npm-局部安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "两种安装方式的由来 了解",
+        "slug": "两种安装方式的由来-了解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "命令总结",
+        "slug": "命令总结",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/npm/notes/npm.html",
     "pathLocale": "/",
     "extraFields": []
   },
