@@ -616,516 +616,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Oracle中的子查询",
-    "headers": [
-      {
-        "level": 2,
-        "title": "子查询使用场景",
-        "slug": "子查询使用场景",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题一：子查询语法中的小括号",
-        "slug": "问题一-子查询语法中的小括号",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题二：子查询的书写风格",
-        "slug": "问题二-子查询的书写风格",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题三：可以使用子查询的位置",
-        "slug": "问题三-可以使用子查询的位置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题四：不可以使用子查询的位置",
-        "slug": "问题四-不可以使用子查询的位置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题五：FROM 后面的子查询",
-        "slug": "问题五-from-后面的子查询",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题六：子查询和主查询使用的表",
-        "slug": "问题六-子查询和主查询使用的表",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题七：子查询中的排序",
-        "slug": "问题七-子查询中的排序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题八：子查询的执行顺序",
-        "slug": "问题八-子查询的执行顺序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题九：单行子查询与多行子查询的区别",
-        "slug": "问题九-单行子查询与多行子查询的区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题十：子查询中的null值问题",
-        "slug": "问题十-子查询中的null值问题",
-        "children": []
-      }
-    ],
-    "path": "/demo/databases/notes/oracle%E5%AD%90%E6%9F%A5%E8%AF%A2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
-    "headers": [],
-    "path": "/demo/frame/notes/junitTest.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SpringBoot集成Swagger",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、添加pom依赖",
-        "slug": "_1、添加pom依赖",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、创建SwaggerConfiguration.java",
-        "slug": "_2、创建swaggerconfiguration-java",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、API接口编写（Controller）",
-        "slug": "_3、api接口编写-controller",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4、启动SpringBoot应用",
-        "slug": "_4、启动springboot应用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5、对swgager文档的美化框架（2次封装）",
-        "slug": "_5、对swgager文档的美化框架-2次封装",
-        "children": [
-          {
-            "level": 3,
-            "title": "5.1、依赖(只需要这一个依赖即可，里面包含有swagger的依赖)",
-            "slug": "_5-1、依赖-只需要这一个依赖即可-里面包含有swagger的依赖",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.2、配置",
-            "slug": "_5-2、配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.3、打开地址及页面效果",
-            "slug": "_5-3、打开地址及页面效果",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/frame/notes/swagger2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "BigDecimal使用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、常用方法详解",
-        "slug": "_1、常用方法详解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、BigDecimal格式化",
-        "slug": "_2、bigdecimal格式化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、BigDecimal常见异常",
-        "slug": "_3、bigdecimal常见异常",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4、工具类",
-        "slug": "_4、工具类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5、总结",
-        "slug": "_5、总结",
-        "children": []
-      }
-    ],
-    "path": "/demo/Java/notes/BigDecimal.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java反射基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "使用步骤",
-        "slug": "使用步骤",
-        "children": [
-          {
-            "level": 3,
-            "title": "1、获取目标类型的Class对象",
-            "slug": "_1、获取目标类型的class对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2、通过 Class 对象分别获取Constructor类对象、Method类对象 & Field 类对象",
-            "slug": "_2、通过-class-对象分别获取constructor类对象、method类对象-field-类对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3、通过 Constructor类对象、Method类对象 & Field类对象分别创建对象、调用方法、成员变量赋值",
-            "slug": "_3、通过-constructor类对象、method类对象-field类对象分别创建对象、调用方法、成员变量赋值",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "反射使用",
-        "slug": "反射使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "业务类",
-            "slug": "业务类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "非反射方法",
-            "slug": "非反射方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射方法",
-            "slug": "反射方法",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/Java/notes/java%E5%8F%8D%E5%B0%84.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "List集合去重",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前置知识",
-        "slug": "前置知识",
-        "children": [
-          {
-            "level": 3,
-            "title": "无序集合",
-            "slug": "无序集合",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序集合",
-            "slug": "有序集合",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序和无序",
-            "slug": "有序和无序",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "方法1：contains判断去重(有序)",
-        "slug": "方法1-contains判断去重-有序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法2：迭代器去重(无序)",
-        "slug": "方法2-迭代器去重-无序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法3：HashSet去重(无序)",
-        "slug": "方法3-hashset去重-无序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法4：LinkedHashSet去重(有序)",
-        "slug": "方法4-linkedhashset去重-有序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法5：TreeSet去重(无序)",
-        "slug": "方法5-treeset去重-无序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "方法6：Stream去重(有序)",
-        "slug": "方法6-stream去重-有序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "总结",
-        "slug": "总结",
-        "children": []
-      }
-    ],
-    "path": "/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "什么是动态代理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "一、介绍",
-        "slug": "一、介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二、静态代理",
-        "slug": "二、静态代理",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三、动态代理",
-        "slug": "三、动态代理",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "四、静态织入",
-        "slug": "四、静态织入",
-        "children": [
-          {
-            "level": 3,
-            "title": "五、小结",
-            "slug": "五、小结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "六、参考",
-            "slug": "六、参考",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Gitee 添加了ssh公钥还是需要账户和密码",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Gitee生成密钥",
-        "slug": "gitee生成密钥",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "小坑",
-        "slug": "小坑",
-        "children": []
-      }
-    ],
-    "path": "/demo/server/notes/ssh%E5%85%AC%E9%92%A5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "配置 FRP 实现内网穿透",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. FRP 的作用",
-        "slug": "_1-frp-的作用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 配置说明",
-        "slug": "_2-配置说明",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.1 实现功能",
-            "slug": "_2-1-实现功能",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2 配置前准备",
-            "slug": "_2-2-配置前准备",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 安装 FRP",
-        "slug": "_3-安装-frp",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 配置",
-        "slug": "_4-配置",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.1 服务端配置",
-            "slug": "_4-1-服务端配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.2 客户端配置",
-            "slug": "_4-2-客户端配置",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/server/notes/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "轻量应用服务器与ECS服务器的区别",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、两种服务器面向群体不同",
-        "slug": "_1、两种服务器面向群体不同",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、用处不同",
-        "slug": "_2、用处不同",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、计费标准不同",
-        "slug": "_3、计费标准不同",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.两种服务器的性质不同",
-        "slug": "_4-两种服务器的性质不同",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5.两种服务器管理方式不同",
-        "slug": "_5-两种服务器管理方式不同",
-        "children": [
-          {
-            "level": 3,
-            "title": "什么是轻量应用服务器（TencentCloud Lighthouse）？",
-            "slug": "什么是轻量应用服务器-tencentcloud-lighthouse",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据结构与算法入门",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Classpath 在哪？",
     "headers": [
       {
@@ -2453,175 +1943,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Executors",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. FixedThreadPool 使用",
-        "slug": "_1-fixedthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. CachedThreadPool 使用",
-        "slug": "_2-cachedthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. SingleThreadExecutor 使用",
-        "slug": "_4-singlethreadexecutor-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. ScheduledThreadPool 使用",
-        "slug": "_5-scheduledthreadpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. SingleThreadScheduledExecutor 使用",
-        "slug": "_6-singlethreadscheduledexecutor-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. WorkStealingPool 使用",
-        "slug": "_7-workstealingpool-使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 总结",
-        "slug": "_8-总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 其它",
-        "slug": "_9-其它",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/Executors.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Runnable 接口创建线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/runnable.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Thread 类创建线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/thread.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "ThreadPoolExecutor",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. ThreadPoolExecutor 的使用",
-        "slug": "_1-threadpoolexecutor-的使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 线程池执行方法",
-        "slug": "_2-线程池执行方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 线程池关闭方法",
-        "slug": "_3-线程池关闭方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 总结",
-        "slug": "_4-总结",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/ThreadPoolExecutor.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "多线程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "多进程",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E5%A4%9A%E8%BF%9B%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程池",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程的状态",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "线程的调用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 线程的优先级（了解、自学）",
-        "slug": "_1-线程的优先级-了解、自学",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 实现线程调度的方法",
-        "slug": "_2-实现线程调度的方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 线程的同步与互斥",
-        "slug": "_3-线程的同步与互斥",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. synchronized 关键字",
-        "slug": "_4-synchronized-关键字",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%B0%83%E7%94%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "锁",
-    "headers": [],
-    "path": "/one-stage/javathread/notes/%E9%94%81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "事务",
     "headers": [
       {
@@ -2867,6 +2188,175 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Executors",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. FixedThreadPool 使用",
+        "slug": "_1-fixedthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. CachedThreadPool 使用",
+        "slug": "_2-cachedthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. SingleThreadExecutor 使用",
+        "slug": "_4-singlethreadexecutor-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. ScheduledThreadPool 使用",
+        "slug": "_5-scheduledthreadpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. SingleThreadScheduledExecutor 使用",
+        "slug": "_6-singlethreadscheduledexecutor-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. WorkStealingPool 使用",
+        "slug": "_7-workstealingpool-使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 总结",
+        "slug": "_8-总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 其它",
+        "slug": "_9-其它",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/Executors.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "使用 Runnable 接口创建线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/runnable.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "使用 Thread 类创建线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/thread.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "ThreadPoolExecutor",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. ThreadPoolExecutor 的使用",
+        "slug": "_1-threadpoolexecutor-的使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 线程池执行方法",
+        "slug": "_2-线程池执行方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 线程池关闭方法",
+        "slug": "_3-线程池关闭方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 总结",
+        "slug": "_4-总结",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/ThreadPoolExecutor.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多线程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E5%A4%9A%E7%BA%BF%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "多进程",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E5%A4%9A%E8%BF%9B%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程池",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E6%B1%A0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程的状态",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "线程的调用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 线程的优先级（了解、自学）",
+        "slug": "_1-线程的优先级-了解、自学",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 实现线程调度的方法",
+        "slug": "_2-实现线程调度的方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 线程的同步与互斥",
+        "slug": "_3-线程的同步与互斥",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. synchronized 关键字",
+        "slug": "_4-synchronized-关键字",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/javathread/notes/%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%B0%83%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "锁",
+    "headers": [],
+    "path": "/one-stage/javathread/notes/%E9%94%81.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3389,6 +2879,87 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [],
+    "path": "/demo/databases/notes/EXISTS%E4%BD%BF%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Oracle中的子查询",
+    "headers": [
+      {
+        "level": 2,
+        "title": "子查询使用场景",
+        "slug": "子查询使用场景",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题一：子查询语法中的小括号",
+        "slug": "问题一-子查询语法中的小括号",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题二：子查询的书写风格",
+        "slug": "问题二-子查询的书写风格",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题三：可以使用子查询的位置",
+        "slug": "问题三-可以使用子查询的位置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题四：不可以使用子查询的位置",
+        "slug": "问题四-不可以使用子查询的位置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题五：FROM 后面的子查询",
+        "slug": "问题五-from-后面的子查询",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题六：子查询和主查询使用的表",
+        "slug": "问题六-子查询和主查询使用的表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题七：子查询中的排序",
+        "slug": "问题七-子查询中的排序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题八：子查询的执行顺序",
+        "slug": "问题八-子查询的执行顺序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题九：单行子查询与多行子查询的区别",
+        "slug": "问题九-单行子查询与多行子查询的区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题十：子查询中的null值问题",
+        "slug": "问题十-子查询中的null值问题",
+        "children": []
+      }
+    ],
+    "path": "/demo/databases/notes/oracle%E5%AD%90%E6%9F%A5%E8%AF%A2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "线程安全",
     "headers": [
       {
@@ -3550,6 +3121,2269 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/threadsafe/notes/c02.CAS.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
+    "headers": [],
+    "path": "/demo/frame/notes/junitTest.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot集成Swagger",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、添加pom依赖",
+        "slug": "_1、添加pom依赖",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、创建SwaggerConfiguration.java",
+        "slug": "_2、创建swaggerconfiguration-java",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、API接口编写（Controller）",
+        "slug": "_3、api接口编写-controller",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、启动SpringBoot应用",
+        "slug": "_4、启动springboot应用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5、对swgager文档的美化框架（2次封装）",
+        "slug": "_5、对swgager文档的美化框架-2次封装",
+        "children": [
+          {
+            "level": 3,
+            "title": "5.1、依赖(只需要这一个依赖即可，里面包含有swagger的依赖)",
+            "slug": "_5-1、依赖-只需要这一个依赖即可-里面包含有swagger的依赖",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.2、配置",
+            "slug": "_5-2、配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.3、打开地址及页面效果",
+            "slug": "_5-3、打开地址及页面效果",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/frame/notes/swagger2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Gitee 添加了ssh公钥还是需要账户和密码",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Gitee生成密钥",
+        "slug": "gitee生成密钥",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "小坑",
+        "slug": "小坑",
+        "children": []
+      }
+    ],
+    "path": "/demo/server/notes/ssh%E5%85%AC%E9%92%A5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "配置 FRP 实现内网穿透",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. FRP 的作用",
+        "slug": "_1-frp-的作用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 配置说明",
+        "slug": "_2-配置说明",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1 实现功能",
+            "slug": "_2-1-实现功能",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2 配置前准备",
+            "slug": "_2-2-配置前准备",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. 安装 FRP",
+        "slug": "_3-安装-frp",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 配置",
+        "slug": "_4-配置",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.1 服务端配置",
+            "slug": "_4-1-服务端配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.2 客户端配置",
+            "slug": "_4-2-客户端配置",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/server/notes/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "轻量应用服务器与ECS服务器的区别",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、两种服务器面向群体不同",
+        "slug": "_1、两种服务器面向群体不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、用处不同",
+        "slug": "_2、用处不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、计费标准不同",
+        "slug": "_3、计费标准不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.两种服务器的性质不同",
+        "slug": "_4-两种服务器的性质不同",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5.两种服务器管理方式不同",
+        "slug": "_5-两种服务器管理方式不同",
+        "children": [
+          {
+            "level": 3,
+            "title": "什么是轻量应用服务器（TencentCloud Lighthouse）？",
+            "slug": "什么是轻量应用服务器-tencentcloud-lighthouse",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "BigDecimal使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、常用方法详解",
+        "slug": "_1、常用方法详解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、BigDecimal格式化",
+        "slug": "_2、bigdecimal格式化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、BigDecimal常见异常",
+        "slug": "_3、bigdecimal常见异常",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、工具类",
+        "slug": "_4、工具类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5、总结",
+        "slug": "_5、总结",
+        "children": []
+      }
+    ],
+    "path": "/demo/Java/notes/BigDecimal.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Java反射基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "使用步骤",
+        "slug": "使用步骤",
+        "children": [
+          {
+            "level": 3,
+            "title": "1、获取目标类型的Class对象",
+            "slug": "_1、获取目标类型的class对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2、通过 Class 对象分别获取Constructor类对象、Method类对象 & Field 类对象",
+            "slug": "_2、通过-class-对象分别获取constructor类对象、method类对象-field-类对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3、通过 Constructor类对象、Method类对象 & Field类对象分别创建对象、调用方法、成员变量赋值",
+            "slug": "_3、通过-constructor类对象、method类对象-field类对象分别创建对象、调用方法、成员变量赋值",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "反射使用",
+        "slug": "反射使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "业务类",
+            "slug": "业务类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "非反射方法",
+            "slug": "非反射方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "反射方法",
+            "slug": "反射方法",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/Java/notes/java%E5%8F%8D%E5%B0%84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "List集合去重",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前置知识",
+        "slug": "前置知识",
+        "children": [
+          {
+            "level": 3,
+            "title": "无序集合",
+            "slug": "无序集合",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序集合",
+            "slug": "有序集合",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序和无序",
+            "slug": "有序和无序",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "方法1：contains判断去重(有序)",
+        "slug": "方法1-contains判断去重-有序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法2：迭代器去重(无序)",
+        "slug": "方法2-迭代器去重-无序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法3：HashSet去重(无序)",
+        "slug": "方法3-hashset去重-无序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法4：LinkedHashSet去重(有序)",
+        "slug": "方法4-linkedhashset去重-有序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法5：TreeSet去重(无序)",
+        "slug": "方法5-treeset去重-无序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "方法6：Stream去重(有序)",
+        "slug": "方法6-stream去重-有序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "children": []
+      }
+    ],
+    "path": "/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "什么是动态代理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、介绍",
+        "slug": "一、介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二、静态代理",
+        "slug": "二、静态代理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三、动态代理",
+        "slug": "三、动态代理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "四、静态织入",
+        "slug": "四、静态织入",
+        "children": [
+          {
+            "level": 3,
+            "title": "五、小结",
+            "slug": "五、小结",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "六、参考",
+            "slug": "六、参考",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "docker搭建常用容器",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、docker搭建redis容器",
+        "slug": "_1、docker搭建redis容器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、docker搭建mysql容器",
+        "slug": "_2、docker搭建mysql容器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、docker搭建rabbitMQ容器",
+        "slug": "_3、docker搭建rabbitmq容器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、docker搭建minio文件管理容器",
+        "slug": "_4、docker搭建minio文件管理容器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5、docker搭建nginx容器",
+        "slug": "_5、docker搭建nginx容器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6、最后说明",
+        "slug": "_6、最后说明",
+        "children": []
+      }
+    ],
+    "path": "/utilse/docker/notes/docker%E6%90%AD%E5%BB%BA%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "断言（Assert）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 概念",
+        "slug": "_1-概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. Java assert",
+        "slug": "_2-java-assert",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. Spring Assert 工具类",
+        "slug": "_3-spring-assert-工具类",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/assert.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Bucket4j",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本使用",
+        "slug": "基本使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "阻塞式消费",
+        "slug": "阻塞式消费",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "探针",
+        "slug": "探针",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Refill 和 classic 方法",
+        "slug": "refill-和-classic-方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "初始化令牌数量",
+        "slug": "初始化令牌数量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "非贪婪式创建令牌",
+        "slug": "非贪婪式创建令牌",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/bucket4j.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据库连接池",
+    "headers": [
+      {
+        "level": 2,
+        "title": "数据库连接池：Druid",
+        "slug": "数据库连接池-druid",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单使用",
+            "slug": "简单使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结合配置文件使用",
+            "slug": "结合配置文件使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Druid 中的工具类：JdbcUtils",
+            "slug": "druid-中的工具类-jdbcutils",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "数据库连接池：HikariCP",
+        "slug": "数据库连接池-hikaricp",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单使用",
+            "slug": "简单使用-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配合配置文件使用",
+            "slug": "配合配置文件使用",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/else/notes/datasource.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Jackson",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本使用",
+        "slug": "基本使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "Object to JSON-String",
+            "slug": "object-to-json-string",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "JSON-String to Object",
+            "slug": "json-string-to-object",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "@JsonProperty 注解",
+        "slug": "jsonproperty-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数组的序列化和反序列化",
+        "slug": "数组的序列化和反序列化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "集合的序列化和反序列化",
+        "slug": "集合的序列化和反序列化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "处理对象的 NULL 属性",
+        "slug": "处理对象的-null-属性",
+        "children": [
+          {
+            "level": 3,
+            "title": "方案一：注解",
+            "slug": "方案一-注解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "方案二：配置",
+            "slug": "方案二-配置",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "格式化 Date 类型属性",
+        "slug": "格式化-date-类型属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Jackson 对 jsr310 的支持",
+        "slug": "jackson-对-jsr310-的支持",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "循环引用",
+        "slug": "循环引用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "其它",
+        "slug": "其它",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "基于 Jackson 的 JsonUtils 工具类",
+        "slug": "基于-jackson-的-jsonutils-工具类",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/jackson.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "元组：javatuples",
+    "headers": [
+      {
+        "level": 2,
+        "title": "问题",
+        "slug": "问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "tuples",
+        "slug": "tuples",
+        "children": [
+          {
+            "level": 3,
+            "title": "The tuple classes",
+            "slug": "the-tuple-classes",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Creating tuples",
+            "slug": "creating-tuples",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Getting/Setting values",
+            "slug": "getting-setting-values",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Adding or removing elements",
+            "slug": "adding-or-removing-elements",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Converting to/from collections or arrays",
+            "slug": "converting-to-from-collections-or-arrays",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Iterating",
+            "slug": "iterating",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Checking contents",
+            "slug": "checking-contents",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/else/notes/javatuples.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "操作 JWT：nimbus-jose-jwt 库",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 相关概念",
+        "slug": "_1-相关概念",
+        "children": [
+          {
+            "level": 3,
+            "title": "JWT 和 JWS",
+            "slug": "jwt-和-jws",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "加密算法",
+            "slug": "加密算法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 核心 API 介绍",
+        "slug": "_2-核心-api-介绍",
+        "children": [
+          {
+            "level": 3,
+            "title": "加密过程",
+            "slug": "加密过程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "解密",
+            "slug": "解密",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "官网的 HS256 示例",
+        "slug": "官网的-hs256-示例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "在 Payload 中存对象",
+        "slug": "在-payload-中存对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "非对称加密（RSA）",
+        "slug": "非对称加密-rsa",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/jwt.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Lombok 常用注解",
+    "headers": [
+      {
+        "level": 2,
+        "title": "@Constructor 注解",
+        "slug": "constructor-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@Builder 注解",
+        "slug": "builder-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@Getter / @Setter 注解",
+        "slug": "getter-setter-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@ToString 注解",
+        "slug": "tostring-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@EqualsAndHashCode 注解",
+        "slug": "equalsandhashcode-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@Data 注解",
+        "slug": "data-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@Slf4j",
+        "slug": "slf4j",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@SneakyThrows 注解（了解）",
+        "slug": "sneakythrows-注解-了解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "@Synchronized（了解）",
+        "slug": "synchronized-了解",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/lombok.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "slf4j 日志库",
+    "headers": [
+      {
+        "level": 2,
+        "title": "slf4j 和 slf4j-simple",
+        "slug": "slf4j-和-slf4j-simple",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本使用",
+            "slug": "基本使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "{} 占位符",
+            "slug": "占位符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "附：设置 slf4j-simple 的日志级别",
+            "slug": "附-设置-slf4j-simple-的日志级别",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "logback",
+        "slug": "logback",
+        "children": [
+          {
+            "level": 3,
+            "title": "日志库及其发展历史",
+            "slug": "日志库及其发展历史",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Logback",
+            "slug": "logback-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "一个更复杂的样例",
+            "slug": "一个更复杂的样例",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/else/notes/slf4j.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "字符串相关操作",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 字符串判空",
+        "slug": "_1-字符串判空",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 子串的查询、摘出与统计",
+        "slug": "_2-子串的查询、摘出与统计",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 子串的摘除与替换",
+        "slug": "_3-子串的摘除与替换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 为了 IO",
+        "slug": "_4-为了-io",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. String 转数组集合",
+        "slug": "_5-string-转数组集合",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 数组集合转 String",
+        "slug": "_6-数组集合转-string",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. Collection<String> 转 String[]",
+        "slug": "_7-collection-string-转-string",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 转其它",
+        "slug": "_8-转其它",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 操作字符串数组",
+        "slug": "_9-操作字符串数组",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "a. 附：TimeZone String",
+        "slug": "a-附-timezone-string",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数组相关操作",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 数组判空",
+        "slug": "_1-数组判空",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 数组的内容查询",
+        "slug": "_2-数组的内容查询",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 填充与拷贝",
+        "slug": "_3-填充与拷贝",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 数组转换",
+        "slug": "_4-数组转换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. String 转数组集合",
+        "slug": "_5-string-转数组集合",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "集合相关操作",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 集合判空",
+        "slug": "_1-集合判空",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 集合元素的查询、摘出与统计",
+        "slug": "_2-集合元素的查询、摘出与统计",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 添加元素",
+        "slug": "_3-添加元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 集合变序",
+        "slug": "_4-集合变序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 其他",
+        "slug": "_5-其他",
+        "children": []
+      }
+    ],
+    "path": "/utilse/else/notes/%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Guava 学习之 CharMatcher",
+    "headers": [
+      {
+        "level": 2,
+        "title": "概览",
+        "slug": "概览",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用示例",
+        "slug": "使用示例",
+        "children": [
+          {
+            "level": 3,
+            "title": "创建 CharMatcher",
+            "slug": "创建-charmatcher",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 CharMatcher",
+            "slug": "使用-charmatcher",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "方法分类",
+        "slug": "方法分类",
+        "children": [
+          {
+            "level": 3,
+            "title": "第一类是判定型函数",
+            "slug": "第一类是判定型函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "第二类是计数型函数",
+            "slug": "第二类是计数型函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "第三类就是对匹配字符的操作",
+            "slug": "第三类就是对匹配字符的操作",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Example",
+        "slug": "example",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/charMatcher.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "字符串工具类",
+    "headers": [
+      {
+        "level": 2,
+        "title": "对字符串的判断空：Strings",
+        "slug": "对字符串的判断空-strings",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "对字符串作拼接：Joiner",
+        "slug": "对字符串作拼接-joiner",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "对字符串的拆分：Splitter",
+        "slug": "对字符串的拆分-splitter",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串内容的替换：CharMatcher",
+        "slug": "字符串内容的替换-charmatcher",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数组工具类",
+    "headers": [
+      {
+        "level": 2,
+        "title": "判断数组中是否包含指定元素",
+        "slug": "判断数组中是否包含指定元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "向数组中添加元素",
+        "slug": "向数组中添加元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "截取数组中的一部分",
+        "slug": "截取数组中的一部分",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "查找元素并返回其索引",
+        "slug": "查找元素并返回其索引",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "复制数组",
+        "slug": "复制数组",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "空安全的查询长度和查询长度",
+        "slug": "空安全的查询长度和查询长度",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E6%95%B0%E7%BB%84%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "文件操作工具：Files",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Guava 的文件写入",
+        "slug": "guava-的文件写入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "获得文件内容",
+        "slug": "获得文件内容",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "复制移动（剪切）文件",
+        "slug": "复制移动-剪切-文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "比较文件内容",
+        "slug": "比较文件内容",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "其他有用的方法",
+        "slug": "其他有用的方法",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E6%96%87%E4%BB%B6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Guava 对 Java 集合框架的补充",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Multiset",
+        "slug": "multiset",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Multimap",
+        "slug": "multimap",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "BiMap",
+        "slug": "bimap",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Table",
+        "slug": "table",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E6%96%B0%E9%9B%86%E5%90%88.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "校验工具",
+    "headers": [],
+    "path": "/utilse/guava/notes/%E6%A0%A1%E9%AA%8C%E5%B7%A5%E5%85%B7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "字符串、数组、集合的相互转换",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Array -> List",
+        "slug": "array-list",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Array -> String",
+        "slug": "array-string",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "List -> Array",
+        "slug": "list-array",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "List -> String",
+        "slug": "list-string",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "String -> Array",
+        "slug": "string-array",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "String -> List",
+        "slug": "string-list",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E8%BD%AC%E6%8D%A2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "迭代器工具类",
+    "headers": [
+      {
+        "level": 2,
+        "title": "all 方法：判断迭代器中的元素是否都满足某个条件",
+        "slug": "all-方法-判断迭代器中的元素是否都满足某个条件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "any 方法：判断迭代器中是否至少有一个满足条件",
+        "slug": "any-方法-判断迭代器中是否至少有一个满足条件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "get 方法：获得迭代器中的第 x 个元素",
+        "slug": "get-方法-获得迭代器中的第-x-个元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "filter 方法：过滤、选中符合条件的项",
+        "slug": "filter-方法-过滤、选中符合条件的项",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "find 方法：返回符合条件的第一个元素",
+        "slug": "find-方法-返回符合条件的第一个元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "transform 方法：对迭代器元素做转换",
+        "slug": "transform-方法-对迭代器元素做转换",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "集合工具类",
+    "headers": [
+      {
+        "level": 2,
+        "title": "判空",
+        "slug": "判空",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "批量添加元素",
+        "slug": "批量添加元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "选中/选出某些元素",
+        "slug": "选中-选出某些元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "剃除某些元素",
+        "slug": "剃除某些元素",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "形变",
+        "slug": "形变",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "比较",
+        "slug": "比较",
+        "children": []
+      }
+    ],
+    "path": "/utilse/guava/notes/%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Axios 发起AJAX请求模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、html页面引入Axios（使用CDN）",
+        "slug": "_1、html页面引入axios-使用cdn",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、发起AJAX GET 请求",
+        "slug": "_2、发起ajax-get-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、发起AJAX POST 请求",
+        "slug": "_3、发起ajax-post-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、发起AJAX POST 请求",
+        "slug": "_4、发起ajax-post-请求",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/axios.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "docker-compose.yml 模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "mysql",
+        "slug": "mysql",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "redis",
+        "slug": "redis",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "nginx",
+        "slug": "nginx",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "RabbitMQ",
+        "slug": "rabbitmq",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Elastic Search",
+        "slug": "elastic-search",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Nacos",
+        "slug": "nacos",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/docker-compose.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Git",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 创建 SSH key",
+        "slug": "_1-创建-ssh-key",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. gitignore 文件模板",
+        "slug": "_2-gitignore-文件模板",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. Git 常用命令汇总",
+        "slug": "_3-git-常用命令汇总",
+        "children": [
+          {
+            "level": 3,
+            "title": "0. 如何创建 SSH key",
+            "slug": "_0-如何创建-ssh-key",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1. 配置",
+            "slug": "_1-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2. 仓库",
+            "slug": "_2-仓库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3. 增加/删除文件",
+            "slug": "_3-增加-删除文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4. 代码提交",
+            "slug": "_4-代码提交",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5. 分支",
+            "slug": "_5-分支",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "6. 标签",
+            "slug": "_6-标签",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7. 远程同步",
+            "slug": "_7-远程同步",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8. 查看信息",
+            "slug": "_8-查看信息",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "jdbc.properties",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、自定义的 .properties 配置",
+        "slug": "_1、自定义的-properties-配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、Spring Boot 项目中的配置",
+        "slug": "_2、spring-boot-项目中的配置",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/jdbc.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "logback",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. logback.xml 例子",
+        "slug": "_1-logback-xml-例子",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. Spring Boot 中的日志配置",
+        "slug": "_2-spring-boot-中的日志配置",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/logback.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Maven 相关模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. maven 的 settings.xml",
+        "slug": "_1-maven-的-settings-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. cleanLastUpdated.bat",
+        "slug": "_2-cleanlastupdated-bat",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. maven 的 pom.xml",
+        "slug": "_3-maven-的-pom-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. mybatis-generator-maven-plugin 插件配置",
+        "slug": "_4-mybatis-generator-maven-plugin-插件配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. tomcat8-magen-plugin 配置",
+        "slug": "_5-tomcat8-magen-plugin-配置",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/maven-xml.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Mybatis 相关",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. mybatis-generator-maven-plugin 插件",
+        "slug": "_1-mybatis-generator-maven-plugin-插件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. generator.properties",
+        "slug": "_2-generator-properties",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. mybatis-generator-config.xml 配置",
+        "slug": "_3-mybatis-generator-config-xml-配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 核心配置文件 for standalone",
+        "slug": "_4-核心配置文件-for-standalone",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 核心配置文件 with Spring",
+        "slug": "_5-核心配置文件-with-spring",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 普通的结果集映射",
+        "slug": "_6-普通的结果集映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. 结果集一对多映射",
+        "slug": "_7-结果集一对多映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 结果集多对一映射",
+        "slug": "_8-结果集多对一映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 注解映射",
+        "slug": "_9-注解映射",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/mybatis-xml.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SSM 整合（Java 代码配置版）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. SpringDaoConfig 替代了 spring-dao.xml",
+        "slug": "_1-springdaoconfig-替代了-spring-dao-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. SpringServiceConfig 替代了 spring-service.xml",
+        "slug": "_2-springserviceconfig-替代了-spring-service-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. SpringWebConfig 替代了 spring-web.xml",
+        "slug": "_3-springwebconfig-替代了-spring-web-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 有 web.xml 的方案",
+        "slug": "_4-有-web-xml-的方案",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 无 web.xml 的方案：WebAppInitializer",
+        "slug": "_5-无-web-xml-的方案-webappinitializer",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配合 @PropertySource 使用的一个『坑』（了解、自学）",
+        "slug": "配合-propertysource-使用的一个『坑』-了解、自学",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/ssm-java.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "首页",
+    "headers": [
+      {
+        "level": 2,
+        "title": "使用说明",
+        "slug": "使用说明",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二级标题",
+        "slug": "二级标题",
+        "children": [
+          {
+            "level": 3,
+            "title": "三级标题",
+            "slug": "三级标题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "无序列表",
+            "slug": "无序列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序列表",
+            "slug": "有序列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "嵌套列表",
+            "slug": "嵌套列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "引用说明",
+            "slug": "引用说明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "嵌套区块",
+            "slug": "嵌套区块",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码块（单行代码）",
+            "slug": "代码块-单行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多行代码",
+            "slug": "多行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "链接（行内式）",
+            "slug": "链接-行内式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参数式",
+            "slug": "参数式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "图片",
+            "slug": "图片",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "分割线",
+            "slug": "分割线",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字体",
+            "slug": "字体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "表格",
+            "slug": "表格",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Base64Utils",
+    "headers": [],
+    "path": "/utilse/spring-utils/notes/Base64Util.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring 中的 EventBus",
+    "headers": [
+      {
+        "level": 2,
+        "title": "自定义 Event",
+        "slug": "自定义-event",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "定义 EventListener",
+        "slug": "定义-eventlistener",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "触发事件",
+        "slug": "触发事件",
+        "children": []
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/EventBus.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "FileCopyUtils",
+    "headers": [
+      {
+        "level": 2,
+        "title": "输出",
+        "slug": "输出",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "输入",
+        "slug": "输入",
+        "children": []
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/FileCopyUtils.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring 反射工具类：ReflectionUtils",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Field 相关操作",
+        "slug": "field-相关操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "查找/获取 Field",
+            "slug": "查找-获取-field",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "读写属性值",
+            "slug": "读写属性值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "遍历 Field",
+            "slug": "遍历-field",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他",
+            "slug": "其他",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Method 相关方法",
+        "slug": "method-相关方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "查找/获得 Method",
+            "slug": "查找-获得-method",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "判断 Method",
+            "slug": "判断-method",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "执行 Field",
+            "slug": "执行-field",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "遍历执行 Method",
+            "slug": "遍历执行-method",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Constructor 相关方法",
+        "slug": "constructor-相关方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "查找/获得 Constructor",
+            "slug": "查找-获得-constructor",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "设置 Constructor 访问权限",
+            "slug": "设置-constructor-访问权限",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/ReflectionUtils.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring ResolvableType",
+    "headers": [
+      {
+        "level": 2,
+        "title": "类型擦除",
+        "slug": "类型擦除",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ResolvableType 简介",
+        "slug": "resolvabletype-简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单使用",
+        "slug": "简单使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "在泛型中的使用",
+        "slug": "在泛型中的使用",
+        "children": []
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/ResolvableType.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "资源（Resource）及相关",
+    "headers": [
+      {
+        "level": 2,
+        "title": "URI 和 URL",
+        "slug": "uri-和-url",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Resource 及其实现类",
+        "slug": "resource-及其实现类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Resource 的 getFile() 方法的一个问题",
+        "slug": "resource-的-getfile-方法的一个问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ResourceUtils",
+        "slug": "resourceutils",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "PropertiesLoaderUtils",
+        "slug": "propertiesloaderutils",
+        "children": []
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/Resource.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "StreamUtils",
+    "headers": [
+      {
+        "level": 2,
+        "title": "输出",
+        "slug": "输出",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "输入",
+        "slug": "输入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "实例化",
+        "slug": "实例化",
+        "children": []
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/StreamUtils.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring 中最常用的四个工具类",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 写在前面的话",
+        "slug": "_1-写在前面的话",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. ObjectUtils",
+        "slug": "_2-objectutils",
+        "children": [
+          {
+            "level": 3,
+            "title": "获取对象基本信息",
+            "slug": "获取对象基本信息",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "判断工具",
+            "slug": "判断工具",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "用 NullSafe 替代 Object 原生方法",
+            "slug": "用-nullsafe-替代-object-原生方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他工具",
+            "slug": "其他工具",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. StringUtils",
+        "slug": "_3-stringutils",
+        "children": [
+          {
+            "level": 3,
+            "title": "判断 String",
+            "slug": "判断-string",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "操作 String[]",
+            "slug": "操作-string",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字符串与容器的互转",
+            "slug": "字符串与容器的互转",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "操作 String",
+            "slug": "操作-string-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "截取 String",
+            "slug": "截取-string",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "文件路径字符串操作",
+            "slug": "文件路径字符串操作",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他",
+            "slug": "其他",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. CollectionUtils",
+        "slug": "_4-collectionutils",
+        "children": [
+          {
+            "level": 3,
+            "title": "判断工具",
+            "slug": "判断工具-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "向集合中添加",
+            "slug": "向集合中添加",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "在集合中查找",
+            "slug": "在集合中查找",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "MultiMap 相关",
+            "slug": "multimap-相关",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他",
+            "slug": "其他-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5. Assert",
+        "slug": "_5-assert",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "附：TimeZone String",
+        "slug": "附-timezone-string",
+        "children": []
+      }
+    ],
+    "path": "/utilse/spring-utils/notes/top-4.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -4644,1917 +6478,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "docker搭建常用容器",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、docker搭建redis容器",
-        "slug": "_1、docker搭建redis容器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、docker搭建mysql容器",
-        "slug": "_2、docker搭建mysql容器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、docker搭建rabbitMQ容器",
-        "slug": "_3、docker搭建rabbitmq容器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4、docker搭建minio文件管理容器",
-        "slug": "_4、docker搭建minio文件管理容器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5、docker搭建nginx容器",
-        "slug": "_5、docker搭建nginx容器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6、最后说明",
-        "slug": "_6、最后说明",
-        "children": []
-      }
-    ],
-    "path": "/utilse/docker/notes/docker%E6%90%AD%E5%BB%BA%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "断言（Assert）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 概念",
-        "slug": "_1-概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. Java assert",
-        "slug": "_2-java-assert",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. Spring Assert 工具类",
-        "slug": "_3-spring-assert-工具类",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/assert.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Bucket4j",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本使用",
-        "slug": "基本使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "阻塞式消费",
-        "slug": "阻塞式消费",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "探针",
-        "slug": "探针",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Refill 和 classic 方法",
-        "slug": "refill-和-classic-方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "初始化令牌数量",
-        "slug": "初始化令牌数量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "非贪婪式创建令牌",
-        "slug": "非贪婪式创建令牌",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/bucket4j.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据库连接池",
-    "headers": [
-      {
-        "level": 2,
-        "title": "数据库连接池：Druid",
-        "slug": "数据库连接池-druid",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单使用",
-            "slug": "简单使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结合配置文件使用",
-            "slug": "结合配置文件使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Druid 中的工具类：JdbcUtils",
-            "slug": "druid-中的工具类-jdbcutils",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "数据库连接池：HikariCP",
-        "slug": "数据库连接池-hikaricp",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单使用",
-            "slug": "简单使用-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "配合配置文件使用",
-            "slug": "配合配置文件使用",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/else/notes/datasource.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Jackson",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本使用",
-        "slug": "基本使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "Object to JSON-String",
-            "slug": "object-to-json-string",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "JSON-String to Object",
-            "slug": "json-string-to-object",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "@JsonProperty 注解",
-        "slug": "jsonproperty-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "数组的序列化和反序列化",
-        "slug": "数组的序列化和反序列化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "集合的序列化和反序列化",
-        "slug": "集合的序列化和反序列化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "处理对象的 NULL 属性",
-        "slug": "处理对象的-null-属性",
-        "children": [
-          {
-            "level": 3,
-            "title": "方案一：注解",
-            "slug": "方案一-注解",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "方案二：配置",
-            "slug": "方案二-配置",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "格式化 Date 类型属性",
-        "slug": "格式化-date-类型属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Jackson 对 jsr310 的支持",
-        "slug": "jackson-对-jsr310-的支持",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "循环引用",
-        "slug": "循环引用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "其它",
-        "slug": "其它",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "基于 Jackson 的 JsonUtils 工具类",
-        "slug": "基于-jackson-的-jsonutils-工具类",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/jackson.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "元组：javatuples",
-    "headers": [
-      {
-        "level": 2,
-        "title": "问题",
-        "slug": "问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "tuples",
-        "slug": "tuples",
-        "children": [
-          {
-            "level": 3,
-            "title": "The tuple classes",
-            "slug": "the-tuple-classes",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Creating tuples",
-            "slug": "creating-tuples",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Getting/Setting values",
-            "slug": "getting-setting-values",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Adding or removing elements",
-            "slug": "adding-or-removing-elements",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Converting to/from collections or arrays",
-            "slug": "converting-to-from-collections-or-arrays",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Iterating",
-            "slug": "iterating",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Checking contents",
-            "slug": "checking-contents",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/else/notes/javatuples.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "操作 JWT：nimbus-jose-jwt 库",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 相关概念",
-        "slug": "_1-相关概念",
-        "children": [
-          {
-            "level": 3,
-            "title": "JWT 和 JWS",
-            "slug": "jwt-和-jws",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "加密算法",
-            "slug": "加密算法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 核心 API 介绍",
-        "slug": "_2-核心-api-介绍",
-        "children": [
-          {
-            "level": 3,
-            "title": "加密过程",
-            "slug": "加密过程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "解密",
-            "slug": "解密",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "官网的 HS256 示例",
-        "slug": "官网的-hs256-示例",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "在 Payload 中存对象",
-        "slug": "在-payload-中存对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "非对称加密（RSA）",
-        "slug": "非对称加密-rsa",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/jwt.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Lombok 常用注解",
-    "headers": [
-      {
-        "level": 2,
-        "title": "@Constructor 注解",
-        "slug": "constructor-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@Builder 注解",
-        "slug": "builder-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@Getter / @Setter 注解",
-        "slug": "getter-setter-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@ToString 注解",
-        "slug": "tostring-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@EqualsAndHashCode 注解",
-        "slug": "equalsandhashcode-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@Data 注解",
-        "slug": "data-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@Slf4j",
-        "slug": "slf4j",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@SneakyThrows 注解（了解）",
-        "slug": "sneakythrows-注解-了解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "@Synchronized（了解）",
-        "slug": "synchronized-了解",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/lombok.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "slf4j 日志库",
-    "headers": [
-      {
-        "level": 2,
-        "title": "slf4j 和 slf4j-simple",
-        "slug": "slf4j-和-slf4j-simple",
-        "children": [
-          {
-            "level": 3,
-            "title": "基本使用",
-            "slug": "基本使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "{} 占位符",
-            "slug": "占位符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "附：设置 slf4j-simple 的日志级别",
-            "slug": "附-设置-slf4j-simple-的日志级别",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "logback",
-        "slug": "logback",
-        "children": [
-          {
-            "level": 3,
-            "title": "日志库及其发展历史",
-            "slug": "日志库及其发展历史",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Logback",
-            "slug": "logback-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "一个更复杂的样例",
-            "slug": "一个更复杂的样例",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/else/notes/slf4j.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "字符串相关操作",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 字符串判空",
-        "slug": "_1-字符串判空",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 子串的查询、摘出与统计",
-        "slug": "_2-子串的查询、摘出与统计",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 子串的摘除与替换",
-        "slug": "_3-子串的摘除与替换",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 为了 IO",
-        "slug": "_4-为了-io",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. String 转数组集合",
-        "slug": "_5-string-转数组集合",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 数组集合转 String",
-        "slug": "_6-数组集合转-string",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. Collection<String> 转 String[]",
-        "slug": "_7-collection-string-转-string",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 转其它",
-        "slug": "_8-转其它",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 操作字符串数组",
-        "slug": "_9-操作字符串数组",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "a. 附：TimeZone String",
-        "slug": "a-附-timezone-string",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数组相关操作",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 数组判空",
-        "slug": "_1-数组判空",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 数组的内容查询",
-        "slug": "_2-数组的内容查询",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 填充与拷贝",
-        "slug": "_3-填充与拷贝",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 数组转换",
-        "slug": "_4-数组转换",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. String 转数组集合",
-        "slug": "_5-string-转数组集合",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "集合相关操作",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 集合判空",
-        "slug": "_1-集合判空",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 集合元素的查询、摘出与统计",
-        "slug": "_2-集合元素的查询、摘出与统计",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 添加元素",
-        "slug": "_3-添加元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 集合变序",
-        "slug": "_4-集合变序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 其他",
-        "slug": "_5-其他",
-        "children": []
-      }
-    ],
-    "path": "/utilse/else/notes/%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Axios 发起AJAX请求模板",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、html页面引入Axios（使用CDN）",
-        "slug": "_1、html页面引入axios-使用cdn",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、发起AJAX GET 请求",
-        "slug": "_2、发起ajax-get-请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、发起AJAX POST 请求",
-        "slug": "_3、发起ajax-post-请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4、发起AJAX POST 请求",
-        "slug": "_4、发起ajax-post-请求",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/axios.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "docker-compose.yml 模板",
-    "headers": [
-      {
-        "level": 2,
-        "title": "mysql",
-        "slug": "mysql",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "redis",
-        "slug": "redis",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "nginx",
-        "slug": "nginx",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "RabbitMQ",
-        "slug": "rabbitmq",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Elastic Search",
-        "slug": "elastic-search",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Nacos",
-        "slug": "nacos",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/docker-compose.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Git",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 创建 SSH key",
-        "slug": "_1-创建-ssh-key",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. gitignore 文件模板",
-        "slug": "_2-gitignore-文件模板",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. Git 常用命令汇总",
-        "slug": "_3-git-常用命令汇总",
-        "children": [
-          {
-            "level": 3,
-            "title": "0. 如何创建 SSH key",
-            "slug": "_0-如何创建-ssh-key",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1. 配置",
-            "slug": "_1-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2. 仓库",
-            "slug": "_2-仓库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3. 增加/删除文件",
-            "slug": "_3-增加-删除文件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4. 代码提交",
-            "slug": "_4-代码提交",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5. 分支",
-            "slug": "_5-分支",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "6. 标签",
-            "slug": "_6-标签",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7. 远程同步",
-            "slug": "_7-远程同步",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8. 查看信息",
-            "slug": "_8-查看信息",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "jdbc.properties",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、自定义的 .properties 配置",
-        "slug": "_1、自定义的-properties-配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、Spring Boot 项目中的配置",
-        "slug": "_2、spring-boot-项目中的配置",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/jdbc.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "logback",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. logback.xml 例子",
-        "slug": "_1-logback-xml-例子",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. Spring Boot 中的日志配置",
-        "slug": "_2-spring-boot-中的日志配置",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/logback.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Maven 相关模板",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. maven 的 settings.xml",
-        "slug": "_1-maven-的-settings-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. cleanLastUpdated.bat",
-        "slug": "_2-cleanlastupdated-bat",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. maven 的 pom.xml",
-        "slug": "_3-maven-的-pom-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. mybatis-generator-maven-plugin 插件配置",
-        "slug": "_4-mybatis-generator-maven-plugin-插件配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. tomcat8-magen-plugin 配置",
-        "slug": "_5-tomcat8-magen-plugin-配置",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/maven-xml.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Mybatis 相关",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. mybatis-generator-maven-plugin 插件",
-        "slug": "_1-mybatis-generator-maven-plugin-插件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. generator.properties",
-        "slug": "_2-generator-properties",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. mybatis-generator-config.xml 配置",
-        "slug": "_3-mybatis-generator-config-xml-配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 核心配置文件 for standalone",
-        "slug": "_4-核心配置文件-for-standalone",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 核心配置文件 with Spring",
-        "slug": "_5-核心配置文件-with-spring",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 普通的结果集映射",
-        "slug": "_6-普通的结果集映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. 结果集一对多映射",
-        "slug": "_7-结果集一对多映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 结果集多对一映射",
-        "slug": "_8-结果集多对一映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 注解映射",
-        "slug": "_9-注解映射",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/mybatis-xml.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SSM 整合（Java 代码配置版）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. SpringDaoConfig 替代了 spring-dao.xml",
-        "slug": "_1-springdaoconfig-替代了-spring-dao-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. SpringServiceConfig 替代了 spring-service.xml",
-        "slug": "_2-springserviceconfig-替代了-spring-service-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. SpringWebConfig 替代了 spring-web.xml",
-        "slug": "_3-springwebconfig-替代了-spring-web-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 有 web.xml 的方案",
-        "slug": "_4-有-web-xml-的方案",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 无 web.xml 的方案：WebAppInitializer",
-        "slug": "_5-无-web-xml-的方案-webappinitializer",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "配合 @PropertySource 使用的一个『坑』（了解、自学）",
-        "slug": "配合-propertysource-使用的一个『坑』-了解、自学",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/ssm-java.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Guava 学习之 CharMatcher",
-    "headers": [
-      {
-        "level": 2,
-        "title": "概览",
-        "slug": "概览",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用示例",
-        "slug": "使用示例",
-        "children": [
-          {
-            "level": 3,
-            "title": "创建 CharMatcher",
-            "slug": "创建-charmatcher",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用 CharMatcher",
-            "slug": "使用-charmatcher",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "方法分类",
-        "slug": "方法分类",
-        "children": [
-          {
-            "level": 3,
-            "title": "第一类是判定型函数",
-            "slug": "第一类是判定型函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "第二类是计数型函数",
-            "slug": "第二类是计数型函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "第三类就是对匹配字符的操作",
-            "slug": "第三类就是对匹配字符的操作",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Example",
-        "slug": "example",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/charMatcher.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "字符串工具类",
-    "headers": [
-      {
-        "level": 2,
-        "title": "对字符串的判断空：Strings",
-        "slug": "对字符串的判断空-strings",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "对字符串作拼接：Joiner",
-        "slug": "对字符串作拼接-joiner",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "对字符串的拆分：Splitter",
-        "slug": "对字符串的拆分-splitter",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串内容的替换：CharMatcher",
-        "slug": "字符串内容的替换-charmatcher",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数组工具类",
-    "headers": [
-      {
-        "level": 2,
-        "title": "判断数组中是否包含指定元素",
-        "slug": "判断数组中是否包含指定元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "向数组中添加元素",
-        "slug": "向数组中添加元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "截取数组中的一部分",
-        "slug": "截取数组中的一部分",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "查找元素并返回其索引",
-        "slug": "查找元素并返回其索引",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "复制数组",
-        "slug": "复制数组",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "空安全的查询长度和查询长度",
-        "slug": "空安全的查询长度和查询长度",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E6%95%B0%E7%BB%84%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "文件操作工具：Files",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Guava 的文件写入",
-        "slug": "guava-的文件写入",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "获得文件内容",
-        "slug": "获得文件内容",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "复制移动（剪切）文件",
-        "slug": "复制移动-剪切-文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "比较文件内容",
-        "slug": "比较文件内容",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "其他有用的方法",
-        "slug": "其他有用的方法",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E6%96%87%E4%BB%B6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Guava 对 Java 集合框架的补充",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Multiset",
-        "slug": "multiset",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Multimap",
-        "slug": "multimap",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "BiMap",
-        "slug": "bimap",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Table",
-        "slug": "table",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E6%96%B0%E9%9B%86%E5%90%88.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "校验工具",
-    "headers": [],
-    "path": "/utilse/guava/notes/%E6%A0%A1%E9%AA%8C%E5%B7%A5%E5%85%B7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "字符串、数组、集合的相互转换",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Array -> List",
-        "slug": "array-list",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Array -> String",
-        "slug": "array-string",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "List -> Array",
-        "slug": "list-array",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "List -> String",
-        "slug": "list-string",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "String -> Array",
-        "slug": "string-array",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "String -> List",
-        "slug": "string-list",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E8%BD%AC%E6%8D%A2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "迭代器工具类",
-    "headers": [
-      {
-        "level": 2,
-        "title": "all 方法：判断迭代器中的元素是否都满足某个条件",
-        "slug": "all-方法-判断迭代器中的元素是否都满足某个条件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "any 方法：判断迭代器中是否至少有一个满足条件",
-        "slug": "any-方法-判断迭代器中是否至少有一个满足条件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "get 方法：获得迭代器中的第 x 个元素",
-        "slug": "get-方法-获得迭代器中的第-x-个元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "filter 方法：过滤、选中符合条件的项",
-        "slug": "filter-方法-过滤、选中符合条件的项",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "find 方法：返回符合条件的第一个元素",
-        "slug": "find-方法-返回符合条件的第一个元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "transform 方法：对迭代器元素做转换",
-        "slug": "transform-方法-对迭代器元素做转换",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "集合工具类",
-    "headers": [
-      {
-        "level": 2,
-        "title": "判空",
-        "slug": "判空",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "批量添加元素",
-        "slug": "批量添加元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "选中/选出某些元素",
-        "slug": "选中-选出某些元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "剃除某些元素",
-        "slug": "剃除某些元素",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "形变",
-        "slug": "形变",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "比较",
-        "slug": "比较",
-        "children": []
-      }
-    ],
-    "path": "/utilse/guava/notes/%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "NPM 的使用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "npm 的全局安装和局部安装",
-        "slug": "npm-的全局安装和局部安装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "npm 全局安装包及使用",
-        "slug": "npm-全局安装包及使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "npm 局部安装包及使用",
-        "slug": "npm-局部安装包及使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "两种安装方式的由来",
-        "slug": "两种安装方式的由来",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "命令总结",
-        "slug": "命令总结",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/npm/notes/npm.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "首页",
-    "headers": [
-      {
-        "level": 2,
-        "title": "使用说明",
-        "slug": "使用说明",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二级标题",
-        "slug": "二级标题",
-        "children": [
-          {
-            "level": 3,
-            "title": "三级标题",
-            "slug": "三级标题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "无序列表",
-            "slug": "无序列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序列表",
-            "slug": "有序列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "嵌套列表",
-            "slug": "嵌套列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "引用说明",
-            "slug": "引用说明",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "嵌套区块",
-            "slug": "嵌套区块",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "代码块（单行代码）",
-            "slug": "代码块-单行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多行代码",
-            "slug": "多行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "链接（行内式）",
-            "slug": "链接-行内式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "参数式",
-            "slug": "参数式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "图片",
-            "slug": "图片",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "分割线",
-            "slug": "分割线",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字体",
-            "slug": "字体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "表格",
-            "slug": "表格",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "HTTP 概述",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 基本概念",
-        "slug": "_1-基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. HTTP 1.0 和 HTTP 1.1 的区别",
-        "slug": "_2-http-1-0-和-http-1-1-的区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. HTTP 请求数据和响应数据",
-        "slug": "_3-http-请求数据和响应数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. HTTP 请求",
-        "slug": "_4-http-请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. HTTP 响应",
-        "slug": "_5-http-响应",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/servlet/notes/HTTP%E6%A6%82%E8%BF%B0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java Web 进阶",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. HttpSession",
-        "slug": "_1-httpsession",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. EL 表达式",
-        "slug": "_2-el-表达式",
-        "children": [
-          {
-            "level": 3,
-            "title": "EL 的默认关闭",
-            "slug": "el-的默认关闭",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "EL 语法",
-            "slug": "el-语法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "EL 隐式对象",
-            "slug": "el-隐式对象",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. JSTL 标签库",
-        "slug": "_3-jstl-标签库",
-        "children": [
-          {
-            "level": 3,
-            "title": "c:out",
-            "slug": "c-out",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:set",
-            "slug": "c-set",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:remove",
-            "slug": "c-remove",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:if",
-            "slug": "c-if",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:choose、c:when 和 c:otherwise",
-            "slug": "c-choose、c-when-和-c-otherwise",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:forEach",
-            "slug": "c-foreach",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "fmt 进行日期格式化",
-            "slug": "fmt-进行日期格式化",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. 乱码问题",
-        "slug": "_4-乱码问题",
-        "children": [
-          {
-            "level": 3,
-            "title": "判断字符串的编码格式",
-            "slug": "判断字符串的编码格式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "获取 GET 请求中的数据，打印乱码",
-            "slug": "获取-get-请求中的数据-打印乱码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "获取 POST 请求中的数据，打印乱码",
-            "slug": "获取-post-请求中的数据-打印乱码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "中文字符串，输出到页面显示乱码",
-            "slug": "中文字符串-输出到页面显示乱码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "setContentType 和 setCharacterEncoding",
-            "slug": "setcontenttype-和-setcharacterencoding",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/servlet/notes/javaWeb%E8%BF%9B%E9%98%B6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java Web 高级",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. JavaWeb 中的静态资源访问",
-        "slug": "_1-javaweb-中的静态资源访问",
-        "children": [
-          {
-            "level": 3,
-            "title": "Tomcat 中的两个默认 Servlet",
-            "slug": "tomcat-中的两个默认-servlet",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "总结",
-            "slug": "总结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何允许静态资源访问",
-            "slug": "如何允许静态资源访问",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 过滤器（Filter）",
-        "slug": "_2-过滤器-filter",
-        "children": [
-          {
-            "level": 3,
-            "title": "基本概念",
-            "slug": "基本概念",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Filter 的配置",
-            "slug": "filter-的配置",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 文件上传与下载",
-        "slug": "_3-文件上传与下载",
-        "children": [
-          {
-            "level": 3,
-            "title": "文件上传",
-            "slug": "文件上传",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "文件下载",
-            "slug": "文件下载",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. Cookies",
-        "slug": "_4-cookies",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 监听器（Listener）",
-        "slug": "_5-监听器-listener",
-        "children": [
-          {
-            "level": 3,
-            "title": "监听器接口和注册",
-            "slug": "监听器接口和注册",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Servelt Context 监听器",
-            "slug": "servelt-context-监听器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Session 监听器",
-            "slug": "session-监听器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletRequest 监听器",
-            "slug": "servletrequest-监听器",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/servlet/notes/javaWeb%E9%AB%98%E7%BA%A7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Servlet 基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. Servlet API",
-        "slug": "_1-servlet-api",
-        "children": [
-          {
-            "level": 3,
-            "title": "概述",
-            "slug": "概述",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "相关对象概述",
-            "slug": "相关对象概述",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Servlet 接口",
-            "slug": "servlet-接口",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "GenericServlet 抽象类",
-            "slug": "genericservlet-抽象类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "HTTPServlet 类",
-            "slug": "httpservlet-类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletRequest 和 HTTPServletRequest",
-            "slug": "servletrequest-和-httpservletrequest",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "HttpServletRequest",
-            "slug": "httpservletrequest",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletResponse 和 HTTPServletResponse",
-            "slug": "servletresponse-和-httpservletresponse",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletConfig 和 ServletContext",
-            "slug": "servletconfig-和-servletcontext",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "部署描述符",
-            "slug": "部署描述符",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 配置 Servlet 及其映射",
-        "slug": "_2-配置-servlet-及其映射",
-        "children": [
-          {
-            "level": 3,
-            "title": "老式配置：web.xml 配置",
-            "slug": "老式配置-web-xml-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新式配置：注解配置",
-            "slug": "新式配置-注解配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "URL 匹配规则",
-            "slug": "url-匹配规则",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. JSP",
-        "slug": "_3-jsp",
-        "children": [
-          {
-            "level": 3,
-            "title": "JSP 概述",
-            "slug": "jsp-概述",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "隐式对象",
-            "slug": "隐式对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "指令",
-            "slug": "指令",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "脚本元素",
-            "slug": "脚本元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "动作（了解、自学）",
-            "slug": "动作-了解、自学",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. Servlet 版本和 web.xml",
-        "slug": "_4-servlet-版本和-web-xml",
-        "children": [
-          {
-            "level": 3,
-            "title": "Servlet 的版本和对应的 Tomcat",
-            "slug": "servlet-的版本和对应的-tomcat",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不同版本的 web.xml 声明",
-            "slug": "不同版本的-web-xml-声明",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/servlet/notes/Servlet%E5%9F%BA%E7%A1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "ES6 新特性",
     "headers": [
       {
@@ -7035,383 +6958,467 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Base64Utils",
-    "headers": [],
-    "path": "/utilse/spring-utils/notes/Base64Util.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring 中的 EventBus",
+    "title": "NPM 的使用",
     "headers": [
       {
         "level": 2,
-        "title": "自定义 Event",
-        "slug": "自定义-event",
+        "title": "npm 的全局安装和局部安装",
+        "slug": "npm-的全局安装和局部安装",
         "children": []
       },
       {
         "level": 2,
-        "title": "定义 EventListener",
-        "slug": "定义-eventlistener",
+        "title": "npm 全局安装包及使用",
+        "slug": "npm-全局安装包及使用",
         "children": []
       },
       {
         "level": 2,
-        "title": "触发事件",
-        "slug": "触发事件",
+        "title": "npm 局部安装包及使用",
+        "slug": "npm-局部安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "两种安装方式的由来",
+        "slug": "两种安装方式的由来",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "命令总结",
+        "slug": "命令总结",
         "children": []
       }
     ],
-    "path": "/utilse/spring-utils/notes/EventBus.html",
+    "path": "/two-stage/npm/notes/npm.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "FileCopyUtils",
+    "title": "HTTP 概述",
     "headers": [
       {
         "level": 2,
-        "title": "输出",
-        "slug": "输出",
+        "title": "1. 基本概念",
+        "slug": "_1-基本概念",
         "children": []
       },
       {
         "level": 2,
-        "title": "输入",
-        "slug": "输入",
+        "title": "2. HTTP 1.0 和 HTTP 1.1 的区别",
+        "slug": "_2-http-1-0-和-http-1-1-的区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. HTTP 请求数据和响应数据",
+        "slug": "_3-http-请求数据和响应数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. HTTP 请求",
+        "slug": "_4-http-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. HTTP 响应",
+        "slug": "_5-http-响应",
         "children": []
       }
     ],
-    "path": "/utilse/spring-utils/notes/FileCopyUtils.html",
+    "path": "/two-stage/servlet/notes/HTTP%E6%A6%82%E8%BF%B0.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Spring 反射工具类：ReflectionUtils",
+    "title": "Java Web 进阶",
     "headers": [
       {
         "level": 2,
-        "title": "Field 相关操作",
-        "slug": "field-相关操作",
+        "title": "1. HttpSession",
+        "slug": "_1-httpsession",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. EL 表达式",
+        "slug": "_2-el-表达式",
         "children": [
           {
             "level": 3,
-            "title": "查找/获取 Field",
-            "slug": "查找-获取-field",
+            "title": "EL 的默认关闭",
+            "slug": "el-的默认关闭",
             "children": []
           },
           {
             "level": 3,
-            "title": "读写属性值",
-            "slug": "读写属性值",
+            "title": "EL 语法",
+            "slug": "el-语法",
             "children": []
           },
           {
             "level": 3,
-            "title": "遍历 Field",
-            "slug": "遍历-field",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他",
-            "slug": "其他",
+            "title": "EL 隐式对象",
+            "slug": "el-隐式对象",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "Method 相关方法",
-        "slug": "method-相关方法",
+        "title": "3. JSTL 标签库",
+        "slug": "_3-jstl-标签库",
         "children": [
           {
             "level": 3,
-            "title": "查找/获得 Method",
-            "slug": "查找-获得-method",
+            "title": "c:out",
+            "slug": "c-out",
             "children": []
           },
           {
             "level": 3,
-            "title": "判断 Method",
-            "slug": "判断-method",
+            "title": "c:set",
+            "slug": "c-set",
             "children": []
           },
           {
             "level": 3,
-            "title": "执行 Field",
-            "slug": "执行-field",
+            "title": "c:remove",
+            "slug": "c-remove",
             "children": []
           },
           {
             "level": 3,
-            "title": "遍历执行 Method",
-            "slug": "遍历执行-method",
+            "title": "c:if",
+            "slug": "c-if",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:choose、c:when 和 c:otherwise",
+            "slug": "c-choose、c-when-和-c-otherwise",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:forEach",
+            "slug": "c-foreach",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "fmt 进行日期格式化",
+            "slug": "fmt-进行日期格式化",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "Constructor 相关方法",
-        "slug": "constructor-相关方法",
+        "title": "4. 乱码问题",
+        "slug": "_4-乱码问题",
         "children": [
           {
             "level": 3,
-            "title": "查找/获得 Constructor",
-            "slug": "查找-获得-constructor",
+            "title": "判断字符串的编码格式",
+            "slug": "判断字符串的编码格式",
             "children": []
           },
           {
             "level": 3,
-            "title": "设置 Constructor 访问权限",
-            "slug": "设置-constructor-访问权限",
+            "title": "获取 GET 请求中的数据，打印乱码",
+            "slug": "获取-get-请求中的数据-打印乱码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "获取 POST 请求中的数据，打印乱码",
+            "slug": "获取-post-请求中的数据-打印乱码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "中文字符串，输出到页面显示乱码",
+            "slug": "中文字符串-输出到页面显示乱码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "setContentType 和 setCharacterEncoding",
+            "slug": "setcontenttype-和-setcharacterencoding",
             "children": []
           }
         ]
       }
     ],
-    "path": "/utilse/spring-utils/notes/ReflectionUtils.html",
+    "path": "/two-stage/servlet/notes/javaWeb%E8%BF%9B%E9%98%B6.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Spring ResolvableType",
+    "title": "Java Web 高级",
     "headers": [
       {
         "level": 2,
-        "title": "类型擦除",
-        "slug": "类型擦除",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "ResolvableType 简介",
-        "slug": "resolvabletype-简介",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单使用",
-        "slug": "简单使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "在泛型中的使用",
-        "slug": "在泛型中的使用",
-        "children": []
-      }
-    ],
-    "path": "/utilse/spring-utils/notes/ResolvableType.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "资源（Resource）及相关",
-    "headers": [
-      {
-        "level": 2,
-        "title": "URI 和 URL",
-        "slug": "uri-和-url",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Resource 及其实现类",
-        "slug": "resource-及其实现类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Resource 的 getFile() 方法的一个问题",
-        "slug": "resource-的-getfile-方法的一个问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "ResourceUtils",
-        "slug": "resourceutils",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "PropertiesLoaderUtils",
-        "slug": "propertiesloaderutils",
-        "children": []
-      }
-    ],
-    "path": "/utilse/spring-utils/notes/Resource.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "StreamUtils",
-    "headers": [
-      {
-        "level": 2,
-        "title": "输出",
-        "slug": "输出",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "输入",
-        "slug": "输入",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "实例化",
-        "slug": "实例化",
-        "children": []
-      }
-    ],
-    "path": "/utilse/spring-utils/notes/StreamUtils.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring 中最常用的四个工具类",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 写在前面的话",
-        "slug": "_1-写在前面的话",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. ObjectUtils",
-        "slug": "_2-objectutils",
+        "title": "1. JavaWeb 中的静态资源访问",
+        "slug": "_1-javaweb-中的静态资源访问",
         "children": [
           {
             "level": 3,
-            "title": "获取对象基本信息",
-            "slug": "获取对象基本信息",
+            "title": "Tomcat 中的两个默认 Servlet",
+            "slug": "tomcat-中的两个默认-servlet",
             "children": []
           },
           {
             "level": 3,
-            "title": "判断工具",
-            "slug": "判断工具",
+            "title": "总结",
+            "slug": "总结",
             "children": []
           },
           {
             "level": 3,
-            "title": "用 NullSafe 替代 Object 原生方法",
-            "slug": "用-nullsafe-替代-object-原生方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他工具",
-            "slug": "其他工具",
+            "title": "如何允许静态资源访问",
+            "slug": "如何允许静态资源访问",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "3. StringUtils",
-        "slug": "_3-stringutils",
+        "title": "2. 过滤器（Filter）",
+        "slug": "_2-过滤器-filter",
         "children": [
           {
             "level": 3,
-            "title": "判断 String",
-            "slug": "判断-string",
+            "title": "基本概念",
+            "slug": "基本概念",
             "children": []
           },
           {
             "level": 3,
-            "title": "操作 String[]",
-            "slug": "操作-string",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字符串与容器的互转",
-            "slug": "字符串与容器的互转",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "操作 String",
-            "slug": "操作-string-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "截取 String",
-            "slug": "截取-string",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "文件路径字符串操作",
-            "slug": "文件路径字符串操作",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他",
-            "slug": "其他",
+            "title": "Filter 的配置",
+            "slug": "filter-的配置",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "4. CollectionUtils",
-        "slug": "_4-collectionutils",
+        "title": "3. 文件上传与下载",
+        "slug": "_3-文件上传与下载",
         "children": [
           {
             "level": 3,
-            "title": "判断工具",
-            "slug": "判断工具-1",
+            "title": "文件上传",
+            "slug": "文件上传",
             "children": []
           },
           {
             "level": 3,
-            "title": "向集合中添加",
-            "slug": "向集合中添加",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "在集合中查找",
-            "slug": "在集合中查找",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "MultiMap 相关",
-            "slug": "multimap-相关",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他",
-            "slug": "其他-1",
+            "title": "文件下载",
+            "slug": "文件下载",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "5. Assert",
-        "slug": "_5-assert",
+        "title": "4. Cookies",
+        "slug": "_4-cookies",
         "children": []
       },
       {
         "level": 2,
-        "title": "附：TimeZone String",
-        "slug": "附-timezone-string",
-        "children": []
+        "title": "5. 监听器（Listener）",
+        "slug": "_5-监听器-listener",
+        "children": [
+          {
+            "level": 3,
+            "title": "监听器接口和注册",
+            "slug": "监听器接口和注册",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Servelt Context 监听器",
+            "slug": "servelt-context-监听器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Session 监听器",
+            "slug": "session-监听器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletRequest 监听器",
+            "slug": "servletrequest-监听器",
+            "children": []
+          }
+        ]
       }
     ],
-    "path": "/utilse/spring-utils/notes/top-4.html",
+    "path": "/two-stage/servlet/notes/javaWeb%E9%AB%98%E7%BA%A7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Servlet 基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. Servlet API",
+        "slug": "_1-servlet-api",
+        "children": [
+          {
+            "level": 3,
+            "title": "概述",
+            "slug": "概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "相关对象概述",
+            "slug": "相关对象概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Servlet 接口",
+            "slug": "servlet-接口",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "GenericServlet 抽象类",
+            "slug": "genericservlet-抽象类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HTTPServlet 类",
+            "slug": "httpservlet-类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletRequest 和 HTTPServletRequest",
+            "slug": "servletrequest-和-httpservletrequest",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HttpServletRequest",
+            "slug": "httpservletrequest",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletResponse 和 HTTPServletResponse",
+            "slug": "servletresponse-和-httpservletresponse",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletConfig 和 ServletContext",
+            "slug": "servletconfig-和-servletcontext",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "部署描述符",
+            "slug": "部署描述符",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 配置 Servlet 及其映射",
+        "slug": "_2-配置-servlet-及其映射",
+        "children": [
+          {
+            "level": 3,
+            "title": "老式配置：web.xml 配置",
+            "slug": "老式配置-web-xml-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新式配置：注解配置",
+            "slug": "新式配置-注解配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "URL 匹配规则",
+            "slug": "url-匹配规则",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. JSP",
+        "slug": "_3-jsp",
+        "children": [
+          {
+            "level": 3,
+            "title": "JSP 概述",
+            "slug": "jsp-概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "隐式对象",
+            "slug": "隐式对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "指令",
+            "slug": "指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "脚本元素",
+            "slug": "脚本元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "动作（了解、自学）",
+            "slug": "动作-了解、自学",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. Servlet 版本和 web.xml",
+        "slug": "_4-servlet-版本和-web-xml",
+        "children": [
+          {
+            "level": 3,
+            "title": "Servlet 的版本和对应的 Tomcat",
+            "slug": "servlet-的版本和对应的-tomcat",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不同版本的 web.xml 声明",
+            "slug": "不同版本的-web-xml-声明",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/two-stage/servlet/notes/Servlet%E5%9F%BA%E7%A1%80.html",
     "pathLocale": "/",
     "extraFields": []
   },

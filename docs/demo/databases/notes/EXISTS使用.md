@@ -1,0 +1,66 @@
+# EXISTS和NOT EXISTS的使用
+
+::: tip 定义
+not exists是sql中的一个语法，常用在子查询和主查询之间，用于条件判断，根据一个条件返回一个布尔值，从而来确定下一步操作如何进行，not exists也是exists或in的对立面。
+:::
+
+not exists 是exists的对立面，所以要了解not exists的用法，我们首先了解下exists、in的区别和特点：
+
+exists : 强调的是是否返回结果集，不要求知道返回什么, 比如：
+
+``` sql
+select name from student where sex = 'm' and mark exists(select 1 from grade where ...)
+```
+
+<font color="red">只要exists引导的子句有结果集返回，那么exists这个条件就算成立了</font>,大家注意返回的字段始终为1，如果改成“select 2 from grade where ...”，那么返回的字段就是2，这个数字没有意义。所以exists子句不在乎返回什么，而是在乎是不是有结果集返回。
+
+而 exists 与 in 最大的区别在于 in引导的子句只能返回一个字段，比如：
+
+``` sql
+select name from student where sex = 'm' and mark in (select 1,2,3 from grade where ...)
+``` 
+
+in子句返回了三个字段，这是不正确的，exists子句是允许的，但in只允许有一个字段返回，在1，2，3中随便去了两个字段即可。
+
+而not exists 和not in 分别是exists 和 in 的 对立面。
+
+``` sql
+exists     （sql       返回结果集，为真）
+```
+
+主要看exists括号中的sql语句结果是否有结果，有结果：才会继续执行where条件；没结果：视为where条件不成立。
+
+``` sql
+not exists   (sql       不返回结果集，为真）
+```
+
+主要看not exists括号中的sql语句是否有结果，无结果：才会继续执行where条件；有结果：视为where条件不成立。
+
+not exists：经过测试，当子查询和主查询有关联条件时，相当于从主查询中去掉子查询的数据。
+
+例如：
+
+test数据：id name
+
+1 张三
+
+2 李四
+
+
+```sql
+
+select * from test c where  not exists
+
+(select 1 from test t where t.id= '1' )
+
+--无结果
+
+```
+
+```sql
+select * from test c where  not exists
+
+(select 1 from test t where t.id= '1'  and t.id = c.id)
+
+--返回2 李四
+```

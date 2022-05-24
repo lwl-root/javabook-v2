@@ -5,6 +5,7 @@ module.exports = [
 		link:'/demo/databases/notes/oracle子查询.html',
 		children:[
 			'oracle子查询.html',
+			'EXISTS使用.html'
 		]
 	},
 	
