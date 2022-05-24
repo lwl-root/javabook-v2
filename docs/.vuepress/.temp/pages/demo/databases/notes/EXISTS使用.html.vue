@@ -16,9 +16,25 @@
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>主要看not exists括号中的sql语句是否有结果，无结果：才会继续执行where条件；有结果：视为where条件不成立。</p>
 <p>not exists：经过测试，当子查询和主查询有关联条件时，相当于从主查询中去掉子查询的数据。</p>
 <p>例如：</p>
-<p>test数据：id name</p>
-<p>1 张三</p>
-<p>2 李四</p>
+<p>test数据：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>张三</td>
+</tr>
+<tr>
+<td>2</td>
+<td>李四</td>
+</tr>
+</tbody>
+</table>
 <div class="language-sql ext-sql line-numbers-mode"><pre v-pre class="language-sql"><code>
 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> test c <span class="token keyword">where</span>  <span class="token operator">not</span> <span class="token keyword">exists</span>
 
