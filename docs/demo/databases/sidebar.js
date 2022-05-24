@@ -2,9 +2,9 @@ module.exports = [
 	{
 		text:'数据库相关',
 		collapsable: false,
-		link:'/demo/databases/notes/数据库test.html',
+		link:'/demo/databases/notes/oracle子查询.html',
 		children:[
-			'数据库test.html',
+			'oracle子查询.html',
 		]
 	},
 	

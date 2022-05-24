@@ -38,7 +38,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1651931383000
   },
   "filePathRelative": "two-stage/npm/notes/npm.md"
 }

@@ -685,7 +685,7 @@ export const searchIndex = [
         "children": []
       }
     ],
-    "path": "/demo/databases/notes/%E6%95%B0%E6%8D%AE%E5%BA%93test.html",
+    "path": "/demo/databases/notes/oracle%E5%AD%90%E6%9F%A5%E8%AF%A2.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1089,6 +1089,39 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3521,39 +3554,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据结构与算法入门",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "使用 Mockito 伪造对象",
     "headers": [],
     "path": "/three-stage/junit/notes/mockito.html",
@@ -4640,951 +4640,6 @@ export const searchIndex = [
     "title": "元素的分类",
     "headers": [],
     "path": "/two-stage/html/notes/05.%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "ES6 新特性",
-    "headers": [
-      {
-        "level": 2,
-        "title": "关于 ECMAScript 6",
-        "slug": "关于-ecmascript-6",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "let 命令",
-        "slug": "let-命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "const 命令",
-        "slug": "const-命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串扩展",
-        "slug": "字符串扩展",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "解构表达式",
-        "slug": "解构表达式",
-        "children": [
-          {
-            "level": 3,
-            "title": "数组解构",
-            "slug": "数组解构",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "对象解构",
-            "slug": "对象解构",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "函数优化",
-        "slug": "函数优化",
-        "children": [
-          {
-            "level": 3,
-            "title": "函数参数默认值",
-            "slug": "函数参数默认值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "箭头函数",
-            "slug": "箭头函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "对象的函数属性简写",
-        "slug": "对象的函数属性简写",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "箭头函数结合结构表达式",
-        "slug": "箭头函数结合结构表达式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "新增的数组的 map 方法",
-        "slug": "新增的数组的-map-方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "新增的数组的 reduce 方法",
-        "slug": "新增的数组的-reduce-方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "扩展运算符",
-        "slug": "扩展运算符",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/js/notes/01.ES6%E6%96%B0%E7%89%B9%E6%80%A7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JavaScript 编程基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 基础知识",
-        "slug": "_1-基础知识",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 值和变量",
-        "slug": "_2-值和变量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 定义变量",
-        "slug": "_3-定义变量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 运算符",
-        "slug": "_4-运算符",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 条件查询与布尔测试",
-        "slug": "_5-条件查询与布尔测试",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 分支与循环",
-        "slug": "_5-分支与循环",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 数组",
-        "slug": "_6-数组",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. 函数",
-        "slug": "_7-函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 变量的作用域",
-        "slug": "_8-变量的作用域",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/js/notes/01.JavaScript%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JavaScript面向对象编程",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. JavaScript 类和对象",
-        "slug": "_1-javascript-类和对象",
-        "children": [
-          {
-            "level": 3,
-            "title": "使用内置类",
-            "slug": "使用内置类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "new Object",
-            "slug": "new-object",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "对象字面量",
-            "slug": "对象字面量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "构造函数",
-            "slug": "构造函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "利用原型对象模式定义类",
-            "slug": "利用原型对象模式定义类",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. JavaScript 继承",
-        "slug": "_2-javascript-继承",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 内置类",
-        "slug": "_3-内置类",
-        "children": [
-          {
-            "level": 3,
-            "title": "String 类",
-            "slug": "string-类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Number 类",
-            "slug": "number-类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "全局 Math 对象",
-            "slug": "全局-math-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Array 对象",
-            "slug": "array-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "RegExp 对象",
-            "slug": "regexp-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间与日期",
-            "slug": "时间与日期",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/js/notes/02.JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "模块化",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 关于模块化",
-        "slug": "_1-关于模块化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. JavaScript 的模块化",
-        "slug": "_2-javascript-的模块化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. export 命令",
-        "slug": "_3-export-命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. import 命令",
-        "slug": "_4-import-命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. export default 命令",
-        "slug": "_5-export-default-命令",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/js/notes/02.%E6%A8%A1%E5%9D%97%E5%8C%96.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "BOM 和 DOM",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. BOM：浏览器对象模型",
-        "slug": "_1-bom-浏览器对象模型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. DOM：文档对象模型",
-        "slug": "_2-dom-文档对象模型",
-        "children": [
-          {
-            "level": 3,
-            "title": "1. 核心概念",
-            "slug": "_1-核心概念",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2. 选中页面元素",
-            "slug": "_2-选中页面元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3. 通过亲属关系选中元素",
-            "slug": "_3-通过亲属关系选中元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4. 操作所选元素",
-            "slug": "_4-操作所选元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5. 操作 DOM 结构",
-            "slug": "_5-操作-dom-结构",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. DOM：事件处理",
-        "slug": "_3-dom-事件处理",
-        "children": [
-          {
-            "level": 3,
-            "title": "1. 添加事件处理程序",
-            "slug": "_1-添加事件处理程序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2. 常见的事件及其种类",
-            "slug": "_2-常见的事件及其种类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3. EventHandler",
-            "slug": "_3-eventhandler",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/js/notes/03.BOM%E5%92%8CDOM.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Promise 对象",
-    "headers": [],
-    "path": "/two-stage/js/notes/03.promise%E5%AF%B9%E8%B1%A1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "HTML5 的 web storage",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. Window 的 sessionStorage 属性",
-        "slug": "_1-window-的-sessionstorage-属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. Window 的 localStorage 属性",
-        "slug": "_2-window-的-localstorage-属性",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/js/notes/04.HTML5%E7%9A%84web%20storage.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JavaScript 中内置的工具和常用代码片段",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 数组相关",
-        "slug": "_1-数组相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "makeArray",
-            "slug": "makearray",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. DOM 相关",
-        "slug": "_2-dom-相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "包含",
-            "slug": "包含",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "解析 parseHTML",
-            "slug": "解析-parsehtml",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "解析 parseJSON",
-            "slug": "解析-parsejson",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 其它",
-        "slug": "_3-其它",
-        "children": [
-          {
-            "level": 3,
-            "title": "extend",
-            "slug": "extend",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "trim",
-            "slug": "trim",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "type",
-            "slug": "type",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "now",
-            "slug": "now",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. JS 中构建一个 Form",
-        "slug": "_4-js-中构建一个-form",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/js/notes/04.js-utils.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "NPM 的使用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "npm 的全局安装和局部安装",
-        "slug": "npm-的全局安装和局部安装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "npm 全局安装包及使用",
-        "slug": "npm-全局安装包及使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "npm 局部安装包及使用",
-        "slug": "npm-局部安装包及使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "两种安装方式的由来 了解",
-        "slug": "两种安装方式的由来-了解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "命令总结",
-        "slug": "命令总结",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/npm/notes/npm.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "HTTP 概述",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 基本概念",
-        "slug": "_1-基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. HTTP 1.0 和 HTTP 1.1 的区别",
-        "slug": "_2-http-1-0-和-http-1-1-的区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. HTTP 请求数据和响应数据",
-        "slug": "_3-http-请求数据和响应数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. HTTP 请求",
-        "slug": "_4-http-请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. HTTP 响应",
-        "slug": "_5-http-响应",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/servlet/notes/HTTP%E6%A6%82%E8%BF%B0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java Web 进阶",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. HttpSession",
-        "slug": "_1-httpsession",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. EL 表达式",
-        "slug": "_2-el-表达式",
-        "children": [
-          {
-            "level": 3,
-            "title": "EL 的默认关闭",
-            "slug": "el-的默认关闭",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "EL 语法",
-            "slug": "el-语法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "EL 隐式对象",
-            "slug": "el-隐式对象",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. JSTL 标签库",
-        "slug": "_3-jstl-标签库",
-        "children": [
-          {
-            "level": 3,
-            "title": "c:out",
-            "slug": "c-out",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:set",
-            "slug": "c-set",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:remove",
-            "slug": "c-remove",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:if",
-            "slug": "c-if",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:choose、c:when 和 c:otherwise",
-            "slug": "c-choose、c-when-和-c-otherwise",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "c:forEach",
-            "slug": "c-foreach",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "fmt 进行日期格式化",
-            "slug": "fmt-进行日期格式化",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. 乱码问题",
-        "slug": "_4-乱码问题",
-        "children": [
-          {
-            "level": 3,
-            "title": "判断字符串的编码格式",
-            "slug": "判断字符串的编码格式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "获取 GET 请求中的数据，打印乱码",
-            "slug": "获取-get-请求中的数据-打印乱码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "获取 POST 请求中的数据，打印乱码",
-            "slug": "获取-post-请求中的数据-打印乱码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "中文字符串，输出到页面显示乱码",
-            "slug": "中文字符串-输出到页面显示乱码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "setContentType 和 setCharacterEncoding",
-            "slug": "setcontenttype-和-setcharacterencoding",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/servlet/notes/javaWeb%E8%BF%9B%E9%98%B6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Java Web 高级",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. JavaWeb 中的静态资源访问",
-        "slug": "_1-javaweb-中的静态资源访问",
-        "children": [
-          {
-            "level": 3,
-            "title": "Tomcat 中的两个默认 Servlet",
-            "slug": "tomcat-中的两个默认-servlet",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "总结",
-            "slug": "总结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何允许静态资源访问",
-            "slug": "如何允许静态资源访问",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 过滤器（Filter）",
-        "slug": "_2-过滤器-filter",
-        "children": [
-          {
-            "level": 3,
-            "title": "基本概念",
-            "slug": "基本概念",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Filter 的配置",
-            "slug": "filter-的配置",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 文件上传与下载",
-        "slug": "_3-文件上传与下载",
-        "children": [
-          {
-            "level": 3,
-            "title": "文件上传",
-            "slug": "文件上传",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "文件下载",
-            "slug": "文件下载",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. Cookies",
-        "slug": "_4-cookies",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 监听器（Listener）",
-        "slug": "_5-监听器-listener",
-        "children": [
-          {
-            "level": 3,
-            "title": "监听器接口和注册",
-            "slug": "监听器接口和注册",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Servelt Context 监听器",
-            "slug": "servelt-context-监听器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Session 监听器",
-            "slug": "session-监听器",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletRequest 监听器",
-            "slug": "servletrequest-监听器",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/servlet/notes/javaWeb%E9%AB%98%E7%BA%A7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Servlet 基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. Servlet API",
-        "slug": "_1-servlet-api",
-        "children": [
-          {
-            "level": 3,
-            "title": "概述",
-            "slug": "概述",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "相关对象概述",
-            "slug": "相关对象概述",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Servlet 接口",
-            "slug": "servlet-接口",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "GenericServlet 抽象类",
-            "slug": "genericservlet-抽象类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "HTTPServlet 类",
-            "slug": "httpservlet-类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletRequest 和 HTTPServletRequest",
-            "slug": "servletrequest-和-httpservletrequest",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "HttpServletRequest",
-            "slug": "httpservletrequest",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletResponse 和 HTTPServletResponse",
-            "slug": "servletresponse-和-httpservletresponse",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ServletConfig 和 ServletContext",
-            "slug": "servletconfig-和-servletcontext",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "部署描述符",
-            "slug": "部署描述符",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 配置 Servlet 及其映射",
-        "slug": "_2-配置-servlet-及其映射",
-        "children": [
-          {
-            "level": 3,
-            "title": "老式配置：web.xml 配置",
-            "slug": "老式配置-web-xml-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "新式配置：注解配置",
-            "slug": "新式配置-注解配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "URL 匹配规则",
-            "slug": "url-匹配规则",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. JSP",
-        "slug": "_3-jsp",
-        "children": [
-          {
-            "level": 3,
-            "title": "JSP 概述",
-            "slug": "jsp-概述",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "隐式对象",
-            "slug": "隐式对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "指令",
-            "slug": "指令",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "脚本元素",
-            "slug": "脚本元素",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "动作（了解、自学）",
-            "slug": "动作-了解、自学",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. Servlet 版本和 web.xml",
-        "slug": "_4-servlet-版本和-web-xml",
-        "children": [
-          {
-            "level": 3,
-            "title": "Servlet 的版本和对应的 Tomcat",
-            "slug": "servlet-的版本和对应的-tomcat",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不同版本的 web.xml 声明",
-            "slug": "不同版本的-web-xml-声明",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/two-stage/servlet/notes/Servlet%E5%9F%BA%E7%A1%80.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6930,6 +5985,44 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "NPM 的使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "npm 的全局安装和局部安装",
+        "slug": "npm-的全局安装和局部安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "npm 全局安装包及使用",
+        "slug": "npm-全局安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "npm 局部安装包及使用",
+        "slug": "npm-局部安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "两种安装方式的由来",
+        "slug": "两种安装方式的由来",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "命令总结",
+        "slug": "命令总结",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/npm/notes/npm.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "首页",
     "headers": [
       {
@@ -7031,6 +6124,913 @@ export const searchIndex = [
       }
     ],
     "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "HTTP 概述",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 基本概念",
+        "slug": "_1-基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. HTTP 1.0 和 HTTP 1.1 的区别",
+        "slug": "_2-http-1-0-和-http-1-1-的区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. HTTP 请求数据和响应数据",
+        "slug": "_3-http-请求数据和响应数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. HTTP 请求",
+        "slug": "_4-http-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. HTTP 响应",
+        "slug": "_5-http-响应",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/servlet/notes/HTTP%E6%A6%82%E8%BF%B0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Java Web 进阶",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. HttpSession",
+        "slug": "_1-httpsession",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. EL 表达式",
+        "slug": "_2-el-表达式",
+        "children": [
+          {
+            "level": 3,
+            "title": "EL 的默认关闭",
+            "slug": "el-的默认关闭",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "EL 语法",
+            "slug": "el-语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "EL 隐式对象",
+            "slug": "el-隐式对象",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. JSTL 标签库",
+        "slug": "_3-jstl-标签库",
+        "children": [
+          {
+            "level": 3,
+            "title": "c:out",
+            "slug": "c-out",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:set",
+            "slug": "c-set",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:remove",
+            "slug": "c-remove",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:if",
+            "slug": "c-if",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:choose、c:when 和 c:otherwise",
+            "slug": "c-choose、c-when-和-c-otherwise",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "c:forEach",
+            "slug": "c-foreach",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "fmt 进行日期格式化",
+            "slug": "fmt-进行日期格式化",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. 乱码问题",
+        "slug": "_4-乱码问题",
+        "children": [
+          {
+            "level": 3,
+            "title": "判断字符串的编码格式",
+            "slug": "判断字符串的编码格式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "获取 GET 请求中的数据，打印乱码",
+            "slug": "获取-get-请求中的数据-打印乱码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "获取 POST 请求中的数据，打印乱码",
+            "slug": "获取-post-请求中的数据-打印乱码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "中文字符串，输出到页面显示乱码",
+            "slug": "中文字符串-输出到页面显示乱码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "setContentType 和 setCharacterEncoding",
+            "slug": "setcontenttype-和-setcharacterencoding",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/two-stage/servlet/notes/javaWeb%E8%BF%9B%E9%98%B6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Java Web 高级",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. JavaWeb 中的静态资源访问",
+        "slug": "_1-javaweb-中的静态资源访问",
+        "children": [
+          {
+            "level": 3,
+            "title": "Tomcat 中的两个默认 Servlet",
+            "slug": "tomcat-中的两个默认-servlet",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "如何允许静态资源访问",
+            "slug": "如何允许静态资源访问",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 过滤器（Filter）",
+        "slug": "_2-过滤器-filter",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本概念",
+            "slug": "基本概念",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Filter 的配置",
+            "slug": "filter-的配置",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. 文件上传与下载",
+        "slug": "_3-文件上传与下载",
+        "children": [
+          {
+            "level": 3,
+            "title": "文件上传",
+            "slug": "文件上传",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "文件下载",
+            "slug": "文件下载",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. Cookies",
+        "slug": "_4-cookies",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 监听器（Listener）",
+        "slug": "_5-监听器-listener",
+        "children": [
+          {
+            "level": 3,
+            "title": "监听器接口和注册",
+            "slug": "监听器接口和注册",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Servelt Context 监听器",
+            "slug": "servelt-context-监听器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Session 监听器",
+            "slug": "session-监听器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletRequest 监听器",
+            "slug": "servletrequest-监听器",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/two-stage/servlet/notes/javaWeb%E9%AB%98%E7%BA%A7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Servlet 基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. Servlet API",
+        "slug": "_1-servlet-api",
+        "children": [
+          {
+            "level": 3,
+            "title": "概述",
+            "slug": "概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "相关对象概述",
+            "slug": "相关对象概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Servlet 接口",
+            "slug": "servlet-接口",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "GenericServlet 抽象类",
+            "slug": "genericservlet-抽象类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HTTPServlet 类",
+            "slug": "httpservlet-类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletRequest 和 HTTPServletRequest",
+            "slug": "servletrequest-和-httpservletrequest",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HttpServletRequest",
+            "slug": "httpservletrequest",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletResponse 和 HTTPServletResponse",
+            "slug": "servletresponse-和-httpservletresponse",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ServletConfig 和 ServletContext",
+            "slug": "servletconfig-和-servletcontext",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "部署描述符",
+            "slug": "部署描述符",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 配置 Servlet 及其映射",
+        "slug": "_2-配置-servlet-及其映射",
+        "children": [
+          {
+            "level": 3,
+            "title": "老式配置：web.xml 配置",
+            "slug": "老式配置-web-xml-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "新式配置：注解配置",
+            "slug": "新式配置-注解配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "URL 匹配规则",
+            "slug": "url-匹配规则",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. JSP",
+        "slug": "_3-jsp",
+        "children": [
+          {
+            "level": 3,
+            "title": "JSP 概述",
+            "slug": "jsp-概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "隐式对象",
+            "slug": "隐式对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "指令",
+            "slug": "指令",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "脚本元素",
+            "slug": "脚本元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "动作（了解、自学）",
+            "slug": "动作-了解、自学",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. Servlet 版本和 web.xml",
+        "slug": "_4-servlet-版本和-web-xml",
+        "children": [
+          {
+            "level": 3,
+            "title": "Servlet 的版本和对应的 Tomcat",
+            "slug": "servlet-的版本和对应的-tomcat",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不同版本的 web.xml 声明",
+            "slug": "不同版本的-web-xml-声明",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/two-stage/servlet/notes/Servlet%E5%9F%BA%E7%A1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "ES6 新特性",
+    "headers": [
+      {
+        "level": 2,
+        "title": "关于 ECMAScript 6",
+        "slug": "关于-ecmascript-6",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "let 命令",
+        "slug": "let-命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "const 命令",
+        "slug": "const-命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串扩展",
+        "slug": "字符串扩展",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "解构表达式",
+        "slug": "解构表达式",
+        "children": [
+          {
+            "level": 3,
+            "title": "数组解构",
+            "slug": "数组解构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "对象解构",
+            "slug": "对象解构",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "函数优化",
+        "slug": "函数优化",
+        "children": [
+          {
+            "level": 3,
+            "title": "函数参数默认值",
+            "slug": "函数参数默认值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "箭头函数",
+            "slug": "箭头函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "对象的函数属性简写",
+        "slug": "对象的函数属性简写",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "箭头函数结合结构表达式",
+        "slug": "箭头函数结合结构表达式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "新增的数组的 map 方法",
+        "slug": "新增的数组的-map-方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "新增的数组的 reduce 方法",
+        "slug": "新增的数组的-reduce-方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "扩展运算符",
+        "slug": "扩展运算符",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/js/notes/01.ES6%E6%96%B0%E7%89%B9%E6%80%A7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JavaScript 编程基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 基础知识",
+        "slug": "_1-基础知识",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 值和变量",
+        "slug": "_2-值和变量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 定义变量",
+        "slug": "_3-定义变量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 运算符",
+        "slug": "_4-运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 条件查询与布尔测试",
+        "slug": "_5-条件查询与布尔测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 分支与循环",
+        "slug": "_5-分支与循环",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 数组",
+        "slug": "_6-数组",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. 函数",
+        "slug": "_7-函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 变量的作用域",
+        "slug": "_8-变量的作用域",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/js/notes/01.JavaScript%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JavaScript面向对象编程",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. JavaScript 类和对象",
+        "slug": "_1-javascript-类和对象",
+        "children": [
+          {
+            "level": 3,
+            "title": "使用内置类",
+            "slug": "使用内置类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "new Object",
+            "slug": "new-object",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "对象字面量",
+            "slug": "对象字面量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "构造函数",
+            "slug": "构造函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "利用原型对象模式定义类",
+            "slug": "利用原型对象模式定义类",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. JavaScript 继承",
+        "slug": "_2-javascript-继承",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 内置类",
+        "slug": "_3-内置类",
+        "children": [
+          {
+            "level": 3,
+            "title": "String 类",
+            "slug": "string-类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Number 类",
+            "slug": "number-类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "全局 Math 对象",
+            "slug": "全局-math-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Array 对象",
+            "slug": "array-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "RegExp 对象",
+            "slug": "regexp-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间与日期",
+            "slug": "时间与日期",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/two-stage/js/notes/02.JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "模块化",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 关于模块化",
+        "slug": "_1-关于模块化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. JavaScript 的模块化",
+        "slug": "_2-javascript-的模块化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. export 命令",
+        "slug": "_3-export-命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. import 命令",
+        "slug": "_4-import-命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. export default 命令",
+        "slug": "_5-export-default-命令",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/js/notes/02.%E6%A8%A1%E5%9D%97%E5%8C%96.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "BOM 和 DOM",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. BOM：浏览器对象模型",
+        "slug": "_1-bom-浏览器对象模型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. DOM：文档对象模型",
+        "slug": "_2-dom-文档对象模型",
+        "children": [
+          {
+            "level": 3,
+            "title": "1. 核心概念",
+            "slug": "_1-核心概念",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2. 选中页面元素",
+            "slug": "_2-选中页面元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3. 通过亲属关系选中元素",
+            "slug": "_3-通过亲属关系选中元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4. 操作所选元素",
+            "slug": "_4-操作所选元素",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5. 操作 DOM 结构",
+            "slug": "_5-操作-dom-结构",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. DOM：事件处理",
+        "slug": "_3-dom-事件处理",
+        "children": [
+          {
+            "level": 3,
+            "title": "1. 添加事件处理程序",
+            "slug": "_1-添加事件处理程序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2. 常见的事件及其种类",
+            "slug": "_2-常见的事件及其种类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3. EventHandler",
+            "slug": "_3-eventhandler",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/two-stage/js/notes/03.BOM%E5%92%8CDOM.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Promise 对象",
+    "headers": [],
+    "path": "/two-stage/js/notes/03.promise%E5%AF%B9%E8%B1%A1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "HTML5 的 web storage",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. Window 的 sessionStorage 属性",
+        "slug": "_1-window-的-sessionstorage-属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. Window 的 localStorage 属性",
+        "slug": "_2-window-的-localstorage-属性",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/js/notes/04.HTML5%E7%9A%84web%20storage.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JavaScript 中内置的工具和常用代码片段",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 数组相关",
+        "slug": "_1-数组相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "makeArray",
+            "slug": "makearray",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. DOM 相关",
+        "slug": "_2-dom-相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "包含",
+            "slug": "包含",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "解析 parseHTML",
+            "slug": "解析-parsehtml",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "解析 parseJSON",
+            "slug": "解析-parsejson",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. 其它",
+        "slug": "_3-其它",
+        "children": [
+          {
+            "level": 3,
+            "title": "extend",
+            "slug": "extend",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "trim",
+            "slug": "trim",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "type",
+            "slug": "type",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "now",
+            "slug": "now",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. JS 中构建一个 Form",
+        "slug": "_4-js-中构建一个-form",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/js/notes/04.js-utils.html",
     "pathLocale": "/",
     "extraFields": []
   },
