@@ -153,6 +153,10 @@ export const themeData = {
         {
           "text": "server 相关",
           "link": "/demo/server/notes/ssh公钥.html"
+        },
+        {
+          "text": "前端相关",
+          "link": "/demo/web/notes/全局loading.html"
         }
       ]
     },
@@ -640,6 +644,16 @@ export const themeData = {
           "ssh公钥.html",
           "内网穿透.html",
           "轻量与ECS.html"
+        ]
+      }
+    ],
+    "/demo/web": [
+      {
+        "text": "前端相关",
+        "collapsable": false,
+        "link": "/demo/web/notes/全局loading.html",
+        "children": [
+          "全局loading.html"
         ]
       }
     ],

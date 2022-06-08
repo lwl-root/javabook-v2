@@ -108,6 +108,7 @@ module.exports = [
                 ],*/
             },
             {text: 'server 相关', link: '/demo/server/notes/ssh公钥.html'},
+            {text: '前端相关', link: '/demo/web/notes/全局loading.html'},
         ]
     },
 
