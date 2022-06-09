@@ -1,8 +1,8 @@
 module.exports = {
     // 站点配置
     lang: 'zh-CN',
-    title: 'Java笔记',
-    description: '人民要有信仰，国家才有力量！',
+    title: 'J a v a',
+    description: '富强、民主、文明、和谐、自由、平等、公正、法治、爱国、敬业、诚信、友善',
     dest: './dist',
     port: '4950',
     head: [
