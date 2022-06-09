@@ -13,6 +13,8 @@ export const pagesData = {
   "v-1e023788": () => import(/* webpackChunkName: "v-1e023788" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/junitTest.html.js").then(({ data }) => data),
   // path: /demo/frame/notes/swagger2.html
   "v-39fc678e": () => import(/* webpackChunkName: "v-39fc678e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.js").then(({ data }) => data),
+  // path: /demo/Java/notes/BigDecimal.html
+  "v-58addb60": () => import(/* webpackChunkName: "v-58addb60" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/BigDecimal.html.js").then(({ data }) => data),
   // path: /demo/Java/notes/java%E5%8F%8D%E5%B0%84.html
   "v-5251ac7f": () => import(/* webpackChunkName: "v-5251ac7f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/java反射.html.js").then(({ data }) => data),
   // path: /demo/Java/notes/list%E5%8E%BB%E9%87%8D.html

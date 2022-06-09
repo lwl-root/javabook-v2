@@ -754,6 +754,44 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "BigDecimal使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、常用方法详解",
+        "slug": "_1、常用方法详解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、BigDecimal格式化",
+        "slug": "_2、bigdecimal格式化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、BigDecimal常见异常",
+        "slug": "_3、bigdecimal常见异常",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、工具类",
+        "slug": "_4、工具类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5、总结",
+        "slug": "_5、总结",
+        "children": []
+      }
+    ],
+    "path": "/demo/Java/notes/BigDecimal.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Java反射基础",
     "headers": [
       {
