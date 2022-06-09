@@ -16,9 +16,9 @@ export const pagesComponents = {
   // path: /demo/frame/notes/junitTest.html
   "v-1e023788": defineAsyncComponent(() => import(/* webpackChunkName: "v-1e023788" */"C:/javaBook/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/junitTest.html.vue")),
   // path: /demo/frame/notes/swagger2.html
-  "v-39fc678e": defineAsyncComponent(() => import(/* webpackChunkName: "v-39fc678e" */"C:/javaBook/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.vue")),
+  "v-39fc678e": defineAsyncComponent(() => import(/* webpackChunkName: "v-39fc678e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.vue")),
   // path: /demo/Java/notes/BigDecimal.html
-  "v-58addb60": defineAsyncComponent(() => import(/* webpackChunkName: "v-58addb60" */"C:/javaBook/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/BigDecimal.html.vue")),
+  "v-58addb60": defineAsyncComponent(() => import(/* webpackChunkName: "v-58addb60" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/BigDecimal.html.vue")),
   // path: /demo/Java/notes/java%E5%8F%8D%E5%B0%84.html
   "v-5251ac7f": defineAsyncComponent(() => import(/* webpackChunkName: "v-5251ac7f" */"C:/javaBook/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/java反射.html.vue")),
   // path: /demo/Java/notes/list%E5%8E%BB%E9%87%8D.html
