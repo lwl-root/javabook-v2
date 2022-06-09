@@ -33,15 +33,15 @@ POST https://httpbin.org/post
 <span class="token header"><span class="token header-name keyword">Content-Type</span><span class="token punctuation">:</span> <span class="token header-value">application/json</span></span>
 <span class="token application-json">
 <span class="token punctuation">{</span>
-<span class="token string-property property">"id"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
-<span class="token string-property property">"value"</span><span class="token operator">:</span> <span class="token string">"content"</span>
+<span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">999</span><span class="token punctuation">,</span>
+<span class="token property">"value"</span><span class="token operator">:</span> <span class="token string">"content"</span>
 <span class="token punctuation">}</span>
 
-### Send <span class="token constant">POST</span> request <span class="token keyword">with</span> body <span class="token keyword">as</span> parameters
-<span class="token constant">POST</span> <span class="token literal-property property">https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>post
-Content<span class="token operator">-</span>Type<span class="token operator">:</span> application<span class="token operator">/</span>x<span class="token operator">-</span>www<span class="token operator">-</span>form<span class="token operator">-</span>urlencoded
+### Send POST request with body as parameters
+POST https<span class="token operator">:</span><span class="token comment">//httpbin.org/post</span>
+Content-Type<span class="token operator">:</span> application/x-www-form-urlencoded
 
-id<span class="token operator">=</span><span class="token number">999</span><span class="token operator">&amp;</span>value<span class="token operator">=</span>content
+id=<span class="token number">999</span>&amp;value=content
 </span></code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>其中：</p>
 <ul>
 <li>
