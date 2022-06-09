@@ -74,7 +74,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": 1653400216000
+    "updatedTime": null
   },
   "filePathRelative": "demo/databases/notes/oracle子查询.md"
 }
