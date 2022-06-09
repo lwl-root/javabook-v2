@@ -18,6 +18,7 @@ module.exports = {
     '/two-stage/js': require('../two-stage/js/sidebar'),
     '/two-stage/ajax': require('../two-stage/ajax/sidebar'),
     '/two-stage/servlet': require('../two-stage/servlet/sidebar'),
+    '/two-stage/npm': require('../two-stage/npm/sidebar'),
 
     '/three-stage/junit': require('../three-stage/junit/sidebar'),
     '/three-stage/mybatis': require('../three-stage/mybatis/sidebar'),
@@ -28,6 +29,7 @@ module.exports = {
     '/demo/frame': require('../demo/frame/sidebar'),
     '/demo/databases': require('../demo/databases/sidebar'),
     '/demo/server': require('../demo/server/sidebar'),
+    '/demo/web': require('../demo/web/sidebar'),
 
     '/c-book/gof23': require('../c-book/gof23/sidebar'),
 	'/c-book/spring-security': require('../c-book/spring-security/sidebar'),

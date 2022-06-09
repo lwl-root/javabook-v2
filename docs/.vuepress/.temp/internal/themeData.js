@@ -106,6 +106,15 @@ export const themeData = {
               "link": "/two-stage/servlet/notes/HTTP概述.html"
             }
           ]
+        },
+        {
+          "text": "VUE",
+          "children": [
+            {
+              "text": "NPM",
+              "link": "/two-stage/npm/notes/npm.html"
+            }
+          ]
         }
       ]
     },
@@ -139,11 +148,15 @@ export const themeData = {
         },
         {
           "text": "数据库相关",
-          "link": "/demo/databases/notes/数据库test.html"
+          "link": "/demo/databases/notes/oracle子查询.html"
         },
         {
           "text": "server 相关",
           "link": "/demo/server/notes/ssh公钥.html"
+        },
+        {
+          "text": "前端相关",
+          "link": "/demo/web/notes/全局loading.html"
         }
       ]
     },
@@ -508,6 +521,16 @@ export const themeData = {
         ]
       }
     ],
+    "/two-stage/npm": [
+      {
+        "text": "npm的使用",
+        "collapsable": false,
+        "link": "/two-stage/npm/notes/npm.html",
+        "children": [
+          "npm.html"
+        ]
+      }
+    ],
     "/three-stage/junit": [
       {
         "text": "JUnit",
@@ -605,9 +628,10 @@ export const themeData = {
       {
         "text": "数据库相关",
         "collapsable": false,
-        "link": "/demo/databases/notes/数据库test.html",
+        "link": "/demo/databases/notes/oracle子查询.html",
         "children": [
-          "数据库test.html"
+          "oracle子查询.html",
+          "EXISTS使用.html"
         ]
       }
     ],
@@ -620,6 +644,16 @@ export const themeData = {
           "ssh公钥.html",
           "内网穿透.html",
           "轻量与ECS.html"
+        ]
+      }
+    ],
+    "/demo/web": [
+      {
+        "text": "前端相关",
+        "collapsable": false,
+        "link": "/demo/web/notes/全局loading.html",
+        "children": [
+          "全局loading.html"
         ]
       }
     ],

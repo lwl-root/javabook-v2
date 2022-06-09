@@ -61,6 +61,13 @@ module.exports = [
 
                 ],
             },
+            {
+                text: "VUE",
+                children: [
+                    {text: 'NPM', link: '/two-stage/npm/notes/npm.html'},
+
+                ],
+            },
             // {text: '前端基础', link: '/two-stage/html/notes/01.基本概念和结构.html'},
             // {text: 'Java Web', link: '/two-stage/servlet/notes/HTTP概述.html'},
 
@@ -95,12 +102,13 @@ module.exports = [
             {text: 'Java 相关', link: '/demo/Java/notes/List去重.html'},
             {text: '框架相关', link: '/demo/frame/notes/swagger2.html'},
             {
-                text: '数据库相关', link: '/demo/databases/notes/数据库test.html',
+                text: '数据库相关', link: '/demo/databases/notes/oracle子查询.html',
                 /*children: [
                     {text: '数据库二级', link: '/demo/databases/notes/数据库test.html'}
                 ],*/
             },
             {text: 'server 相关', link: '/demo/server/notes/ssh公钥.html'},
+            {text: '前端相关', link: '/demo/web/notes/全局loading.html'},
         ]
     },
 
