@@ -2,7 +2,7 @@ module.exports = {
     // 站点配置
     lang: 'zh-CN',
     title: 'Java笔记',
-    description: 'I LOVE CHINA',
+    description: '人民要有信仰，国家才有力量！',
     dest: './dist',
     port: '4950',
     head: [
