@@ -5,6 +5,7 @@ module.exports = [
 		link:'/demo/web/notes/全局loading.html',
 		children:[
 			'全局loading.html',
+			'vue3地址.html',
 		]
 	},
 

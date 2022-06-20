@@ -653,7 +653,8 @@ export const themeData = {
         "collapsable": false,
         "link": "/demo/web/notes/全局loading.html",
         "children": [
-          "全局loading.html"
+          "全局loading.html",
+          "vue3地址.html"
         ]
       }
     ],
