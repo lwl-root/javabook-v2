@@ -29,6 +29,8 @@ export const pagesData = {
   "v-260e80e6": () => import(/* webpackChunkName: "v-260e80e6" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/server/notes/内网穿透.html.js").then(({ data }) => data),
   // path: /demo/server/notes/%E8%BD%BB%E9%87%8F%E4%B8%8EECS.html
   "v-0939e576": () => import(/* webpackChunkName: "v-0939e576" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/server/notes/轻量与ECS.html.js").then(({ data }) => data),
+  // path: /demo/web/notes/vue3%E5%9C%B0%E5%9D%80.html
+  "v-f5578932": () => import(/* webpackChunkName: "v-f5578932" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/web/notes/vue3地址.html.js").then(({ data }) => data),
   // path: /demo/web/notes/%E5%85%A8%E5%B1%80loading.html
   "v-eb37e9b0": () => import(/* webpackChunkName: "v-eb37e9b0" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/web/notes/全局loading.html.js").then(({ data }) => data),
   // path: /one-stage/java/notes/classpath.html
