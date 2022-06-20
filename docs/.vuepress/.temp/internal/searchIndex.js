@@ -1100,6 +1100,26 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "VUE3.0 路由去掉#号",
+    "headers": [
+      {
+        "level": 3,
+        "title": "createWebHistory路由模式路径不带#号(生产环境下不能直接访问项目，需要nginx转发)",
+        "slug": "createwebhistory路由模式路径不带-号-生产环境下不能直接访问项目-需要nginx转发",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "createWebHashHistory路由模式路径带#号",
+        "slug": "createwebhashhistory路由模式路径带-号",
+        "children": []
+      }
+    ],
+    "path": "/demo/web/notes/vue3%E5%9C%B0%E5%9D%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "浅谈vue+element全局loading加载",
     "headers": [
       {
