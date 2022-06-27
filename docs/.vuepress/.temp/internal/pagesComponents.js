@@ -13,6 +13,8 @@ export const pagesComponents = {
   "v-00d382c8": defineAsyncComponent(() => import(/* webpackChunkName: "v-00d382c8" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/databases/notes/EXISTS使用.html.vue")),
   // path: /demo/databases/notes/oracle%E5%AD%90%E6%9F%A5%E8%AF%A2.html
   "v-69141782": defineAsyncComponent(() => import(/* webpackChunkName: "v-69141782" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/databases/notes/oracle子查询.html.vue")),
+  // path: /demo/databases/notes/%E5%88%A0%E9%99%A4oracle%E7%94%A8%E6%88%B7%E5%8F%8A%E8%A1%A8%E7%A9%BA%E9%97%B4.html
+  "v-43321a05": defineAsyncComponent(() => import(/* webpackChunkName: "v-43321a05" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/databases/notes/删除oracle用户及表空间.html.vue")),
   // path: /demo/frame/notes/junitTest.html
   "v-1e023788": defineAsyncComponent(() => import(/* webpackChunkName: "v-1e023788" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/junitTest.html.vue")),
   // path: /demo/frame/notes/swagger2.html
