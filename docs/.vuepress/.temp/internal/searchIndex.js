@@ -697,6 +697,13 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "怎么删除oracle用户及表空间",
+    "headers": [],
+    "path": "/demo/databases/notes/%E5%88%A0%E9%99%A4oracle%E7%94%A8%E6%88%B7%E5%8F%8A%E8%A1%A8%E7%A9%BA%E9%97%B4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
     "headers": [],
     "path": "/demo/frame/notes/junitTest.html",
