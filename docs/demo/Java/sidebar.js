@@ -8,6 +8,7 @@ module.exports = [
 			'java反射.html',
 			'动态代理.html',
 			'BigDecimal.html',
+			'CountDownLatch.html',
 		]
 	},
 
