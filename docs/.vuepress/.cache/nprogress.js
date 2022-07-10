@@ -1,13 +1,15 @@
 import {
   __commonJS,
+  init_define_EXTERNAL_LINK_ICON_LOCALES,
   init_define_MZ_ZOOM_OPTIONS,
   init_define_SEARCH_HOT_KEYS,
   init_define_SEARCH_LOCALES
-} from "./chunk-SMMSCRG2.js";
+} from "./chunk-FN6J7K7N.js";
 
 // node_modules/nprogress/nprogress.js
 var require_nprogress = __commonJS({
   "node_modules/nprogress/nprogress.js"(exports, module) {
+    init_define_EXTERNAL_LINK_ICON_LOCALES();
     init_define_MZ_ZOOM_OPTIONS();
     init_define_SEARCH_HOT_KEYS();
     init_define_SEARCH_LOCALES();
@@ -286,6 +288,7 @@ var require_nprogress = __commonJS({
 });
 
 // dep:nprogress
+init_define_EXTERNAL_LINK_ICON_LOCALES();
 init_define_MZ_ZOOM_OPTIONS();
 init_define_SEARCH_HOT_KEYS();
 init_define_SEARCH_LOCALES();
