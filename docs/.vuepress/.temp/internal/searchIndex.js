@@ -698,7 +698,14 @@ export const searchIndex = [
   },
   {
     "title": "怎么删除oracle用户及表空间",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "删除oracle用户和表空间的方法:",
+        "slug": "删除oracle用户和表空间的方法",
+        "children": []
+      }
+    ],
     "path": "/demo/databases/notes/%E5%88%A0%E9%99%A4oracle%E7%94%A8%E6%88%B7%E5%8F%8A%E8%A1%A8%E7%A9%BA%E9%97%B4.html",
     "pathLocale": "/",
     "extraFields": []
@@ -707,6 +714,82 @@ export const searchIndex = [
     "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
     "headers": [],
     "path": "/demo/frame/notes/junitTest.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "MyBatis-plus基本使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、快速入门",
+        "slug": "_1、快速入门",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.2、导入依赖",
+            "slug": "_1-2、导入依赖",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.3、配置数据库",
+            "slug": "_1-3、配置数据库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.4、创建一个实体类",
+            "slug": "_1-4、创建一个实体类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.5、创建一个mapper接口",
+            "slug": "_1-5、创建一个mapper接口",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.6、在SpringBoot启动类上配置mapper接口的扫描路径",
+            "slug": "_1-6、在springboot启动类上配置mapper接口的扫描路径",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.7、在数据库中创建表",
+            "slug": "_1-7、在数据库中创建表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.8、编写一个SpringBoot测试类",
+            "slug": "_1-8、编写一个springboot测试类",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2、核心功能",
+        "slug": "_2、核心功能",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1、注解",
+            "slug": "_2-1、注解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2、CRUD接口",
+            "slug": "_2-2、crud接口",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/frame/notes/MyBatisPlus.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1179,6 +1262,39 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/web/notes/%E5%85%A8%E5%B1%80loading.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3607,39 +3723,6 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/threadsafe/notes/c02.CAS.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据结构与算法入门",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
