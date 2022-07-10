@@ -12,6 +12,7 @@ const routeItems = [
   ["v-09acec6f","/demo/frame/notes/MyBatisPlus.html",{"title":"MyBatis-plus基本使用"},["/demo/frame/notes/MyBatisPlus","/demo/frame/notes/MyBatisPlus.md"]],
   ["v-39fc678e","/demo/frame/notes/swagger2.html",{"title":"SpringBoot集成Swagger"},["/demo/frame/notes/swagger2","/demo/frame/notes/swagger2.md"]],
   ["v-58addb60","/demo/Java/notes/BigDecimal.html",{"title":"BigDecimal使用"},["/demo/Java/notes/BigDecimal","/demo/Java/notes/BigDecimal.md"]],
+  ["v-6113b744","/demo/Java/notes/CountDownLatch.html",{"title":"java中对CountDownLatch的使用"},["/demo/Java/notes/CountDownLatch","/demo/Java/notes/CountDownLatch.md"]],
   ["v-5251ac7f","/demo/Java/notes/java%E5%8F%8D%E5%B0%84.html",{"title":"Java反射基础"},["/demo/Java/notes/java反射.html","/demo/Java/notes/java%E5%8F%8D%E5%B0%84","/demo/Java/notes/java反射.md","/demo/Java/notes/java%E5%8F%8D%E5%B0%84.md"]],
   ["v-0fc9cbd5","/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",{"title":"List集合去重"},["/demo/Java/notes/list去重.html","/demo/Java/notes/list%E5%8E%BB%E9%87%8D","/demo/Java/notes/list去重.md","/demo/Java/notes/list%E5%8E%BB%E9%87%8D.md"]],
   ["v-db4ffdb6","/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html",{"title":"什么是动态代理"},["/demo/Java/notes/动态代理.html","/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86","/demo/Java/notes/动态代理.md","/demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.md"]],
