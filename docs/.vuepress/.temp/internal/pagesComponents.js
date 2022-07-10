@@ -23,6 +23,8 @@ export const pagesComponents = {
   "v-39fc678e": defineAsyncComponent(() => import(/* webpackChunkName: "v-39fc678e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.vue")),
   // path: /demo/Java/notes/BigDecimal.html
   "v-58addb60": defineAsyncComponent(() => import(/* webpackChunkName: "v-58addb60" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/BigDecimal.html.vue")),
+  // path: /demo/Java/notes/CountDownLatch.html
+  "v-6113b744": defineAsyncComponent(() => import(/* webpackChunkName: "v-6113b744" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/CountDownLatch.html.vue")),
   // path: /demo/Java/notes/java%E5%8F%8D%E5%B0%84.html
   "v-5251ac7f": defineAsyncComponent(() => import(/* webpackChunkName: "v-5251ac7f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/java反射.html.vue")),
   // path: /demo/Java/notes/list%E5%8E%BB%E9%87%8D.html
