@@ -106,7 +106,7 @@ Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等
 </table>
 <p>因此，从一个较高的层面上来看，producer通过网络发送消息到Kafka集群，然后consumer
 来进行消费，如下图：
-<img src="@source/c-book/kafka/notes/images/QQ截图20220110112502.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+<img src="/images/kafka/QQ截图20220110112502.png" alt="输入图片说明" title="20201229183512.png"></p>
 <p>服务端(brokers)和客户端(producer、consumer)之间通信通过 <strong>TCP协议</strong> 来完成。</p>
 <h2 id="二、kafka基本使用" tabindex="-1"><a class="header-anchor" href="#二、kafka基本使用" aria-hidden="true">#</a> 二、kafka基本使用</h2>
 <h3 id="_1-安装前的环境准备" tabindex="-1"><a class="header-anchor" href="#_1-安装前的环境准备" aria-hidden="true">#</a> 1.安装前的环境准备</h3>
@@ -195,7 +195,7 @@ zookeeper.connect<span class="token operator">=</span> <span class="token number
 <blockquote>
 <p>topic是什么概念？topic可以实现消息的分类，不同消费者订阅不同的topic。</p>
 </blockquote>
-<p><img src="@source/c-book/kafka/notes/images/QQ截图20220110122844.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+<p><img src="/images/kafka/QQ截图20220110122844.png" alt="输入图片说明" title="20201229183512.png"></p>
 <p>执行以下命令创建名为“test”的topic，这个topic只有一个partition，并且备份因子也设置为1</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-topics.sh --create --zookeeper <span class="token number">172.16</span>.253.35:2181 --replication-factor <span class="token number">1</span> --partitions <span class="token number">1</span> --topic <span class="token builtin class-name">test</span>
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>查看当前kafka内有哪些topic</p>
@@ -241,7 +241,7 @@ topic中消费消息</p>
 ./kafka-consumer-groups.sh --bootstrap-server <span class="token number">10.31</span>.167.10:9092 --list
 <span class="token comment"># 查看消费组中的具体信息：比如当前偏移量、最后一条消息的偏移量、堆积的消息数量</span>
 ./kafka-consumer-groups.sh --bootstrap-server <span class="token number">172.16</span>.253.38:9092 --describe --group testGroup
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="@source/c-book/kafka/notes/images/QQ截图20220110125233.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="/images/kafka/QQ截图20220110125233.png" alt="输入图片说明" title="20201229183512.png"></p>
 <ul>
 <li>Currennt-offset: 当前消费组的已消费偏移量</li>
 <li>Log-end-offset: 主题对应分区消息的结束偏移量(HW)</li>
@@ -251,7 +251,7 @@ topic中消费消息</p>
 <h3 id="_1-主题topic" tabindex="-1"><a class="header-anchor" href="#_1-主题topic" aria-hidden="true">#</a> 1.主题Topic</h3>
 <p>?主题Topic可以理解成是一个类别的名称。</p>
 <h3 id="_2-partition分区" tabindex="-1"><a class="header-anchor" href="#_2-partition分区" aria-hidden="true">#</a> 2.partition分区</h3>
-<p><img src="@source/c-book/kafka/notes/images/QQ截图20220110125413.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+<p><img src="/images/kafka/QQ截图20220110125413.png" alt="输入图片说明" title="20201229183512.png"></p>
 <blockquote>
 <p>一个主题中的消息量是非常大的，因此可以通过分区的设置，来分布式存储这些消息。比如一个topic创建了 3 个分区。那么topic中的消息就会分别存放在这三个分区中。</p>
 </blockquote>
@@ -307,7 +307,7 @@ log.dir<span class="token operator">=</span>/usr/local/data/kafka-logs-
 <p>副本是对分区的备份。在集群中，不同的副本会被部署在不同的broker上。下面例子：创建 1个主题， 2 个分区、 3 个副本。</p>
 </blockquote>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-topics.sh --create --zookeeper <span class="token number">172.16</span>.253.35:2181 --replication-factor <span class="token number">3</span> --partitions <span class="token number">2</span> --topic my-replicated-topic
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p><img src="@source/c-book/kafka/notes/images/QQ截图20220110133849.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p><img src="/images/kafka/QQ截图20220110133849.png" alt="输入图片说明" title="20201229183512.png"></p>
 <p>通过查看主题信息，其中的关键数据：</p>
 <ul>
 <li>replicas：当前副本存在的broker节点</li>
@@ -333,13 +333,13 @@ log.dir<span class="token operator">=</span>/usr/local/data/kafka-logs-
 <li>kafka集群中由多个broker组成</li>
 <li>一个broker中存放一个topic的不同partition——副本</li>
 </ul>
-<p><img src="@source/c-book/kafka/notes/images/QQ截图20220110134554.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+<p><img src="/images/kafka/QQ截图20220110134554.png" alt="输入图片说明" title="20201229183512.png"></p>
 <h3 id="_4-kafka集群消息的发送" tabindex="-1"><a class="header-anchor" href="#_4-kafka集群消息的发送" aria-hidden="true">#</a> 4.kafka集群消息的发送</h3>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-producer.sh --broker-list <span class="token number">172.16</span>.253.38:9092,172.16.253.38:9093,172.16.253.38:9094 --topic my-replicated-topic
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_5-kafka集群消息的消费" tabindex="-1"><a class="header-anchor" href="#_5-kafka集群消息的消费" aria-hidden="true">#</a> 5.kafka集群消息的消费</h3>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>./kafka-console-consumer.sh --bootstrap-server <span class="token number">172.16</span>.253.38:9092,172.16.253.38:9093,172.16.253.38:9094 --from-beginning --topic my-replicated-topic
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="_6-关于分区消费组消费者的细节" tabindex="-1"><a class="header-anchor" href="#_6-关于分区消费组消费者的细节" aria-hidden="true">#</a> 6.关于分区消费组消费者的细节</h3>
-<p><img src="@source/c-book/kafka/notes/images/QQ截图20220110134734.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+<p><img src="/images/kafka/QQ截图20220110134734.png" alt="输入图片说明" title="20201229183512.png"></p>
 <blockquote>
 <p>图中Kafka集群有两个broker，每个broker中有多个partition。一个partition只能被一个消费组里的某一个消费者消费，从而保证消费顺序。Kafka只在partition的范围内保证消息消费的局部顺序性，不能在同一个topic中的多个partition中保证总的消费顺序性。一个消费者可以消费多个partition。</p>
 </blockquote>
@@ -382,7 +382,7 @@ props<span class="token punctuation">.</span><span class="token function">put</s
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">//等待消息发送成功的同步阻塞方法</span>
 <span class="token class-name">RecordMetadata</span> metadata <span class="token operator">=</span> producer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>producerRecord<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"同步方式发送消息结果："</span> <span class="token operator">+</span> <span class="token string">"topic-"</span> <span class="token operator">+</span>metadata<span class="token punctuation">.</span><span class="token function">topic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|partition-"</span><span class="token operator">+</span> metadata<span class="token punctuation">.</span><span class="token function">partition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|offset-"</span> <span class="token operator">+</span>metadata<span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><img src="@source/c-book/kafka/notes/images/QQ截图20220110142708.png" alt="输入图片说明" title="QQ截图20201229183512.png"></p>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><img src="/images/kafka/QQ截图20220110142708.png" alt="输入图片说明" title="20201229183512.png"></p>
 <h3 id="_6-异步发消息" tabindex="-1"><a class="header-anchor" href="#_6-异步发消息" aria-hidden="true">#</a> 6.异步发消息</h3>
 <h4 id="生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果" tabindex="-1"><a class="header-anchor" href="#生产者发消息-发送完后不用等待broker给回复-直接执行下面的业务逻辑。可以提供callback-让broker异步的调用callback-告知生产者-消息发送的结果" aria-hidden="true">#</a> 生产者发消息，发送完后不用等待broker给回复，直接执行下面的业务逻辑。可以提供callback，让broker异步的调用callback，告知生产者，消息发送的结果</h4>
 <div class="language-java ext-java line-numbers-mode"><pre v-pre class="language-java"><code><span class="token comment">//要发送 5 条消息</span>
