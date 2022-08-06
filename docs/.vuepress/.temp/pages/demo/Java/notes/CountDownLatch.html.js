@@ -38,7 +38,7 @@ export const data = {
     }
   ],
   "git": {
-    "updatedTime": null
+    "updatedTime": 1657464374000
   },
   "filePathRelative": "demo/Java/notes/CountDownLatch.md"
 }

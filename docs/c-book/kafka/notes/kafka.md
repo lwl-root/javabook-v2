@@ -80,7 +80,7 @@ Partition|物理上的概念，⼀个topic可以分为多个partition，每个pa
 
 因此，从一个较高的层面上来看，producer通过网络发送消息到Kafka集群，然后consumer
 来进行消费，如下图：
-![输入图片说明](./images/QQ截图20220110112502.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110112502.png "20201229183512.png")
 
 服务端(brokers)和客户端(producer、consumer)之间通信通过 **TCP协议** 来完成。
 
@@ -138,7 +138,7 @@ delete.topic.enable|false|是否允许删除主题
 
 >topic是什么概念？topic可以实现消息的分类，不同消费者订阅不同的topic。
 
-![输入图片说明](./images/QQ截图20220110122844.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110122844.png "20201229183512.png")
 
 执行以下命令创建名为“test”的topic，这个topic只有一个partition，并且备份因子也设置为1
 ```shell
@@ -207,7 +207,7 @@ kafka实现多播，只需要让不同的消费者处于不同的消费组即可
 # 查看消费组中的具体信息：比如当前偏移量、最后一条消息的偏移量、堆积的消息数量
 ./kafka-consumer-groups.sh --bootstrap-server 172.16.253.38:9092 --describe --group testGroup
 ```
-![输入图片说明](./images/QQ截图20220110125233.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110125233.png "20201229183512.png")
 * Currennt-offset: 当前消费组的已消费偏移量
 * Log-end-offset: 主题对应分区消息的结束偏移量(HW)
 * Lag: 当前消费组未消费的消息数
@@ -219,7 +219,7 @@ kafka实现多播，只需要让不同的消费者处于不同的消费组即可
 ?主题Topic可以理解成是一个类别的名称。
 
 ### 2.partition分区
-![输入图片说明](./images/QQ截图20220110125413.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110125413.png "20201229183512.png")
 
 >一个主题中的消息量是非常大的，因此可以通过分区的设置，来分布式存储这些消息。比如一个topic创建了 3 个分区。那么topic中的消息就会分别存放在这三个分区中。
 
@@ -291,7 +291,7 @@ log.dir=/usr/local/data/kafka-logs-
 ```shell
 ./kafka-topics.sh --create --zookeeper 172.16.253.35:2181 --replication-factor 3 --partitions 2 --topic my-replicated-topic
 ```
-![输入图片说明](./images/QQ截图20220110133849.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110133849.png "20201229183512.png")
 
 通过查看主题信息，其中的关键数据：
 
@@ -320,7 +320,7 @@ isr：
 * kafka集群中由多个broker组成
 * 一个broker中存放一个topic的不同partition——副本
 
-![输入图片说明](./images/QQ截图20220110134554.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110134554.png "20201229183512.png")
 
 ### 4.kafka集群消息的发送
 ```shell
@@ -333,7 +333,7 @@ isr：
 ```
 ### 6.关于分区消费组消费者的细节
 
-![输入图片说明](./images/QQ截图20220110134734.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110134734.png "20201229183512.png")
 
 >图中Kafka集群有两个broker，每个broker中有多个partition。一个partition只能被一个消费组里的某一个消费者消费，从而保证消费顺序。Kafka只在partition的范围内保证消息消费的局部顺序性，不能在同一个topic中的多个partition中保证总的消费顺序性。一个消费者可以消费多个partition。
 
@@ -391,7 +391,7 @@ ProducerRecord<String, String> producerRecord = new ProducerRecord<String, Strin
 RecordMetadata metadata = producer.send(producerRecord).get();
 System.out.println("同步方式发送消息结果：" + "topic-" +metadata.topic() + "|partition-"+ metadata.partition() + "|offset-" +metadata.offset());
 ```
-![输入图片说明](./images/QQ截图20220110142708.png "QQ截图20201229183512.png")
+![输入图片说明](/images/kafka/QQ截图20220110142708.png "20201229183512.png")
 ### 6.异步发消息
 
 #### 生产者发消息，发送完后不用等待broker给回复，直接执行下面的业务逻辑。可以提供callback，让broker异步的调用callback，告知生产者，消息发送的结果
