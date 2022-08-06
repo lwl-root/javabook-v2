@@ -9,7 +9,10 @@ module.exports = [
 				text:'SpringBoot中junit问题',
 				link:'/demo/frame/notes/junitTest.html',
 			},
-
+			{
+				text:'java给文件添加水印',
+				link:'/demo/frame/notes/java添加水印.html',
+			},
 		]
 	},
 

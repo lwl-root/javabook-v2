@@ -13,6 +13,8 @@ export const pagesData = {
   "v-69141782": () => import(/* webpackChunkName: "v-69141782" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/databases/notes/oracle子查询.html.js").then(({ data }) => data),
   // path: /demo/databases/notes/%E5%88%A0%E9%99%A4oracle%E7%94%A8%E6%88%B7%E5%8F%8A%E8%A1%A8%E7%A9%BA%E9%97%B4.html
   "v-43321a05": () => import(/* webpackChunkName: "v-43321a05" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/databases/notes/删除oracle用户及表空间.html.js").then(({ data }) => data),
+  // path: /demo/frame/notes/java%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0.html
+  "v-6d64cebd": () => import(/* webpackChunkName: "v-6d64cebd" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/java添加水印.html.js").then(({ data }) => data),
   // path: /demo/frame/notes/junitTest.html
   "v-1e023788": () => import(/* webpackChunkName: "v-1e023788" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/junitTest.html.js").then(({ data }) => data),
   // path: /demo/frame/notes/MyBatisPlus.html
