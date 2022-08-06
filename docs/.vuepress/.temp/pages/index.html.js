@@ -17,7 +17,7 @@ export const data = {
         "details": "宠辱不惊，闲看庭前花开花落。去留无意，漫随天外云卷云舒。  《幽窗小记》"
       }
     ],
-    "footer": "Copyright ©2021-11-11 lwl 版权所有"
+    "footer": "Copyright ©2021-11-11 lwl | fcas 版权所有"
   },
   "excerpt": "",
   "headers": [],
