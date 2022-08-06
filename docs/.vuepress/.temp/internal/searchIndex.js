@@ -711,6 +711,13 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "java为word、excel、pdf、ppt、图片添加图片水印（文字水印同理）",
+    "headers": [],
+    "path": "/demo/frame/notes/java%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "junit-vintage-engine和junit-jupiter-engine之间的区别",
     "headers": [],
     "path": "/demo/frame/notes/junitTest.html",
