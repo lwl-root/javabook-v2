@@ -6,13 +6,20 @@
 ## schema简介
 **官方文档：**
 > A schema is a collection of database objects (used by a user.).
+> 
 > Schema是数据库对象的集合（由用户使用）。
+> 
 > Schema objects are the logical structures that directly refer to the database’s data.
+> 
 > Schema对象是直接引用数据库数据的逻辑结构。
+> 
 > A user is a name defined in the database that can connect to and access objects.
+> 
 > 用户是在数据库中定义的可以连接和访问对象的名称。
+> 
 > Schemas and users help database administrators manage database security.
-> Schemas和用户帮助数据库管理员管理数据库安全。
+> 
+> Schema和用户帮助数据库管理员管理数据库安全。
 
 在oracle数据库中每个用户都有一个默认的schema，如果我们访问一个表时，没有指明该表属于哪一个schema中的，系统就会自动给我们在表上加上缺省的sheman名。在oracle中一个对象完整的名称应该是`schema.object`，并不是`user.object`.
 
