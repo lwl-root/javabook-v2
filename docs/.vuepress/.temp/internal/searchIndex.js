@@ -697,6 +697,39 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "oracle数据库新建schema",
+    "headers": [
+      {
+        "level": 2,
+        "title": "schema简介",
+        "slug": "schema简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "schema创建",
+        "slug": "schema创建",
+        "children": [
+          {
+            "level": 3,
+            "title": "1、编写bat文件",
+            "slug": "_1、编写bat文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2、编写sql脚本",
+            "slug": "_2、编写sql脚本",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/databases/notes/oracle%E6%96%B0%E5%BB%BAschema.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "怎么删除oracle用户及表空间",
     "headers": [
       {
@@ -1307,6 +1340,39 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/web/notes/%E5%85%A8%E5%B1%80loading.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3735,39 +3801,6 @@ export const searchIndex = [
       }
     ],
     "path": "/one-stage/threadsafe/notes/c02.CAS.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据结构与算法入门",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },
