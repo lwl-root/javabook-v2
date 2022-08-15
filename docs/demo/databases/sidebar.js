@@ -6,7 +6,8 @@ module.exports = [
 		children:[
 			'oracle子查询.html',
 			'EXISTS使用.html',
-			'删除oracle用户及表空间.html'
+			'删除oracle用户及表空间.html',
+			'oracle新建schema.html'
 		]
 	},
 	
