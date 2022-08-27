@@ -9,6 +9,8 @@ module.exports = [
 			'动态代理.html',
 			'BigDecimal.html',
 			'CountDownLatch.html',
+			'java压缩包下载.html',
+			'Stream流分割list及分页.html'
 		]
 	},
 
