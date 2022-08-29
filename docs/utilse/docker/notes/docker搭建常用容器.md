@@ -201,15 +201,15 @@ docker run -d --restart always \
 新版本
 
 ```sh
-docker run -d 
--p 9000:9000 
---name=minio 
---restart=always 
--e "MINIO_ROOT_USER=admin"  # 登录账号
--e "MINIO_ROOT_PASSWORD=admin123456"  # 登录密码
--v /home/data:/data 
--v /home/config:/root/.minio  minio/minio server /data 
---console-address ":9000" --address ":9090" # 这个一定要加
+docker run -p 9000:9000 -p 9090:9090 \
+     --name minio \
+     -d --restart=always \
+     -e "MINIO_ACCESS_KEY=lwl-root" \
+     -e "MINIO_SECRET_KEY=l20001121" \
+     -v /mnt/minio/data:/data \
+     -v /mnt/minio/config:/root/.minio \
+     minio/minio server \
+     /data --console-address ":9090" -address ":9000"
 
 ```
 
@@ -220,9 +220,9 @@ docker run -d
    MINIO_ACCESS_KEY替换为MINIO_ROOT_USER
    MINIO_SECRET_KEY替换为MINIO_ROOT_PASSWORD
 
-2. minio是动态端口会改变,需要在docker run 最后加上 --console-address ":9000" --address   这句话
+2. minio是动态端口会改变,需要在docker run 最后加上 --console-address ":9090" -address ":9000"   这句话
 
-   如果不加 管理界面一直进不去
+   如果不加 管理界面一直进不去 9090端口指的是minio的客户端端口
 
 :::
 
