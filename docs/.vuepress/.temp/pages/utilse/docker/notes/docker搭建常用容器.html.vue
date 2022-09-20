@@ -106,15 +106,15 @@ mysql
    -v /home/data/minio/data -v /home/data/minio/config:/root/.minio minio/minio server /data
 
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>新版本</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> run -d 
--p <span class="token number">9000</span>:9000 
---name<span class="token operator">=</span>minio 
---restart<span class="token operator">=</span>always 
--e <span class="token string">"MINIO_ROOT_USER=admin"</span>  <span class="token comment"># 登录账号</span>
--e <span class="token string">"MINIO_ROOT_PASSWORD=admin123456"</span>  <span class="token comment"># 登录密码</span>
--v /home/data:/data 
--v /home/config:/root/.minio  minio/minio server /data 
---console-address <span class="token string">":9000"</span> --address <span class="token string">":9090"</span> <span class="token comment"># 这个一定要加</span>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> run -p <span class="token number">9000</span>:9000 -p <span class="token number">9090</span>:9090 <span class="token punctuation">\</span>
+     --name minio <span class="token punctuation">\</span>
+     -d --restart<span class="token operator">=</span>always <span class="token punctuation">\</span>
+     -e <span class="token string">"MINIO_ACCESS_KEY=lwl-root"</span> <span class="token punctuation">\</span>
+     -e <span class="token string">"MINIO_SECRET_KEY=l20001121"</span> <span class="token punctuation">\</span>
+     -v /mnt/minio/data:/data <span class="token punctuation">\</span>
+     -v /mnt/minio/config:/root/.minio <span class="token punctuation">\</span>
+     minio/minio server <span class="token punctuation">\</span>
+     /data --console-address <span class="token string">":9090"</span> -address <span class="token string">":9000"</span>
 
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="custom-container warning"><p class="custom-container-title">注意</p>
 <ol>
@@ -124,8 +124,8 @@ mysql
 MINIO_SECRET_KEY替换为MINIO_ROOT_PASSWORD</p>
 </li>
 <li>
-<p>minio是动态端口会改变,需要在docker run 最后加上 --console-address &quot;:9000&quot; --address   这句话</p>
-<p>如果不加 管理界面一直进不去</p>
+<p>minio是动态端口会改变,需要在docker run 最后加上 --console-address &quot;:9090&quot; -address &quot;:9000&quot;   这句话</p>
+<p>如果不加 管理界面一直进不去 9090端口指的是minio的客户端端口</p>
 </li>
 </ol>
 </div>
@@ -211,7 +211,23 @@ http {
     include /etc/nginx/conf.d/*.conf;
 }
  
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="_6、最后说明" tabindex="-1"><a class="header-anchor" href="#_6、最后说明" aria-hidden="true">#</a> 6、最后说明</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="_6、docker搭建sqlserver容器-2019版本" tabindex="-1"><a class="header-anchor" href="#_6、docker搭建sqlserver容器-2019版本" aria-hidden="true">#</a> 6、docker搭建sqlServer容器(2019版本)</h2>
+<p>拉取镜像</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> pull mcr.microsoft.com/mssql/server:2019-latest
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><div class="custom-container warning"><p class="custom-container-title">注意</p>
+<p>此出的权限授予不能漏，否则会导致挂在失败，容器启动失败（闪退）。</p>
+</div>
+<p>创建挂载目录，用户授权</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">mkdir</span> -p /hams/backup
+<span class="token function">chown</span> <span class="token number">10001</span>:root /hams/backup
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>容器创建</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> run --restart<span class="token operator">=</span>unless-stopped -e <span class="token string">"ACCEPT_EULA=Y"</span> -e <span class="token string">"SA_PASSWORD=5w5w.5w5w"</span> <span class="token punctuation">\</span>
+-p <span class="token number">1433</span>:1433 --name 2mssql --hostname 2mssql <span class="token punctuation">\</span>
+-v /hams/backup:/var/opt/mssql/data <span class="token punctuation">\</span>
+-d mcr.microsoft.com/mssql/server:2019-latest
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>进入容器</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> <span class="token builtin class-name">exec</span> -it 2mssql <span class="token function">bash</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="最后说明" tabindex="-1"><a class="header-anchor" href="#最后说明" aria-hidden="true">#</a> 最后说明</h2>
 <p>1、如果没有拉取镜像，直接运行</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> run -d --name xxx -p <span class="token number">80</span>:80 mysql
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>docker会默认去下载最新版本的mysql镜像，如果你需要的是最新本版的镜像，就无需拉取镜像。</p>

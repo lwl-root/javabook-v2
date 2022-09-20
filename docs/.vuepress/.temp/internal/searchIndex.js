@@ -891,6 +891,58 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Word、Excel、PPT、PDF、图片类型文件添加水印及转成Html文件实现浏览器预览效果",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一、添加水印",
+        "slug": "一、添加水印",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.1 为项目添加jar包，使用idea开发",
+            "slug": "_1-1-为项目添加jar包-使用idea开发",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.2 添加依赖：",
+            "slug": "_1-2-添加依赖",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.3 准备资源：",
+            "slug": "_1-3-准备资源",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.4 水印代码：",
+            "slug": "_1-4-水印代码",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "二、转Html",
+        "slug": "二、转html",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1 注意事项：",
+            "slug": "_2-1-注意事项",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/frame/notes/%E6%B0%B4%E5%8D%B0%E5%8F%8A%E8%BD%AChtml.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "BigDecimal使用",
     "headers": [
       {
@@ -963,6 +1015,13 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/Java/notes/CountDownLatch.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "批量下载文件-打成压缩包zip下载",
+    "headers": [],
+    "path": "/demo/Java/notes/java%E5%8E%8B%E7%BC%A9%E5%8C%85%E4%B8%8B%E8%BD%BD.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1096,6 +1155,27 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/Java/notes/list%E5%8E%BB%E9%87%8D.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Stream常见操作",
+    "headers": [
+      {
+        "level": 2,
+        "title": "一.Stream流分割list及分页",
+        "slug": "一-stream流分割list及分页",
+        "children": [
+          {
+            "level": 3,
+            "title": "page源码：",
+            "slug": "page源码",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/demo/Java/notes/Stream%E6%B5%81%E5%88%86%E5%89%B2list%E5%8F%8A%E5%88%86%E9%A1%B5.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5874,8 +5954,14 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "6、最后说明",
-        "slug": "_6、最后说明",
+        "title": "6、docker搭建sqlServer容器(2019版本)",
+        "slug": "_6、docker搭建sqlserver容器-2019版本",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "最后说明",
+        "slug": "最后说明",
         "children": []
       }
     ],
@@ -7181,6 +7267,111 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "首页",
+    "headers": [
+      {
+        "level": 2,
+        "title": "使用说明",
+        "slug": "使用说明",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二级标题",
+        "slug": "二级标题",
+        "children": [
+          {
+            "level": 3,
+            "title": "三级标题",
+            "slug": "三级标题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "无序列表",
+            "slug": "无序列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "有序列表",
+            "slug": "有序列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "嵌套列表",
+            "slug": "嵌套列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "引用说明",
+            "slug": "引用说明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "嵌套区块",
+            "slug": "嵌套区块",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码块（单行代码）",
+            "slug": "代码块-单行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多行代码",
+            "slug": "多行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "链接（行内式）",
+            "slug": "链接-行内式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参数式",
+            "slug": "参数式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "图片",
+            "slug": "图片",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "分割线",
+            "slug": "分割线",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字体",
+            "slug": "字体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "表格",
+            "slug": "表格",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Base64Utils",
     "headers": [],
     "path": "/utilse/spring-utils/notes/Base64Util.html",
@@ -7558,111 +7749,6 @@ export const searchIndex = [
       }
     ],
     "path": "/utilse/spring-utils/notes/top-4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "首页",
-    "headers": [
-      {
-        "level": 2,
-        "title": "使用说明",
-        "slug": "使用说明",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "二级标题",
-        "slug": "二级标题",
-        "children": [
-          {
-            "level": 3,
-            "title": "三级标题",
-            "slug": "三级标题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "无序列表",
-            "slug": "无序列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "有序列表",
-            "slug": "有序列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "嵌套列表",
-            "slug": "嵌套列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "引用说明",
-            "slug": "引用说明",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "嵌套区块",
-            "slug": "嵌套区块",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "代码块（单行代码）",
-            "slug": "代码块-单行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多行代码",
-            "slug": "多行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "链接（行内式）",
-            "slug": "链接-行内式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "参数式",
-            "slug": "参数式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "图片",
-            "slug": "图片",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "分割线",
-            "slug": "分割线",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字体",
-            "slug": "字体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "表格",
-            "slug": "表格",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html",
     "pathLocale": "/",
     "extraFields": []
   },

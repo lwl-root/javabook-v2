@@ -336,8 +336,36 @@ http {
 }
  
 ```
+## 6、docker搭建sqlServer容器(2019版本)
+拉取镜像
+```shell
+docker pull mcr.microsoft.com/mssql/server:2019-latest
+```
 
-## 6、最后说明
+::: warning 注意
+此出的权限授予不能漏，否则会导致挂在失败，容器启动失败（闪退）。
+:::
+
+创建挂载目录，用户授权
+```shell
+mkdir -p /hams/backup
+chown 10001:root /hams/backup
+```
+
+容器创建
+```shell
+docker run --restart=unless-stopped -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=5w5w.5w5w" \
+-p 1433:1433 --name 2mssql --hostname 2mssql \
+-v /hams/backup:/var/opt/mssql/data \
+-d mcr.microsoft.com/mssql/server:2019-latest
+```
+
+进入容器
+```shell
+docker exec -it 2mssql bash
+```
+
+## 最后说明
 
 1、如果没有拉取镜像，直接运行
 
