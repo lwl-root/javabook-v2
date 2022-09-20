@@ -25,14 +25,20 @@ export const pagesComponents = {
   "v-09acec6f": defineAsyncComponent(() => import(/* webpackChunkName: "v-09acec6f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/MyBatisPlus.html.vue")),
   // path: /demo/frame/notes/swagger2.html
   "v-39fc678e": defineAsyncComponent(() => import(/* webpackChunkName: "v-39fc678e" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/swagger2.html.vue")),
+  // path: /demo/frame/notes/%E6%B0%B4%E5%8D%B0%E5%8F%8A%E8%BD%AChtml.html
+  "v-758b9306": defineAsyncComponent(() => import(/* webpackChunkName: "v-758b9306" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/frame/notes/水印及转html.html.vue")),
   // path: /demo/Java/notes/BigDecimal.html
   "v-58addb60": defineAsyncComponent(() => import(/* webpackChunkName: "v-58addb60" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/BigDecimal.html.vue")),
   // path: /demo/Java/notes/CountDownLatch.html
   "v-6113b744": defineAsyncComponent(() => import(/* webpackChunkName: "v-6113b744" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/CountDownLatch.html.vue")),
+  // path: /demo/Java/notes/java%E5%8E%8B%E7%BC%A9%E5%8C%85%E4%B8%8B%E8%BD%BD.html
+  "v-b5056fb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-b5056fb0" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/java压缩包下载.html.vue")),
   // path: /demo/Java/notes/java%E5%8F%8D%E5%B0%84.html
   "v-5251ac7f": defineAsyncComponent(() => import(/* webpackChunkName: "v-5251ac7f" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/java反射.html.vue")),
   // path: /demo/Java/notes/list%E5%8E%BB%E9%87%8D.html
   "v-0fc9cbd5": defineAsyncComponent(() => import(/* webpackChunkName: "v-0fc9cbd5" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/list去重.html.vue")),
+  // path: /demo/Java/notes/Stream%E6%B5%81%E5%88%86%E5%89%B2list%E5%8F%8A%E5%88%86%E9%A1%B5.html
+  "v-0cddf283": defineAsyncComponent(() => import(/* webpackChunkName: "v-0cddf283" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/Stream流分割list及分页.html.vue")),
   // path: /demo/Java/notes/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.html
   "v-db4ffdb6": defineAsyncComponent(() => import(/* webpackChunkName: "v-db4ffdb6" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/demo/Java/notes/动态代理.html.vue")),
   // path: /demo/server/notes/ssh%E5%85%AC%E9%92%A5.html
@@ -313,6 +319,8 @@ export const pagesComponents = {
   "v-276c1774": defineAsyncComponent(() => import(/* webpackChunkName: "v-276c1774" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/迭代器工具类.html.vue")),
   // path: /utilse/guava/notes/%E9%9B%86%E5%90%88%E5%B7%A5%E5%85%B7%E7%B1%BB.html
   "v-4cdf575b": defineAsyncComponent(() => import(/* webpackChunkName: "v-4cdf575b" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/guava/notes/集合工具类.html.vue")),
+  // path: /utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html
+  "v-6b5b42fa": defineAsyncComponent(() => import(/* webpackChunkName: "v-6b5b42fa" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/markdown/notes/Markdown基本使用.html.vue")),
   // path: /utilse/spring-utils/notes/Base64Util.html
   "v-4d1116be": defineAsyncComponent(() => import(/* webpackChunkName: "v-4d1116be" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/Base64Util.html.vue")),
   // path: /utilse/spring-utils/notes/EventBus.html
@@ -329,8 +337,6 @@ export const pagesComponents = {
   "v-0512401c": defineAsyncComponent(() => import(/* webpackChunkName: "v-0512401c" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/StreamUtils.html.vue")),
   // path: /utilse/spring-utils/notes/top-4.html
   "v-500d3cf2": defineAsyncComponent(() => import(/* webpackChunkName: "v-500d3cf2" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/spring-utils/notes/top-4.html.vue")),
-  // path: /utilse/markdown/notes/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.html
-  "v-6b5b42fa": defineAsyncComponent(() => import(/* webpackChunkName: "v-6b5b42fa" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/utilse/markdown/notes/Markdown基本使用.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"D:/学习/项目/my_book/javaBook/docs/.vuepress/.temp/pages/404.html.vue")),
 }

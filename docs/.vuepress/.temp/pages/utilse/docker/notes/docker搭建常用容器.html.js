@@ -38,13 +38,19 @@ export const data = {
     },
     {
       "level": 2,
-      "title": "6、最后说明",
-      "slug": "_6、最后说明",
+      "title": "6、docker搭建sqlServer容器(2019版本)",
+      "slug": "_6、docker搭建sqlserver容器-2019版本",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "最后说明",
+      "slug": "最后说明",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": 1642384727000
+    "updatedTime": 1661778419000
   },
   "filePathRelative": "utilse/docker/notes/docker搭建常用容器.md"
 }

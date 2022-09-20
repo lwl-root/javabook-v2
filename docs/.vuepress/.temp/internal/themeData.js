@@ -607,7 +607,9 @@ export const themeData = {
           "java反射.html",
           "动态代理.html",
           "BigDecimal.html",
-          "CountDownLatch.html"
+          "CountDownLatch.html",
+          "java压缩包下载.html",
+          "Stream流分割list及分页.html"
         ]
       }
     ],
@@ -623,8 +625,8 @@ export const themeData = {
             "link": "/demo/frame/notes/junitTest.html"
           },
           {
-            "text": "java给文件添加水印",
-            "link": "/demo/frame/notes/java添加水印.html"
+            "text": "文件添加水印转html",
+            "link": "/demo/frame/notes/水印及转html.html"
           }
         ]
       }
