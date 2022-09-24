@@ -84,7 +84,7 @@ mkdir -p /usr/data/mysql/logs /usr/data/mysql/data /usr/data/mysql/conf
 
 :::
 
-**创建my.cnf配置文件**
+**创建my.cnf配置文件(可省略)**
 
 ```shell
 cd /mysql/conf
@@ -106,25 +106,25 @@ default-character-set=utf8
 default-character-set=utf8
 ```
 
-
-
 用镜像创建容器
 
 ```sh
-docker run 
---restart=always 
--p 3306:3306 
---name mysql 
--v /usr/data/mysql/conf:/etc/mysql  
--v /usr/data/mysql/logs:/var/log/mysql 
--v /usr/data/mysql/data:/var/lib/mysql 
--v /usr/data/mysql/conf/my.cnf:/etc/mysql/my.cnf 
--e MYSQL_ROOT_PASSWORD=123456 
--d 
-mysql
+ docker run --restart=always \
+ -p 3306:3306 \
+--name mysql \
+-v /mnt/mysql/log:/var/log/mysql \
+-v /mnt/mysql/data:/var/lib/mysql  \
+-v /mnt/mysql/conf:/etc/mysql/conf.d  \
+-v /etc/localtime:/etc/localtime:ro \
+-e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest 
 ```
 
-启动成功后进入redis容器
+说明：
+   - --restart=always：自动重启。
+   - -v /etc/localtime:/etc/localtime:ro ：将宿主机的时间挂载到MySQL容器中，新版的MySQL时区不是东八区时区需要修改。
+   - -e MYSQL_ROOT_PASSWORD=123456 :MySQL密码设置。
+
+启动成功后进入mysql容器
 
 ```shell
 docker exec -it mysql /bin/bash
@@ -343,7 +343,7 @@ docker pull mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ::: warning 注意
-此出的权限授予不能漏，否则会导致挂在失败，容器启动失败（闪退）。
+此处的权限授予不能漏，否则会导致挂在失败，容器启动失败（闪退）。
 :::
 
 创建挂载目录，用户授权
