@@ -129,7 +129,32 @@ default-character-set=utf8
 ```shell
 docker exec -it mysql /bin/bash
 ```
+### 小坑
+**远程连接mysql：报异常 mysql-1044**
 
+**一·问题描述：**
+
+1. 在Linux中Docker中部署mysql 8.0容器
+
+2. 远程连接工具可以成功连接，docker中数据库容器，但是只会显示一个数据库，其他的必要数据库无法显示出来：（mysql 8.0版本）
+
+3. 无法使用远程连接工具创建数据库（Navicat）：一旦执行创建数据库，就报1044异常。
+
+4. 进入docker中的mysql容器中，却可以正常创建数据库。
+
+**二·问题原因：**
+1. 根本原因：远程连接用户权限不足！
+2. 直接原因：应该是创建远程连接用户 'root@%' 时，没有添加访问数据库的权限。
+
+**三·解决办法：**
+
+```sql
+# 这里为刚才创建的root@% 用户授予所有数据库的所有表的所有操作访问权限
+grant all privileges on *.* to 'root'@'%' with grant option;
+
+# 刷新权限
+flush privileges;
+```
 
 
 ## 3、docker搭建rabbitMQ容器
