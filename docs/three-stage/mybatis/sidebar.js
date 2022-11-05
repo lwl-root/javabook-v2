@@ -30,14 +30,17 @@ module.exports = [
 		link:'/three-stage/mybatis/notes/03.MyBatis Generator.html',
 		children:[
 			'03.MyBatis Generator.html',
+			'延迟加载.html',
+			'MyBatis内置缓存.html',
+			'个人习惯.html',
 		]
 	},
-	{
-		text:'扩展',
-		collapsable: false,
-		// link:'/two-stage/mybatis/notes/基本概念.html',
-		children:[
-			
-		]
-	},
+	// {
+	// 	text:'扩展',
+	// 	collapsable: false,
+	// 	link:'/two-stage/mybatis/notes/延迟加载.html',
+	// 	children:[
+	// 		''
+	// 	]
+	// },
 ]
