@@ -578,13 +578,11 @@ export const themeData = {
         "collapsable": false,
         "link": "/three-stage/mybatis/notes/03.MyBatis Generator.html",
         "children": [
-          "03.MyBatis Generator.html"
+          "03.MyBatis Generator.html",
+          "延迟加载.html",
+          "MyBatis内置缓存.html",
+          "个人习惯.html"
         ]
-      },
-      {
-        "text": "扩展",
-        "collapsable": false,
-        "children": []
       }
     ],
     "/pascal/basics": [

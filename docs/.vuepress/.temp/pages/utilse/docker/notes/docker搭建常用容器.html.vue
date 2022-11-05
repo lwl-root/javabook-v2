@@ -39,7 +39,7 @@
 <div class="custom-container warning"><p class="custom-container-title">注意</p>
 <p>如果不创建挂载目录，一旦容器重启，则数据会全部丢失。</p>
 </div>
-<p><strong>创建my.cnf配置文件</strong></p>
+<p><strong>创建my.cnf配置文件(可省略)</strong></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token builtin class-name">cd</span> /mysql/conf
 <span class="token function">touch</span> my.cnf
 然后使用vim编辑my.cnf文件，文件内容如下：
@@ -58,20 +58,51 @@ default-character-set<span class="token operator">=</span>utf8
 <span class="token punctuation">[</span>mysql<span class="token punctuation">]</span>
 default-character-set<span class="token operator">=</span>utf8
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>用镜像创建容器</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> run 
---restart<span class="token operator">=</span>always 
--p <span class="token number">3306</span>:3306 
---name mysql 
--v /usr/data/mysql/conf:/etc/mysql  
--v /usr/data/mysql/logs:/var/log/mysql 
--v /usr/data/mysql/data:/var/lib/mysql 
--v /usr/data/mysql/conf/my.cnf:/etc/mysql/my.cnf 
--e <span class="token assign-left variable">MYSQL_ROOT_PASSWORD</span><span class="token operator">=</span><span class="token number">123456</span> 
--d 
-mysql
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>启动成功后进入redis容器</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code> <span class="token function">docker</span> run --restart<span class="token operator">=</span>always <span class="token punctuation">\</span>
+ -p <span class="token number">3306</span>:3306 <span class="token punctuation">\</span>
+--name mysql <span class="token punctuation">\</span>
+-v /mnt/mysql/log:/var/log/mysql <span class="token punctuation">\</span>
+-v /mnt/mysql/data:/var/lib/mysql  <span class="token punctuation">\</span>
+-v /mnt/mysql/conf:/etc/mysql/conf.d  <span class="token punctuation">\</span>
+-v /etc/localtime:/etc/localtime:ro <span class="token punctuation">\</span>
+-e <span class="token assign-left variable">MYSQL_ROOT_PASSWORD</span><span class="token operator">=</span><span class="token number">123456</span> -d mysql:latest 
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>说明：</p>
+<ul>
+<li>--restart=always：自动重启。</li>
+<li>-v /etc/localtime:/etc/localtime:ro ：将宿主机的时间挂载到MySQL容器中，新版的MySQL时区不是东八区时区需要修改。</li>
+<li>-e MYSQL_ROOT_PASSWORD=123456 :MySQL密码设置。</li>
+</ul>
+<p>启动成功后进入mysql容器</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> <span class="token builtin class-name">exec</span> -it mysql /bin/bash
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h2 id="_3、docker搭建rabbitmq容器" tabindex="-1"><a class="header-anchor" href="#_3、docker搭建rabbitmq容器" aria-hidden="true">#</a> 3、docker搭建rabbitMQ容器</h2>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="小坑" tabindex="-1"><a class="header-anchor" href="#小坑" aria-hidden="true">#</a> 小坑</h3>
+<p><strong>远程连接mysql：报异常 mysql-1044</strong></p>
+<p><strong>一·问题描述：</strong></p>
+<ol>
+<li>
+<p>在Linux中Docker中部署mysql 8.0容器</p>
+</li>
+<li>
+<p>远程连接工具可以成功连接，docker中数据库容器，但是只会显示一个数据库，其他的必要数据库无法显示出来：（mysql 8.0版本）</p>
+</li>
+<li>
+<p>无法使用远程连接工具创建数据库（Navicat）：一旦执行创建数据库，就报1044异常。</p>
+</li>
+<li>
+<p>进入docker中的mysql容器中，却可以正常创建数据库。</p>
+</li>
+</ol>
+<p><strong>二·问题原因：</strong></p>
+<ol>
+<li>根本原因：远程连接用户权限不足！</li>
+<li>直接原因：应该是创建远程连接用户 'root@%' 时，没有添加访问数据库的权限。</li>
+</ol>
+<p><strong>三·解决办法：</strong></p>
+<div class="language-sql ext-sql line-numbers-mode"><pre v-pre class="language-sql"><code><span class="token comment"># 这里为刚才创建的root@% 用户授予所有数据库的所有表的所有操作访问权限</span>
+<span class="token keyword">grant</span> <span class="token keyword">all</span> <span class="token keyword">privileges</span> <span class="token keyword">on</span> <span class="token operator">*</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">to</span> <span class="token string">'root'</span><span class="token variable">@'%'</span> <span class="token keyword">with</span> <span class="token keyword">grant</span> <span class="token keyword">option</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 刷新权限</span>
+flush <span class="token keyword">privileges</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_3、docker搭建rabbitmq容器" tabindex="-1"><a class="header-anchor" href="#_3、docker搭建rabbitmq容器" aria-hidden="true">#</a> 3、docker搭建rabbitMQ容器</h2>
 <p>首先拉取rabbitMQ镜像</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> pull rabbitmq //最新版
 <span class="token function">docker</span> pull rabbitmq:3.7-management //其他版本
@@ -215,7 +246,7 @@ http {
 <p>拉取镜像</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> pull mcr.microsoft.com/mssql/server:2019-latest
 </code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><div class="custom-container warning"><p class="custom-container-title">注意</p>
-<p>此出的权限授予不能漏，否则会导致挂在失败，容器启动失败（闪退）。</p>
+<p>此处的权限授予不能漏，否则会导致挂在失败，容器启动失败（闪退）。</p>
 </div>
 <p>创建挂载目录，用户授权</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">mkdir</span> -p /hams/backup

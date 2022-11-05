@@ -1424,6 +1424,39 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "数据结构与算法入门",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.算法的复杂度",
+        "slug": "_1-算法的复杂度",
+        "children": [
+          {
+            "level": 3,
+            "title": "算法复杂度的表达式",
+            "slug": "算法复杂度的表达式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "时间复杂度",
+            "slug": "时间复杂度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "空间复杂度",
+            "slug": "空间复杂度",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Classpath 在哪？",
     "headers": [
       {
@@ -3852,39 +3885,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据结构与算法入门",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.算法的复杂度",
-        "slug": "_1-算法的复杂度",
-        "children": [
-          {
-            "level": 3,
-            "title": "算法复杂度的表达式",
-            "slug": "算法复杂度的表达式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "时间复杂度",
-            "slug": "时间复杂度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "空间复杂度",
-            "slug": "空间复杂度",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "使用 Mockito 伪造对象",
     "headers": [],
     "path": "/three-stage/junit/notes/mockito.html",
@@ -4448,6 +4448,110 @@ export const searchIndex = [
       }
     ],
     "path": "/three-stage/mybatis/notes/03.MyBatis%20Generator.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Mybatis 的内置缓存",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. Mybatis 一级缓存",
+        "slug": "_1-mybatis-一级缓存",
+        "children": [
+          {
+            "level": 3,
+            "title": "概述",
+            "slug": "概述",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "刷新缓存的时机",
+            "slug": "刷新缓存的时机",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. Mybatis 二级缓存",
+        "slug": "_2-mybatis-二级缓存",
+        "children": [
+          {
+            "level": 3,
+            "title": "打开二级缓存总开关",
+            "slug": "打开二级缓存总开关",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "打开需要使用二级缓存的 mapper 的开关。",
+            "slug": "打开需要使用二级缓存的-mapper-的开关。",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "POJO 序列化",
+            "slug": "pojo-序列化",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/MyBatis%E5%86%85%E7%BD%AE%E7%BC%93%E5%AD%98.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "一个个人习惯引发的问题",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 有些人的个人习惯",
+        "slug": "_1-有些人的个人习惯",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 问题及其原因",
+        "slug": "_2-问题及其原因",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 解决办法",
+        "slug": "_3-解决办法",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/%E4%B8%AA%E4%BA%BA%E4%B9%A0%E6%83%AF.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "延迟加载",
+    "headers": [
+      {
+        "level": 2,
+        "title": "立即加载",
+        "slug": "立即加载",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "激进式延迟加载",
+        "slug": "激进式延迟加载",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "真-延迟加载",
+        "slug": "真-延迟加载",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/mybatis/notes/%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5932,7 +6036,14 @@ export const searchIndex = [
         "level": 2,
         "title": "2、docker搭建mysql容器",
         "slug": "_2、docker搭建mysql容器",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "小坑",
+            "slug": "小坑",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -5966,6 +6077,347 @@ export const searchIndex = [
       }
     ],
     "path": "/utilse/docker/notes/docker%E6%90%AD%E5%BB%BA%E5%B8%B8%E7%94%A8%E5%AE%B9%E5%99%A8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Axios 发起AJAX请求模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、html页面引入Axios（使用CDN）",
+        "slug": "_1、html页面引入axios-使用cdn",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、发起AJAX GET 请求",
+        "slug": "_2、发起ajax-get-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3、发起AJAX POST 请求",
+        "slug": "_3、发起ajax-post-请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4、发起AJAX POST 请求",
+        "slug": "_4、发起ajax-post-请求",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/axios.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "docker-compose.yml 模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "mysql",
+        "slug": "mysql",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "redis",
+        "slug": "redis",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "nginx",
+        "slug": "nginx",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "RabbitMQ",
+        "slug": "rabbitmq",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Elastic Search",
+        "slug": "elastic-search",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Nacos",
+        "slug": "nacos",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/docker-compose.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Git",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 创建 SSH key",
+        "slug": "_1-创建-ssh-key",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. gitignore 文件模板",
+        "slug": "_2-gitignore-文件模板",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. Git 常用命令汇总",
+        "slug": "_3-git-常用命令汇总",
+        "children": [
+          {
+            "level": 3,
+            "title": "0. 如何创建 SSH key",
+            "slug": "_0-如何创建-ssh-key",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1. 配置",
+            "slug": "_1-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2. 仓库",
+            "slug": "_2-仓库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3. 增加/删除文件",
+            "slug": "_3-增加-删除文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4. 代码提交",
+            "slug": "_4-代码提交",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5. 分支",
+            "slug": "_5-分支",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "6. 标签",
+            "slug": "_6-标签",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "7. 远程同步",
+            "slug": "_7-远程同步",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "8. 查看信息",
+            "slug": "_8-查看信息",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "jdbc.properties",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1、自定义的 .properties 配置",
+        "slug": "_1、自定义的-properties-配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2、Spring Boot 项目中的配置",
+        "slug": "_2、spring-boot-项目中的配置",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/jdbc.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "logback",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. logback.xml 例子",
+        "slug": "_1-logback-xml-例子",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. Spring Boot 中的日志配置",
+        "slug": "_2-spring-boot-中的日志配置",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/logback.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Maven 相关模板",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. maven 的 settings.xml",
+        "slug": "_1-maven-的-settings-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. cleanLastUpdated.bat",
+        "slug": "_2-cleanlastupdated-bat",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. maven 的 pom.xml",
+        "slug": "_3-maven-的-pom-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. mybatis-generator-maven-plugin 插件配置",
+        "slug": "_4-mybatis-generator-maven-plugin-插件配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. tomcat8-magen-plugin 配置",
+        "slug": "_5-tomcat8-magen-plugin-配置",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/maven-xml.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Mybatis 相关",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. mybatis-generator-maven-plugin 插件",
+        "slug": "_1-mybatis-generator-maven-plugin-插件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. generator.properties",
+        "slug": "_2-generator-properties",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. mybatis-generator-config.xml 配置",
+        "slug": "_3-mybatis-generator-config-xml-配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 核心配置文件 for standalone",
+        "slug": "_4-核心配置文件-for-standalone",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 核心配置文件 with Spring",
+        "slug": "_5-核心配置文件-with-spring",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 普通的结果集映射",
+        "slug": "_6-普通的结果集映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. 结果集一对多映射",
+        "slug": "_7-结果集一对多映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 结果集多对一映射",
+        "slug": "_8-结果集多对一映射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 注解映射",
+        "slug": "_9-注解映射",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/mybatis-xml.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SSM 整合（Java 代码配置版）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. SpringDaoConfig 替代了 spring-dao.xml",
+        "slug": "_1-springdaoconfig-替代了-spring-dao-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. SpringServiceConfig 替代了 spring-service.xml",
+        "slug": "_2-springserviceconfig-替代了-spring-service-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. SpringWebConfig 替代了 spring-web.xml",
+        "slug": "_3-springwebconfig-替代了-spring-web-xml",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 有 web.xml 的方案",
+        "slug": "_4-有-web-xml-的方案",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 无 web.xml 的方案：WebAppInitializer",
+        "slug": "_5-无-web-xml-的方案-webappinitializer",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配合 @PropertySource 使用的一个『坑』（了解、自学）",
+        "slug": "配合-propertysource-使用的一个『坑』-了解、自学",
+        "children": []
+      }
+    ],
+    "path": "/utilse/gist/notes/ssm-java.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6573,347 +7025,6 @@ export const searchIndex = [
       }
     ],
     "path": "/utilse/else/notes/%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Axios 发起AJAX请求模板",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、html页面引入Axios（使用CDN）",
-        "slug": "_1、html页面引入axios-使用cdn",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、发起AJAX GET 请求",
-        "slug": "_2、发起ajax-get-请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3、发起AJAX POST 请求",
-        "slug": "_3、发起ajax-post-请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4、发起AJAX POST 请求",
-        "slug": "_4、发起ajax-post-请求",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/axios.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "docker-compose.yml 模板",
-    "headers": [
-      {
-        "level": 2,
-        "title": "mysql",
-        "slug": "mysql",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "redis",
-        "slug": "redis",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "nginx",
-        "slug": "nginx",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "RabbitMQ",
-        "slug": "rabbitmq",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Elastic Search",
-        "slug": "elastic-search",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Nacos",
-        "slug": "nacos",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/docker-compose.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Git",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 创建 SSH key",
-        "slug": "_1-创建-ssh-key",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. gitignore 文件模板",
-        "slug": "_2-gitignore-文件模板",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. Git 常用命令汇总",
-        "slug": "_3-git-常用命令汇总",
-        "children": [
-          {
-            "level": 3,
-            "title": "0. 如何创建 SSH key",
-            "slug": "_0-如何创建-ssh-key",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1. 配置",
-            "slug": "_1-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2. 仓库",
-            "slug": "_2-仓库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3. 增加/删除文件",
-            "slug": "_3-增加-删除文件",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4. 代码提交",
-            "slug": "_4-代码提交",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5. 分支",
-            "slug": "_5-分支",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "6. 标签",
-            "slug": "_6-标签",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "7. 远程同步",
-            "slug": "_7-远程同步",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "8. 查看信息",
-            "slug": "_8-查看信息",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/utilse/gist/notes/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "jdbc.properties",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1、自定义的 .properties 配置",
-        "slug": "_1、自定义的-properties-配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2、Spring Boot 项目中的配置",
-        "slug": "_2、spring-boot-项目中的配置",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/jdbc.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "logback",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. logback.xml 例子",
-        "slug": "_1-logback-xml-例子",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. Spring Boot 中的日志配置",
-        "slug": "_2-spring-boot-中的日志配置",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/logback.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Maven 相关模板",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. maven 的 settings.xml",
-        "slug": "_1-maven-的-settings-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. cleanLastUpdated.bat",
-        "slug": "_2-cleanlastupdated-bat",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. maven 的 pom.xml",
-        "slug": "_3-maven-的-pom-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. mybatis-generator-maven-plugin 插件配置",
-        "slug": "_4-mybatis-generator-maven-plugin-插件配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. tomcat8-magen-plugin 配置",
-        "slug": "_5-tomcat8-magen-plugin-配置",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/maven-xml.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Mybatis 相关",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. mybatis-generator-maven-plugin 插件",
-        "slug": "_1-mybatis-generator-maven-plugin-插件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. generator.properties",
-        "slug": "_2-generator-properties",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. mybatis-generator-config.xml 配置",
-        "slug": "_3-mybatis-generator-config-xml-配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 核心配置文件 for standalone",
-        "slug": "_4-核心配置文件-for-standalone",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 核心配置文件 with Spring",
-        "slug": "_5-核心配置文件-with-spring",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 普通的结果集映射",
-        "slug": "_6-普通的结果集映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. 结果集一对多映射",
-        "slug": "_7-结果集一对多映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 结果集多对一映射",
-        "slug": "_8-结果集多对一映射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 注解映射",
-        "slug": "_9-注解映射",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/mybatis-xml.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SSM 整合（Java 代码配置版）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. SpringDaoConfig 替代了 spring-dao.xml",
-        "slug": "_1-springdaoconfig-替代了-spring-dao-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. SpringServiceConfig 替代了 spring-service.xml",
-        "slug": "_2-springserviceconfig-替代了-spring-service-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. SpringWebConfig 替代了 spring-web.xml",
-        "slug": "_3-springwebconfig-替代了-spring-web-xml",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 有 web.xml 的方案",
-        "slug": "_4-有-web-xml-的方案",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 无 web.xml 的方案：WebAppInitializer",
-        "slug": "_5-无-web-xml-的方案-webappinitializer",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "配合 @PropertySource 使用的一个『坑』（了解、自学）",
-        "slug": "配合-propertysource-使用的一个『坑』-了解、自学",
-        "children": []
-      }
-    ],
-    "path": "/utilse/gist/notes/ssm-java.html",
     "pathLocale": "/",
     "extraFields": []
   },
