@@ -156,6 +156,7 @@ grant all privileges on *.* to 'root'@'%' with grant option;
 flush privileges;
 ```
 
+<img src="/images/mysql1.png">
 
 ## 3、docker搭建rabbitMQ容器
 
