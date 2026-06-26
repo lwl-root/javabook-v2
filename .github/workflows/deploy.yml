@@ -5,23 +5,23 @@ on:
     branches:
       - master
 
-permissions:
-  contents: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - name: Install and Build
         run: |
           npm install
           npm run docs:build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/.vuepress/dist
+      
+      - name: 🔍 彻底检查文件生成位置
+        run: |
+          echo "--- 根目录下的内容 ---"
+          ls -F
+          echo "--- docs/.vuepress 目录下的内容 ---"
+          ls -F docs/.vuepress/
+          echo "--- 如果有 dist 目录，看看里面有什么 ---"
+          if [ -d "dist" ]; then ls -R dist; else echo "没有找到 dist 目录"; fi
+          echo "--- 如果有 docs/.vuepress/dist 目录，看看里面有什么 ---"
+          if [ -d "docs/.vuepress/dist" ]; then ls -R docs/.vuepress/dist; else echo "没有找到 docs/.vuepress/dist 目录"; fi
