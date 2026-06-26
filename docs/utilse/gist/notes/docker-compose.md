@@ -47,8 +47,6 @@
     [mysql]
     default-character-set=utf8
   ```
-:::
-
 ## redis
 ::: code-tabs
 @tab docker 命令版
@@ -145,8 +143,6 @@
   aof-rewrite-incremental-fsync yes
   rdb-save-incremental-fsync yes
   ```
-:::
-
 ## nginx
 
 ::: danger 警告
