@@ -3,7 +3,10 @@ name: Deploy VuePress
 on:
   push:
     branches:
-      - master
+      - master # 确保这里和你实际的分支名一致
+
+permissions:
+  contents: write # 必须要有写入权限
 
 jobs:
   build-and-deploy:
@@ -22,5 +25,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
-permissions:
-  contents: write # 必须要有这个权限
