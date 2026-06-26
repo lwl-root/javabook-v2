@@ -3,10 +3,10 @@ name: Deploy VuePress
 on:
   push:
     branches:
-      - master # 确保这里和你实际的分支名一致
+      - master
 
 permissions:
-  contents: write # 必须要有写入权限
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -20,17 +20,9 @@ jobs:
           npm install
           npm run docs:build
 
-      - name: List files for debug
-        run: |
-          echo "查看当前目录："
-          ls -F
-          echo "查看 docs 目录："
-          ls -F docs/
-          echo "查看 docs/.vuepress 目录："
-          ls -F docs/.vuepress/
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist  # 确保这里对应的是根目录的 dist
+          force_orphan: true    # 强制创建一个干净的发布分支，解决旧文件残留问题
