@@ -8,7 +8,7 @@ export default defineUserConfig({
   title: 'J a v a',
   description: '别睡着了，这不是尽头。',
   base: '/javabook-v2/',
-  dest: './dist',
+  dest: 'docs/.vuepress/dist',
   port: '4950',
   head: [
     ['link', { rel: 'icon', href: 'logo.png' }],
