@@ -20,6 +20,15 @@ jobs:
           npm install
           npm run docs:build
 
+      - name: List files for debug
+        run: |
+          echo "查看当前目录："
+          ls -F
+          echo "查看 docs 目录："
+          ls -F docs/
+          echo "查看 docs/.vuepress 目录："
+          ls -F docs/.vuepress/
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
