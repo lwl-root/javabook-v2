@@ -6,7 +6,9 @@ on:
       - master
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -20,12 +22,14 @@ jobs:
           npm install
           npm run docs:build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 必须使用绝对路径或基于根目录的精确路径
-          publish_dir: ./docs/.vuepress/dist
-          # 确保不排除这些目录
-          keep_files: false
-          force_orphan: true
+          path: './docs/.vuepress/dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
