@@ -5,7 +5,6 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "npm run docs:build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
