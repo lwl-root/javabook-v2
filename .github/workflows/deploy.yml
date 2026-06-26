@@ -24,5 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # 确保这里对应的是根目录的 dist
-          force_orphan: true    # 强制创建一个干净的发布分支，解决旧文件残留问题
+          publish_dir: ./docs/.vuepress/dist
