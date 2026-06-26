@@ -22,3 +22,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
+permissions:
+  contents: write # 必须要有这个权限
