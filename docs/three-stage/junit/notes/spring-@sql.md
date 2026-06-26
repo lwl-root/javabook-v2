@@ -1,6 +1,6 @@
 # Spring 中的 @Sql 注解
 
-> 大概我们在别处也用不上 Spring 的 @Sql 注解，主要也就是在单元测试中它才有用武之地。
+&gt; 大概我们在别处也用不上 Spring 的 @Sql 注解，主要也就是在单元测试中它才有用武之地。
 
 ## 1. @Sql 注解
 
@@ -79,11 +79,11 @@ public class SqlTest {
 
 @SqlConfig 用于配置如何去解释 @Sql 注解中指定的 Sql 脚本。
 
-> @SqlConfig 用于配置 @Sql 的一些个性化的行为，通常，我们不会那么有个性。
+&gt; @SqlConfig 用于配置 @Sql 的一些个性化的行为，通常，我们不会那么有个性。
 
 @SqlConfig 可以用于类上，也可以用于方法上。
 
-> @Sql 注解也有一个 config 属性，作用与 @SqlConfig 相同，不同的是作用域只在对应的 @Sql 注解范围。它的优先级也大于类注解的 @SqlConfig 。
+&gt; @Sql 注解也有一个 config 属性，作用与 @SqlConfig 相同，不同的是作用域只在对应的 @Sql 注解范围。它的优先级也大于类注解的 @SqlConfig 。
 
 | 属性                       | 说明                                                         |
 | :------------------------- | :----------------------------------------------------------- |
@@ -137,7 +137,7 @@ insert into student(id, name) values (102, 'Krishna');
 
 @SqlMergeMode 可以加在类上，也可以加在方法上。用于指示方法上的 @Sql 和类上 @Sql 注解配置是否合并。方法上的 @SqlMergeMode 注解优先级更高。默认值是 SqlMergeMode.MergeMode 的 OVERRIDE 。
 
-> 和 @SqlConfig 注解一样，@SqlMergeMode 注解也是用于配置 @Sql 的一些个性化的行为，通常，我们不会那么有个性。
+&gt; 和 @SqlConfig 注解一样，@SqlMergeMode 注解也是用于配置 @Sql 的一些个性化的行为，通常，我们不会那么有个性。
 
 ```java
 @SqlMergeMode(MergeMode.MERGE)

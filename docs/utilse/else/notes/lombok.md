@@ -104,7 +104,7 @@ public class Human { ... }
 
 和之前的 **@ToString** 一样，可是使用 **exclude** 选项除掉不想要的属性。也可以通过 **callSuper** 包含父类的 equals 和 hashCode 。
 
-> 需要注意的是，如果类的属性中有 Array（数组）类型的变量，最好是『**手写**』**equals** 和 **hashCode** 方法。因为最好是调用工具类 Arrays 中的 **deepHashCode** 方法， **deepEquals** 方法进行比较。
+&gt; 需要注意的是，如果类的属性中有 Array（数组）类型的变量，最好是『**手写**』**equals** 和 **hashCode** 方法。因为最好是调用工具类 Arrays 中的 **deepHashCode** 方法， **deepEquals** 方法进行比较。
 
 ## @Data 注解
 

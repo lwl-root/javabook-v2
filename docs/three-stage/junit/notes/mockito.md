@@ -1,6 +1,6 @@
 # 使用 Mockito 伪造对象
 
-> 如果是 SpringBoot 项目，Spring Boot 项目已经包含了它，无需引入。
+&gt; 如果是 SpringBoot 项目，Spring Boot 项目已经包含了它，无需引入。
 
 ```xml
 <dependency>

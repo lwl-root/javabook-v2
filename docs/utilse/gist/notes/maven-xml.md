@@ -1,1 +1,303 @@
-﻿# Maven 相关模板## 1. maven 的 settings.xml```xml&lt;?xml version="1.0" encoding="UTF-8"?>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0    http://maven.apache.org/xsd/settings-1.0.0.xsd">    &lt;mirrors>        &lt;mirror>            &lt;id>nexus-aliyun&lt;/id>            &lt;name>Nexus aliyun&lt;/name>            &lt;mirrorOf>central&lt;/mirrorOf>            &lt;url>http://maven.aliyun.com/nexus/content/groups/public&lt;/url>        &lt;/mirror>    &lt;/mirrors>    <!-- 写法一     &lt;repository>        &lt;id>nexus-aliyun&lt;/id>        &lt;name>Nexus aliyun&lt;/name>        &lt;url>https://maven.aliyun.com/repository/public&lt;/url>    &lt;/repository>    -->    <!-- 写法二    &lt;profiles>        &lt;profile>            &lt;id>hello&lt;/id>            &lt;repositories>                &lt;repository>                    &lt;id>aliyun&lt;/id>                    &lt;url>https://maven.aliyun.com/repository/public&lt;/url>                &lt;/repository>            &lt;/repositories>            &lt;pluginRepositories>                &lt;pluginRepository>                    &lt;id>alfresco&lt;/id>                    &lt;url>https://artifacts.alfresco.com/nexus/content/repositories/public/&lt;/url>                &lt;/pluginRepository>            &lt;/pluginRepositories>        &lt;/profile>    &lt;/profiles>    &lt;activeProfiles>        &lt;activeProfile>hello&lt;/activeProfile>    &lt;/activeProfiles>    -->&lt;/settings>```## 2. cleanLastUpdated.bat&lt;CodeGroup&gt;&lt;CodeGroupItem title="Windows 版本"&gt;  ```bash  @echo off  rem create by NettQun    rem 这里写你的仓库路径，利用了系统变量 HOMEPATH ，避免写死。  set REPOSITORY_PATH=C:%HOMEPATH%\.m2\repository  rem 正在搜索...  for /f "delims=" %%i in ('dir /b /s "%REPOSITORY_PATH%\*lastUpdated*"') do (      echo %%i      del /s /q "%%i"  )  rem 搜索完毕  pause  ```&lt;/CodeGroupItem>&lt;CodeGroupItem title="Linux 版本"&gt;  ```bash  #!/bin/bash    # 这里写你的仓库路径   REPOSITORY_PATH=~/.m2/repository  echo 正在搜索...   find $REPOSITORY_PATH -name "*lastUpdated*" | xargs rm -fr  echo 搜索完   ```  &lt;/CodeGroupItem>  &lt;/CodeGroup>## 3. maven 的 pom.xml版本信息来源说明：以下的版本信息截取自 spring-boot-starter 2.1.16 和 mybatis-spring-boot 2.0.1，选择这两个版本的原因在于：- spring-boot-starter ***2.1.16.RELEASE*** 是 spring clould Greenwich.SR6 使用的版本 。- spring-boot-starter ***2.1.16.RELEASE*** 最终使用到的 spring 的版本是 ***5.1.17.RELEASE*** 。- mybatis-spring-boot-starter ***2.0.1*** 最低支持的 spring 版本刚好最低到 ***5.1.16.RELEASE*** 。所依赖的包有：- guava + slf4j + logback- SSM- jackson + hikaricp + pagehelper- junit- tomcat7 插件```xml&lt;properties>    &lt;project.build.sourceEncoding>UTF-8&lt;/project.build.sourceEncoding>    &lt;maven.compiler.source>1.8&lt;/maven.compiler.source>    &lt;maven.compiler.target>1.8&lt;/maven.compiler.target>    &lt;java.version>1.8&lt;/java.version>    &lt;lombok.version>1.18.12&lt;/lombok.version>    &lt;logback.version>1.2.3&lt;/logback.version>    &lt;guava.version>28.2-jre&lt;/guava.version>    &lt;spring.version>5.1.17.RELEASE&lt;/spring.version>    &lt;aspectj.version>1.9.6&lt;/aspectj.version>    &lt;servlet-api.version>3.1.0&lt;/servlet-api.version>    &lt;jsp-api.version>2.2&lt;/jsp-api.version>    &lt;jstl.version>1.2&lt;/jstl.version>    &lt;jackson.version>2.9.10&lt;/jackson.version>    &lt;mysql.version>8.0.21&lt;/mysql.version>    &lt;hikaricp.version>3.2.0&lt;/hikaricp.version>    &lt;mybatis.version>3.5.1&lt;/mybatis.version>    &lt;mybatis-spring.version>2.0.1&lt;/mybatis-spring.version>    &lt;pagehelper.version>5.1.8&lt;/pagehelper.version> <!-- 单独指定 -->    &lt;junit.version>4.12&lt;/junit.version>&lt;/properties>&lt;dependencies>  &lt;dependency><!-- lombok 工具 -->    &lt;groupId>org.projectlombok&lt;/groupId>    &lt;artifactId>lombok&lt;/artifactId>    &lt;version>${lombok.version}&lt;/version>    &lt;scope>provided&lt;/scope>  &lt;/dependency>  &lt;dependency><!-- guava 工具库 -->    &lt;groupId>com.google.guava&lt;/groupId>    &lt;artifactId>guava&lt;/artifactId>    &lt;version>${guava.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- logback 日志包 -->    &lt;groupId>ch.qos.logback&lt;/groupId>    &lt;artifactId>logback-classic&lt;/artifactId>    &lt;version>${logback.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- spring aop 的 aspectj 功能 -->    &lt;groupId>org.aspectj&lt;/groupId>    &lt;artifactId>aspectjweaver&lt;/artifactId>    &lt;version>${aspectj.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- jackson: 处理 json 的库 -->    &lt;groupId>com.fasterxml.jackson.core&lt;/groupId>    &lt;artifactId>jackson-databind&lt;/artifactId>    &lt;version>${jackson.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- spring mvc：spring-web 被依赖，自动导入 -->    &lt;groupId>org.springframework&lt;/groupId>    &lt;artifactId>spring-webmvc&lt;/artifactId>    &lt;version>${spring.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- servlet 接口声明 -->    &lt;groupId>javax.servlet&lt;/groupId>    &lt;artifactId>javax.servlet-api&lt;/artifactId>    &lt;version>${servlet-api.version}&lt;/version>    &lt;scope>provided&lt;/scope>  &lt;/dependency>  &lt;dependency> <!-- jsp 接口声明 -->    &lt;groupId>javax.servlet.jsp&lt;/groupId>    &lt;artifactId>jsp-api&lt;/artifactId>    &lt;version>${jsp-api.version}&lt;/version>    &lt;scope>provided&lt;/scope>  &lt;/dependency>  &lt;dependency><!-- jsp 标签库 -->    &lt;groupId>javax.servlet&lt;/groupId>    &lt;artifactId>jstl&lt;/artifactId>    &lt;version>${jstl.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- Spring 整合 Dao 需要 -->    &lt;groupId>org.springframework&lt;/groupId>    &lt;artifactId>spring-jdbc&lt;/artifactId>    &lt;version>${spring.version}&lt;/version>  &lt;/dependency>  &lt;dependency>    &lt;groupId>com.zaxxer&lt;/groupId>    &lt;artifactId>HikariCP&lt;/artifactId>    &lt;version>${hikaricp.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- mysql 数据库驱动 -->    &lt;groupId>mysql&lt;/groupId>    &lt;artifactId>mysql-connector-java&lt;/artifactId>    &lt;version>${mysql.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- mybatis -->    &lt;groupId>org.mybatis&lt;/groupId>    &lt;artifactId>mybatis&lt;/artifactId>    &lt;version>${mybatis.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- mybatis 分页插件 -->    &lt;groupId>com.github.pagehelper&lt;/groupId>    &lt;artifactId>pagehelper&lt;/artifactId>    &lt;version>${pagehelper.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- spring 整合 mybatis -->    &lt;groupId>org.mybatis&lt;/groupId>    &lt;artifactId>mybatis-spring&lt;/artifactId>    &lt;version>${mybatis-spring.version}&lt;/version>  &lt;/dependency>  &lt;dependency> <!-- sprint test -->    &lt;groupId>org.springframework&lt;/groupId>    &lt;artifactId>spring-test&lt;/artifactId>    &lt;version>${spring.version}&lt;/version>    &lt;scope>test&lt;/scope>  &lt;/dependency>  &lt;dependency> <!-- junit -->    &lt;groupId>junit&lt;/groupId>    &lt;artifactId>junit&lt;/artifactId>    &lt;version>${junit.version}&lt;/version>    &lt;scope>test&lt;/scope>  &lt;/dependency>&lt;/dependencies>&lt;build>  &lt;finalName>${project.artifactId}&lt;/finalName>  &lt;plugins>    &lt;plugin> <!-- tomcat 7 插件-->      &lt;groupId>org.apache.tomcat.maven&lt;/groupId>      &lt;artifactId>tomcat7-maven-plugin&lt;/artifactId>      &lt;version>2.2&lt;/version>      &lt;configuration>        &lt;port>8080&lt;/port>        &lt;path>/${project.artifactId}&lt;/path>        &lt;uriEncoding>UTF-8&lt;/uriEncoding>      &lt;/configuration>    &lt;/plugin> <!-- tomcat 7 插件 end -->    &lt;plugin> <!-- mybatis.generator 插件 begin-->      &lt;groupId>org.mybatis.generator&lt;/groupId>      &lt;artifactId>mybatis-generator-maven-plugin&lt;/artifactId>      &lt;version>1.4.0&lt;/version> <!-- 不要低于 1.3.7 版本 -->      &lt;dependencies>        &lt;dependency>          &lt;groupId>mysql&lt;/groupId>          &lt;artifactId>mysql-connector-java&lt;/artifactId>          &lt;version>8.0.22&lt;/version>        &lt;/dependency>        &lt;dependency>          &lt;groupId>org.mybatis.generator&lt;/groupId>          &lt;artifactId>mybatis-generator-core&lt;/artifactId>          &lt;version>1.4.0&lt;/version> <!-- 不要低于 1.3.7 版本 -->        &lt;/dependency>      &lt;/dependencies>      &lt;configuration>        &lt;verbose>true&lt;/verbose> <!-- 允许移动生成的文件 -->        &lt;overwrite>true&lt;/overwrite> <!-- 是否覆盖 -->        <!-- 自动生成的配置 -->        &lt;configurationFile>          src/main/resources/mybatis/generator/mybatis-generator-config.xml        &lt;/configurationFile>      &lt;/configuration>    &lt;/plugin> <!-- mybatis.generator 插件 end-->  &lt;/plugins>&lt;/build>```## 4. mybatis-generator-maven-plugin 插件配置见 mybatis 模板部分。## 5. tomcat8-magen-plugin 配置```xml&lt;plugins>  ...     &lt;plugin> <!-- tomcat 8 插件 -->      &lt;groupId>org.apache.tomcat.maven&lt;/groupId>      &lt;artifactId>tomcat8-maven-plugin&lt;/artifactId>      &lt;version>3.0-r1655215&lt;/version>      &lt;configuration>        &lt;port>8080&lt;/port>        &lt;path>/${project.artifactId}&lt;/path>        &lt;uriEncoding>UTF-8&lt;/uriEncoding>      &lt;/configuration>    &lt;/plugin>  ...&lt;/plugins>&lt;pluginRepositories>  &lt;pluginRepository>    &lt;id>alfresco&lt;/id>    &lt;url>https://artifacts.alfresco.com/nexus/content/repositories/public/&lt;/url>    &lt;snapshots>      &lt;enabled>false&lt;/enabled>    &lt;/snapshots>    &lt;releases>      &lt;enabled>true&lt;/enabled>    &lt;/releases>  &lt;/pluginRepository>&lt;/pluginRepositories>```
+# Maven 相关模板
+
+## 1. maven 的 settings.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+    http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <mirrors>
+        <mirror>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <mirrorOf>central</mirrorOf>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </mirror>
+    </mirrors>
+
+    <!-- 写法一 
+    <repository>
+        <id>nexus-aliyun</id>
+        <name>Nexus aliyun</name>
+        <url>https://maven.aliyun.com/repository/public</url>
+    </repository>
+    -->
+
+    <!-- 写法二
+    <profiles>
+        <profile>
+            <id>hello</id>
+            <repositories>
+                <repository>
+                    <id>aliyun</id>
+                    <url>https://maven.aliyun.com/repository/public</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>alfresco</id>
+                    <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>hello</activeProfile>
+    </activeProfiles>
+    -->
+</settings>
+```
+
+## 2. cleanLastUpdated.bat
+&lt;CodeGroup&gt;
+&lt;CodeGroupItem title="Windows 版本"&gt;
+
+  ```bash
+  @echo off
+  rem create by NettQun
+  
+  rem 这里写你的仓库路径，利用了系统变量 HOMEPATH ，避免写死。
+  set REPOSITORY_PATH=C:%HOMEPATH%\.m2\repository
+  rem 正在搜索...
+  for /f "delims=" %%i in ('dir /b /s "%REPOSITORY_PATH%\*lastUpdated*"') do (
+      echo %%i
+      del /s /q "%%i"
+  )
+  rem 搜索完毕
+  pause
+  ```
+
+&lt;/CodeGroupItem&gt;
+
+&lt;CodeGroupItem title="Linux 版本"&gt;
+
+  ```bash
+  #!/bin/bash
+  
+  # 这里写你的仓库路径 
+  REPOSITORY_PATH=~/.m2/repository
+  echo 正在搜索... 
+  find $REPOSITORY_PATH -name "*lastUpdated*" | xargs rm -fr
+  echo 搜索完 
+  ```
+
+  &lt;/CodeGroupItem&gt;
+  &lt;/CodeGroup&gt;
+
+## 3. maven 的 pom.xml
+
+版本信息来源说明：
+
+以下的版本信息截取自 spring-boot-starter 2.1.16 和 mybatis-spring-boot 2.0.1，选择这两个版本的原因在于：
+
+- spring-boot-starter ***2.1.16.RELEASE*** 是 spring clould Greenwich.SR6 使用的版本 。
+- spring-boot-starter ***2.1.16.RELEASE*** 最终使用到的 spring 的版本是 ***5.1.17.RELEASE*** 。
+- mybatis-spring-boot-starter ***2.0.1*** 最低支持的 spring 版本刚好最低到 ***5.1.16.RELEASE*** 。
+
+所依赖的包有：
+
+- guava + slf4j + logback
+- SSM
+- jackson + hikaricp + pagehelper
+- junit
+- tomcat7 插件
+
+```xml
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <java.version>1.8</java.version>
+    <lombok.version>1.18.12</lombok.version>
+    <logback.version>1.2.3</logback.version>
+    <guava.version>28.2-jre</guava.version>
+    <spring.version>5.1.17.RELEASE</spring.version>
+    <aspectj.version>1.9.6</aspectj.version>
+    <servlet-api.version>3.1.0</servlet-api.version>
+    <jsp-api.version>2.2</jsp-api.version>
+    <jstl.version>1.2</jstl.version>
+    <jackson.version>2.9.10</jackson.version>
+    <mysql.version>8.0.21</mysql.version>
+    <hikaricp.version>3.2.0</hikaricp.version>
+    <mybatis.version>3.5.1</mybatis.version>
+    <mybatis-spring.version>2.0.1</mybatis-spring.version>
+    <pagehelper.version>5.1.8</pagehelper.version> <!-- 单独指定 -->
+    <junit.version>4.12</junit.version>
+</properties>
+
+<dependencies>
+  <dependency><!-- lombok 工具 -->
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>${lombok.version}</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency><!-- guava 工具库 -->
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>${guava.version}</version>
+  </dependency>
+  <dependency> <!-- logback 日志包 -->
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>${logback.version}</version>
+  </dependency>
+  <dependency> <!-- spring aop 的 aspectj 功能 -->
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>${aspectj.version}</version>
+  </dependency>
+  <dependency> <!-- jackson: 处理 json 的库 -->
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson.version}</version>
+  </dependency>
+  <dependency> <!-- spring mvc：spring-web 被依赖，自动导入 -->
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>${spring.version}</version>
+  </dependency>
+  <dependency> <!-- servlet 接口声明 -->
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>${servlet-api.version}</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency> <!-- jsp 接口声明 -->
+    <groupId>javax.servlet.jsp</groupId>
+    <artifactId>jsp-api</artifactId>
+    <version>${jsp-api.version}</version>
+    <scope>provided</scope>
+  </dependency>
+  <dependency><!-- jsp 标签库 -->
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>${jstl.version}</version>
+  </dependency>
+  <dependency> <!-- Spring 整合 Dao 需要 -->
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>${spring.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>com.zaxxer</groupId>
+    <artifactId>HikariCP</artifactId>
+    <version>${hikaricp.version}</version>
+  </dependency>
+  <dependency> <!-- mysql 数据库驱动 -->
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>${mysql.version}</version>
+  </dependency>
+  <dependency> <!-- mybatis -->
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>${mybatis.version}</version>
+  </dependency>
+  <dependency> <!-- mybatis 分页插件 -->
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper</artifactId>
+    <version>${pagehelper.version}</version>
+  </dependency>
+  <dependency> <!-- spring 整合 mybatis -->
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis-spring</artifactId>
+    <version>${mybatis-spring.version}</version>
+  </dependency>
+  <dependency> <!-- sprint test -->
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>${spring.version}</version>
+    <scope>test</scope>
+  </dependency>
+  <dependency> <!-- junit -->
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>${junit.version}</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+
+<build>
+  <finalName>${project.artifactId}</finalName>
+  <plugins>
+    <plugin> <!-- tomcat 7 插件-->
+      <groupId>org.apache.tomcat.maven</groupId>
+      <artifactId>tomcat7-maven-plugin</artifactId>
+      <version>2.2</version>
+      <configuration>
+        <port>8080</port>
+        <path>/${project.artifactId}</path>
+        <uriEncoding>UTF-8</uriEncoding>
+      </configuration>
+    </plugin> <!-- tomcat 7 插件 end -->
+    <plugin> <!-- mybatis.generator 插件 begin-->
+      <groupId>org.mybatis.generator</groupId>
+      <artifactId>mybatis-generator-maven-plugin</artifactId>
+      <version>1.4.0</version> <!-- 不要低于 1.3.7 版本 -->
+      <dependencies>
+        <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.22</version>
+        </dependency>
+        <dependency>
+          <groupId>org.mybatis.generator</groupId>
+          <artifactId>mybatis-generator-core</artifactId>
+          <version>1.4.0</version> <!-- 不要低于 1.3.7 版本 -->
+        </dependency>
+      </dependencies>
+      <configuration>
+        <verbose>true</verbose> <!-- 允许移动生成的文件 -->
+        <overwrite>true</overwrite> <!-- 是否覆盖 -->
+        <!-- 自动生成的配置 -->
+        <configurationFile>
+          src/main/resources/mybatis/generator/mybatis-generator-config.xml
+        </configurationFile>
+      </configuration>
+    </plugin> <!-- mybatis.generator 插件 end-->
+  </plugins>
+</build>
+```
+
+## 4. mybatis-generator-maven-plugin 插件配置
+
+见 mybatis 模板部分。
+
+## 5. tomcat8-magen-plugin 配置
+
+```xml
+<plugins>
+  ... 
+
+    <plugin> <!-- tomcat 8 插件 -->
+      <groupId>org.apache.tomcat.maven</groupId>
+      <artifactId>tomcat8-maven-plugin</artifactId>
+      <version>3.0-r1655215</version>
+      <configuration>
+        <port>8080</port>
+        <path>/${project.artifactId}</path>
+        <uriEncoding>UTF-8</uriEncoding>
+      </configuration>
+    </plugin>
+
+  ...
+</plugins>
+
+<pluginRepositories>
+  <pluginRepository>
+    <id>alfresco</id>
+    <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+  </pluginRepository>
+</pluginRepositories>
+```

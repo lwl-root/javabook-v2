@@ -38,6 +38,7 @@ where `age` = select `age` form
                `user` where `name` = 'jack';
 ```
 :::
+:::
 
 ## 问题二：子查询的书写风格
 一个好的sql语句书写习惯可以规避很多没有必要出现的小问题，提高开发的效率。
@@ -56,6 +57,7 @@ where `age` = (select `age` form
 ```
 ::: warning 注意
 where条件后面的子查询只能是单行子查询（只能返回一条数据）
+:::
 @tab select 使用
 ```sql
 -- 查询学生的信息以及对应的班级名称
@@ -67,6 +69,7 @@ from `student`;
 ```
 ::: warning 注意
 select后面的子查询只能是单行子查询（只能返回一条数据）
+:::
 @tab having 使用
 ```sql
 -- 平均分比一班最高分高的班级号
@@ -77,6 +80,7 @@ having AVG(score)>=(select MAX(score) from student where class_no=1);
 ```
 ::: warning 注意
 having后面的子查询只能是单行子查询（只能返回一条数据）
+:::
 @tab from 使用
 ```sql
 -- 下面的sql语句中子查询返回的数据被当作一张表放在主查询中使用
@@ -87,8 +91,10 @@ FROM
 ```
 ::: warning 注意
 在使用子查询作为表的时候推荐使用别名，在mysql中from后面使用子查询需要给子查询返回的数据取别名，否则会报错，但在oracle中可以不取别名。
-> 1248 - Every derived table must have its own alias
+&gt; 1248 - Every derived table must have its own alias
 
+:::
+:::
 :::
 
 ## 问题四：不可以使用子查询的位置
@@ -104,7 +110,8 @@ select item_name
 ```
 ::: warning 警告
 在oracle中group by后面出现子查询语句会报错
-> ORA->22818:这里不允许出现子查询表达式
+&gt; ORA-&gt;22818:这里不允许出现子查询表达式
+:::
 
 @tab mysql中
 ```sql
@@ -114,7 +121,9 @@ select AVG(score)
 ```
 ::: tip 提示
 在mysql中group by后面出现子查询语句会正常执行
-:::: 
+:::
+:::
+::: 
 
 ## 问题五：FROM 后面的子查询
 在平时的工作中在from后面出现的子查询十分的常见，我们可以将from后的子查询看成一张新的表。
@@ -125,6 +134,7 @@ from (select `name`,`sal`,sal*12 as 年薪 from emp);
 ```
 ::: tip 提示
 我们在使用from后面的子查询时可以在已有的列上加更多的列，然后在主查询中对这些列添加条件从而得到想要的数据。
+:::
 
 ## 问题六：子查询和主查询使用的表
 主查询和子查询使用的表可以是同一张表，也可以不是同一张表。对我们自己来说只要子查询返回的结果主查询可以使用就可以了
@@ -146,6 +156,7 @@ from `student`
 order by (select `class_no` from `class`);
 -- 在mysql中可以在group by后面使用子查询，在oracle中是不可以的
 ```
+:::
 :::
 
 ## 问题七：子查询中的排序
@@ -180,6 +191,7 @@ from (select * form emp oreder by sal desc)
 where rownum<=3
 ```
 这时发现结果是我们想要的效果，这是因为from后面的子查询被看作是一张新的表，他是已经根据工资降序排列好的，所以他的行号前三对应的数据就是我们想要的数据。
+:::
 :::
 
 ## 问题八：子查询的执行顺序
@@ -233,30 +245,33 @@ WHERE a.类编号=b.类编号
 )
 ```
 :::
+:::
 ::: tip 总结
 - 非相关子查询是独立于外部查询的子查询，子查询总共执行一次，执行完毕后将值传递给外部查询。
 - 相关子查询的执行依赖于外部查询的数据，外部查询执行一行，子查询就执行一次。
 - 故非相关子查询比相关子查询效率高。
+:::
 ## 问题九：单行子查询与多行子查询的区别
 见名知意，单行子查询就是只返回一条数据的子查询，多行子查询就是返回多行数据的子查询。
 ::: warning 注意
 在单行子查询中使用单行运算符，在多行子查询中用多行运算符。
-- 单行运算符：子查询结果只有一个：< > = <= >= !=
+- 单行运算符：子查询结果只有一个：&lt; &gt; = &lt;= &gt;= !=
 - 多行子查询：子查询结果是单列多行：in ， any，all
 - 多列子查询：子查询为多列，一定要在FROM后作为表，且一定要取别名，否则无法访问这张表中的字段。
+:::
 
 ## 问题十：子查询中的null值问题
 x为外部查询结果 a b c ..... null 是子查询中结果
 
 1. in 子查询的逻辑关系
 
->X == a  or  X == b  or  x == c .....  or  x == null
+&gt;X == a  or  X == b  or  x == c .....  or  x == null
 
 任何值和null比较结果NULL, 由于是OR语句只要一个为真结果就为真， 所以只看前半部分 null值忽略
 
 2. not in 子查询的逻辑关系
 
->X != a  and  X != b  and  x != c .....  and  x != null
+&gt;X != a  and  X != b  and  x != c .....  and  x != null
 
 同理任何值和null比较结果NULL, 由于是and语句短路原理，只要一个为假结果为假， 所以结果必为 NULL/FALSE
 
@@ -264,3 +279,4 @@ x为外部查询结果 a b c ..... null 是子查询中结果
 由此可见在in 子查询结果列表中含有null值时,不影响正常比较。
 
 而在not in 子查询结果列表中 含有null值时,必然返回空,就算有项目符合前面所有结果。
+:::

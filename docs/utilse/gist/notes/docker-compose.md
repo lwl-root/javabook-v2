@@ -48,6 +48,7 @@
     default-character-set=utf8
   ```
 :::
+:::
 
 ## redis
 ::: code-tabs
@@ -146,12 +147,14 @@
   rdb-save-incremental-fsync yes
   ```
 :::
+:::
 
 ## nginx
 
 ::: danger 警告
 虽然 dockerhub 上的官方文档说 nginx 启动后是在容器内的 `/usr/share/nginx/html` 目录下加载 .html 等静态资源，但是实际上不同的版本会有一些不同，有的版本是到容器内的 `/etc/nginx/html` 下找。
 所以，当你映射了数据卷但又没找到 .html 时，留意一下 error.log ，看看错误信息中显示的是到哪里『找』文件。
+:::
 
 ::: code-tabs
 @tab docker 命令版
@@ -241,6 +244,7 @@
   }
   ```
 :::
+:::
 
 ## RabbitMQ
 ::: code-tabs
@@ -273,6 +277,7 @@
         - "5672:5672"
         - "15672:15672"
   ```
+:::
 :::
 ## Elastic Search
 ::: code-tabs
@@ -311,6 +316,7 @@
         - "9200:9200"
         - "9300:9300"
   ```
+:::
 :::
 
 ## Nacos
@@ -584,3 +590,5 @@ INSERT INTO users (username, password, enabled) VALUES ('nacos', '$2a$10$EuWPZHz
 
 INSERT INTO roles (username, role) VALUES ('nacos', 'ROLE_ADMIN');
 ```
+:::
+:::

@@ -88,9 +88,9 @@ new bigdemica(a).compareTo(new bigdemical(b)) >= 0
 
 ## 2、BigDecimal格式化
 
-> 由于NumberFormat类的format()方法可以使用BigDecimal对象作为其参数，可以利用BigDecimal对超出16位有效数字的货币值，百分值，以及一般数值进行格式化控制。
+&gt; 由于NumberFormat类的format()方法可以使用BigDecimal对象作为其参数，可以利用BigDecimal对超出16位有效数字的货币值，百分值，以及一般数值进行格式化控制。
 
-> 以利用BigDecimal对货币和百分比格式化为例。首先，创建BigDecimal对象，进行BigDecimal的算术运算后，分别建立对货币和百分比格式化的引用，最后利用BigDecimal对象作为format()方法的参数，输出其格式化的货币值和百分比。
+&gt; 以利用BigDecimal对货币和百分比格式化为例。首先，创建BigDecimal对象，进行BigDecimal的算术运算后，分别建立对货币和百分比格式化的引用，最后利用BigDecimal对象作为format()方法的参数，输出其格式化的货币值和百分比。
 
 ```java
 NumberFormat currency = NumberFormat.getCurrencyInstance(); //建立货币格式化引用
@@ -170,11 +170,11 @@ java.lang.ArithmeticException: Non-terminating decimal expansion; no exact repre
 
 **原因分析：**
 
-> 通过BigDecimal的divide方法进行除法时当不整除，出现无限循环小数时，就会抛异常：java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.
+&gt; 通过BigDecimal的divide方法进行除法时当不整除，出现无限循环小数时，就会抛异常：java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.
 
 **解决方法：**
 
-> divide方法设置精确的小数点，如：divide(xxxxx,2)
+&gt; divide方法设置精确的小数点，如：divide(xxxxx,2)
 
 
 
@@ -477,7 +477,7 @@ public class ArithmeticUtils {
 
 ## 5、总结
 
-> 在需要精确的小数计算时再使用BigDecimal，BigDecimal的性能比double和float差，在处理庞大，复杂的运算时尤为明显。故一般精度的计算没必要使用BigDecimal。尽量使用参数类型为String的构造函数。
+&gt; 在需要精确的小数计算时再使用BigDecimal，BigDecimal的性能比double和float差，在处理庞大，复杂的运算时尤为明显。故一般精度的计算没必要使用BigDecimal。尽量使用参数类型为String的构造函数。
 
-> BigDecimal都是不可变的（immutable）的， 在进行每一次四则运算时，都会产生一个新的对象 ，所以在做加减乘除运算时要记得要保存操作后的值。
+&gt; BigDecimal都是不可变的（immutable）的， 在进行每一次四则运算时，都会产生一个新的对象 ，所以在做加减乘除运算时要记得要保存操作后的值。
 

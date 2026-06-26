@@ -1,9 +1,12 @@
 module.exports = [
 	{
-		text: 'Kafka',
+		text:'kafka',
 		collapsible: false,
-		children: [
-			{ text: 'Kafka 基础', link: '/c-book/kafka/notes/kafka.md' },
+		link:'/c-book/kafka/notes/kafka.md',
+		children:[
+			{text:'Kafka', link:'/c-book/kafka/notes/kafka.md'},
+			{text:'', link:'/c-book/kafka/notes/.md'},
 		]
 	},
+	
 ]

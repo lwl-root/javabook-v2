@@ -86,7 +86,7 @@ public class UserAddedEvent extends ApplicationEvent {
 
   ```java
   @Component
-  public class UserAddedEventListener1 implements ApplicationListener<UserAddedEvent> {
+  public class UserAddedEventListener1 implements ApplicationListener&lt;UserAddedEvent&gt; {
   
       @Override
       public void onApplicationEvent(UserAddedEvent userAddedEvent) {

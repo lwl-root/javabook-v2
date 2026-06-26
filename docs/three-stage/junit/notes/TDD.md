@@ -2,7 +2,7 @@
 
 **TDD** 有广义和狭义之分，常说的是狭义的 TDD ，也就是 UTDD（Unit Test Driven Development）。
 
-> 广义的 TDD 是 ATDD（Acceptance Test Driven Development），包括 BDD（Behavior Driven Test Development）和 Consumer-Driven Contracts Development 等。
+&gt; 广义的 TDD 是 ATDD（Acceptance Test Driven Development），包括 BDD（Behavior Driven Test Development）和 Consumer-Driven Contracts Development 等。
 
 **TDD** 的原理是在开发功能代码之前，先编写单元测试用例代码，测试代码确定需要编写什么产品代码。
 
@@ -27,13 +27,13 @@
   7. 转测试，小问题，补用例，修复
   8. 代码整洁且用例齐全，信心满满地提交
 
-> 有很多人说 TDD 时，我的代码量增加了，所以开发效率降低了。但是，如果没有单元测试，你就要手工测试，你要花很多时间去准备数据，启动应用，跳转界面，观察显示效果等，反馈是很慢的。准确说，『**快速反馈**』是单元测试的好处。
->
-> 简单来说，你的代码量有增加，但是工作量和工作时间有减少。付出减去回报，最后你还是有的赚。
+&gt; 有很多人说 TDD 时，我的代码量增加了，所以开发效率降低了。但是，如果没有单元测试，你就要手工测试，你要花很多时间去准备数据，启动应用，跳转界面，观察显示效果等，反馈是很慢的。准确说，『**快速反馈**』是单元测试的好处。
+&gt;
+&gt; 简单来说，你的代码量有增加，但是工作量和工作时间有减少。付出减去回报，最后你还是有的赚。
 
 ## 2. 如何 TDD
 
-<img src="/images/tdd-1.png">
+&lt;img src="/images/tdd-1.png"&gt;
 
 TDD 的基本流程是：红，绿，重构。
 

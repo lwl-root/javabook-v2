@@ -14,7 +14,7 @@ CountDownLatch是一个同步辅助类，它允许一个或多个线程一直等
 
 
 ## 实例1
->场景：模拟10人赛跑。10人跑完后才喊"Game Over."
+&gt;场景：模拟10人赛跑。10人跑完后才喊"Game Over."
 
 ```java
 package com.jihite;
@@ -86,7 +86,7 @@ Game Over.
 
 ## 实例2（和join的相似处）
 
->场景：流水线上有3个worker: worker1、worker2、worker3,只有当worker1和worker2执行完时才可以执行worker3
+&gt;场景：流水线上有3个worker: worker1、worker2、worker3,只有当worker1和worker2执行完时才可以执行worker3
 
 
 ```java
@@ -213,7 +213,7 @@ lilei-2工作完成, 耗时：6126
 既然这样，那CountDownLatch和join的区别在哪？通过下面的场景三就可以看出
 
 ## 实例3（和join的不同处）
->场景：流水线上有3个worker: worker1、worker2、worker3,只有当worker1和worker2两者的阶段一都执行完后才可以执行worker3
+&gt;场景：流水线上有3个worker: worker1、worker2、worker3,只有当worker1和worker2两者的阶段一都执行完后才可以执行worker3
 
 ```java
 package com.jihite;

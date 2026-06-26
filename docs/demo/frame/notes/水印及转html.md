@@ -2,13 +2,13 @@
 
 ## 一、添加水印
 
-> 前期准备：需下载spire的jar包，或引入依赖；
->
-> jar包下载地址：https://repo.e-iceblue.cn/#browse/browse:maven-public:e-iceblue，下载free的；（依赖也在这个地址里面，找到后复制即可）
->
-> 使用文档地址：https://www.e-iceblue.cn/tutorials.html，查看...for java的文档；
->
-> 注：免费版会有诸多限制，比如pdf、ppt加水印只能添加前十页，文件之间的互相转换也只能前十页等等。
+&gt; 前期准备：需下载spire的jar包，或引入依赖；
+&gt;
+&gt; jar包下载地址：https://repo.e-iceblue.cn/#browse/browse:maven-public:e-iceblue，下载free的；（依赖也在这个地址里面，找到后复制即可）
+&gt;
+&gt; 使用文档地址：https://www.e-iceblue.cn/tutorials.html，查看...for java的文档；
+&gt;
+&gt; 注：免费版会有诸多限制，比如pdf、ppt加水印只能添加前十页，文件之间的互相转换也只能前十页等等。
 
 ### 1.1 为项目添加jar包，使用idea开发
 
@@ -1204,10 +1204,10 @@ public class OfficeUtils {
 
 ### 2.1 注意事项：
 
-> Linux环境需引入字体，具体操作
->
-> 1.先找到win环境的字体，C:\Windows\Fonts
->
-> 2.放到Linux的jdk的jre的font文件夹下即可，jdk目录/jdk/jre/lib/fonts (一般在user/local/java下面)，放好后，需重启项目的jar，不是服务器
+&gt; Linux环境需引入字体，具体操作
+&gt;
+&gt; 1.先找到win环境的字体，C:\Windows\Fonts
+&gt;
+&gt; 2.放到Linux的jdk的jre的font文件夹下即可，jdk目录/jdk/jre/lib/fonts (一般在user/local/java下面)，放好后，需重启项目的jar，不是服务器
 
 ![img](/images/水印及转html/image-20220827203254606.png)

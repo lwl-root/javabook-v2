@@ -1,4 +1,4 @@
-﻿# 浅谈vue+element全局loading加载
+# 浅谈vue+element全局loading加载
 
 ::: tip 前言
 
@@ -8,11 +8,11 @@
 
 ## 01：用到的插件
 
-**1、element-ui-->ui库**
+**1、element-ui--&gt;ui库**
 
-**2、lodash--->高效的JavaScript库**
+**2、lodash---&gt;高效的JavaScript库**
 
-**3、axios--->基于promise的http库**
+**3、axios---&gt;基于promise的http库**
 
 准备工作安装：
 
@@ -36,7 +36,7 @@ $ npm i axios -S
 
 ![img](/images/loading.png)
 
-&lt;a href="https://element.eleme.cn/#/zh-CN/component/loading">api:https://element.eleme.cn/#/zh-CN/component/loading&lt;/a>
+&lt;a href="https://element.eleme.cn/#/zh-CN/component/loading"&gt;api:https://element.eleme.cn/#/zh-CN/component/loading&lt;/a&gt;
 
 ```javascript
 import { Loading } from "element-ui";

@@ -1,10 +1,12 @@
 module.exports = [
 	{
-		text: 'Spring Security',
+		text:'spring-security',
 		collapsible: false,
-		children: [
-			{ text: 'Spring Security 基础', link: '/c-book/spring-security/notes/spring-security.md' },
-			{ text: 'Git 使用', link: '/c-book/spring-security/notes/git使用.html' },
+		link:'/c-book/spring-security/notes/spring-security.md',
+		children:[
+			{text:'Spring Security', link:'/c-book/spring-security/notes/spring-security.md'},
+			{text:'', link:'/c-book/spring-security/notes/.md'},
 		]
 	},
+	
 ]

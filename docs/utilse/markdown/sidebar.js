@@ -1,9 +1,10 @@
 module.exports = [
 	{
 		title:'Markdown',
-		collapsable: false,
+		collapsible: false,
 		children:[
-			'markdown/notes/Markdown基本使用',
+			{text:'markdown/notes/Markdown基本使用', link:'/utilse/markdown/notes/markdown/notes/Markdown基本使用.md'},
+			{text:'', link:'/utilse/markdown/notes/.md'},
 		]
 	},
 	

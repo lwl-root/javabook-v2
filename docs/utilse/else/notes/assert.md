@@ -25,7 +25,7 @@ assert 语法上是代码，但是功效上更像是一种注释！
 
 断言是通过关键字 `assert` 来定义的，一般的，它有两种形式。
 
-assert <布尔表达式>;
+assert &lt;布尔表达式&gt;;
 
 ```java
 boolean b = ...;
@@ -35,7 +35,7 @@ assert b;
 
 当 b 的值为 false 时，assert 就会抛出异常（AssertionError），因此，assert 后面的语句也就不会执行了。
 
-assert <布尔表达式> : <字符串>;
+assert &lt;布尔表达式&gt; : &lt;字符串&gt;;
 
 ```java
 boolean b = ...;  
@@ -86,8 +86,10 @@ void isInstanceOf(Class type, Object obj, String message)
 void isAssignable(Class superType, Class subType, String message)
 ```
 :::
+:::
 
 ::: tip 提示
 Spring Assert 的一个缺点:
 
 你看一下 Spring Assert 的源码就会发现，它抛出的全部都是 IllegalArgumentException 。作为使用者，你无法去控制、影响这一点。
+:::

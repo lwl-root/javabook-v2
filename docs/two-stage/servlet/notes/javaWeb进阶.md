@@ -1,1 +1,406 @@
-﻿# Java Web 进阶## 1. HttpSession一个用户有且最多有一个 HttpSession，并且不会被其他用户访问到。HttpSession 对象在用户第一次访问网站时自动被创建，你可以通过调用 HttpServeltRequest 的 `getSession()` 方法获得该对象。会话（Session）是一个比请求（Request）更“大”的概念。一个会话中可以包含一个或多个请求；一个请求必定是在某个会话中。`getSession()` 方法会返回当前的 HttpSession，若当前没有，则创建一个返回。可以通过 HttpSession 的 `setAttribute()` 方法将值放入 HttpSesion 中。::: warning 注意- 放到 HttpSesion 中的值不仅限于 String 类型，可以是任意实现了 java.io.Serializable 接口的 java 对象。- 其实，你也可以将不支持序列化的对象放入 HttpSession，只不过这样做会有隐患。:::调用 `setAttribute()` 方法时，若传入的 name 参数此前已经使用过，则会用新值覆盖旧值。通过调用 HttpSession 的 `getAttribute()` 方法可以取回之前放入的对象。所有保存在 HttpSession 的数据不会发送到客户端。容器为每个 HttpSession 生成唯一的表示，并将该标识发送给客户端，或创建一个名为 **JSESSIONID** 的 cookie，或者在 URL 后附加一个名为 jsessionid 的参数。在后续的请求总，浏览器会将该标识发送给客户端，这样服务器就可以识别该请求是由哪个用户发起的（**这个过程无须开发人员介入**）。默认情况下，HttpSession 会在用户不活动一段时间之后自动过期，该时间由 web.xml 中的 `session-timeout` 元素配置，单位为分钟（如果不设置，则过期时间由容器自行决定）。此外，HttpSession还定义可一个 `invalidate()` 方法强制会话立即过期失效。```xml&lt;session-config>    &lt;session-timeout>2&lt;/session-timeout>&lt;/session-config>```## 2. EL 表达式JSP 2.0 的最重要特性就是表达式语言（EL），EL 的目的是帮助程序员编写无脚本的 JSP 页面。最初 EL 表达式被创造出来是为了 JSTL 服务，配合 JSTL 使用的。不过从 JSP 2.0 开始即便项目中没有引入 JSTL，也可以（单独）使用 EL 。### EL 的默认关闭在 Servlet 3.0 以下版本中，EL 表达式的功能默认是关闭的。> 如何判断你的项目使用的是哪个 Servlet ？可以查看你的 web.xml 配置文件的头部声明。通常情况下，我们一般不会使用 3.0 以下（甚至是 3.0）版本，最常见的至少是 3.1 版本起。但是，有时我们通过开发工具去自动创建 Web 项目时，很有被创建出来的项目默认的 Servlet 版本会偏低。因为这些工具的模板会偏老旧。如果因为某些原因，你使用的是低版本的 Servlet，记得要将 EL 表达式的功能打开。在 JSP 的 *`page`* 指令中，通过 *`isELIgnored`* 属性可以在当前页面 启用/禁止 EL 表达式。或者在 web.xml 作出全局性设置：```xml&lt;jsp-config>    &lt;jsp-property-group>        &lt;url-pattern>*.jsp&lt;/url-pattern>        &lt;el-ignored>false&lt;/el-ignored>    &lt;/jsp-property-group>&lt;/jsp-config>```### EL 语法EL 表达式以 `${` 开头，并以 `}` 结束，其结构为 `${ 表达式 }`，其计算结果的类型是一个『**字符串**』。EL 表达式的结果值可以是任何类型，但是浏览器会将其值以字符串形式（toString 方法）的形式将其“替换”到 EL 表达式所处位置。EL 表达式可以返回任意类型的值。如果 EL 表达式的结果是一个带有属性的对象，则可以利用 `[ ]` 或者 `.` 运算符来访问该属性。如果是使用 `[ ]` ，属性名需要用引号括起来。例如：- **${object["propertyName"]}**- **${object.propertyName}**如果，propertyName 不是一个有效的 Java 变量名，例如：`accept-language`，那么，此时只能使用 `[ ]` 语法，而不能使用 `.` 语法。如果，对象的属性碰巧又是另一个对象，那么可以用 `[ ]`，也可以使用 `.` 运算符来访问第二个对象的属性。例如：- **${pageContext["request"]["servletPath"]}**- **${pageContext.request["servletPath"]}**- **${pageContext.request.servletPath}**- **${pageContext["request"].servletPath}**如果 object 的类型是一个 Map，那么，这里使用的是键值对的键：`${object["key"]}`如果 object 的类型是一个 Array 或 List，那么这里使用的是其下标索引：`${object[0]}` 。这里的下标索引 `0` 没有使用 `""`，它必须是一个数字。### EL 隐式对象在 JSP 页面中，可以利用 JSP 脚本来访问 JSP 隐式对象，注意，在页面上显示 EL 表达式的值时，不需要 *`out.print()`* 或者 *`&lt;%= %>`* ，容器会执行 EL 表达式并将其结果“写在”它所在的位置。| 隐含对象         | 描述                                                         || :--------------- | :----------------------------------------------------------- || pageContext      | 当前 JSP 页面的 `pageContext` 对象                           || initParam        | Application 的初始化参数，初始化参数通常是在 web.xml 中通过 `&lt;context-param&gt;` 及其子元素 `&lt;param-name&gt;` 和 `&lt;param-value&gt;` 配置项配置 || param            | 一个包含了所有请求参数的 Map，其中请求参数名为 key。不过，它无法处理一个请求参数，多个值的情况。通过 key 始终只有第一个值返回。 || paramValues      | 和 param 类似，不过它可以处理一个参数名有多个参数值的情况。不过，如果参数只有一个值，它的返回值仍然是一个数组 || applicationScope | 包含了 ServletContext 对象中所有属性的 map，并用属性名作 key。 || sessionScope     | 包含了 HttpSession 对象中所有属性的 Map，并用属性名作 key。  || requestScope     | 包含了 HttpServletRequest 对象中所有属性的Map，并用属性名作key。 || pageScope        | 包含了全页面范围内的属性的 Map，并用属性名作 Key。           || cookie           | 包含了当前请求对象中所有 Cookie 对象的Map。以 Cookie 的名称作为 key，并且每一个 key 都映射到一个 Cookie 对象。 || header           | HTTP 请求信息头，字符串                                      || headerValues     | HTTP 信息头，字符串数组。对应一个请求名，多个请求值的情况。通过 key 取出的始终是数组。 |E L表达式所提供的隐式对象中，并没有 request、response、session、application、out 等这些JSP中所存在的隐式对象。这是 EL 隐式对象与 JSP 隐式对象的区别。不过 EL 的隐式对象中有 pageContext（和 JSP 中一样），通过它我们依旧可以访问到上述这些 JSP 中直接提供，但 EL 中没有直接提供的对象。EL 表达式中可以使用 + 、- 、*、/、% 五种算数运算符。EL 表达式中可以使用 &&、||、！ 三种逻辑运算符。EL 表达式中可以使用 ==、！=、>、>=、&lt;、&lt;= 六种关系运算符。EL 表达式中提供了一个 **empty** 运算符专门用于 空和非空 的判断（当然，你也可以用 == null 判断）。例如：```java${empty X}```X 为 null，或者 X 是一个空字符串，或者 X 是一个空数组、空List、空Map、空Set，它都将返回 true 。## 3. JSTL 标签库JSP 标准标签库（JSTL）是一个定制标签库的集合，它的出现是为了实现呈现层与业务层的分离功能。使用 JSTL（结合EL表达式）在绝大多数情况下，JSP 页面中不再需要“嵌入”Java 代码（scriplet）。**使用 JSTL 需要额外导入 jstl 库。****使用 JSTL 需要额外导入 jstl 库。****使用 JSTL 需要额外导入 jstl 库。**根据 JSTL 标签所提供的功能，可以将其分为 5 个类别：核心（Core）标签、格式化标签、SQL 标签、XML 标签、JSTL 函数。其中以核心（Core）标签最为常用。使用不同类别的 JSTL 库，需要在 JSP 页面的头文件中做出相应的“声明”。例如：```html&lt;%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>```如果忘记引入 ***jstl*** 库，上述声明会报错。### c:out`&lt;c:out&gt;` 标签用来显示一个表达式的结果，与 `&lt;%= ... %&gt;` 作用相似，它们的区别就是 `&lt;c:out&gt;` 标签可以直接通过 "." 操作符来访问属性。out 的语法有两种形式：- 形式一：  ```html  &lt;c:out value = "VALUE" [escapeXml = {true | false}] [default = "默认值"] />  ```- 形式二：  ```html  &lt;c:out value = "VALUE" [escapeXml = {true | false}]>    默认内容  &lt;/c:out>  ```  其中 value 属性是必要部分。### c:setset 标签常见 2 种形式/作用：- 第一种用于创建一个有界变量，并用 value 属性在其中定义一个要创建的字符串或者现存的有界对象：```html&lt;c:set value="VALUE"       var="VAR NAME"       [scope="{ page | request | session | application }"]/>```- 第二种形式是设置有界变量的属性。例如：```html&lt;%    request.setAttribute("username", "tom");    session.setAttribute("", "");    application.setAttribute("", "");%>&lt;c:set var="password" value="123" scope="request">&lt;/c:set>&lt;c:set var="key" value="value" scope="session">&lt;/c:set>&lt;c:set var="key" value="value" scope="application">&lt;/c:set>${requestScope.username}, ${requestScope.password}&lt;c:set target="TARGET"       property="PROPERTY NAME"       value="VALUE"/>```注意，这种形式中，target 属性中 **必须使用一个 EL 表达式** 来引用这个有界变量。例如：```html&lt;%    Department dept = new Department(10, "Testing","BeiJing");    request.setAttribute("dept", dept);%>&lt;c:set target="${requestScope.dept}" property="dname" value="System">&lt;/c:set>&lt;p> ${requestScope.dept.deptno} &lt;/p>&lt;p> ${requestScope.dept.dname} &lt;/p>&lt;p> ${requestScope.dept.loc} &lt;/p>```### c:removeremove 标签用于删除有界变量。```xml&lt;c:remove var = "VAR NAME"          [scope="{ page | request | session | application }"] />```### c:ifif 标签是对某一个条件进行测试，假如结果为 true，就处理它的 body content 。另外，测试的结果可以保存在一个 Boolean 对象中，并创建有界变量来引用这个 Boolean 对象。if 的语法有两种形式。第一种是没有 body content：```xml&lt;c:if test="bool 型 EL 表达式"      [var="VAR NAME"]      [scope="{ page | request | session | application }"]/>```第二种形式使用了一个 body content：```html&lt;c:if test="bool 型 EL 表达式" [var="变量名"] [scope="{ page | request | session | applicationi }"]>    body content&lt;/c:if>```### c:choose、c:when 和 c:otherwisechoose-when-otherwise 标签的作用与 Java 中的 switch-case-default 类似。choose 标签中必须嵌有一个或多个 when 标签，并且每个 when 标签都有一种可以计算和处理的情况。otherwise 标签则用于默认的条件块。choose 和 otherwise 标签没有属性。when 标签必须带有定义的测试条件 test 属性，来决定是否应该处理 body content 。```html&lt;c:choose>    &lt;c:when test="${boolean 表达式}"> ... &lt;/c:when>    &lt;c:when test="${boolean 表达式}"> ... &lt;/c:when>    ...    &lt;c:otherwise> ... &lt;/c:otherwise>&lt;/c:choose>```### c:forEachforEach 标签会无数次反复便利 body content 或者对象集合。forEach 标签的语法有两种。第一种形式是固定次数地重返 body content：```xml&lt;c:forEach [var="VAR NAME"] begin="BEGIN" end="END" step="STEP">    body content&lt;/c:forEach>```这种形式与集合对象无关。类似于 Java 代码中的 `for (int i = 0; i &lt; 10; i++)`例如：```html&lt;c:forEach var="item" begin="1" end="5" step="2">    &lt;p>hello world ${item} &lt;/p>&lt;/c:forEach>```第二种形式用于遍历对象集合。类似于 Java 代码中的 `for (String string : list)````html&lt;c:forEach items="COLLECTIONS" [var="变量名"] [varStatus="变量名"]>    body content&lt;/c:forEach>```对于每一次遍历，forEach 标签都将创建一个有界变量，变量名通过 var 属性定义，可在 body content 中使用。 该有界变量只能在 body content 部分使用。forEach 标签有一个类型为 javax.servlet.jsp.jstl.core.LoopTagStatus 的变量 varStatus，这个变量有一个 count 属性，其中记录了当循环遍历的次数，该数值从1开始。例如：```xml&lt;c:forEach items="${requestScope.depts}" var="dept" varStatus="loop">    &lt;p>第 ${loop.count} 个：${dept.deptno}, ${dept.dname}, ${dept.loc}&lt;/p>&lt;/c:forEach>```### fmt 进行日期格式化引入申明：```html&lt;%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>&lt;fmt:formatDate value="&lt;%=new Date()%>" type="date" pattern="yyyy-MM-dd"%/>&lt;fmt:formatDate value="${date}" type="date" pattern="yyyy-MM-dd"//>```## 4. 乱码问题### 判断字符串的编码格式*注意，由于存在重码现象，以下方案并不严谨* 。```java// 由于字符编码存在重叠区，所以一个字符/字符串有多种编码可能，是完全正常合理的。public static String getEncoding(String str) {    String encode[] = new String[]{            "ASCII",            "ISO-8859-1",            "GB2312",       // GB2312 是 GBK 的一种“具体情况”。            "GBK",            "UTF-8",        // UTF-8 是 Unicode 的一种“具体情况”。            "UTF-16",       // UTF-16 是 Unicode 的一种“具体情况”。            "Unicode",    };    String ret = "";    for (int i = 0; i &lt; encode.length; i++) {        try {            if (str.equals(new String(str.getBytes(encode[i]), encode[i]))) {                ret = ret + encode[i] + " ";            }        } catch (Exception ex) {        }    }    return ret.equals("") ? "Other" : ret;}```乱码出现在三种场景：- GET 请求提交的中文数据，在 Servlet 中输出乱码。- POST 请求提交的中文数据，在 Servlet 中输出乱码。- 返回给浏览器的中文数据，在页面显示乱码。提前声明，虽然同样是提交的数据在 Servlet中 显示为乱码，但是 GET / POST 发生乱码的原因和解决乱码的方案并不相同，不能混用 。### 获取 GET 请求中的数据，打印乱码默认情况下，浏览器发送给 Tomcat 的数据都是以 `ISO-8859-1` 进行编码后的字节流。在 get 请求中，Tomcat 以何种方式看待、解析接收的这些字节流取决于 server.xml 中的一个配置：`&lt;Connector port="8080" ... URIEncoding="xxx"` 。默认情况下 `URIEncoding="ISO-8859-1"`，即 Tomcat 默认以 ISO-8859-1 编码解析所收到的 get 请求发送来的字节流，从而转换为字符流，即字符串。但是这里有一个关键性问题：Java 字符串是 UTF-8 编码。所以，当你通过 `req.getParameter("");` 获得一个中文字符串时，这个字符串是 ISO-8859-1 编码，但一旦你使用 `System.out.println()` 打印时，Java 会当它是一个 UTF-8 编码的字符串。这就是出现乱码原因。解决问题的办法有两个：1. 修改配置文件，让 Tomcat 以 UTF-8 格式 看待/解析 接收到的字节流。2. 不改变配置文件。获得 Tomcat 的 ISO-8859-1 字符串后，生成对应的 UTF-8 字符串，再进行输出打印。### 获取 POST 请求中的数据，打印乱码serverl.xml 中 `URIEncoding="xxx"` 设置影响不到 post 请求提交来的数据！适用于 get 请求的修改配置方案，对 post 请求无效！Tomcat 如何 看待/解析 post 请求发送来的数据，取决于 `req.setCharacterEncoding("");`。如果未曾调用该方法，Tomcat 以 ISO-8859-1 编码解析接受的post请求数据。同上，随后一旦调用 `System.out.println()` 就会出现乱码。解决问题的办法有两个：1. 在调用 `req.getParameter()` 前调用 `req.setCharacterEncoding("UTF-8");`， 让 Tomcat 以 UTF-8 格式 看待/解析 接收到的字节流2. 不设置req字符编码。获得 Tomcat 的 ISO-8859-1 字符串后，生成对应的 UTF-8 字符串，再进行输出打印。如同 get 的方案一对 post 无效，post 的方案一同样解决不了 get 的乱码问题。但是，显而易见，两者方案二是相同的，这也是后续 **过滤器** 的主要使用场景。### 中文字符串，输出到页面显示乱码以何种编码将字符转换为字节流后，发送给浏览器，取决于 *`resp.setCharacterEncoding("xxx");`* 。没有调用时，默认使用 ISO-8859-1 编码格式。但是 ISO-8859-1 格式最大的问题在于：它是一个单字节编码，不支持中文。所以，使用 Tomcat 默认的 ISO-8859-1 编码向浏览器发送的字节流中，如果含有中文信息，浏览器无法正确显示成对应中文。解决办法只有一个，设置 Tomcat 发送数据的编码格式，并且，*`resp.setCharacterEncoding()`* 必须在 *`PrintWriter out = resp.getWriter();`* 之前，否则设置无效（因为你已经得到了使用 ISO-8859-1 编码的 out 对象了）。### setContentType 和 setCharacterEncoding在 **servletResponse.setCharacterEncoding()** 方法的注释中写到了它和 setContentType 之间的关系：- 如果 response 的字符集已经在 setContentType（或 setLocale）方法中指定，那么你再调用 setCharacterEncoding 方法则会覆盖掉之前的设置。- `.setContentType("text/html; charset=UTF-8")` 等同于 `.setContentType("text/html")` + `.setCharacterEncoding("UTF-8")`。另外，在使用 setCharacterEncoding 会出现失效的情况，通常是因为 2 点原因：1. 你在 `.getWriter()` 之后才调用 `.setCharacterEncoding()`，这样对字符集的设置太晚，自然是无效的。2. 你有 `.setCharacterEncoding()`，但是没有调用 `.setContentType()`，这样对字符集的设置也是无效的。
+# Java Web 进阶
+
+## 1. HttpSession
+
+一个用户有且最多有一个 HttpSession，并且不会被其他用户访问到。HttpSession 对象在用户第一次访问网站时自动被创建，你可以通过调用 HttpServeltRequest 的 `getSession()` 方法获得该对象。
+
+会话（Session）是一个比请求（Request）更“大”的概念。一个会话中可以包含一个或多个请求；一个请求必定是在某个会话中。
+
+`getSession()` 方法会返回当前的 HttpSession，若当前没有，则创建一个返回。
+
+可以通过 HttpSession 的 `setAttribute()` 方法将值放入 HttpSesion 中。
+
+::: warning 注意
+
+- 放到 HttpSesion 中的值不仅限于 String 类型，可以是任意实现了 java.io.Serializable 接口的 java 对象。
+- 其实，你也可以将不支持序列化的对象放入 HttpSession，只不过这样做会有隐患。
+
+:::
+
+调用 `setAttribute()` 方法时，若传入的 name 参数此前已经使用过，则会用新值覆盖旧值。通过调用 HttpSession 的 `getAttribute()` 方法可以取回之前放入的对象。
+
+所有保存在 HttpSession 的数据不会发送到客户端。容器为每个 HttpSession 生成唯一的表示，并将该标识发送给客户端，或创建一个名为 **JSESSIONID** 的 cookie，或者在 URL 后附加一个名为 jsessionid 的参数。在后续的请求总，浏览器会将该标识发送给客户端，这样服务器就可以识别该请求是由哪个用户发起的（**这个过程无须开发人员介入**）。
+
+默认情况下，HttpSession 会在用户不活动一段时间之后自动过期，该时间由 web.xml 中的 `session-timeout` 元素配置，单位为分钟（如果不设置，则过期时间由容器自行决定）。此外，HttpSession还定义可一个 `invalidate()` 方法强制会话立即过期失效。
+
+```xml
+<session-config>
+    <session-timeout>2</session-timeout>
+</session-config>
+```
+
+## 2. EL 表达式
+
+JSP 2.0 的最重要特性就是表达式语言（EL），EL 的目的是帮助程序员编写无脚本的 JSP 页面。
+
+最初 EL 表达式被创造出来是为了 JSTL 服务，配合 JSTL 使用的。不过从 JSP 2.0 开始即便项目中没有引入 JSTL，也可以（单独）使用 EL 。
+
+### EL 的默认关闭
+
+在 Servlet 3.0 以下版本中，EL 表达式的功能默认是关闭的。
+
+&gt; 如何判断你的项目使用的是哪个 Servlet ？可以查看你的 web.xml 配置文件的头部声明。
+
+通常情况下，我们一般不会使用 3.0 以下（甚至是 3.0）版本，最常见的至少是 3.1 版本起。但是，有时我们通过开发工具去自动创建 Web 项目时，很有被创建出来的项目默认的 Servlet 版本会偏低。因为这些工具的模板会偏老旧。
+
+如果因为某些原因，你使用的是低版本的 Servlet，记得要将 EL 表达式的功能打开。
+
+在 JSP 的 *`page`* 指令中，通过 *`isELIgnored`* 属性可以在当前页面 启用/禁止 EL 表达式。
+
+或者在 web.xml 作出全局性设置：
+
+```xml
+<jsp-config>
+    <jsp-property-group>
+        <url-pattern>*.jsp</url-pattern>
+        <el-ignored>false</el-ignored>
+    </jsp-property-group>
+</jsp-config>
+```
+
+### EL 语法
+
+EL 表达式以 `${` 开头，并以 `}` 结束，其结构为 `${ 表达式 }`，其计算结果的类型是一个『**字符串**』。
+
+EL 表达式的结果值可以是任何类型，但是浏览器会将其值以字符串形式（toString 方法）的形式将其“替换”到 EL 表达式所处位置。
+
+EL 表达式可以返回任意类型的值。如果 EL 表达式的结果是一个带有属性的对象，则可以利用 `[ ]` 或者 `.` 运算符来访问该属性。如果是使用 `[ ]` ，属性名需要用引号括起来。例如：
+
+- **${object["propertyName"]}**
+- **${object.propertyName}**
+
+如果，propertyName 不是一个有效的 Java 变量名，例如：`accept-language`，那么，此时只能使用 `[ ]` 语法，而不能使用 `.` 语法。
+
+如果，对象的属性碰巧又是另一个对象，那么可以用 `[ ]`，也可以使用 `.` 运算符来访问第二个对象的属性。例如：
+
+- **${pageContext["request"]["servletPath"]}**
+- **${pageContext.request["servletPath"]}**
+- **${pageContext.request.servletPath}**
+- **${pageContext["request"].servletPath}**
+
+如果 object 的类型是一个 Map，那么，这里使用的是键值对的键：`${object["key"]}`
+
+如果 object 的类型是一个 Array 或 List，那么这里使用的是其下标索引：`${object[0]}` 。这里的下标索引 `0` 没有使用 `""`，它必须是一个数字。
+
+### EL 隐式对象
+
+在 JSP 页面中，可以利用 JSP 脚本来访问 JSP 隐式对象，
+
+注意，在页面上显示 EL 表达式的值时，不需要 *`out.print()`* 或者 *`<%= %>`* ，容器会执行 EL 表达式并将其结果“写在”它所在的位置。
+
+| 隐含对象         | 描述                                                         |
+| :--------------- | :----------------------------------------------------------- |
+| pageContext      | 当前 JSP 页面的 `pageContext` 对象                           |
+| initParam        | Application 的初始化参数，初始化参数通常是在 web.xml 中通过 `<context-param>` 及其子元素 `<param-name>` 和 `<param-value>` 配置项配置 |
+| param            | 一个包含了所有请求参数的 Map，其中请求参数名为 key。不过，它无法处理一个请求参数，多个值的情况。通过 key 始终只有第一个值返回。 |
+| paramValues      | 和 param 类似，不过它可以处理一个参数名有多个参数值的情况。不过，如果参数只有一个值，它的返回值仍然是一个数组 |
+| applicationScope | 包含了 ServletContext 对象中所有属性的 map，并用属性名作 key。 |
+| sessionScope     | 包含了 HttpSession 对象中所有属性的 Map，并用属性名作 key。  |
+| requestScope     | 包含了 HttpServletRequest 对象中所有属性的Map，并用属性名作key。 |
+| pageScope        | 包含了全页面范围内的属性的 Map，并用属性名作 Key。           |
+| cookie           | 包含了当前请求对象中所有 Cookie 对象的Map。以 Cookie 的名称作为 key，并且每一个 key 都映射到一个 Cookie 对象。 |
+| header           | HTTP 请求信息头，字符串                                      |
+| headerValues     | HTTP 信息头，字符串数组。对应一个请求名，多个请求值的情况。通过 key 取出的始终是数组。 |
+
+E L表达式所提供的隐式对象中，并没有 request、response、session、application、out 等这些JSP中所存在的隐式对象。这是 EL 隐式对象与 JSP 隐式对象的区别。
+
+不过 EL 的隐式对象中有 pageContext（和 JSP 中一样），通过它我们依旧可以访问到上述这些 JSP 中直接提供，但 EL 中没有直接提供的对象。
+
+EL 表达式中可以使用 + 、- 、*、/、% 五种算数运算符。
+
+EL 表达式中可以使用 &&、||、！ 三种逻辑运算符。
+
+EL 表达式中可以使用 ==、！=、&gt;、&gt;=、&lt;、&lt;= 六种关系运算符。
+
+EL 表达式中提供了一个 **empty** 运算符专门用于 空和非空 的判断（当然，你也可以用 == null 判断）。例如：
+
+```java
+${empty X}
+```
+
+X 为 null，或者 X 是一个空字符串，或者 X 是一个空数组、空List、空Map、空Set，它都将返回 true 。
+
+## 3. JSTL 标签库
+
+JSP 标准标签库（JSTL）是一个定制标签库的集合，它的出现是为了实现呈现层与业务层的分离功能。使用 JSTL（结合EL表达式）在绝大多数情况下，JSP 页面中不再需要“嵌入”Java 代码（scriplet）。
+
+**使用 JSTL 需要额外导入 jstl 库。**
+
+**使用 JSTL 需要额外导入 jstl 库。**
+
+**使用 JSTL 需要额外导入 jstl 库。**
+
+根据 JSTL 标签所提供的功能，可以将其分为 5 个类别：核心（Core）标签、格式化标签、SQL 标签、XML 标签、JSTL 函数。其中以核心（Core）标签最为常用。
+
+使用不同类别的 JSTL 库，需要在 JSP 页面的头文件中做出相应的“声明”。例如：
+
+```html
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
+```
+
+如果忘记引入 ***jstl*** 库，上述声明会报错。
+
+### c:out
+
+`<c:out>` 标签用来显示一个表达式的结果，与 `<%= ... %>` 作用相似，它们的区别就是 `<c:out>` 标签可以直接通过 "." 操作符来访问属性。
+
+out 的语法有两种形式：
+
+- 形式一：
+
+  ```html
+  &lt;c:out value = "VALUE" [escapeXml = {true | false}] [default = "默认值"] /&gt;
+  ```
+
+- 形式二：
+
+  ```html
+  &lt;c:out value = "VALUE" [escapeXml = {true | false}]&gt;
+    默认内容
+  &lt;/c:out&gt;
+  ```
+
+  其中 value 属性是必要部分。
+
+### c:set
+
+set 标签常见 2 种形式/作用：
+
+- 第一种用于创建一个有界变量，并用 value 属性在其中定义一个要创建的字符串或者现存的有界对象：
+
+```html
+<c:set value="VALUE"
+       var="VAR NAME"
+       [scope="{ page | request | session | application }"]/>
+```
+
+- 第二种形式是设置有界变量的属性。
+
+例如：
+
+```html
+<%
+    request.setAttribute("username", "tom");
+    session.setAttribute("", "");
+    application.setAttribute("", "");
+%>
+
+<c:set var="password" value="123" scope="request"></c:set>
+<c:set var="key" value="value" scope="session"></c:set>
+<c:set var="key" value="value" scope="application"></c:set>
+
+${requestScope.username}, ${requestScope.password}
+
+<c:set target="TARGET"
+       property="PROPERTY NAME"
+       value="VALUE"/>
+```
+
+注意，这种形式中，target 属性中 **必须使用一个 EL 表达式** 来引用这个有界变量。
+
+例如：
+
+```html
+<%
+    Department dept = new Department(10, "Testing","BeiJing");
+    request.setAttribute("dept", dept);
+%>
+
+<c:set target="${requestScope.dept}" property="dname" value="System"></c:set>
+
+<p> ${requestScope.dept.deptno} </p>
+<p> ${requestScope.dept.dname} </p>
+<p> ${requestScope.dept.loc} </p>
+```
+
+### c:remove
+
+remove 标签用于删除有界变量。
+
+```xml
+<c:remove var = "VAR NAME"
+          [scope="{ page | request | session | application }"] />
+```
+
+### c:if
+
+if 标签是对某一个条件进行测试，假如结果为 true，就处理它的 body content 。另外，测试的结果可以保存在一个 Boolean 对象中，并创建有界变量来引用这个 Boolean 对象。
+
+if 的语法有两种形式。第一种是没有 body content：
+
+```xml
+<c:if test="bool 型 EL 表达式"
+      [var="VAR NAME"]
+      [scope="{ page | request | session | application }"]/>
+```
+
+第二种形式使用了一个 body content：
+
+```html
+<c:if test="bool 型 EL 表达式" [var="变量名"] [scope="{ page | request | session | applicationi }"]>
+    body content
+</c:if>
+```
+
+### c:choose、c:when 和 c:otherwise
+
+choose-when-otherwise 标签的作用与 Java 中的 switch-case-default 类似。
+
+choose 标签中必须嵌有一个或多个 when 标签，并且每个 when 标签都有一种可以计算和处理的情况。otherwise 标签则用于默认的条件块。
+
+choose 和 otherwise 标签没有属性。when 标签必须带有定义的测试条件 test 属性，来决定是否应该处理 body content 。
+
+```html
+<c:choose>
+    <c:when test="${boolean 表达式}"> ... </c:when>
+    <c:when test="${boolean 表达式}"> ... </c:when>
+    ...
+    <c:otherwise> ... </c:otherwise>
+</c:choose>
+```
+
+### c:forEach
+
+forEach 标签会无数次反复便利 body content 或者对象集合。
+
+forEach 标签的语法有两种。第一种形式是固定次数地重返 body content：
+
+```xml
+<c:forEach [var="VAR NAME"] begin="BEGIN" end="END" step="STEP">
+    body content
+</c:forEach>
+```
+
+这种形式与集合对象无关。类似于 Java 代码中的 `for (int i = 0; i < 10; i++)`
+
+例如：
+
+```html
+<c:forEach var="item" begin="1" end="5" step="2">
+    <p>hello world ${item} </p>
+</c:forEach>
+```
+
+第二种形式用于遍历对象集合。类似于 Java 代码中的 `for (String string : list)`
+
+```html
+<c:forEach items="COLLECTIONS" [var="变量名"] [varStatus="变量名"]>
+    body content
+</c:forEach>
+```
+
+对于每一次遍历，forEach 标签都将创建一个有界变量，变量名通过 var 属性定义，可在 body content 中使用。 该有界变量只能在 body content 部分使用。
+
+forEach 标签有一个类型为 javax.servlet.jsp.jstl.core.LoopTagStatus 的变量 varStatus，这个变量有一个 count 属性，其中记录了当循环遍历的次数，该数值从1开始。
+
+例如：
+
+```xml
+<c:forEach items="${requestScope.depts}" var="dept" varStatus="loop">
+    <p>第 ${loop.count} 个：${dept.deptno}, ${dept.dname}, ${dept.loc}</p>
+</c:forEach>
+```
+
+### fmt 进行日期格式化
+
+引入申明：
+
+```html
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:formatDate value="<%=new Date()%>" type="date" pattern="yyyy-MM-dd"%/>
+<fmt:formatDate value="${date}" type="date" pattern="yyyy-MM-dd"//>
+```
+
+## 4. 乱码问题
+
+### 判断字符串的编码格式
+
+*注意，由于存在重码现象，以下方案并不严谨* 。
+
+```java
+// 由于字符编码存在重叠区，所以一个字符/字符串有多种编码可能，是完全正常合理的。
+public static String getEncoding(String str) {
+    String encode[] = new String[]{
+            "ASCII",
+            "ISO-8859-1",
+            "GB2312",       // GB2312 是 GBK 的一种“具体情况”。
+            "GBK",
+            "UTF-8",        // UTF-8 是 Unicode 的一种“具体情况”。
+            "UTF-16",       // UTF-16 是 Unicode 的一种“具体情况”。
+            "Unicode",
+    };
+    String ret = "";
+
+    for (int i = 0; i < encode.length; i++) {
+        try {
+            if (str.equals(new String(str.getBytes(encode[i]), encode[i]))) {
+                ret = ret + encode[i] + " ";
+            }
+        } catch (Exception ex) {
+        }
+    }
+
+    return ret.equals("") ? "Other" : ret;
+}
+```
+
+乱码出现在三种场景：
+
+- GET 请求提交的中文数据，在 Servlet 中输出乱码。
+- POST 请求提交的中文数据，在 Servlet 中输出乱码。
+- 返回给浏览器的中文数据，在页面显示乱码。
+
+提前声明，虽然同样是提交的数据在 Servlet中 显示为乱码，但是 GET / POST 发生乱码的原因和解决乱码的方案并不相同，不能混用 。
+
+### 获取 GET 请求中的数据，打印乱码
+
+默认情况下，浏览器发送给 Tomcat 的数据都是以 `ISO-8859-1` 进行编码后的字节流。
+
+在 get 请求中，Tomcat 以何种方式看待、解析接收的这些字节流取决于 server.xml 中的一个配置：`<Connector port="8080" ... URIEncoding="xxx"` 。
+
+默认情况下 `URIEncoding="ISO-8859-1"`，即 Tomcat 默认以 ISO-8859-1 编码解析所收到的 get 请求发送来的字节流，从而转换为字符流，即字符串。
+
+但是这里有一个关键性问题：Java 字符串是 UTF-8 编码。所以，当你通过 `req.getParameter("");` 获得一个中文字符串时，这个字符串是 ISO-8859-1 编码，但一旦你使用 `System.out.println()` 打印时，Java 会当它是一个 UTF-8 编码的字符串。这就是出现乱码原因。
+
+解决问题的办法有两个：
+
+1. 修改配置文件，让 Tomcat 以 UTF-8 格式 看待/解析 接收到的字节流。
+2. 不改变配置文件。获得 Tomcat 的 ISO-8859-1 字符串后，生成对应的 UTF-8 字符串，再进行输出打印。
+
+### 获取 POST 请求中的数据，打印乱码
+
+serverl.xml 中 `URIEncoding="xxx"` 设置影响不到 post 请求提交来的数据！适用于 get 请求的修改配置方案，对 post 请求无效！
+
+Tomcat 如何 看待/解析 post 请求发送来的数据，取决于 `req.setCharacterEncoding("");`。如果未曾调用该方法，Tomcat 以 ISO-8859-1 编码解析接受的post请求数据。同上，随后一旦调用 `System.out.println()` 就会出现乱码。
+
+解决问题的办法有两个：
+
+1. 在调用 `req.getParameter()` 前调用 `req.setCharacterEncoding("UTF-8");`， 让 Tomcat 以 UTF-8 格式 看待/解析 接收到的字节流
+2. 不设置req字符编码。获得 Tomcat 的 ISO-8859-1 字符串后，生成对应的 UTF-8 字符串，再进行输出打印。
+
+如同 get 的方案一对 post 无效，post 的方案一同样解决不了 get 的乱码问题。
+
+但是，显而易见，两者方案二是相同的，这也是后续 **过滤器** 的主要使用场景。
+
+### 中文字符串，输出到页面显示乱码
+
+以何种编码将字符转换为字节流后，发送给浏览器，取决于 *`resp.setCharacterEncoding("xxx");`* 。没有调用时，默认使用 ISO-8859-1 编码格式。
+
+但是 ISO-8859-1 格式最大的问题在于：它是一个单字节编码，不支持中文。
+
+所以，使用 Tomcat 默认的 ISO-8859-1 编码向浏览器发送的字节流中，如果含有中文信息，浏览器无法正确显示成对应中文。
+
+解决办法只有一个，设置 Tomcat 发送数据的编码格式，并且，*`resp.setCharacterEncoding()`* 必须在 *`PrintWriter out = resp.getWriter();`* 之前，否则设置无效（因为你已经得到了使用 ISO-8859-1 编码的 out 对象了）。
+
+### setContentType 和 setCharacterEncoding
+
+在 **servletResponse.setCharacterEncoding()** 方法的注释中写到了它和 setContentType 之间的关系：
+
+- 如果 response 的字符集已经在 setContentType（或 setLocale）方法中指定，那么你再调用 setCharacterEncoding 方法则会覆盖掉之前的设置。
+- `.setContentType("text/html; charset=UTF-8")` 等同于 `.setContentType("text/html")` + `.setCharacterEncoding("UTF-8")`。
+
+另外，在使用 setCharacterEncoding 会出现失效的情况，通常是因为 2 点原因：
+
+1. 你在 `.getWriter()` 之后才调用 `.setCharacterEncoding()`，这样对字符集的设置太晚，自然是无效的。
+2. 你有 `.setCharacterEncoding()`，但是没有调用 `.setContentType()`，这样对字符集的设置也是无效的。

@@ -4,7 +4,7 @@
 
 我们将使用 Spring 的 **@WebAppConfiguration** 注释来测试 web 控制器。@WebAppConfiguration 是一个类级注释，它将加载特定于 web 的 ApplicationContext，即 WebApplicationContext 。
 
-> 虽然 @WebAppConfiguration 从命名上并未体现出与测试的关系，但是在它的注释中明确写道： the ApplicationContext loaded for an integration test should be a WebApplicationContext.
+&gt; 虽然 @WebAppConfiguration 从命名上并未体现出与测试的关系，但是在它的注释中明确写道： the ApplicationContext loaded for an integration test should be a WebApplicationContext.
 
 @WebAppConfiguration 所其中的配置中指定的 web application 的目录的默认路径是 `src/main/webapp` 。当然，你可以用自己指定的值来覆盖这个默认值。
 

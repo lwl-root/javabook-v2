@@ -32,7 +32,7 @@
 
 通过上面的无序集合和有序集合，我们可以得出有序和无序的概念。有序指的是数据的排列顺序和读取顺序符合我们的预期就叫做有序。而无序指的是数据的排列顺序和读取顺序不符合我们的预期就叫做无序。
 
-> PS：如果对于有序和无序的概念不是很清楚也没关系，通过下面的事例，我们可以进一步的理解它们的含义。
+&gt; PS：如果对于有序和无序的概念不是很清楚也没关系，通过下面的事例，我们可以进一步的理解它们的含义。
 
 ## 方法1：contains判断去重(有序)
 
@@ -74,7 +74,7 @@ public class ListDistinctExample {
 
 以上程序执行的结果，如下所示：
 
-<img src="/images/list去重1.jpg">
+&lt;img src="/images/list去重1.jpg"&gt;
 
 此方法的优点的：理解起来比较简单，并且最终得到的集合也是有序的，这里的有序指的是新集合的排列顺序和原集合的顺序是一致的；但缺点是实现代码有点多，不够简洁优雅。
 
@@ -120,7 +120,7 @@ public class ListDistinctExample {
 ```
 
 以上程序执行的结果，如下所示：
-<img src="/images/list去重2.jpg">
+&lt;img src="/images/list去重2.jpg"&gt;
 此方法的实现比上一种方法的实现代码要少一些，并且不需要新建集合，但此方法得到的新集合是无序的，也就是新集合的排列顺序和原集合不一致，因此也不是最优的解决方案。
 
 ## 方法3：HashSet去重(无序)
@@ -156,7 +156,7 @@ public class ListDistinctExample {
 ```
 
 以上程序执行的结果，如下所示：
-<img src="/images/list去重3.jpg">
+&lt;img src="/images/list去重3.jpg"&gt;
 此方法的实现代码较为简洁，但缺点是 HashSet 会自动排序，这样新集合的数据排序就和原集合不一致了，如果对集合的顺序有要求，那么此方法也不能满足当前需求。
 
 ## 方法4：LinkedHashSet去重(有序)
@@ -193,7 +193,7 @@ public class ListDistinctExample {
 
 以上程序执行的结果，如下所示：
 
-<img src="/images/list去重4.jpg">
+&lt;img src="/images/list去重4.jpg"&gt;
 
 从上述代码和执行结果可以看出，LinkedHashSet 是到目前为止，实现比较简单，且最终生成的新集合与原集合顺序保持一致的实现方法，是我们可以考虑使用的一种去重方法。
 
@@ -231,7 +231,7 @@ public class ListDistinctExample {
 
 以上程序执行的结果，如下所示：
 
-<img src="/images/list去重5.jpg">
+&lt;img src="/images/list去重5.jpg"&gt;
 
 比较遗憾的是，TreeSet 虽然实现起来也比较简单，但它有着和 HashSet 一样的问题，会自动排序，因此也不能满足我们的需求。
 
@@ -269,7 +269,7 @@ public class ListDistinctExample {
 
 以上程序执行的结果，如下所示：
 
-<img src="/images/list去重6.jpg">
+&lt;img src="/images/list去重6.jpg"&gt;
 
 Stream 实现去重功能和其他方法不同的是，它不用新创建集合，使用自身接收一个去重的结果就可以了，并且实现代码也很简洁，并且去重后的集合顺序也和原集合的顺序保持一致，是我们最优先考虑的去重方法。
 

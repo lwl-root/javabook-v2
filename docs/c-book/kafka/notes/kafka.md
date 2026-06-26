@@ -2,25 +2,25 @@
 
 #### 什么是 MQ
 
->Message Queue（MQ），消息队列中间件。很多人都说：MQ 通过将消息的发送和接收分离来实现应用程序的异步和解偶，这个给人的直觉是——MQ 是异步的，用来解耦的，但是这个只是 MQ 的效果而不是目的。MQ 真正的目的是为了通讯，屏蔽底层复杂的通讯协议，定义了一套应用层的、更加简单的通讯协议。一个分布式系统中两个模块之间通讯要么是HTTP，要么是自己开发的（rpc） TCP，但是这两种协议其实都是原始的协议。HTTP 协议很难实现两端通讯——模块 A 可以调用 B，B 也可以主动调用 A，如果要做到这个两端都要背上WebServer，而且还不支持⻓连接（HTTP 2.0 的库根本找不到）。TCP 就更加原始了，粘包、心跳、私有的协议，想一想头皮就发麻。MQ 所要做的就是在这些协议之上构建一个简单的“协议”——生产者/消费者模型。MQ 带给我的“协议”不是具体的通讯协议，而是更高层次通讯模型。它定义了两个对象——发送数据的叫生产者；接收数据的叫消费者， 提供一个SDK 让我们可以定义自己的生产者和消费者实现消息通讯而无视底层通讯协议
+&gt;Message Queue（MQ），消息队列中间件。很多人都说：MQ 通过将消息的发送和接收分离来实现应用程序的异步和解偶，这个给人的直觉是——MQ 是异步的，用来解耦的，但是这个只是 MQ 的效果而不是目的。MQ 真正的目的是为了通讯，屏蔽底层复杂的通讯协议，定义了一套应用层的、更加简单的通讯协议。一个分布式系统中两个模块之间通讯要么是HTTP，要么是自己开发的（rpc） TCP，但是这两种协议其实都是原始的协议。HTTP 协议很难实现两端通讯——模块 A 可以调用 B，B 也可以主动调用 A，如果要做到这个两端都要背上WebServer，而且还不支持⻓连接（HTTP 2.0 的库根本找不到）。TCP 就更加原始了，粘包、心跳、私有的协议，想一想头皮就发麻。MQ 所要做的就是在这些协议之上构建一个简单的“协议”——生产者/消费者模型。MQ 带给我的“协议”不是具体的通讯协议，而是更高层次通讯模型。它定义了两个对象——发送数据的叫生产者；接收数据的叫消费者， 提供一个SDK 让我们可以定义自己的生产者和消费者实现消息通讯而无视底层通讯协议
 
 #### 有 Broker 的 MQ
 
->这个流派通常有一台服务器作为 Broker，所有的消息都通过它中转。生产者把消息发送给它就结束自己的任务了，Broker 则把消息主动推送给消费者（或者消费者主动轮询）
+&gt;这个流派通常有一台服务器作为 Broker，所有的消息都通过它中转。生产者把消息发送给它就结束自己的任务了，Broker 则把消息主动推送给消费者（或者消费者主动轮询）
 
 #### 重 Topic
 
->kafka、JMS（ActiveMQ）就属于这个流派，生产者会发送 key 和数据到 Broker，由 Broker比较 key 之后决定给哪个消费者。这种模式是我们最常⻅的模式，是我们对 MQ 最多的印象。在这种模式下一个 topic 往往是一个比较大的概念，甚至一个系统中就可能只有一个topic，topic 某种意义上就是 queue，生产者发送 key 相当于说：“hi，把数据放到 key 的队列中”
+&gt;kafka、JMS（ActiveMQ）就属于这个流派，生产者会发送 key 和数据到 Broker，由 Broker比较 key 之后决定给哪个消费者。这种模式是我们最常⻅的模式，是我们对 MQ 最多的印象。在这种模式下一个 topic 往往是一个比较大的概念，甚至一个系统中就可能只有一个topic，topic 某种意义上就是 queue，生产者发送 key 相当于说：“hi，把数据放到 key 的队列中”
 
->如上图所示，Broker 定义了三个队列，key1，key2，key3，生产者发送数据的时候会发送key1 和 data，Broker 在推送数据的时候则推送 data（也可能把 key 带上）。
+&gt;如上图所示，Broker 定义了三个队列，key1，key2，key3，生产者发送数据的时候会发送key1 和 data，Broker 在推送数据的时候则推送 data（也可能把 key 带上）。
 
->虽然架构一样但是 kafka 的性能要比 jms 的性能不知道高到多少倍，所以基本这种类型的MQ 只有 kafka 一种备选方案。如果你需要一条暴力的数据流（在乎性能而非灵活性）那么kafka 是最好的选择
+&gt;虽然架构一样但是 kafka 的性能要比 jms 的性能不知道高到多少倍，所以基本这种类型的MQ 只有 kafka 一种备选方案。如果你需要一条暴力的数据流（在乎性能而非灵活性）那么kafka 是最好的选择
 
 #### 轻 Topic
 
->这种的代表是 RabbitMQ（或者说是 AMQP）。生产者发送 key 和数据，消费者定义订阅的队列，Broker 收到数据之后会通过一定的逻辑计算出 key 对应的队列，然后把数据交给队列
+&gt;这种的代表是 RabbitMQ（或者说是 AMQP）。生产者发送 key 和数据，消费者定义订阅的队列，Broker 收到数据之后会通过一定的逻辑计算出 key 对应的队列，然后把数据交给队列
 
->这种模式下解耦了 key 和 queue，在这种架构中 queue 是非常轻量级的（在 RabbitMQ 中它的上限取决于你的内存），消费者关心的只是自己的 queue；生产者不必关心数据最终给谁只要指定 key 就行了，中间的那层映射在 AMQP 中叫 exchange（交换机）。
+&gt;这种模式下解耦了 key 和 queue，在这种架构中 queue 是非常轻量级的（在 RabbitMQ 中它的上限取决于你的内存），消费者关心的只是自己的 queue；生产者不必关心数据最终给谁只要指定 key 就行了，中间的那层映射在 AMQP 中叫 exchange（交换机）。
 
 AMQP 中有四种 exchange
 
@@ -34,15 +34,15 @@ AMQP 中有四种 exchange
 
 #### 无 Broker 的 MQ
 
->无 Broker 的 MQ 的代表是 ZeroMQ。该作者非常睿智，他非常敏锐的意识到——MQ 是更高级的 Socket，它是解决通讯问题的。所以 ZeroMQ 被设计成了一个“库”而不是一个中间件，这种实现也可以达到——没有 Broker 的目的
+&gt;无 Broker 的 MQ 的代表是 ZeroMQ。该作者非常睿智，他非常敏锐的意识到——MQ 是更高级的 Socket，它是解决通讯问题的。所以 ZeroMQ 被设计成了一个“库”而不是一个中间件，这种实现也可以达到——没有 Broker 的目的
 
->节点之间通讯的消息都是发送到彼此的队列中，每个节点都既是生产者又是消费者。ZeroMQ做的事情就是封装出一套类似于 Socket 的 API 可以完成发送数据，读取数据
+&gt;节点之间通讯的消息都是发送到彼此的队列中，每个节点都既是生产者又是消费者。ZeroMQ做的事情就是封装出一套类似于 Socket 的 API 可以完成发送数据，读取数据
 
->ZeroMQ 其实就是一个跨语言的、重量级的 Actor 模型邮箱库。你可以把自己的程序想象成一个 Actor，ZeroMQ 就是提供邮箱功能的库；ZeroMQ 可以实现同一台机器的 RPC 通讯也可以实现不同机器的 TCP、UDP 通讯，如果你需要一个强大的、灵活、野蛮的通讯能力，别犹豫 ZeroMQ
+&gt;ZeroMQ 其实就是一个跨语言的、重量级的 Actor 模型邮箱库。你可以把自己的程序想象成一个 Actor，ZeroMQ 就是提供邮箱功能的库；ZeroMQ 可以实现同一台机器的 RPC 通讯也可以实现不同机器的 TCP、UDP 通讯，如果你需要一个强大的、灵活、野蛮的通讯能力，别犹豫 ZeroMQ
 
 ## 一、Kafka介绍
 
->Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的
+&gt;Kafka是最初由Linkedin公司开发，是一个分布式、支持分区的（partition）、多副本的
 （replica），基于zookeeper协调的分布式消息系统，它的最大的特性就是可以实时的处理
 大量数据以满足各种需求场景：比如基于hadoop的批处理系统、低延迟的实时系统、
 Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等等，用scala语言编
@@ -50,7 +50,7 @@ Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等
 
 ### 1.Kafka的使用场景
 
->日志收集：一个公司可以用Kafka收集各种服务的log，通过kafka以统一接口服务的方式
+&gt;日志收集：一个公司可以用Kafka收集各种服务的log，通过kafka以统一接口服务的方式
 开放给各种consumer，例如hadoop、Hbase、Solr等。
 消息系统：解耦和生产者和消费者、缓存消息等。
 用户活动跟踪：Kafka经常被用来记录web用户或者app用户的各种活动，如浏览网⻚、
@@ -62,7 +62,7 @@ Storm/Spark流式处理引擎，web/nginx日志、访问日志，消息服务等
 
 ### 2.Kafka基本概念
 
->kafka是一个分布式的，分区的消息(官方称之为commit log)服务。它提供一个消息系统应该
+&gt;kafka是一个分布式的，分区的消息(官方称之为commit log)服务。它提供一个消息系统应该
 具备的功能，但是确有着独特的设计。可以这样来说，Kafka借鉴了JMS规范的思想，但是确
 并 `没有完全遵循JMS规范。`
 
@@ -136,7 +136,7 @@ delete.topic.enable|false|是否允许删除主题
 
 ### 3.创建主题topic
 
->topic是什么概念？topic可以实现消息的分类，不同消费者订阅不同的topic。
+&gt;topic是什么概念？topic可以实现消息的分类，不同消费者订阅不同的topic。
 
 ![输入图片说明](/images/kafka/QQ截图20220110122844.png "20201229183512.png")
 
@@ -150,7 +150,7 @@ delete.topic.enable|false|是否允许删除主题
 ```
 ### 4.发送消息
 
->kafka自带了一个producer命令客户端，可以从本地文件中读取内容，或者我们也可以以命令行中直接输入内容，并将这些内容以消息的形式发送到kafka集群中。在默认情况下，每一个行会被当做成一个独立的消息。使用kafka的发送消息的客户端，指定发送到的kafka服务器地址和topic
+&gt;kafka自带了一个producer命令客户端，可以从本地文件中读取内容，或者我们也可以以命令行中直接输入内容，并将这些内容以消息的形式发送到kafka集群中。在默认情况下，每一个行会被当做成一个独立的消息。使用kafka的发送消息的客户端，指定发送到的kafka服务器地址和topic
 
 ```shell
 ./kafka-console-producer.sh --broker-list 172.16.253.38:9092 --topic test
@@ -181,11 +181,11 @@ topic中消费消息
 
 ### 1.消息的顺序存储
 
->消息的发送方会把消息发送到broker中，broker会存储消息，消息是按照发送的顺序进行存储。因此消费者在消费消息时可以指明主题中消息的偏移量。默认情况下，是从最后一个消息的下一个偏移量开始消费。
+&gt;消息的发送方会把消息发送到broker中，broker会存储消息，消息是按照发送的顺序进行存储。因此消费者在消费消息时可以指明主题中消息的偏移量。默认情况下，是从最后一个消息的下一个偏移量开始消费。
 
 ### 2. 单播消息的实现
 
->单播消息：一个消费组里 只会有一个消费者能消费到某一个topic中的消息。于是可以创建多个消费者，这些消费者在同一个消费组中。
+&gt;单播消息：一个消费组里 只会有一个消费者能消费到某一个topic中的消息。于是可以创建多个消费者，这些消费者在同一个消费组中。
 ```shell
 ./kafka-console-consumer.sh --bootstrap-server 10.31.167.10:9092 --consumer-property group.id=testGroup --topic test
 ```
@@ -221,7 +221,7 @@ kafka实现多播，只需要让不同的消费者处于不同的消费组即可
 ### 2.partition分区
 ![输入图片说明](/images/kafka/QQ截图20220110125413.png "20201229183512.png")
 
->一个主题中的消息量是非常大的，因此可以通过分区的设置，来分布式存储这些消息。比如一个topic创建了 3 个分区。那么topic中的消息就会分别存放在这三个分区中。
+&gt;一个主题中的消息量是非常大的，因此可以通过分区的设置，来分布式存储这些消息。比如一个topic创建了 3 个分区。那么topic中的消息就会分别存放在这三个分区中。
 
 ### 为一个主题创建多个分区
 ```shell
@@ -240,7 +240,7 @@ kafka实现多播，只需要让不同的消费者处于不同的消费组即可
 
 小细节：
 
->定期将自己消费分区的offset提交给kafka内部topic：__consumer_offsets，提交过去的
+&gt;定期将自己消费分区的offset提交给kafka内部topic：__consumer_offsets，提交过去的
 时候，key是consumerGroupId+topic+分区号，value就是当前offset的值，kafka会定
 期清理topic里的消息，最后就保留最新的那条数据
 因为__consumer_offsets可能会接收高并发的请求，kafka默认给其分配 50 个分区(可以
@@ -286,7 +286,7 @@ log.dir=/usr/local/data/kafka-logs-
 
 ### 2.副本的概念
 
->副本是对分区的备份。在集群中，不同的副本会被部署在不同的broker上。下面例子：创建 1个主题， 2 个分区、 3 个副本。
+&gt;副本是对分区的备份。在集群中，不同的副本会被部署在不同的broker上。下面例子：创建 1个主题， 2 个分区、 3 个副本。
 
 ```shell
 ./kafka-topics.sh --create --zookeeper 172.16.253.35:2181 --replication-factor 3 --partitions 2 --topic my-replicated-topic
@@ -335,7 +335,7 @@ isr：
 
 ![输入图片说明](/images/kafka/QQ截图20220110134734.png "20201229183512.png")
 
->图中Kafka集群有两个broker，每个broker中有多个partition。一个partition只能被一个消费组里的某一个消费者消费，从而保证消费顺序。Kafka只在partition的范围内保证消息消费的局部顺序性，不能在同一个topic中的多个partition中保证总的消费顺序性。一个消费者可以消费多个partition。
+&gt;图中Kafka集群有两个broker，每个broker中有多个partition。一个partition只能被一个消费组里的某一个消费者消费，从而保证消费顺序。Kafka只在partition的范围内保证消息消费的局部顺序性，不能在同一个topic中的多个partition中保证总的消费顺序性。一个消费者可以消费多个partition。
 
 `消费组中消费者的数量不能比一个topic中的partition数量多，否则多出来的消费者消费不到消息。`
 
@@ -587,7 +587,7 @@ for (Map.Entry<TopicPartition, OffsetAndTimestamp> entry :parMap.entrySet()) {
 
 ### 9.新消费组的消费偏移量
 
-> 当消费主题的是一个新的消费组，或者指定offset的消费方式，offset不存在，那么应该如何消费?
+&gt; 当消费主题的是一个新的消费组，或者指定offset的消费方式，offset不存在，那么应该如何消费?
 
 * latest(默认) ：只消费自己启动之后发送到主题的消息
 * earliest：第一次从头开始消费，以后按照消费offset记录继续消费，这个需要区别于consumer.seekToBeginning(每次都从头开始消费)
@@ -715,7 +715,7 @@ public void listenGroup(ConsumerRecord<String, String> record,Acknowledgment ack
 
 ### 3.HW和LEO
 
->HW俗称高水位，HighWatermark的缩写，取一个partition对应的ISR中最小的LEO(log-end-offset)作为HW，consumer最多只能消费到HW所在的位置。另外每个replica都有HW,leader和follower各自负责更新自己的HW的状态。对于leader新写入的消息，consumer不能立刻消费，leader会等待该消息被所有ISR中的replicas同步后更新HW，此时消息才能被consumer消费。这样就保证了如果leader所在的broker失效，该消息仍然可以从新选举的leader中获取。
+&gt;HW俗称高水位，HighWatermark的缩写，取一个partition对应的ISR中最小的LEO(log-end-offset)作为HW，consumer最多只能消费到HW所在的位置。另外每个replica都有HW,leader和follower各自负责更新自己的HW的状态。对于leader新写入的消息，consumer不能立刻消费，leader会等待该消息被所有ISR中的replicas同步后更新HW，此时消息才能被consumer消费。这样就保证了如果leader所在的broker失效，该消息仍然可以从新选举的leader中获取。
 
 ## 十、Kafka线上问题优化
 
@@ -726,7 +726,7 @@ public void listenGroup(ConsumerRecord<String, String> record,Acknowledgment ack
 
 ### 2.如何防止消息的重复消费
 
->一条消息被消费者消费多次。如果为了消息的不重复消费，而把生产端的重试机制关闭、消费端的手动提交改成自动提交，这样反而会出现消息丢失，那么可以直接在防治消息丢失的手段上再加上消费消息时的幂等性保证，就能解决消息的重复消费问题。
+&gt;一条消息被消费者消费多次。如果为了消息的不重复消费，而把生产端的重试机制关闭、消费端的手动提交改成自动提交，这样反而会出现消息丢失，那么可以直接在防治消息丢失的手段上再加上消费消息时的幂等性保证，就能解决消息的重复消费问题。
 
 ### 幂等性如何保证：
 
@@ -740,7 +740,7 @@ public void listenGroup(ConsumerRecord<String, String> record,Acknowledgment ack
 
 ### 4.解决消息积压问题
 
->消息积压会导致很多问题，比如磁盘被打满、生产端发消息导致kafka性能过慢，就容易出现服务雪崩，就需要有相应的手段：
+&gt;消息积压会导致很多问题，比如磁盘被打满、生产端发消息导致kafka性能过慢，就容易出现服务雪崩，就需要有相应的手段：
 
 * 方案一：在一个消费者中启动多个线程，让多个线程同时消费。——提升一个消费者的消费能力（增加分区增加消费者）。
 * 方案二：如果方案一还不够的话，这个时候可以启动多个消费者，多个消费者部署在不同的服务器上。其实多个消费者部署在同一服务器上也可以提高消费能力——充分利用服务器的cpu资源。
