@@ -5,23 +5,23 @@ title: spring security
 
 ## 1.图解
 
-![](/images/ECS.jpg)
+![](/images/security/spring security图解.png)
 
 ## 2.身份认证流程
 
-&lt;img src="/images/security/认证流程.png"&gt;
+![](/images/security/认证流程.png)
 
 ### 2.1  登录参数和配置
 
-&lt;img src="/images/security/登录属性和URL定义.png"&gt;
+![](/images/security/登录属性和URL定义.png)
 
 ### 2.2 用户登录
 
-&lt;img src="/images/security/登录验证.png"&gt;
+![](/images/security/登录验证.png)
 
 ### 2.3  根据用户名查询
 
-&lt;img src="/images/security/查询用户.png"&gt;
+![](/images/security/查询用户.png)
 
 ::: warning 注意
 
@@ -31,7 +31,7 @@ title: spring security
 
 ### 2.4 密码校验
 
-&lt;img src="/images/security/密码效验.png"&gt;
+![](/images/security/密码效验.png)
 
 ::: warning 注意
 
@@ -98,11 +98,11 @@ public class CustomPasswordEncoder implements PasswordEncoder {
 
 ### 2.5 登录后请求，校验token
 
-&lt;img src="/images/security/token验证.png"&gt;
+![](/images/security/token验证.png)
 
 ## 3.授权认证流程
 
-&lt;img src="/images/security/授权流程.png"&gt;
+![](/images/security/授权流程.png)
 
 ```java
     /**
