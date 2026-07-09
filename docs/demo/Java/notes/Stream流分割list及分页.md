@@ -1,3 +1,6 @@
+---
+title: Stream常见操作
+---
 # Stream常见操作
 ## 一.Stream流分割list及分页
 
