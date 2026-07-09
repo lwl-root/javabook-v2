@@ -2,11 +2,14 @@
   "buildCommand": "npm run docs:build",
   "outputDirectory": "docs/.vuepress/dist",
   "installCommand": "npm install",
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/admin",
-      "destination": "/admin/",
-      "permanent": false
+      "source": "/admin/",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin/index.html"
     }
   ],
   "headers": [
