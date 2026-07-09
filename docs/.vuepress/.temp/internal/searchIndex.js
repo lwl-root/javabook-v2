@@ -3137,289 +3137,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "事务",
-    "headers": [
-      {
-        "level": 2,
-        "title": "事务的 ACID 属性",
-        "slug": "事务的-acid-属性",
-        "link": "#事务的-acid-属性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "三大问题",
-        "slug": "三大问题",
-        "link": "#三大问题",
-        "children": [
-          {
-            "level": 3,
-            "title": "脏读问题",
-            "slug": "脏读问题",
-            "link": "#脏读问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不可重复读问题",
-            "slug": "不可重复读问题",
-            "link": "#不可重复读问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "幻读问题",
-            "slug": "幻读问题",
-            "link": "#幻读问题",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "四个隔离级别",
-        "slug": "四个隔离级别",
-        "link": "#四个隔离级别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JDBC 事务的自动提交和隔离级别",
-        "slug": "jdbc-事务的自动提交和隔离级别",
-        "link": "#jdbc-事务的自动提交和隔离级别",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/JDBC%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JDBC 基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本概念",
-        "slug": "基本概念",
-        "link": "#基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "常用的 JDBC API",
-        "slug": "常用的-jdbc-api",
-        "link": "#常用的-jdbc-api",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JDBC 数据库访问步骤",
-        "slug": "jdbc-数据库访问步骤",
-        "link": "#jdbc-数据库访问步骤",
-        "children": [
-          {
-            "level": 3,
-            "title": "加载数据库驱动程序",
-            "slug": "加载数据库驱动程序",
-            "link": "#加载数据库驱动程序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "MySQL 6+ 驱动的使用要求",
-            "slug": "mysql-6-驱动的使用要求",
-            "link": "#mysql-6-驱动的使用要求",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "建立数据库连接",
-            "slug": "建立数据库连接",
-            "link": "#建立数据库连接",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "创建执行 SQL 语句的 Statement 对象",
-            "slug": "创建执行-sql-语句的-statement-对象",
-            "link": "#创建执行-sql-语句的-statement-对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "发送 SQL 执行语句",
-            "slug": "发送-sql-执行语句",
-            "link": "#发送-sql-执行语句",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结果集对象遍历",
-            "slug": "结果集对象遍历",
-            "link": "#结果集对象遍历",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "关闭对象",
-            "slug": "关闭对象",
-            "link": "#关闭对象",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/JDBC%E5%9F%BA%E7%A1%80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JDBC 高级",
-    "headers": [
-      {
-        "level": 2,
-        "title": "获取插入数据的主键",
-        "slug": "获取插入数据的主键",
-        "link": "#获取插入数据的主键",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "设值 NULL",
-        "slug": "设值-null",
-        "link": "#设值-null",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "处理 Blob（选学）",
-        "slug": "处理-blob-选学",
-        "link": "#处理-blob-选学",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/JDBC%E9%AB%98%E7%BA%A7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Service 层中使用事务",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "通过参数传递",
-        "slug": "通过参数传递",
-        "link": "#通过参数传递",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "利用 ThreadLocal",
-        "slug": "利用-threadlocal",
-        "link": "#利用-threadlocal",
-        "children": []
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/Service%E5%B1%82%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数据库连接池",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本概念",
-        "slug": "基本概念",
-        "link": "#基本概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "选择哪个数据库连接池",
-        "slug": "选择哪个数据库连接池",
-        "link": "#选择哪个数据库连接池",
-        "children": [
-          {
-            "level": 3,
-            "title": "不选择 C3P0 的原因：",
-            "slug": "不选择-c3p0-的原因",
-            "link": "#不选择-c3p0-的原因",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不选择 DBCP2 的原因：",
-            "slug": "不选择-dbcp2-的原因",
-            "link": "#不选择-dbcp2-的原因",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Druid",
-        "slug": "druid",
-        "link": "#druid",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单使用",
-            "slug": "简单使用",
-            "link": "#简单使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结合配置文件使用",
-            "slug": "结合配置文件使用",
-            "link": "#结合配置文件使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Druid 中的工具类：JdbcUtils",
-            "slug": "druid-中的工具类-jdbcutils",
-            "link": "#druid-中的工具类-jdbcutils",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "HikariCP",
-        "slug": "hikaricp",
-        "link": "#hikaricp",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单使用",
-            "slug": "简单使用-1",
-            "link": "#简单使用-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "配合配置文件使用",
-            "slug": "配合配置文件使用",
-            "link": "#配合配置文件使用",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Executors",
     "headers": [
       {
@@ -4196,6 +3913,289 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "事务",
+    "headers": [
+      {
+        "level": 2,
+        "title": "事务的 ACID 属性",
+        "slug": "事务的-acid-属性",
+        "link": "#事务的-acid-属性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "三大问题",
+        "slug": "三大问题",
+        "link": "#三大问题",
+        "children": [
+          {
+            "level": 3,
+            "title": "脏读问题",
+            "slug": "脏读问题",
+            "link": "#脏读问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不可重复读问题",
+            "slug": "不可重复读问题",
+            "link": "#不可重复读问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "幻读问题",
+            "slug": "幻读问题",
+            "link": "#幻读问题",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "四个隔离级别",
+        "slug": "四个隔离级别",
+        "link": "#四个隔离级别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JDBC 事务的自动提交和隔离级别",
+        "slug": "jdbc-事务的自动提交和隔离级别",
+        "link": "#jdbc-事务的自动提交和隔离级别",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/JDBC%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JDBC 基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本概念",
+        "slug": "基本概念",
+        "link": "#基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "常用的 JDBC API",
+        "slug": "常用的-jdbc-api",
+        "link": "#常用的-jdbc-api",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JDBC 数据库访问步骤",
+        "slug": "jdbc-数据库访问步骤",
+        "link": "#jdbc-数据库访问步骤",
+        "children": [
+          {
+            "level": 3,
+            "title": "加载数据库驱动程序",
+            "slug": "加载数据库驱动程序",
+            "link": "#加载数据库驱动程序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "MySQL 6+ 驱动的使用要求",
+            "slug": "mysql-6-驱动的使用要求",
+            "link": "#mysql-6-驱动的使用要求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "建立数据库连接",
+            "slug": "建立数据库连接",
+            "link": "#建立数据库连接",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建执行 SQL 语句的 Statement 对象",
+            "slug": "创建执行-sql-语句的-statement-对象",
+            "link": "#创建执行-sql-语句的-statement-对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "发送 SQL 执行语句",
+            "slug": "发送-sql-执行语句",
+            "link": "#发送-sql-执行语句",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结果集对象遍历",
+            "slug": "结果集对象遍历",
+            "link": "#结果集对象遍历",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "关闭对象",
+            "slug": "关闭对象",
+            "link": "#关闭对象",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/JDBC%E5%9F%BA%E7%A1%80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JDBC 高级",
+    "headers": [
+      {
+        "level": 2,
+        "title": "获取插入数据的主键",
+        "slug": "获取插入数据的主键",
+        "link": "#获取插入数据的主键",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "设值 NULL",
+        "slug": "设值-null",
+        "link": "#设值-null",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "处理 Blob（选学）",
+        "slug": "处理-blob-选学",
+        "link": "#处理-blob-选学",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/JDBC%E9%AB%98%E7%BA%A7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Service 层中使用事务",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "通过参数传递",
+        "slug": "通过参数传递",
+        "link": "#通过参数传递",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "利用 ThreadLocal",
+        "slug": "利用-threadlocal",
+        "link": "#利用-threadlocal",
+        "children": []
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/Service%E5%B1%82%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数据库连接池",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本概念",
+        "slug": "基本概念",
+        "link": "#基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "选择哪个数据库连接池",
+        "slug": "选择哪个数据库连接池",
+        "link": "#选择哪个数据库连接池",
+        "children": [
+          {
+            "level": 3,
+            "title": "不选择 C3P0 的原因：",
+            "slug": "不选择-c3p0-的原因",
+            "link": "#不选择-c3p0-的原因",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不选择 DBCP2 的原因：",
+            "slug": "不选择-dbcp2-的原因",
+            "link": "#不选择-dbcp2-的原因",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Druid",
+        "slug": "druid",
+        "link": "#druid",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单使用",
+            "slug": "简单使用",
+            "link": "#简单使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结合配置文件使用",
+            "slug": "结合配置文件使用",
+            "link": "#结合配置文件使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Druid 中的工具类：JdbcUtils",
+            "slug": "druid-中的工具类-jdbcutils",
+            "link": "#druid-中的工具类-jdbcutils",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "HikariCP",
+        "slug": "hikaricp",
+        "link": "#hikaricp",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单使用",
+            "slug": "简单使用-1",
+            "link": "#简单使用-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配合配置文件使用",
+            "slug": "配合配置文件使用",
+            "link": "#配合配置文件使用",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/one-stage/myjdbc/notes/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "线程安全",
     "headers": [
       {
@@ -4411,266 +4411,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/pascal/basics/notes/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "使用 Mockito 伪造对象",
-    "headers": [],
-    "path": "/three-stage/junit/notes/mockito.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "MockMvc 对 Spring MVC 进行测试",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. @WebAppConfiguration 注解",
-        "slug": "_1-webappconfiguration-注解",
-        "link": "#_1-webappconfiguration-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. MockMvc",
-        "slug": "_2-mockmvc",
-        "link": "#_2-mockmvc",
-        "children": []
-      }
-    ],
-    "path": "/three-stage/junit/notes/MockMvc.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring 中的 @Sql 注解",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. @Sql 注解",
-        "slug": "_1-sql-注解",
-        "link": "#_1-sql-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. @SqlConfig（了解）",
-        "slug": "_2-sqlconfig-了解",
-        "link": "#_2-sqlconfig-了解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. @SqlMergeMode（了解）",
-        "slug": "_3-sqlmergemode-了解",
-        "link": "#_3-sqlmergemode-了解",
-        "children": []
-      }
-    ],
-    "path": "/three-stage/junit/notes/spring-@sql.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SpringBoot 中使用 JUnit",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. SpringBoot 所使用的 JUnit 版本",
-        "slug": "_1-springboot-所使用的-junit-版本",
-        "link": "#_1-springboot-所使用的-junit-版本",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 加载配置文件",
-        "slug": "_2-加载配置文件",
-        "link": "#_2-加载配置文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. 使用事务锁定测试数据库中的数据",
-        "slug": "_3-使用事务锁定测试数据库中的数据",
-        "link": "#_3-使用事务锁定测试数据库中的数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. 单独的测试配置",
-        "slug": "_4-单独的测试配置",
-        "link": "#_4-单独的测试配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. @WebMvcTest 注解",
-        "slug": "_5-webmvctest-注解",
-        "link": "#_5-webmvctest-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 测试 Controller",
-        "slug": "_6-测试-controller",
-        "link": "#_6-测试-controller",
-        "children": [
-          {
-            "level": 3,
-            "title": "@MockBean",
-            "slug": "mockbean",
-            "link": "#mockbean",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "@SpyBean",
-            "slug": "spybean",
-            "link": "#spybean",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "MockRestServiceServer（了解、自学）",
-            "slug": "mockrestserviceserver-了解、自学",
-            "link": "#mockrestserviceserver-了解、自学",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/three-stage/junit/notes/spring-boot.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring 整合 JUnit5",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 基本使用和 @ContextConfiguration 注解",
-        "slug": "_1-基本使用和-contextconfiguration-注解",
-        "link": "#_1-基本使用和-contextconfiguration-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. spring-test 利用事务避免污染数据库",
-        "slug": "_2-spring-test-利用事务避免污染数据库",
-        "link": "#_2-spring-test-利用事务避免污染数据库",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. @Sql 注解",
-        "slug": "_3-sql-注解",
-        "link": "#_3-sql-注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4. mvn test 执行 Junit 5",
-        "slug": "_4-mvn-test-执行-junit-5",
-        "link": "#_4-mvn-test-执行-junit-5",
-        "children": []
-      }
-    ],
-    "path": "/three-stage/junit/notes/spring-test-junit5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "测试驱动开发（TDD）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 为什么要 TDD",
-        "slug": "_1-为什么要-tdd",
-        "link": "#_1-为什么要-tdd",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2. 如何 TDD",
-        "slug": "_2-如何-tdd",
-        "link": "#_2-如何-tdd",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3. TDD 的三条规则",
-        "slug": "_3-tdd-的三条规则",
-        "link": "#_3-tdd-的三条规则",
-        "children": []
-      }
-    ],
-    "path": "/three-stage/junit/notes/TDD.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "基本概念",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基本概念",
-        "slug": "基本概念-1",
-        "link": "#基本概念-1",
-        "children": [
-          {
-            "level": 3,
-            "title": "JUnit 4",
-            "slug": "junit-4",
-            "link": "#junit-4",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "JUnit 5",
-            "slug": "junit-5",
-            "link": "#junit-5",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "一个简单的示例",
-        "slug": "一个简单的示例",
-        "link": "#一个简单的示例",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Junit 5 更新 - 执行生命周期注解",
-        "slug": "junit-5-更新-执行生命周期注解",
-        "link": "#junit-5-更新-执行生命周期注解",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "单元测试的编写原则",
-        "slug": "单元测试的编写原则",
-        "link": "#单元测试的编写原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Junit 5 新特性：设置用例别名",
-        "slug": "junit-5-新特性-设置用例别名",
-        "link": "#junit-5-新特性-设置用例别名",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JUnit 5 的 Maven pom 依赖",
-        "slug": "junit-5-的-maven-pom-依赖",
-        "link": "#junit-5-的-maven-pom-依赖",
-        "children": []
-      }
-    ],
-    "path": "/three-stage/junit/notes/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5456,6 +5196,266 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "使用 Mockito 伪造对象",
+    "headers": [],
+    "path": "/three-stage/junit/notes/mockito.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "MockMvc 对 Spring MVC 进行测试",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. @WebAppConfiguration 注解",
+        "slug": "_1-webappconfiguration-注解",
+        "link": "#_1-webappconfiguration-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. MockMvc",
+        "slug": "_2-mockmvc",
+        "link": "#_2-mockmvc",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/junit/notes/MockMvc.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring 中的 @Sql 注解",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. @Sql 注解",
+        "slug": "_1-sql-注解",
+        "link": "#_1-sql-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. @SqlConfig（了解）",
+        "slug": "_2-sqlconfig-了解",
+        "link": "#_2-sqlconfig-了解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. @SqlMergeMode（了解）",
+        "slug": "_3-sqlmergemode-了解",
+        "link": "#_3-sqlmergemode-了解",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/junit/notes/spring-@sql.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot 中使用 JUnit",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. SpringBoot 所使用的 JUnit 版本",
+        "slug": "_1-springboot-所使用的-junit-版本",
+        "link": "#_1-springboot-所使用的-junit-版本",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 加载配置文件",
+        "slug": "_2-加载配置文件",
+        "link": "#_2-加载配置文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. 使用事务锁定测试数据库中的数据",
+        "slug": "_3-使用事务锁定测试数据库中的数据",
+        "link": "#_3-使用事务锁定测试数据库中的数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. 单独的测试配置",
+        "slug": "_4-单独的测试配置",
+        "link": "#_4-单独的测试配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. @WebMvcTest 注解",
+        "slug": "_5-webmvctest-注解",
+        "link": "#_5-webmvctest-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 测试 Controller",
+        "slug": "_6-测试-controller",
+        "link": "#_6-测试-controller",
+        "children": [
+          {
+            "level": 3,
+            "title": "@MockBean",
+            "slug": "mockbean",
+            "link": "#mockbean",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "@SpyBean",
+            "slug": "spybean",
+            "link": "#spybean",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "MockRestServiceServer（了解、自学）",
+            "slug": "mockrestserviceserver-了解、自学",
+            "link": "#mockrestserviceserver-了解、自学",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/three-stage/junit/notes/spring-boot.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring 整合 JUnit5",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 基本使用和 @ContextConfiguration 注解",
+        "slug": "_1-基本使用和-contextconfiguration-注解",
+        "link": "#_1-基本使用和-contextconfiguration-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. spring-test 利用事务避免污染数据库",
+        "slug": "_2-spring-test-利用事务避免污染数据库",
+        "link": "#_2-spring-test-利用事务避免污染数据库",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. @Sql 注解",
+        "slug": "_3-sql-注解",
+        "link": "#_3-sql-注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4. mvn test 执行 Junit 5",
+        "slug": "_4-mvn-test-执行-junit-5",
+        "link": "#_4-mvn-test-执行-junit-5",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/junit/notes/spring-test-junit5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "测试驱动开发（TDD）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 为什么要 TDD",
+        "slug": "_1-为什么要-tdd",
+        "link": "#_1-为什么要-tdd",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2. 如何 TDD",
+        "slug": "_2-如何-tdd",
+        "link": "#_2-如何-tdd",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3. TDD 的三条规则",
+        "slug": "_3-tdd-的三条规则",
+        "link": "#_3-tdd-的三条规则",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/junit/notes/TDD.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "基本概念",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基本概念",
+        "slug": "基本概念-1",
+        "link": "#基本概念-1",
+        "children": [
+          {
+            "level": 3,
+            "title": "JUnit 4",
+            "slug": "junit-4",
+            "link": "#junit-4",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "JUnit 5",
+            "slug": "junit-5",
+            "link": "#junit-5",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "一个简单的示例",
+        "slug": "一个简单的示例",
+        "link": "#一个简单的示例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Junit 5 更新 - 执行生命周期注解",
+        "slug": "junit-5-更新-执行生命周期注解",
+        "link": "#junit-5-更新-执行生命周期注解",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "单元测试的编写原则",
+        "slug": "单元测试的编写原则",
+        "link": "#单元测试的编写原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Junit 5 新特性：设置用例别名",
+        "slug": "junit-5-新特性-设置用例别名",
+        "link": "#junit-5-新特性-设置用例别名",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JUnit 5 的 Maven pom 依赖",
+        "slug": "junit-5-的-maven-pom-依赖",
+        "link": "#junit-5-的-maven-pom-依赖",
+        "children": []
+      }
+    ],
+    "path": "/three-stage/junit/notes/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "CSS 选择器",
     "headers": [
       {
@@ -5753,6 +5753,49 @@ export const SEARCH_INDEX = [
     "title": "元素的分类",
     "headers": [],
     "path": "/two-stage/html/notes/05.%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "NPM 的使用",
+    "headers": [
+      {
+        "level": 2,
+        "title": "npm 的全局安装和局部安装",
+        "slug": "npm-的全局安装和局部安装",
+        "link": "#npm-的全局安装和局部安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "npm 全局安装包及使用",
+        "slug": "npm-全局安装包及使用",
+        "link": "#npm-全局安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "npm 局部安装包及使用",
+        "slug": "npm-局部安装包及使用",
+        "link": "#npm-局部安装包及使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "两种安装方式的由来",
+        "slug": "两种安装方式的由来",
+        "link": "#两种安装方式的由来",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "命令总结",
+        "slug": "命令总结",
+        "link": "#命令总结",
+        "children": []
+      }
+    ],
+    "path": "/two-stage/npm/notes/npm.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6301,49 +6344,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/two-stage/js/notes/04.js-utils.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "NPM 的使用",
-    "headers": [
-      {
-        "level": 2,
-        "title": "npm 的全局安装和局部安装",
-        "slug": "npm-的全局安装和局部安装",
-        "link": "#npm-的全局安装和局部安装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "npm 全局安装包及使用",
-        "slug": "npm-全局安装包及使用",
-        "link": "#npm-全局安装包及使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "npm 局部安装包及使用",
-        "slug": "npm-局部安装包及使用",
-        "link": "#npm-局部安装包及使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "两种安装方式的由来",
-        "slug": "两种安装方式的由来",
-        "link": "#两种安装方式的由来",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "命令总结",
-        "slug": "命令总结",
-        "link": "#命令总结",
-        "children": []
-      }
-    ],
-    "path": "/two-stage/npm/notes/npm.html",
     "pathLocale": "/",
     "extraFields": []
   },

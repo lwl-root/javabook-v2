@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   // 将 Token 传递回前端完成登录
   res.status(200).send(`
     <script>
-      window.opener.postMessage("authorization:github:success:${JSON.stringify({ token: data.access_token, provider: 'github' })}", window.location.origin);
+      window.opener.postMessage("authorization:github:success:${JSON.stringify({ token: data.access_token, provider: 'github' })}", "*");
       window.close();
     </script>
   `);
