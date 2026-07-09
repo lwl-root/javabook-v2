@@ -1,10 +1,12 @@
-﻿---
+---
 title: logback
 ---
 # logback
 
 ## 1. logback.xml 例子
+
 ::: code-tabs
+
 @tab 简单的例子
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -69,11 +71,12 @@ title: logback
 
 </configuration>
 ```
+
 @tab 更复杂的例子
 
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;Badge type="warning" text="注意" /&gt; 这个例子中，通过配置，让 logback 自己从 spring boot 项目的配置文件中 “求得” 当前项目的项目名。
+::: warning
+这个例子中，通过配置，让 logback 自己从 spring boot 项目的配置文件中 “求得” 当前项目的项目名。
+:::
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -167,8 +170,9 @@ title: logback
     </logger>
 </configuration>
 ```
+
 :::
-:::
+
 
 ## 2. Spring Boot 中的日志配置
 
@@ -177,6 +181,7 @@ spring boot 项目中，xml 名字也可命名为：logback-spring.xml
 极简的情况：
 
 ::: code-tabs
+
 @tab application.yml 版
   ```yaml
   logging:
@@ -193,6 +198,7 @@ spring boot 项目中，xml 名字也可命名为：logback-spring.xml
   ```
 
   这里的 console 配置有双引号。
+
 @tab application.properties 版
   ```properties
   logging.level.root=WARN
@@ -201,5 +207,5 @@ spring boot 项目中，xml 名字也可命名为：logback-spring.xml
   ```
 
   这里的 console 配置没有双引号。
-:::
+
 :::
