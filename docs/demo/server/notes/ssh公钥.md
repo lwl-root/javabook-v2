@@ -1,3 +1,6 @@
+---
+title: Gitee 添加了ssh公钥还是需要账户和密码
+---
 # Gitee 添加了ssh公钥还是需要账户和密码
  
 ## Gitee生成密钥
