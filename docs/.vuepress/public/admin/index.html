@@ -6,6 +6,13 @@
   <meta name="robots" content="noindex" />
   <title>内容管理 | Java Book</title>
   <link rel="icon" href="/logo.png" />
+  <script>
+    // Decap CMS 使用 hash 路由（#/），不带 hash 时页面显示空白。
+    // 自动跳转，但 OAuth 回调（?code=）时不干扰，让 CMS 自己处理。
+    if (!window.location.hash && !window.location.search.includes('code=')) {
+      window.location.hash = '#/';
+    }
+  </script>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>

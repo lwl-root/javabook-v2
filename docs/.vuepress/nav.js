@@ -104,7 +104,7 @@ module.exports = [
     {
         text: '管理',
         children: [
-            {text: '📝 内容后台', link: '/admin/index.html'},
+            {text: '📝 内容后台', link: '/admin/'},
         ]
     },
 ]
