@@ -8,6 +8,7 @@ title: logback
 ::: code-tabs
 
 @tab 简单的例子
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
@@ -25,6 +26,7 @@ title: logback
     </root>
 </configuration>
 ```
+
 @tab 复杂一点的例子
 
 &lt;br/&gt;
@@ -183,6 +185,7 @@ spring boot 项目中，xml 名字也可命名为：logback-spring.xml
 ::: code-tabs
 
 @tab application.yml 版
+
   ```yaml
   logging:
     level:
@@ -200,6 +203,7 @@ spring boot 项目中，xml 名字也可命名为：logback-spring.xml
   这里的 console 配置有双引号。
 
 @tab application.properties 版
+
   ```properties
   logging.level.root=WARN
   logging.level.com.woniu=DEBUG
