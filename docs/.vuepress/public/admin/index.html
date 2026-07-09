@@ -6,6 +6,8 @@
   <meta name="robots" content="noindex" />
   <title>内容管理 | Java Book</title>
   <link rel="icon" href="/logo.png" />
+  <!-- 确保浏览器始终以 /admin/ 为基准解析相对路径（如 config.yml），避免 Vercel cleanUrls 去掉末尾斜杠导致 404 -->
+  <base href="/admin/" />
 </head>
 <body>
   <!-- Include the Decap CMS editor script (pinned stable version) -->
