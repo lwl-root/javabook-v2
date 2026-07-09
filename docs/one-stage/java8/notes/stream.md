@@ -1,3 +1,7 @@
+---
+title: Stream API
+---
+
 # Stream API
 
 Stream 是 Java 8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作。

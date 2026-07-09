@@ -1,3 +1,7 @@
+---
+title: HTTP Request 中的 content-type 请求头
+---
+
 # HTTP Request 中的 content-type 请求头
 
 ::: tip 提示

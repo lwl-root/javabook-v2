@@ -1,3 +1,6 @@
+---
+title: oracle数据库新建schema
+---
 # oracle数据库新建schema
 
 ::: tip schema简介

@@ -1,3 +1,7 @@
+---
+title: 元组：javatuples
+---
+
 # 元组：javatuples
 
 ## 问题

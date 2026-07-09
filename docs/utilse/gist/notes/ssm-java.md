@@ -1,3 +1,7 @@
+---
+title: SSM 整合（Java 代码配置版）
+---
+
 # SSM 整合（Java 代码配置版）
 
 ## 1. SpringDaoConfig 替代了 spring-dao.xml

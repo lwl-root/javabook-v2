@@ -1,3 +1,7 @@
+---
+title: Spring 中的 @Sql 注解
+---
+
 # Spring 中的 @Sql 注解
 
 &gt; 大概我们在别处也用不上 Spring 的 @Sql 注解，主要也就是在单元测试中它才有用武之地。

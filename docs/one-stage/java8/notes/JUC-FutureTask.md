@@ -1,3 +1,7 @@
+---
+title: FutureTask
+---
+
 # FutureTask
 
 使用 Thread 和 Runnable 实现线程来有一个小问题：不方便获得线程的执行结果。

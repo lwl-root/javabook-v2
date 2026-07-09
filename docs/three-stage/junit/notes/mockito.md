@@ -1,3 +1,7 @@
+---
+title: 使用 Mockito 伪造对象
+---
+
 # 使用 Mockito 伪造对象
 
 &gt; 如果是 SpringBoot 项目，Spring Boot 项目已经包含了它，无需引入。

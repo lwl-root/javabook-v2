@@ -1,3 +1,6 @@
+---
+title: java为word、excel、pdf、ppt、图片添加图片水印（文字水印同理）
+---
 # java为word、excel、pdf、ppt、图片添加图片水印（文字水印同理）
 
 ::: tip 提示

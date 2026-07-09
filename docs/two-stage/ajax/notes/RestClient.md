@@ -1,3 +1,7 @@
+---
+title: vscode 插件：REST Client
+---
+
 # vscode 插件：REST Client
 关于 HTTP 测试工具，postman 一直是我们开发中不可缺少的工具，这里介绍的 REST Client 堪比是 Postman 的替代品。REST Client 是一个 VS Code 扩展插件，可以通过写脚本的形式发送 HTTP 请求并直接在 VS Code 上查看响应结果。这样不仅能看到 http 的测试结果，测试的脚本文件还能得以保留。
 

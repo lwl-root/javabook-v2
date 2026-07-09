@@ -1,3 +1,7 @@
+---
+title: vue axios
+---
+
 # vue axios
 Vue 2.0 之后，就不再对 vue-resource 更新。Vue 官方推荐使用其竞品：axios 。
 

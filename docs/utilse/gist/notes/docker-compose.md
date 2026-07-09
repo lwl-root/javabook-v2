@@ -1,3 +1,7 @@
+---
+title: metrics for prometheus
+---
+
 ﻿# docker-compose.yml 模板
 
 ## mysql

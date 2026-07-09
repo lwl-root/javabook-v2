@@ -1,4 +1,7 @@
-﻿# Mybatis 相关
+﻿---
+title: Mybatis 相关
+---
+# Mybatis 相关
 
 ## 1. mybatis-generator-maven-plugin 插件
 

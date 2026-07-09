@@ -1,3 +1,7 @@
+---
+title: 使用 Thread 类创建线程
+---
+
 # 使用 Thread 类创建线程
 
 Java 提供了 java.lang.Thread 类支持多线程编程，该类提供了大量的方法来控制和操作线程。

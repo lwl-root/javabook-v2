@@ -1,3 +1,7 @@
+---
+title: Maven 相关模板
+---
+
 # Maven 相关模板
 
 ## 1. maven 的 settings.xml

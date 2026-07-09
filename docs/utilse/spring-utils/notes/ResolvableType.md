@@ -1,3 +1,7 @@
+---
+title: Spring ResolvableType
+---
+
 # Spring ResolvableType
 
 &gt; ResolveableType 与 Java 的 Type 类型体系密切相关。请先了解另一篇笔记《虚拟机中的泛型类型信息》 的内容。

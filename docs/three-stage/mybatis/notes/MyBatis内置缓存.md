@@ -1,3 +1,6 @@
+---
+title: Mybatis 的内置缓存
+---
 # Mybatis 的内置缓存
 ## 1. Mybatis 一级缓存
 ### 概述

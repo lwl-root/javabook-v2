@@ -1,3 +1,6 @@
+---
+title: Word、Excel、PPT、PDF、图片类型文件添加水印及转成Html文件实现浏览器预览效果
+---
 # Word、Excel、PPT、PDF、图片类型文件添加水印及转成Html文件实现浏览器预览效果
 
 ## 一、添加水印

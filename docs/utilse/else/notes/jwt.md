@@ -1,3 +1,7 @@
+---
+title: 操作 JWT：nimbus-jose-jwt 库
+---
+
 # 操作 JWT：nimbus-jose-jwt 库
 
 nimbus-jose-jwt、jose4j、java-jwt 和 jjwt 是几个 Java 中常见的操作 JWT 的库。就使用细节而言，nimbus-jos-jwt（和jose4j）要好于 java-jwt 和 jjwt 。

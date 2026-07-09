@@ -1,3 +1,7 @@
+---
+title: AJAX 和 Servlet
+---
+
 # AJAX 和 Servlet
 由于 Servlet 中的 **request.getParameter("...")** 只对 **content-type** 值为 **application/x-www-form-urlencoded** 的情况有效有效。
 

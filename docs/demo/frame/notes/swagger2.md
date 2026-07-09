@@ -1,4 +1,7 @@
-﻿# SpringBoot集成Swagger
+﻿---
+title: SpringBoot集成Swagger
+---
+# SpringBoot集成Swagger
 
 相对于swagger2的依赖，swagger3只需要一个依赖
 

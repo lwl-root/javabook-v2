@@ -1,3 +1,7 @@
+---
+title: Spring 中的 EventBus
+---
+
 # Spring 中的 EventBus
 
 如果你不想或不能引入 EventBus 包，甚至项目中也没有使用 Guava 包，而你又想使用 EventBus 功能，那么你可以直接使用 Spring 中的 EventBus 。

@@ -1,3 +1,7 @@
+---
+title: MyBatis-plus基本使用
+---
+
 # MyBatis-plus基本使用
 mybatis-plus是一款Mybatis增强工具，用于简化开发，提高效率。下文使用缩写mp 来简化表示mybatis-plus ，本文主要介绍mp搭配SpringBoot的使用。
 

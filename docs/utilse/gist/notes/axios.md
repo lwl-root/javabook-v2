@@ -1,3 +1,7 @@
+---
+title: Axios 发起AJAX请求模板
+---
+
 # Axios 发起AJAX请求模板
 ## 1、html页面引入Axios（使用CDN）
 ```html

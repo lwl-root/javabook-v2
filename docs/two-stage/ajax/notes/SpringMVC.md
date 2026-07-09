@@ -1,3 +1,7 @@
+---
+title: AJAX 和 Spring MVC
+---
+
 # AJAX 和 Spring MVC
 ::: tip 提示
 

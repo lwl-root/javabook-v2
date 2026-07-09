@@ -1,3 +1,7 @@
+---
+title: 如何正确使用 Optional
+---
+
 # 如何正确使用 Optional
 
 Java 8 增加了一些很有用的 API，其中一个就是 Optional。目的是从 JDK 级别解决 NPE 问题。大多数新语言都从语法层面上解决了 NPE 问题。
