@@ -6,8 +6,10 @@ backend:
   name: github
   repo: lwl-root/javabook-v2
   branch: master
-  auth_type: pkce            # 无需后端服务器，浏览器直连 GitHub
-  app_id: Ov23lifuEMc8b0w1spFY # ← 部署后请替换为你在 GitHub 创建的 OAuth App Client ID
+  # auth_type: pkce            # 无需后端服务器，浏览器直连 GitHub
+  base_url: https://javabook-v2.vercel.app
+  auth_endpoint: /api/auth
+  # app_id: Ov23lifuEMc8b0w1spFY # ← 部署后请替换为你在 GitHub 创建的 OAuth App Client ID
 
 # 站点部署后的访问地址（Vercel 域名），用于 OAuth 回调
 # 如果使用了自定义域名，请改成你的域名
