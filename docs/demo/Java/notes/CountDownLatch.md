@@ -1,3 +1,6 @@
+---
+title: java中对CountDownLatch的使用
+---
 # java中对CountDownLatch的使用
 ## 介绍
 CountDownLatch是一个同步辅助类，它允许一个或多个线程一直等待直到其他线程执行完毕才开始执行。
