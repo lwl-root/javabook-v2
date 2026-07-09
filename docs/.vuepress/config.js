@@ -7,7 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'J a v a',
   description: '别睡着了，这不是尽头。',
-  base: '/javabook-v2/',
+  base: '/',
   dest: 'docs/.vuepress/dist',
   port: '4950',
   head: [
