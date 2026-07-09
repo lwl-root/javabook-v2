@@ -100,4 +100,11 @@ module.exports = [
             {text: 'Kafka', link: '/c-book/kafka/notes/kafka.md'},
         ],
     },
+
+    {
+        text: '管理',
+        children: [
+            {text: '📝 内容后台', link: '/admin/'},
+        ]
+    },
 ]

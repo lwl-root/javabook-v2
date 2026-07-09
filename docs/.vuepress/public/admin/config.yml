@@ -1,0 +1,306 @@
+# ============================================================================
+#  Decap CMS 配置文件 (https://decapcms.org/docs/configuration/)
+#  零服务器 / 免费 / GitHub 登录 (PKCE)
+# ============================================================================
+backend:
+  name: github
+  repo: lwl-root/javabook-v2
+  branch: master
+  auth_type: pkce            # 无需后端服务器，浏览器直连 GitHub
+  app_id: Ov23lifuEMc8b0w1spFY # ← 部署后请替换为你在 GitHub 创建的 OAuth App Client ID
+
+# 站点部署后的访问地址（Vercel 域名），用于 OAuth 回调
+# 如果使用了自定义域名，请改成你的域名
+site_url: https://javabook-v2.vercel.app
+
+# CMS 后台显示语言
+locale: zh_Hans
+
+# 发布时自动生成提交信息
+publish_mode: editorial_workflow
+
+# 媒体资源（图片等）存放目录，与 VuePress 的 public 目录保持一致
+media_folder: docs/.vuepress/public/images
+public_folder: /images
+
+# ----------------------------------------------------------------------------
+#  内容集合：与 docs 目录结构一一对应
+#  每篇文章 = docs/<section>/<module>/notes/<file>.md
+# ----------------------------------------------------------------------------
+collections:
+  # ===================== 工具库 =====================
+  - name: utilse_guava
+    label: "工具库 / Guava"
+    folder: docs/utilse/guava/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: utilse_spring_utils
+    label: "工具库 / Spring 内置工具库"
+    folder: docs/utilse/spring-utils/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: utilse_else
+    label: "工具库 / 常用工具类"
+    folder: docs/utilse/else/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: utilse_gist
+    label: "工具库 / 模板"
+    folder: docs/utilse/gist/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: utilse_docker
+    label: "工具库 / Docker"
+    folder: docs/utilse/docker/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  # ===================== Java & MySQL =====================
+  - name: one_stage_java
+    label: "Java & MySQL / Java 基础"
+    folder: docs/one-stage/java/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: one_stage_javathread
+    label: "Java & MySQL / Java 多线程"
+    folder: docs/one-stage/javathread/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: one_stage_threadsafe
+    label: "Java & MySQL / 线程安全"
+    folder: docs/one-stage/threadsafe/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: one_stage_java8
+    label: "Java & MySQL / JDK8 新特性"
+    folder: docs/one-stage/java8/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: one_stage_mysql
+    label: "Java & MySQL / MySQL 数据库"
+    folder: docs/one-stage/mysql/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: one_stage_myjdbc
+    label: "Java & MySQL / JDBC 操作数据库"
+    folder: docs/one-stage/myjdbc/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  # ===================== Servlet & 前端 =====================
+  - name: two_stage_html
+    label: "Servlet & 前端 / HTML 和 CSS"
+    folder: docs/two-stage/html/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: two_stage_js
+    label: "Servlet & 前端 / JS 和 ES6"
+    folder: docs/two-stage/js/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: two_stage_ajax
+    label: "Servlet & 前端 / AJAX 和 Axios"
+    folder: docs/two-stage/ajax/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: two_stage_servlet
+    label: "Servlet & 前端 / Servlet"
+    folder: docs/two-stage/servlet/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: two_stage_npm
+    label: "Servlet & 前端 / NPM"
+    folder: docs/two-stage/npm/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  # ===================== SSM & SpringBoot =====================
+  - name: three_stage_mybatis
+    label: "SSM & SpringBoot / MyBatis"
+    folder: docs/three-stage/mybatis/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: three_stage_junit
+    label: "SSM & SpringBoot / JUnit"
+    folder: docs/three-stage/junit/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  # ===================== Pascal =====================
+  - name: pascal_basics
+    label: "Pascal / 基础"
+    folder: docs/pascal/basics/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  # ===================== 日常积累 =====================
+  - name: demo_java
+    label: "日常积累 / Java 相关"
+    folder: docs/demo/Java/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: demo_frame
+    label: "日常积累 / 框架相关"
+    folder: docs/demo/frame/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: demo_databases
+    label: "日常积累 / 数据库相关"
+    folder: docs/demo/databases/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: demo_server
+    label: "日常积累 / Server 相关"
+    folder: docs/demo/server/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: demo_web
+    label: "日常积累 / 前端相关"
+    folder: docs/demo/web/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  # ===================== C-Book =====================
+  - name: c_book_spring_security
+    label: "C-Book / Spring Security"
+    folder: docs/c-book/spring-security/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: c_book_gof23
+    label: "C-Book / GoF 23"
+    folder: docs/c-book/gof23/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
+
+  - name: c_book_kafka
+    label: "C-Book / Kafka"
+    folder: docs/c-book/kafka/notes
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: "标题", name: title, widget: string }
+      - { label: "正文", name: body, widget: markdown }
