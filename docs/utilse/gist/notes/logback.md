@@ -29,9 +29,10 @@ title: logback
 
 @tab 复杂一点的例子
 
-注意:这里需要在logback的配置文件中手动指定项目的项目名（APP_NAME）
+
 
 ```xml
+注意:这里需要在logback的配置文件中手动指定项目的项目名（APP_NAME）
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
 
@@ -74,11 +75,8 @@ title: logback
 
 @tab 更复杂的例子
 
-::: warning
-这个例子中，通过配置，让 logback 自己从 spring boot 项目的配置文件中 “求得” 当前项目的项目名。
-:::
-
 ```xml
+这个例子中，通过配置，让 logback 自己从 spring boot 项目的配置文件中 “求得” 当前项目的项目名。
 <?xml version="1.0" encoding="utf-8"?>
 <configuration debug="false">
     <!-- 引用 spring-boot 配置中的变量 -->
@@ -196,9 +194,10 @@ spring boot 项目中，xml 名字也可命名为：logback-spring.xml
         %clr(%-40.40logger{39}){cyan} \
         %clr(:){faint} \
         %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}}"
+  这里的 console 配置有双引号。
   ```
 
-  这里的 console 配置有双引号。
+
 
 @tab application.properties 版
 
