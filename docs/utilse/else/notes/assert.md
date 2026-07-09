@@ -89,7 +89,7 @@ void isInstanceOf(Class type, Object obj, String message)
 void isAssignable(Class superType, Class subType, String message)
 ```
 :::
-:::
+
 
 ::: tip 提示
 Spring Assert 的一个缺点:
