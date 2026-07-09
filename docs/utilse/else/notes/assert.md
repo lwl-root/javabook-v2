@@ -88,7 +88,7 @@ void isInstanceOf(Class type, Object obj, String message)
 // 预期参数 subType “应该” 是参数 superType 的子类，或实现类。
 void isAssignable(Class superType, Class subType, String message)
 ```
-:::
+
 
 
 ::: tip 提示
