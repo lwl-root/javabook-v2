@@ -1,3 +1,6 @@
+---
+title: Bucket4j
+---
 # Bucket4j
 
 ```xml
