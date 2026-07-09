@@ -29,9 +29,7 @@ title: logback
 
 @tab 复杂一点的例子
 
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;Badge type="warning" text="注意" /&gt; 这里需要在logback的配置文件中手动指定项目的项目名&lt;small&gt;（APP_NAME）&lt;/small&gt;
+注意:这里需要在logback的配置文件中手动指定项目的项目名（APP_NAME）
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
