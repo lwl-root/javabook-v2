@@ -19,7 +19,7 @@ site_url: https://javabook-v2.vercel.app
 locale: zh_Hans
 
 # 发布时自动生成提交信息
-publish_mode: editorial_workflow
+#publish_mode: editorial_workflow
 
 # 媒体资源（图片等）存放目录，与 VuePress 的 public 目录保持一致
 media_folder: docs/.vuepress/public/images
