@@ -1,21 +1,24 @@
+---
+title: Guava 学习之 CharMatcher
+---
 # Guava 学习之 CharMatcher
 
-## 概览
+## 概览你好
 
 之前，Guava 中的 StringUtil 在无节制地增长，添加了越来越多的方法，如：
 
-- allAscii
-- collapse
-- collapseControlChars
-- collapseWhitespace
-- lastIndexNotOf
-- numSharedChars
-- removeChars
-- removeCrLf
-- retainAllChars
-- strip
-- stripAndCollapse
-- stripNonDigits
+* allAscii
+* collapse
+* collapseControlChars
+* collapseWhitespace
+* lastIndexNotOf
+* numSharedChars
+* removeChars
+* removeCrLf
+* retainAllChars
+* strip
+* stripAndCollapse
+* stripNonDigits
 
 这些函数本质上是以下两个方面的乘积（M x N 种情况）：
 
@@ -24,8 +27,8 @@
 
 为了解决这样的爆炸式增长，Guava 提供了 **`CharMatcher`**：
 
-- 一个 CharMacher 对象，就代表这一种选中规则，或者说，符合这种规则的所有字符串。
-- 而 CharMacher 的各种实例方法，就代表着对这类字符所要进行的各种操作。
+* 一个 CharMacher 对象，就代表这一种选中规则，或者说，符合这种规则的所有字符串。
+* 而 CharMacher 的各种实例方法，就代表着对这类字符所要进行的各种操作。
 
 我们就可以用最小化的 API 来处理字符匹配和字符操作，把 M × N 的复杂度下降到了 M + N 。
 
@@ -39,28 +42,28 @@ CharMatcher 的功能主要在于对特定类或字符串执行这些操作：tr
 
 很多需求都可以被 CharMatcher 的工厂方法满足：
 
-- any()
-- none()
-- whitespace()
-- breakingWhitespace()
-- invisible()
-- digit()
-- javaLetter()
-- javaDigit()
-- javaLetterOrDigit()
-- javaIsoControl()
-- javaLowerCase()
-- javaUpperCase()
-- ascii()
-- singleWidth()
+* any()
+* none()
+* whitespace()
+* breakingWhitespace()
+* invisible()
+* digit()
+* javaLetter()
+* javaDigit()
+* javaLetterOrDigit()
+* javaIsoControl()
+* javaLowerCase()
+* javaUpperCase()
+* ascii()
+* singleWidth()
 
 其它一些常用的获得一个 CharMatcher 的方法包括：
 
-| 方法                | 描述                                                         |
-| :------------------ | :----------------------------------------------------------- |
+| 方法                  | 描述                                                      |
+| ------------------- | ------------------------------------------------------- |
 | anyOf(CharSequence) | 表明你想匹配的所有字符，例如：`CharMatcher.anyOf("aeiou")` 可以匹配小写元音字母。 |
-| is(char)            | 表明你想匹配的一个确定的字符。                               |
-| inRange(char, char) | 表明你想匹配的一个字符范围，例如：`CharMatcher.inRange('a', 'z')`。 |
+| is(char)            | 表明你想匹配的一个确定的字符。                                         |
+| inRange(char, char) | 表明你想匹配的一个字符范围，例如：`CharMatcher.inRange('a', 'z')`。       |
 
 此外，CharMatcher 还有这些方法：`negate()`、`and(CharMatcher)`、`or(CharMatcher)`。这些方法可以为 CharMatcher 提供方便的布尔运算。
 
@@ -68,14 +71,14 @@ CharMatcher 的功能主要在于对特定类或字符串执行这些操作：tr
 
 CharMatcher 提供了很多方法来对匹配的字符序列 CharSequence 进行操作。以下只是列出了一些常用方法。
 
-| 方法                                    | 描述                                                         |
-| :-------------------------------------- | :----------------------------------------------------------- |
+| 方法                                      | 描述                                                                                 |
+| --------------------------------------- | ---------------------------------------------------------------------------------- |
 | collapseFrom(CharSequence, char)        | 将一组连续匹配的字符串替换为一个指定的字符。例如：`WHITESPACE.collapseFrom(string, ' ')` 可以将连续的空字符串替换为单个字符。 |
-| matchesAllOf(CharSequence)              | 测试字符序列是否全部匹配。例如：ASCII.matchesAllOf(string) 可以测试字符是否全部是 ASCII。 |
-| removeFrom(CharSequence)                | 将匹配的字符序列移除                                         |
-| retainFrom(CharSequence)                | 将没有匹配的字符序列移除                                     |
-| trimFrom(CharSequence)                  | 去除开头和结尾匹配的部分                                     |
-| replaceFrom(CharSequence, CharSequence) | 将匹配的字符替换为给定的序列                                 |
+| matchesAllOf(CharSequence)              | 测试字符序列是否全部匹配。例如：ASCII.matchesAllOf(string) 可以测试字符是否全部是 ASCII。                      |
+| removeFrom(CharSequence)                | 将匹配的字符序列移除                                                                         |
+| retainFrom(CharSequence)                | 将没有匹配的字符序列移除                                                                       |
+| trimFrom(CharSequence)                  | 去除开头和结尾匹配的部分                                                                       |
+| replaceFrom(CharSequence, CharSequence) | 将匹配的字符替换为给定的序列                                                                     |
 
 ## 方法分类
 
@@ -181,20 +184,20 @@ String result12 = CharMatcher.javaLowerCase().negate().retainFrom(str8);
 
 CharMatcher 本身提供了很多 CharMatcher 的实现类，如下:
 
-- ANY: 匹配任何字符
-- ASCII: 匹配是否是ASCII字符
-- BREAKING_WHITESPACE: 匹配所有可换行的空白字符(不包括非换行空白字符,例如"\u00a0")
-- DIGIT: 匹配ASCII数字
-- INVISIBLE: 匹配所有看不见的字符
-- JAVA_DIGIT: 匹配UNICODE数字, 使用 Character.isDigit() 实现
-- JAVA_ISO_CONTROL: 匹配ISO控制字符, 使用 Charater.isISOControl() 实现
-- JAVA_LETTER: 匹配字母, 使用 Charater.isLetter() 实现
-- JAVA_LETTER_OR_DIGET: 匹配数字或字母
-- JAVA_LOWER_CASE: 匹配小写
-- JAVA_UPPER_CASE: 匹配大写
-- NONE: 不匹配所有字符
-- SINGLE_WIDTH: 匹配单字宽字符, 如中文字就是双字宽
-- WHITESPACE: 匹配所有空白字符
+* ANY: 匹配任何字符
+* ASCII: 匹配是否是ASCII字符
+* BREAKING_WHITESPACE: 匹配所有可换行的空白字符(不包括非换行空白字符,例如"\u00a0")
+* DIGIT: 匹配ASCII数字
+* INVISIBLE: 匹配所有看不见的字符
+* JAVA_DIGIT: 匹配UNICODE数字, 使用 Character.isDigit() 实现
+* JAVA_ISO_CONTROL: 匹配ISO控制字符, 使用 Charater.isISOControl() 实现
+* JAVA_LETTER: 匹配字母, 使用 Charater.isLetter() 实现
+* JAVA_LETTER_OR_DIGET: 匹配数字或字母
+* JAVA_LOWER_CASE: 匹配小写
+* JAVA_UPPER_CASE: 匹配大写
+* NONE: 不匹配所有字符
+* SINGLE_WIDTH: 匹配单字宽字符, 如中文字就是双字宽
+* WHITESPACE: 匹配所有空白字符
 
 ```java
 // 会截取掉字符串末尾的空格，并将中间连续的空格合并成一个。
