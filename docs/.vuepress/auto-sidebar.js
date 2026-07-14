@@ -1,5 +1,5 @@
-const fs = require('node:fs')
-const path = require('node:path')
+import fs from 'node:fs'
+import path from 'node:path'
 
 const normalizeLink = (link) =>
   link.replace(/\\/g, '/').replace(/\.md$/i, '').toLocaleLowerCase()
@@ -32,8 +32,8 @@ const readTitle = (filePath, fallback) => {
 }
 
 /** Add Markdown files that are not already present in a module's static menu. */
-module.exports = (route, sidebar) => {
-  const notesDir = path.resolve(__dirname, `..${route}/notes`)
+export default (route, sidebar) => {
+  const notesDir = path.resolve(process.cwd(), 'docs', `.${route}`, 'notes')
   if (!fs.existsSync(notesDir)) return sidebar
 
   const existingLinks = collectLinks(sidebar)

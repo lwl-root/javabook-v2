@@ -2,6 +2,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
+import navbar from './nav.js'
+import sidebar from './sidebar.js'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -25,8 +27,8 @@ export default defineUserConfig({
     contributors: false,
     sidebarDepth: 1,
     lastUpdated: false,
-    navbar: require("./nav.js"),
-    sidebar: require("./sidebar.js"),
+    navbar,
+    sidebar,
   }),
 
   plugins: [
