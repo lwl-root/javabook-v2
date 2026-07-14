@@ -85,36 +85,17 @@ Decap CMS 的 PKCE 模式需要一个 GitHub OAuth App 来完成登录。
 
 如果你希望「保存即发布」，可以把 `publish_mode: editorial_workflow` 这一行删掉。
 
-## 六、把文章加入侧边栏（重要）
+## 六、文章自动加入侧边栏
 
-Decap CMS 只负责创建/编辑 `.md` 文件本身。VuePress 的侧边栏（`sidebar.js`）是手动维护的，新文章默认不会自动出现在侧边栏里。
+Decap CMS 新建文章后，只需要正常发布即可。VuePress 启动或构建时会扫描各模块的 `notes/` 目录，并将尚未配置在原有菜单中的 Markdown 文件自动加入“新增文章”分组。
 
-两种方案：
+菜单标题按以下顺序读取：
 
-1. **手动维护（当前模式）**：在 CMS 里写完文章后，顺手编辑对应模块的 `sidebar.js`，加一行 `{text:'标题', link:'/.../文件名.md'}`。CMS 也可以直接编辑这些 js 文件（见下方「七」）。
-2. **自动生成（可选进阶）**：后续可以写一个脚本或 VuePress 插件，扫描 `notes/` 目录自动生成 sidebar，彻底免维护。
+1. Markdown frontmatter 中的 `title`（CMS 的“标题”字段）。
+2. 正文中的第一个一级标题 `# 标题`。
+3. Markdown 文件名。
 
-## 七、（可选）让 CMS 也能编辑 sidebar.js / nav.js
-
-如果你想在 CMS 里直接编辑侧边栏配置，可以在 `config.yml` 的 `collections:` 末尾追加一个「文件集合」：
-
-```yaml
-  - name: config
-    label: "站点配置"
-    files:
-      - label: "导航栏 nav.js"
-        name: nav
-        file: docs/.vuepress/nav.js
-        fields:
-          - { label: "内容", name: body, widget: text }
-      - label: "侧边栏总入口 sidebar.js"
-        name: sidebar
-        file: docs/.vuepress/sidebar.js
-        fields:
-          - { label: "内容", name: body, widget: text }
-```
-
-> 用 `text` widget 直接编辑 js 源码，简单粗暴但有效。更优雅的做法是用 `list`/`object` widget 结构化编辑，但配置较复杂，按需添加。
+已有 `sidebar.js` 中的菜单分组和顺序会继续保留，不需要在 CMS 中直接编辑 JavaScript 文件。
 
 ## 八、常见问题
 
