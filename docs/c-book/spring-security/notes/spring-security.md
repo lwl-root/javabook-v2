@@ -5,7 +5,7 @@ title: spring security
 
 ## 1.图解
 
-![](/images/security/认证流程.png)
+![](/images/security/springsecurity图解.png)
 
 ## 2.身份认证流程
 
