@@ -52,12 +52,5 @@ export default (route, sidebar) => {
 
   if (articles.length === 0) return sidebar
 
-  return [
-    ...sidebar,
-    {
-      text: '新增文章',
-      collapsible: false,
-      children: articles,
-    },
-  ]
+  return [...sidebar, ...articles]
 }

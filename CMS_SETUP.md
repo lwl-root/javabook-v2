@@ -87,7 +87,7 @@ Decap CMS 的 PKCE 模式需要一个 GitHub OAuth App 来完成登录。
 
 ## 六、文章自动加入侧边栏
 
-Decap CMS 新建文章后，只需要正常发布即可。VuePress 启动或构建时会扫描各模块的 `notes/` 目录，并将尚未配置在原有菜单中的 Markdown 文件自动加入“新增文章”分组。
+Decap CMS 新建文章后，只需要正常发布即可。VuePress 启动或构建时会扫描各模块的 `notes/` 目录，并将尚未配置在原有菜单中的 Markdown 文件以独立菜单项追加到对应模块。
 
 菜单标题按以下顺序读取：
 
