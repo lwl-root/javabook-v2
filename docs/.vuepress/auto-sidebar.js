@@ -52,5 +52,10 @@ export default (route, sidebar) => {
 
   if (articles.length === 0) return sidebar
 
-  return [...sidebar, ...articles]
+  const targetIndex = sidebar.findLastIndex((item) => Array.isArray(item.children))
+  if (targetIndex === -1) return sidebar
+
+  return sidebar.map((item, index) => index === targetIndex
+    ? { ...item, children: [...item.children, ...articles] }
+    : item)
 }
