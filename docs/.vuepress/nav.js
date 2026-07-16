@@ -82,6 +82,13 @@ module.exports = [
     },
 
     {
+        text: '笔记',
+        children: [
+            {text: '',link:'/pascal/basics/notes/数据结构与算法入门.md'}
+        ]
+    },
+
+    {
         text: '日常积累',
         children: [
             {text: 'Java 相关', link: '/demo/Java/notes/list去重.md'},
