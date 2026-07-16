@@ -84,7 +84,7 @@ module.exports = [
     {
         text: '笔记',
         children: [
-            {text: '',link:'/pascal/basics/notes/数据结构与算法入门.md'}
+            {text: '笔记',link:'/pascal/basics/notes/数据结构与算法入门.md'}
         ]
     },
 
