@@ -59,12 +59,15 @@ export default defineClientConfig({
     style.textContent = `
       .edit-article-button {
         position: fixed;
-        right: max(1rem, env(safe-area-inset-right));
-        bottom: max(1rem, env(safe-area-inset-bottom));
+        right: 1rem;
+        bottom: .5rem;
         z-index: 100;
         display: flex;
+        box-sizing: border-box;
         width: 48px;
+        min-width: 48px;
         height: 48px;
+        min-height: 48px;
         align-items: center;
         justify-content: center;
         padding: 12px;
@@ -90,6 +93,7 @@ export default defineClientConfig({
       .edit-article-button svg {
         width: 24px;
         height: 24px;
+        flex: 0 0 24px;
       }
 
       .edit-article-button span {
@@ -113,8 +117,8 @@ export default defineClientConfig({
 
       @media (max-width: 719px) {
         .edit-article-button {
-          right: max(16px, env(safe-area-inset-right));
-          bottom: max(16px, env(safe-area-inset-bottom));
+          right: 1rem;
+          bottom: .5rem;
           transform: scale(.8);
           transform-origin: 100% 100%;
         }
