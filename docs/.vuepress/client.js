@@ -59,33 +59,27 @@ export default defineClientConfig({
     style.textContent = `
       .edit-article-button {
         position: fixed;
-        right: max(24px, env(safe-area-inset-right));
-        bottom: max(24px, env(safe-area-inset-bottom));
-        z-index: 50;
-        display: inline-flex;
+        right: max(1rem, env(safe-area-inset-right));
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        z-index: 100;
+        display: flex;
+        width: 48px;
+        height: 48px;
         align-items: center;
         justify-content: center;
-        gap: 7px;
-        min-height: 42px;
-        padding: 0 16px;
-        border: 1px solid var(--c-brand, #3eaf7c);
-        border-radius: 6px;
-        background: var(--c-brand, #3eaf7c);
-        color: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1;
+        padding: 12px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--back-to-top-c-bg, var(--vp-c-bg, #fff));
+        color: var(--back-to-top-c-accent-bg, var(--vp-c-accent-bg, #3eaf7c));
         text-decoration: none;
-        box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
-        transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+        box-shadow: 2px 2px 10px 4px var(--back-to-top-c-shadow, var(--vp-c-shadow, #00000026));
+        transition: color .2s ease, transform .2s ease;
       }
 
       .edit-article-button:hover {
-        color: #fff;
-        text-decoration: none;
-        transform: translateY(-2px);
-        filter: brightness(1.06);
-        box-shadow: 0 7px 18px rgb(0 0 0 / 24%);
+        color: var(--back-to-top-c-accent-hover, var(--vp-c-accent-hover, #4abf8a));
+        transform: scale(1.05);
       }
 
       .edit-article-button:focus-visible {
@@ -93,16 +87,36 @@ export default defineClientConfig({
         outline-offset: 3px;
       }
 
+      .edit-article-button svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .edit-article-button span {
+        position: absolute;
+        right: 58px;
+        white-space: nowrap;
+        border-radius: 4px;
+        background: rgb(0 0 0 / 75%);
+        color: #fff;
+        padding: 4px 10px;
+        font-size: 13px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .2s ease;
+      }
+
+      .edit-article-button:hover span,
+      .edit-article-button:focus-visible span {
+        opacity: 1;
+      }
+
       @media (max-width: 719px) {
         .edit-article-button {
           right: max(16px, env(safe-area-inset-right));
           bottom: max(16px, env(safe-area-inset-bottom));
-          min-width: 42px;
-          padding: 0 11px;
-        }
-
-        .edit-article-button span {
-          display: none;
+          transform: scale(.8);
+          transform-origin: 100% 100%;
         }
       }
     `
