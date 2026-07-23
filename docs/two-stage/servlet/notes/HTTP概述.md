@@ -7,7 +7,7 @@ title: HTTP 概述
 
 HTTP（超文本传输协议）是浏览器与 Web 服务器之间数据交互所必须遵守的一种规范。它是由 W3C 组织推出，专门用于定义浏览器与 Web 服务器之间数据交互的格式。
 
-&lt;img src="/images/http_1.png"&gt;
+<img src="/images/http_1.png">
 
 HTTP 协议自诞生以来，先后经历了很多版本：
 
@@ -22,13 +22,13 @@ HTTP 协议自诞生以来，先后经历了很多版本：
 
 基于 HTTP 1.0 协议的客户端与服务器在交互过程中需要经过建立连接、发送请求信息、返回相应信息、关闭连接 4 个步骤。
 
-&lt;img src="/images/http_2.png"&gt;
+<img src="/images/http_2.png">
 
 HTTP 1.0 的缺陷在于，每次客户端服务端建立连接之后，只能处理一个 HTTP 请求。这种方式对于内容越来越丰富的网页来说，效率显得十分低下。
 
 为了克服 HTTP 1.0 的缺陷，HTTP 1.1 应运而生。HTTP 1.1 支持持久连接，能够在一个 TCP 连接上收发多个 HTTP 请求和响应。
 
-&lt;img src="/images/http_3.png"&gt;
+<img src="/images/http_3.png">
 
 ## 3. HTTP 请求数据和响应数据
 
