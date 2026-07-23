@@ -6,7 +6,7 @@ title: Lambda 表达式
 
 在 Java 编程语言中，方法是『二等公民』。一个典型的现象就是：你无法将一个方法（或者说一段代码）直接作为参数传给一个方法。
 
-&gt; 想实现这样的目的（在 Java 8 之前）你只能采用间接的方式：将方法（一段代码）定义为一个类的实例方法，给目标方法传入这个类的一个对象，再在目标方法内再来调用这个方法。
+> 想实现这样的目的（在 Java 8 之前）你只能采用间接的方式：将方法（一段代码）定义为一个类的实例方法，给目标方法传入这个类的一个对象，再在目标方法内再来调用这个方法。
 
 Java 8 的一个核心升级就是 lambda 表达式。Sun（Oracle）公司借助于『接口』，很巧妙地实现了 lambda 表达式语法。这样，就给初学者提供了一个更简单的了解、学习 lambda 表达式的途径：将它当作接口的升级、缩写。
 
@@ -167,7 +167,7 @@ Variable used in lambda expression should be final or effectively final
         int b = 2;
         int c = 3;
         a++;
-        new Thread(() -&gt; {
+        new Thread(() -> {
             System.out.println("a=" + a); // 在 Lambda 表达式使用前有改动，编译报错
             b++; // 在 Lambda 表达式中更改，报错
             System.out.println("c=" + c); // 在 Lambda 表达式使用之后有改动，编译报错
@@ -190,7 +190,7 @@ Variable used in lambda expression should be final or effectively final
   
     public void testA() {
         int a = 1;
-        new Thread(() -&gt; {
+        new Thread(() -> {
             int a = 3; // 与外部的局部变量重名，编译报错
             Integer num1 = 232; // 虽与域变量重名，允许，编译通过
             Integer num2 = 11; // 虽与静态变量重名，允许，编译通过
@@ -219,7 +219,7 @@ Variable used in lambda expression should be final or effectively final
         this.printHello();  // 输出：subClass: hello budy!
         super.printName("susu"); // 输出：ParentClass: name=susu
   
-        new Thread(() -&gt; {
+        new Thread(() -> {
             this.printHello();  // 输出：subClass: hello budy!
             super.printName("susu"); // 输出：ParentClass: name=susu
         }).start();
@@ -271,7 +271,7 @@ Variable used in lambda expression should be final or effectively final
 
 一句话介绍：
 
-&gt; 方法引用（Method Reference）是在 Lambda 表达式的基础上引申出来的一个功能。
+> 方法引用（Method Reference）是在 Lambda 表达式的基础上引申出来的一个功能。
 
 ### 示例
 
@@ -292,14 +292,14 @@ list.forEach(System.out::println);
 
 上述代码中间的两个冒号 `::` ，就是 Java 语言中方法引用的特有标志，出现它，就说明使用到了方法引用。
 
-&gt; 上述代码中『省』了一个变量，如果把省掉的变量『补』回来，那么上述代码实际上是下面这个样子：
-&gt;
-&gt; ```java
-&gt; Consumer&lt;Integer&gt; consumer = System.out::print;
-&gt; list.forEach(consumer);
-&gt; ```
-&gt;
-&gt; **forEach** 方法的参数是` Consumer<T> `接口的实现类的对象。
+> 上述代码中『省』了一个变量，如果把省掉的变量『补』回来，那么上述代码实际上是下面这个样子：
+>
+> ```java
+> Consumer<Integer> consumer = System.out::print;
+> list.forEach(consumer);
+> ```
+>
+> **forEach** 方法的参数是` Consumer<T> `接口的实现类的对象。
 
 从编译器的角度来理解，等号右侧的语句是一种方法引用，那么编译器会认为该语句引用的是` Consumer<T>` 接口的`accept(T t)`抽象方法。
 
