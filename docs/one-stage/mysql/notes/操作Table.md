@@ -100,8 +100,8 @@ CREATE TABLE <表名> (
 
 主键约束分两种：
 
-&gt; - 单主键，通常直接写在 列声明 的尾部。
-&gt; - 联合主键。只能出现在 表声明 的尾部。
+> - 单主键，通常直接写在 列声明 的尾部。
+> - 联合主键。只能出现在 表声明 的尾部。
 
 ```sql
 CREATE TABLE <表名> (
@@ -210,15 +210,15 @@ ALTER TABLE <从表名>
 
 ### 删除主键约束
 
-&gt; ALTER TABLE &lt;表名&gt; DROP PRIMARY KEY;
+> ALTER TABLE &lt;表名&gt; DROP PRIMARY KEY;
 
 ### 删除外键约束
 
-&gt; ALTER TABLE &lt;表名&gt; DROP FOREIGN KEY &lt;外键&gt; ;
+> ALTER TABLE &lt;表名&gt; DROP FOREIGN KEY &lt;外键&gt; ;
 
 ### 其他
 
-&gt; 略
+> 略
 
 ## MySql 中的数据类型总结
 
@@ -253,7 +253,7 @@ year INT(4)   # 最小显示宽度，不够补空格。与存储空间/取值范
 
 和编程中一样，FLOAT 和 DOUBLE 的运算都是 **非精确** 的，而 DECIMAL 类型是 **精确** 的。
 
-&gt; DECIMAL 底层是以字符串的形式存储数值，因此不存在浮点型的精度问题。不指定精度默认为 (10, 0) ：**有效数字** 共 10 个，其中 **小数点后** 数字 0 个。
+> DECIMAL 底层是以字符串的形式存储数值，因此不存在浮点型的精度问题。不指定精度默认为 (10, 0) ：**有效数字** 共 10 个，其中 **小数点后** 数字 0 个。
 
 ### 字符串类型
 
