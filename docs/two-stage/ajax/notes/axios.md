@@ -78,7 +78,7 @@ axios 的 GET 请求的请求参数是以 query-string（形如：`name=tom&age=
 
 需要注意的需要注意的是 GET 请求要搭配 **params** 使用：
 
-在使用 GET 方法传递参数时使用的是 **params**，并且官方文档中介绍为：params are the URL parameters to be sent with the request. Must be a plain object or a URLSearchParams object。译为：**params** 作为URL链接中的参数发送请求，且其必须是一个 plain object&lt;small&gt;（或者是 URLSearchParams object）&lt;/small&gt;。
+在使用 GET 方法传递参数时使用的是 **params**，并且官方文档中介绍为：params are the URL parameters to be sent with the request. Must be a plain object or a URLSearchParams object。译为：**params** 作为URL链接中的参数发送请求，且其必须是一个 plain object<small>（或者是 URLSearchParams object）</small>。
 
 plain object（纯对象）是指用 JSON 形式定义的普通对象或者 `new Object()` 创建的简单对象；而 URLSearchParams object 指的是一个可以由 URLSearchParams接口定义的一些实用方法来处理 URL 的查询字符串的对象。
 
@@ -120,7 +120,7 @@ axios 的 post 请求的请求参数是以 json-string 的形式传递到后台�
 需要注意的需要注意的是 POST 请求要搭配 **data** 使用。
 
 ## 3. get() 方法和 post() 方法
-在通过 axios() 方法发送请求时，你需要小心翼翼地使用 params 和 data 参数。为了简化&lt;small&gt;（无需用户考虑 params 和 data 问题）&lt;/small&gt;，axios 在 axios() 方法之上提供了专门的 get() 方法 和 post() 方法。
+在通过 axios() 方法发送请求时，你需要小心翼翼地使用 params 和 data 参数。为了简化<small>（无需用户考虑 params 和 data 问题）</small>，axios 在 axios() 方法之上提供了专门的 get() 方法 和 post() 方法。
 
 - get 请求
 
@@ -205,7 +205,7 @@ console.info(e)
 });
 ```
 
-## 5. 执行多个并发请求 &lt;Badge type="tip" text="了解" vertical="top" /&gt;
+## 5. 执行多个并发请求 <Badge type="tip" text="了解" vertical="top"  />
 - 示例
 
 ```js

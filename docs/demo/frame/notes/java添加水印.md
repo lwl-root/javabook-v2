@@ -4,11 +4,11 @@ title: java为word、excel、pdf、ppt、图片添加图片水印（文字水印
 # java为word、excel、pdf、ppt、图片添加图片水印（文字水印同理）
 
 ::: tip 提示
-使用idea开发，所需依赖如下：&lt;br/&gt;
+使用idea开发，所需依赖如下：<br/>
 spire的下载、使用，代码中会给出网址。idea中选中右键，添加为库即可使用。
 :::
 
-&lt;img src="/images/shuiyin_1.png"&gt;
+<img src="/images/shuiyin_1.png">
 
 ```xml
     <!--使用spire，导入的jar-->        
@@ -42,7 +42,7 @@ spire的下载、使用，代码中会给出网址。idea中选中右键，添�
 
 还需要一张白色图片，作用在于可以设置水印图片的透明度（spire没有提供方法）
 
-&lt;img src="/images/shuiyin_2.png"&gt;
+<img src="/images/shuiyin_2.png">
 
 **具体代码如下：**
 
@@ -824,6 +824,6 @@ public class WaterMarkUtils {
 
 实测可用。
 
-&gt; 转载至：
-&gt;
-&gt; [java为word、excel、pdf、ppt、图片添加图片水印（文字水印同理）_fcas的博客-CSDN博客](https://blog.csdn.net/qq_34388185/article/details/126135538?spm=1001.2014.3001.5502)
+> 转载至：
+>
+> [java为word、excel、pdf、ppt、图片添加图片水印（文字水印同理）_fcas的博客-CSDN博客](https://blog.csdn.net/qq_34388185/article/details/126135538?spm=1001.2014.3001.5502)

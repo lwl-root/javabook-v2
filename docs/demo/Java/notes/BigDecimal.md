@@ -177,7 +177,7 @@ java.lang.ArithmeticException: Non-terminating decimal expansion; no exact repre
 
 **解决方法：**
 
-&gt; divide方法设置精确的小数点，如：divide(xxxxx,2)
+> divide方法设置精确的小数点，如：divide(xxxxx,2)
 
 
 

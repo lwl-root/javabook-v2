@@ -10,7 +10,7 @@ title: AJAX 和 Spring MVC
 :::
 ## 1. AJAX 请求和 Spring MVC 的参数绑定
 ### AJAX 发送简单类型参数
-这种情况下，和发送 &lt;font color="blue"&gt;**application/x-www-form-urlencoded**&lt;/font&gt; 情况是一样的。
+这种情况下，和发送 <font color="blue">**application/x-www-form-urlencoded**</font> 情况是一样的。
 
 Spring MVC 该怎么执行参数绑定，就怎么执行参数绑定。
 
@@ -40,9 +40,9 @@ data: str,
 });
 ```
 
-这种情况，本质上和普通的请求中的 checkbox 有『&lt;font color="blue"&gt;**很大但又很不起眼**&lt;/font&gt;』的不同，jQuery 会在请求参数字符串的 key 的名字中加上 `%5b%5d`，其实就是 `[]` 。
+这种情况，本质上和普通的请求中的 checkbox 有『<font color="blue">**很大但又很不起眼**</font>』的不同，jQuery 会在请求参数字符串的 key 的名字中加上 `%5b%5d`，其实就是 `[]` 。
 
-因此，在 SpringMVC 的 &lt;font color="blue"&gt;**@RequestParam**&lt;/font&gt; 中指明的请求参数并不是 `xxx` 而应该是 `xxx[]` ！
+因此，在 SpringMVC 的 <font color="blue">**@RequestParam**</font> 中指明的请求参数并不是 `xxx` 而应该是 `xxx[]` ！
 
 例如：
 
@@ -53,7 +53,7 @@ public void demo(@RequestParam("xxx[]") Integer[] prodNums) {
 ```
 
 ### ajax 发送 application/json 参数类型的请求
-如果，我们将 &lt;font color="blue"&gt;**_contentType_**&lt;/font&gt; 赋值为 `application/json` 表示向后台发起请求时，是将一个 &lt;font color="blue"&gt;**JSON 格式的字符串**&lt;/font&gt; 携带在了 Request 的 body 部分，需要 Spring MVC 通过 &lt;font color="blue"&gt;**_@RequestBody_**&lt;/font&gt; 进行参数绑定，获取并解析出这个 JSON 格式字符串。此时使用 &lt;font color="blue"&gt;**_@RequestParam_**&lt;/font&gt; 注解无效。
+如果，我们将 <font color="blue">**_contentType_**</font> 赋值为 `application/json` 表示向后台发起请求时，是将一个 <font color="blue">**JSON 格式的字符串**</font> 携带在了 Request 的 body 部分，需要 Spring MVC 通过 <font color="blue">**_@RequestBody_**</font> 进行参数绑定，获取并解析出这个 JSON 格式字符串。此时使用 <font color="blue">**_@RequestParam_**</font> 注解无效。
 
 ::: tip 提示
 
@@ -83,7 +83,7 @@ public void add(@RequestBody Employee[] emps) {
 ## 2. Spring MVC 响应 AJAX 请求
 Spring MVC 响应 AJAX 请求，回给客户端浏览器一个 JSON 格式字符串，这很容易实现。
 
-只需要使用 &lt;font color="blue"&gt;**_@ResponseBody_**&lt;/font&gt; 注解，标注在请求处理方法上即可。
+只需要使用 <font color="blue">**_@ResponseBody_**</font> 注解，标注在请求处理方法上即可。
 
 ```java
 @RequestMapping("/hello.do")
@@ -94,13 +94,13 @@ return tom;
 }
 ```
 
-当你使用了 &lt;font color="blue"&gt;**_@ResponseBody_**&lt;/font&gt; 注解，Spring MVC 会【帮】你做两件事情：
+当你使用了 <font color="blue">**_@ResponseBody_**</font> 注解，Spring MVC 会【帮】你做两件事情：
 
 1. 将这个方法的返回值（默认使用jackson）转换为 json 格式字符串。
 
 2. 在底层执行 `resp.setContentType("application/json")`; 将 HTTP 响应的 content-type 设置为 application/json 。
 
-此时，你的方法的返回值不再是 ModelAndView，或者是 String。它直接就是代表你所要返回的数据的对象，或对象的集合&lt;small&gt;（通常是 List）&lt;/small&gt;。
+此时，你的方法的返回值不再是 ModelAndView，或者是 String。它直接就是代表你所要返回的数据的对象，或对象的集合<small>（通常是 List）</small>。
 
 ## 3. @RestController 注解
 如果你的一个 Controller 类下的所有请求处理方法都返回的是 JSON 格式字符串，而不是逻辑视图名。那么，你的所有的请求处理方法的『头』上一定都加了 `@ResponseBody` 注解。
@@ -110,21 +110,21 @@ return tom;
 这样，你就可以不用在这个 Controller 类下的每个方法上添加 `@ResponseBody` 了。
 
 ## 4. 背后功臣 HttpMessageConverter
-你之所以能在 Controller 中收、发 JSON 格式字符串，正是因为有名为 &lt;font color="blue"&gt;**HttpMessageConverter**&lt;/font&gt; 的部件在为 &lt;font color="blue"&gt;**@RequestBody**&lt;/font&gt; 和 &lt;font color="blue"&gt;**@ResponseBody**&lt;/font&gt;『服务』的！注意，它与 @RequestParam 无关
+你之所以能在 Controller 中收、发 JSON 格式字符串，正是因为有名为 <font color="blue">**HttpMessageConverter**</font> 的部件在为 <font color="blue">**@RequestBody**</font> 和 <font color="blue">**@ResponseBody**</font>『服务』的！注意，它与 @RequestParam 无关
 
-+ &lt;font color="blue"&gt;@RequestBody&lt;/font&gt; 需要利用 HttpMessageConverter 来从 HTTP 的请求 body 中取数据；
++ <font color="blue">@RequestBody</font> 需要利用 HttpMessageConverter 来从 HTTP 的请求 body 中取数据；
 
-+ &lt;font color="blue"&gt;@ResponseBody&lt;/font&gt; 需要利用 HttpMessageConverter 来往 HTTP 的响应的 body 中放数据。
++ <font color="blue">@ResponseBody</font> 需要利用 HttpMessageConverter 来往 HTTP 的响应的 body 中放数据。
 
-在这里，你可能会用到 2 种不同的 HttpMessageConverter&lt;small&gt;（取决于你的参数和返回值类型）&lt;/small&gt;：
+在这里，你可能会用到 2 种不同的 HttpMessageConverter<small>（取决于你的参数和返回值类型）</small>：
 
-+ &lt;font color="blue"&gt;StringHttpMessageConverter&lt;/font&gt;:
++ <font color="blue">StringHttpMessageConverter</font>:
 
   + 在 Controller 接受、处理请求时，如果你想将请求体中的 JSON String 形式的请求参数字符串作为一个整体取出来，赋给 Controller 的一个 String 类型参数（该参数必然标注了 @RequestBody），此时，StringHttpMessageConverter 实现了这个工作。
 
   + 在 Controller 准备返回数据，响应请求发起方时，如果，你自己已经在代码逻辑中准备好了 JSON 格式字符串，接下来只需要将它（JSON 格式字符串）放入 HTTP 响应体中，此时，StringHttpMessageConverter 实现了这个工作。
 
-+ &lt;font color="blue"&gt;MappingJackson2HttpMessageConverter&lt;/font&gt;:
++ <font color="blue">MappingJackson2HttpMessageConverter</font>:
 
   + 在 Controller 接受、处理请求时，如果你想将请求体中的 JSON String 形式的请求参数字符串取出来，并希望『有人』能帮你把它转换成一个 JavaBean，再赋给 Controller 的一个引用类型参数（该参数必然标注了 @RequestBody），此时，MappingJackson2HttpMessageConverter 实现了这个工作。
 
@@ -132,13 +132,13 @@ return tom;
 
 ::: tip 再次强调
 
-无论是上述哪个 HttpMessageConverter 再工作，前提都是你使用了 &lt;font color="blue"&gt;**@RequestBody**&lt;/font&gt; 和 &lt;font color="blue"&gt;**@ResponseBody**&lt;/font&gt; 注解。
+无论是上述哪个 HttpMessageConverter 再工作，前提都是你使用了 <font color="blue">**@RequestBody**</font> 和 <font color="blue">**@ResponseBody**</font> 注解。
 :::
 
-## 5. StringHttpMessageConverter 乱码问题 &lt;Badge type="tip" text="了解" vertical="top" /&gt;
-通常，我们不会取直接收、发 JSON 格式字符串，所以，我们用到 &lt;font color="blue"&gt;**MappingJackson2HttpMessageConverter**&lt;/font&gt; 的机会会比 &lt;font color="blue"&gt;**StringHttpMessageConverter**&lt;/font&gt; 要多。&lt;small&gt;毕竟，能偷懒为什么不偷懒。&lt;/small&gt;
+## 5. StringHttpMessageConverter 乱码问题 <Badge type="tip" text="了解" vertical="top"  />
+通常，我们不会取直接收、发 JSON 格式字符串，所以，我们用到 <font color="blue">**MappingJackson2HttpMessageConverter**</font> 的机会会比 <font color="blue">**StringHttpMessageConverter**</font> 要多。<small>毕竟，能偷懒为什么不偷懒。</small>
 
-不过，万一因为某种原因，你要直接收、发 JSON 格式字符串，从而利用到 &lt;font color="blue"&gt;**StringHttpMessageConverter**&lt;/font&gt; 时，要注意，它有个小坑：它默认使用的是 &lt;font color="blue"&gt;**iso-8859-1**&lt;/font&gt; 编码&lt;small&gt;（也就是 &lt;font color="blue"&gt;**latin-1**&lt;/font&gt;）&lt;/small&gt;，因此不支持中日韩文。
+不过，万一因为某种原因，你要直接收、发 JSON 格式字符串，从而利用到 <font color="blue">**StringHttpMessageConverter**</font> 时，要注意，它有个小坑：它默认使用的是 <font color="blue">**iso-8859-1**</font> 编码<small>（也就是 <font color="blue">**latin-1**</font>）</small>，因此不支持中日韩文。
 
 ::: tip 提示
 
@@ -184,7 +184,7 @@ public void configureMessageConverters(List<HttpMessageConverter<?>> converters)
 </mvc:annotation-driven>
 ```
 
-补充，你可以将 &lt;font color="blue"&gt;**utf8Charset**&lt;/font&gt; 的 bean 配置『嵌』在 &lt;font color="blue"&gt;**StringHttpMessageConverter**&lt;/font&gt; 的 bean 配置里面。因为，除了它，也没别的地方用到了 &lt;font color="blue"&gt;**utf8Charset**&lt;/font&gt; Bean。
+补充，你可以将 <font color="blue">**utf8Charset**</font> 的 bean 配置『嵌』在 <font color="blue">**StringHttpMessageConverter**</font> 的 bean 配置里面。因为，除了它，也没别的地方用到了 <font color="blue">**utf8Charset**</font> Bean。
 
 ```xml
 <constructor-arg>

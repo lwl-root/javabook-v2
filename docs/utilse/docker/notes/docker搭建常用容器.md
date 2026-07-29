@@ -26,7 +26,7 @@ touch /home/redis/redis.conf //创建redis配置文件
 
 如图中结构：
 
-&lt;img src="/images/docker_redis.png"&gt;
+<img src="/images/docker_redis.png">
 
 然后用镜像创建容器
 
@@ -34,7 +34,7 @@ touch /home/redis/redis.conf //创建redis配置文件
 docker run -p 6379:6379 --name redis -v /home/redis/redis.conf:/etc/redis/redis.conf -v /home/redis/data:/data -d redis redis-server /home/redis/redis.conf --appendonly yes
 ```
 
-配置文件`redis.conf`从官网下载 &lt;a href="http://download.redis.io/redis-stable/redis.conf"&gt;地址&lt;/a&gt;
+配置文件`redis.conf`从官网下载 <a href="http://download.redis.io/redis-stable/redis.conf">地址</a>
 
 ```tex
 1. -p 6379:6379  容器redis 端口6379 映射 宿主机未6379
@@ -77,7 +77,7 @@ mkdir -p /usr/data/mysql/logs /usr/data/mysql/data /usr/data/mysql/conf
 
 如图中结构：
 
-&lt;img src="/images/docker_mysql.png"&gt;
+<img src="/images/docker_mysql.png">
 
 ::: warning 注意
 
@@ -157,7 +157,7 @@ grant all privileges on *.* to 'root'@'%' with grant option;
 flush privileges;
 ```
 
-&lt;img src="/images/mysql1.png"&gt;
+<img src="/images/mysql1.png">
 
 ## 3、docker搭建rabbitMQ容器
 
@@ -184,7 +184,7 @@ tag为latest有一个问题，就是无法打开web管理页面
 docker run -d --name rabbitmq -p 1567:1567 -p 15672:15672 rabbitmq:3.7-management
 ```
 
-&lt;font color="red"&gt;如果是外网服务器记得开启端口&lt;/font&gt;
+<font color="red">如果是外网服务器记得开启端口</font>
 
 然后就可以访问容器：IP地址:15672
 
@@ -211,7 +211,7 @@ chmod 777 /home/data/minio/data # 权限打开
 
 如图中结构：
 
-&lt;img src="/images/docker_minio.png"&gt;
+<img src="/images/docker_minio.png">
 
 老版本minio创建容器
 
@@ -277,7 +277,7 @@ mkdir -p /opt/nginx/html /opt/nginx/logs /opt/nginx/conf /opt/nginx/ssl
 
 如图中结构：
 
-&lt;img src="/images/docker_nginx.png"&gt;
+<img src="/images/docker_nginx.png">
 
 拷贝空白容器内 Nginx 默认配置文件和静态文件到本地创建的挂载目录，容器 ID 可以查看 docker ps 命令输入中的第一列：
 

@@ -67,7 +67,7 @@ IntStream stream = Arrays.stream(array);
 
 除了由集合和数组生成 Stream，Stream API 为 Stream 提供了静态方法 `.generate(Supplier)` 方法、 `.iterator(Final T, final UnaryOperator<T> f)`方法，直接创建 Stream 。
 
-&gt; 这里需要注意的是，上一章节中，通过数组&集合生成的 Stream 对象中的数据的数量是确定的，即为数组和集合中的数据的数量。 而通过 **.generate** 和 **.iterator** 方法生成的 Stream 对象中的数据的数量是无限的，即，你向 Stream 对象每次『要』一个对象时它都会每次生成一个返回给你，从而达到『无限个』的效果。
+> 这里需要注意的是，上一章节中，通过数组&集合生成的 Stream 对象中的数据的数量是确定的，即为数组和集合中的数据的数量。 而通过 **.generate** 和 **.iterator** 方法生成的 Stream 对象中的数据的数量是无限的，即，你向 Stream 对象每次『要』一个对象时它都会每次生成一个返回给你，从而达到『无限个』的效果。
 
 通常直接创建的 Stream 对象会结合 **.limit()** 方法使用。
 
@@ -164,14 +164,14 @@ String[] array = stream.toArray(String[]::new); // 注意，这里是 String[] �
 
 如果你想将 Stream 中的数据收录到集合中，那么你可以使用 **.collect** 方法。
 
-&gt; 不过最原始最底层的 **.collect** 方法看起来比较『奇怪』：
-&gt;
-&gt; ```java
-&gt; stream.collect(HashSet::new, HashSet::add, HashSet::addAll);
-&gt; stream.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
-&gt; ```
-&gt;
-&gt; 这里的第一第二个参数好理解，比较奇怪的是第三个参数。这里需要用到集合的 **.addAll** 方法是因为会将 Stream 中的数据先存放于多个集合中，最后再将多个集合合并成一个总的集合中再返回（这种『奇怪』的行为是和 Stream API 的并发特性有关）。
+> 不过最原始最底层的 **.collect** 方法看起来比较『奇怪』：
+>
+> ```java
+> stream.collect(HashSet::new, HashSet::add, HashSet::addAll);
+> stream.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+> ```
+>
+> 这里的第一第二个参数好理解，比较奇怪的是第三个参数。这里需要用到集合的 **.addAll** 方法是因为会将 Stream 中的数据先存放于多个集合中，最后再将多个集合合并成一个总的集合中再返回（这种『奇怪』的行为是和 Stream API 的并发特性有关）。
 
 为此，Stream 提供了几个重载的 **.collect** 方法简化使用：
 

@@ -25,7 +25,7 @@ title: HTTP Request 中的 content-type 请求头
 :::
 
 ## 2. Query String 格式的请求参数
-如果，你的 HTTP 请求头中的 `content-type` 的值为 `application/x-www-form-urlencoded` 。那么，你的登录请求的请求参数&lt;small&gt;（用户名和密码）&lt;/small&gt;，就应该是 **Query String** 形式。形如：
+如果，你的 HTTP 请求头中的 `content-type` 的值为 `application/x-www-form-urlencoded` 。那么，你的登录请求的请求参数<small>（用户名和密码）</small>，就应该是 **Query String** 形式。形如：
 
 ```http request
 username=tom&password=123456
@@ -45,9 +45,9 @@ id=999&value=content
 query-string 格式的参数意味着后台 Servlet 要通过 `request.getParameter()` 来获取参数数据。
 
 ## 3. 常见请求方式一
-**通过页面上的 `<form>` 表单提交数据**。&lt;small&gt;发出的是 POST 请求，请求参数以 query-string 格式携带在 HTTP 请求体中，向后端传递。&lt;/small&gt;
+**通过页面上的 `<form>` 表单提交数据**。<small>发出的是 POST 请求，请求参数以 query-string 格式携带在 HTTP 请求体中，向后端传递。</small>
 
-其本质如下&lt;small&gt;（以登录请求为例）&lt;/small&gt;：
+其本质如下<small>（以登录请求为例）</small>：
 
 ```http request
 POST http://127.0.0.1:8080/login
@@ -57,9 +57,9 @@ username=tom&password=123
 ```
 
 ## 4. 常见请求方式二
-**在浏览器地址栏直接输入访问地址和请求参数，并按下回车。** &lt;small&gt;发出的是 GET 请求，请求参数以 query-string 格式携带在请求行中，向后端传递。&lt;/small&gt;
+**在浏览器地址栏直接输入访问地址和请求参数，并按下回车。** <small>发出的是 GET 请求，请求参数以 query-string 格式携带在请求行中，向后端传递。</small>
 
-其本质如下&lt;small&gt;（以登录请求为例）&lt;/small&gt;：
+其本质如下<small>（以登录请求为例）</small>：
 
 ```http request
 GET http://127.0.0.1:8080/login?username=tom&password=123
@@ -78,9 +78,9 @@ GET http://127.0.0.1:8080/login?username=tom&password=123
 ::: 
 
 ## 6. GET 请求的一点点小特殊
-GET 请求的数据包中 **“没有请求体”** &lt;small&gt;（ 逻辑上，你也可以认为 GET 请求的 **“请求体是空的”** ）&lt;/small&gt;。这也是为什么 GET 请求的请求头中没有 content-type 。
+GET 请求的数据包中 **“没有请求体”** <small>（ 逻辑上，你也可以认为 GET 请求的 **“请求体是空的”** ）</small>。这也是为什么 GET 请求的请求头中没有 content-type 。
 
-HTTP 请求头中的 content-type 就是用来指定请求体中的数据&lt;small&gt;（ 即，请求参数 ）&lt;/small&gt;的格式，而 GET 请求压根就没有请求体，因此 content-type 请求头在 GET 请求中自然就没有了用武之地，而 GET 请求的请求头中所以也就用不上 content-type 。
+HTTP 请求头中的 content-type 就是用来指定请求体中的数据<small>（ 即，请求参数 ）</small>的格式，而 GET 请求压根就没有请求体，因此 content-type 请求头在 GET 请求中自然就没有了用武之地，而 GET 请求的请求头中所以也就用不上 content-type 。
 
 GET 请求向后台传递的 query-string 是 “追加” 在请求路径 URI 中的，而请求路径 URI 在 HTTP 请求的数据包中，是存放在请求行中的，因此，GET 请求的 query-string 格式参数是携带在请求行中，传递到后台的。
 

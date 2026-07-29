@@ -20,7 +20,7 @@ slf4j（Simple Logging Facade for Java）是现在最流行的 Java 日志库。
 
 **slf4j-simple** 是它的一个实现。
 
-&gt; 简单来说，*slf4j-api* 和 *slf4j-simple* 的关系类似于「**接口**」和「**实现类**」的关系。在这里，我们代码中使的 *slf4j* ，但实际干活的是 *slf4j-simple* 。
+> 简单来说，*slf4j-api* 和 *slf4j-simple* 的关系类似于「**接口**」和「**实现类**」的关系。在这里，我们代码中使的 *slf4j* ，但实际干活的是 *slf4j-simple* 。
 
 很容易猜到，**slf4j-api** 的实现并非只有一个，**slf4j-simple** 只是它最简单的一个实现。**slf4j-simple** 实现了最基本的功能，而且没有什么额外附加功能和特色功能。
 
@@ -44,7 +44,7 @@ LoggerFactory.getLogger()
 static Logger logger = LoggerFactory.getLogger(App.class);
 ```
 
-slf4j 提供为不同级别的日志输出提供了不同的方法，常用的是：&lt;b&gt;.error()&lt;/b&gt;、&lt;b&gt;.warn()&lt;/b&gt;、&lt;b&gt;.info()&lt;/b&gt;、&lt;b&gt;.debug()&lt;/b&gt; 。
+slf4j 提供为不同级别的日志输出提供了不同的方法，常用的是：<b>.error()</b>、<b>.warn()</b>、<b>.info()</b>、<b>.debug()</b> 。
 
 ```java
 public class App {
@@ -111,7 +111,7 @@ slf4j-simple 没有配置文件，对日志输出级别的设置是通过 VM 的
 </dependency>
 ```
 
-&gt; 整个 Java 日志库领域绕不开的人物是 Ceki Gülcü，大半个日志库领域都与他有关。
+> 整个 Java 日志库领域绕不开的人物是 Ceki Gülcü，大半个日志库领域都与他有关。
 
 ### 日志库及其发展历史
 
@@ -143,7 +143,7 @@ slf4j-simple 没有配置文件，对日志输出级别的设置是通过 VM 的
   - icl-over-slf4j
   - log4j-to-slf4j
 
-&lt;img src="/images/log-relation.png"&gt;
+<img src="/images/log-relation.png">
 
 ### Logback
 

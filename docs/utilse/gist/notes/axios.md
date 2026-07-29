@@ -8,7 +8,7 @@ title: Axios 发起AJAX请求模板
 <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
 ```
 
-## 2、发起AJAX GET 请求 &lt;Badge type="tip" text="query-string" vertical="top" /&gt;
+## 2、发起AJAX GET 请求 <Badge type="tip" text="query-string" vertical="top"  />
 ::: details 原始的通用方式
 ```js
 axios({
@@ -58,7 +58,7 @@ axios
 ```
 :::
 
-## 3、发起AJAX POST 请求 &lt;Badge type="tip" text="query-string" vertical="top" /&gt;
+## 3、发起AJAX POST 请求 <Badge type="tip" text="query-string" vertical="top"  />
 ::: danger 警告
 axios post 请求的 content-type 的默认值就是 application/json ，即，默认传递的参数格式是 json-string ！
 :::
@@ -114,7 +114,7 @@ axios({
 ```
 :::
 
-## 4、发起AJAX POST 请求 &lt;Badge type="tip" text="json-string" vertical="top" /&gt;
+## 4、发起AJAX POST 请求 <Badge type="tip" text="json-string" vertical="top"  />
 ::: details 原始的通用方式
 ```js
 const obj = {

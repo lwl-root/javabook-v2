@@ -8,18 +8,18 @@ MyBatis 提供了查询缓存来缓存数据，从而达到提高查询新能的
 
 MyBatis 的一级缓存是 SqlSession 级别的缓存（在操作数据库时需要构造 SqlSession 对象），每个 SqlSession 对象中都有一个 HashMap 对象用于缓存数据，不同的 SqlSession 之间缓存的数据互不影响。
 
-&gt;提前说明一下，当 mybatis 与 spring 整合后，&lt;font color="blue"&gt;&lt;b&gt;如果没有事务，一级缓存是失效的！&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
-&gt;原因就是两者结合后，sqlsession 如果发现当前没有事务，那么每执行一个 mapper 方法之后，sqlsession 就被关闭了（ `session.close()` ）。&lt;br&gt;
-&gt;所以记得给 Service 的方法的脑袋上面加 &lt;font color="blue"&gt;&lt;b&gt;@Transactional &lt;/b&gt;&lt;/font&gt;。
+>提前说明一下，当 mybatis 与 spring 整合后，<font color="blue"><b>如果没有事务，一级缓存是失效的！</b></font><br/>
+>原因就是两者结合后，sqlsession 如果发现当前没有事务，那么每执行一个 mapper 方法之后，sqlsession 就被关闭了（ `session.close()` ）。<br/>
+>所以记得给 Service 的方法的脑袋上面加 <font color="blue"><b>@Transactional </b></font>。
 
-在参数和 SQL 完全相同的情况下，使用同一个 SqlSession 对象调用同一个 Mapper 方法，往往只执行一次 SQL 语句。因为如果没有声明需要刷新缓存并且缓存没有超时，SqlSession 都只会取出当前缓存的数据，&lt;small&gt;而不是执行 SQL 语句&lt;/small&gt;。
+在参数和 SQL 完全相同的情况下，使用同一个 SqlSession 对象调用同一个 Mapper 方法，往往只执行一次 SQL 语句。因为如果没有声明需要刷新缓存并且缓存没有超时，SqlSession 都只会取出当前缓存的数据，<small>而不是执行 SQL 语句</small>。
 
 如果 SqlSession 执行了 DML 操作，并提交数据库，Mybatis 会清空 SqlSession 中的一级缓存，这样做的目的是保证缓存中存储的数据是最新的，避免出现脏读现象。
 
 ### 刷新缓存的时机
-- 如果 SqlSession 调用了 &lt;font color="blue"&gt;&lt;b&gt;close&lt;/b&gt;&lt;/font&gt; 方法，则一级缓存不可用/销毁。
+- 如果 SqlSession 调用了 <font color="blue"><b>close</b></font> 方法，则一级缓存不可用/销毁。
 
-- 如果 SqlSession 调用了 &lt;font color="blue"&gt;&lt;b&gt;clearCache&lt;/b&gt;&lt;/font&gt; 方法，则一级缓存中缓存的数据被清空。
+- 如果 SqlSession 调用了 <font color="blue"><b>clearCache</b></font> 方法，则一级缓存中缓存的数据被清空。
 
 - 如果 SqlSession 执行了一个 DML 操作，则一级缓存中缓存的数据被清空。
 
@@ -34,9 +34,9 @@ MyBatis 的一级缓存是 SqlSession 级别的缓存（在操作数据库时需
 
 二级缓存比一级缓存作用域更大，多个 sqlsession 可以共用二级缓存，即，二级缓存是跨 sqlsession 的。
 
-&gt; &lt;small&gt;例如，关闭一个 sqlsession 之后，打开一个新的 sqlsession，执行同一条 sql 语句，会利用上一次的缓存数据。&lt;/small&gt;
+> <small>例如，关闭一个 sqlsession 之后，打开一个新的 sqlsession，执行同一条 sql 语句，会利用上一次的缓存数据。</small>
 
-&lt;font color="blue"&gt;&lt;b&gt;mybatis 默认没有开启二级缓存&lt;/b&gt;&lt;/font&gt; ，需要在配置中进行配置才能使用。打开二级缓存分为三步：
+<font color="blue"><b>mybatis 默认没有开启二级缓存</b></font> ，需要在配置中进行配置才能使用。打开二级缓存分为三步：
 
 - 打开二级缓存总开关
 
@@ -54,7 +54,7 @@ MyBatis 的一级缓存是 SqlSession 级别的缓存（在操作数据库时需
 ```
 
 ### 打开需要使用二级缓存的 mapper 的开关。
-在需要开启二级缓存的 &lt;font color="blue"&gt;&lt;b&gt;mapper.xml&lt;/b&gt;&lt;/font&gt; 中加入 caceh 标签
+在需要开启二级缓存的 <font color="blue"><b>mapper.xml</b></font> 中加入 caceh 标签
 ```xml
 <cache />
 ```

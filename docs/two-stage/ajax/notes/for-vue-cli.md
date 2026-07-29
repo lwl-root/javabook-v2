@@ -18,7 +18,7 @@ npm install axios
 
 当然，你不需要 vue-cli-plugin-axios “帮忙” 也可以。那么，就使用 “方式二” 直接通过 npm 安装，然后自己去写那些代码。
 
-&lt;Badge type="tip" text="补充" vertical="middle" /&gt; vue-router、element-ui 也是这么个安装思路。
+<Badge type="tip" text="补充" vertical="middle"  /> vue-router、element-ui 也是这么个安装思路。
 
 ## 2. vue-cli 中的跨域问题的解决
 详情见 vue-cli 的第一篇笔记。
@@ -43,7 +43,7 @@ import axios from 'axios'
 import axios from 'axios'
 ```
 
-2. 在 main.js 中，把 axios 变量绑定到 Vue 的一个原型属性上&lt;small&gt;（原则上，属性名任意，不和已有属性名冲突就行）&lt;/small&gt;。
+2. 在 main.js 中，把 axios 变量绑定到 Vue 的一个原型属性上<small>（原则上，属性名任意，不和已有属性名冲突就行）</small>。
 ```js
 Vue.prototype.$http= axios;
 ```
@@ -54,7 +54,7 @@ Vue.prototype.$http= axios;
 
 因为 axios 没有 **install** 。
 
-当你在执行 `Vue.use(xxx)` 的时候，Vue 会去调用 xxx 的 `install` 方法&lt;small&gt;（前提是它得有这么个方法）&lt;/small&gt;。借用这种机制，你可以将你对 xxx 插件/组件的初始化的代码放在 install 方法里面。
+当你在执行 `Vue.use(xxx)` 的时候，Vue 会去调用 xxx 的 `install` 方法<small>（前提是它得有这么个方法）</small>。借用这种机制，你可以将你对 xxx 插件/组件的初始化的代码放在 install 方法里面。
 
 因此，你可以单独地创建一个 .js 文件，在其中创建、配置 axios 对象，并绑定到 Vue 全局和实例变量上，然后，再在 main.js 中通过 Vue.use() 来触发这段代码的执行。
 

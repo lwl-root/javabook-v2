@@ -39,7 +39,7 @@ $ npm i axios -S
 
 ![img](/images/loading.png)
 
-&lt;a href="https://element.eleme.cn/#/zh-CN/component/loading"&gt;api:https://element.eleme.cn/#/zh-CN/component/loading&lt;/a&gt;
+<a href="https://element.eleme.cn/#/zh-CN/component/loading">api:https://element.eleme.cn/#/zh-CN/component/loading</a>
 
 ```javascript
 import { Loading } from "element-ui";

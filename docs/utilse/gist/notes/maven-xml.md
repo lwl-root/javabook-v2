@@ -57,8 +57,8 @@ title: Maven 相关模板
 ```
 
 ## 2. cleanLastUpdated.bat
-&lt;CodeGroup&gt;
-&lt;CodeGroupItem title="Windows 版本"&gt;
+<CodeGroup>
+<CodeGroupItem title="Windows 版本">
 
   ```bash
   @echo off
@@ -75,9 +75,9 @@ title: Maven 相关模板
   pause
   ```
 
-&lt;/CodeGroupItem&gt;
+</CodeGroupItem>
 
-&lt;CodeGroupItem title="Linux 版本"&gt;
+<CodeGroupItem title="Linux 版本">
 
   ```bash
   #!/bin/bash
@@ -89,8 +89,8 @@ title: Maven 相关模板
   echo 搜索完 
   ```
 
-  &lt;/CodeGroupItem&gt;
-  &lt;/CodeGroup&gt;
+  </CodeGroupItem>
+  </CodeGroup>
 
 ## 3. maven 的 pom.xml
 

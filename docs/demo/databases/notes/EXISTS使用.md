@@ -15,7 +15,7 @@ exists : 强调的是是否返回结果集，不要求知道返回什么, 比如
 select name from student where sex = 'm' and mark exists(select 1 from grade where ...)
 ```
 
-&lt;font color="red"&gt;只要exists引导的子句有结果集返回，那么exists这个条件就算成立了&lt;/font&gt;,大家注意返回的字段始终为1，如果改成“select 2 from grade where ...”，那么返回的字段就是2，这个数字没有意义。所以exists子句不在乎返回什么，而是在乎是不是有结果集返回。
+<font color="red">只要exists引导的子句有结果集返回，那么exists这个条件就算成立了</font>,大家注意返回的字段始终为1，如果改成“select 2 from grade where ...”，那么返回的字段就是2，这个数字没有意义。所以exists子句不在乎返回什么，而是在乎是不是有结果集返回。
 
 而 exists 与 in 最大的区别在于 in引导的子句只能返回一个字段，比如：
 

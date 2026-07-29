@@ -94,7 +94,7 @@ FROM
 ```
 ::: warning 注意
 在使用子查询作为表的时候推荐使用别名，在mysql中from后面使用子查询需要给子查询返回的数据取别名，否则会报错，但在oracle中可以不取别名。
-&gt; 1248 - Every derived table must have its own alias
+> 1248 - Every derived table must have its own alias
 
 :::
 :::
@@ -113,7 +113,7 @@ select item_name
 ```
 ::: warning 警告
 在oracle中group by后面出现子查询语句会报错
-&gt; ORA-&gt;22818:这里不允许出现子查询表达式
+> ORA-&gt;22818:这里不允许出现子查询表达式
 :::
 
 @tab mysql中
@@ -268,13 +268,13 @@ x为外部查询结果 a b c ..... null 是子查询中结果
 
 1. in 子查询的逻辑关系
 
-&gt;X == a  or  X == b  or  x == c .....  or  x == null
+>X == a  or  X == b  or  x == c .....  or  x == null
 
 任何值和null比较结果NULL, 由于是OR语句只要一个为真结果就为真， 所以只看前半部分 null值忽略
 
 2. not in 子查询的逻辑关系
 
-&gt;X != a  and  X != b  and  x != c .....  and  x != null
+>X != a  and  X != b  and  x != c .....  and  x != null
 
 同理任何值和null比较结果NULL, 由于是and语句短路原理，只要一个为假结果为假， 所以结果必为 NULL/FALSE
 

@@ -135,7 +135,7 @@ public class Swagger3Config {
 来展现，本例采用指定扫描的包路径来定义，Swagger 会扫描该包下所有 Controller 定义的 API，并产生文档内容（除了被 `@ApiIgnore` 指定的请求）。
 
 ## 3、API接口编写（Controller）
-&lt;Badge type="tip" text="提示" vertical="middle" /&gt; v2 和 v3 使用的文档注解都是相同的
+<Badge type="tip" text="提示" vertical="middle"  /> v2 和 v3 使用的文档注解都是相同的
 
 ```java
 @Api(description = "生产者进程API接口")
@@ -208,23 +208,23 @@ Swagger 通过注解定制接口对外展示的信息，这些信息包括接口
 ::: code-tabs
 @tab swagger2启动
 
-&lt;br/&gt;
+<br/>
 
 SpringBoot启动成功后，访问http://localhost:8080/swagger-ui.html
 
 
-&lt;img src="/images/swagger2.png"&gt;
+<img src="/images/swagger2.png">
 :::
 
 @tab swagger3启动
 
-&lt;br/&gt;
+<br/>
 
 SpringBoot启动成功后，访问http://localhost:8080/swagger-ui/
 
-&lt;Badge type="warning" text="注意" vertical="middle" /&gt; 最后的 / 不能省略
+<Badge type="warning" text="注意" vertical="middle"  /> 最后的 / 不能省略
 
-&lt;img src="/images/swagger3.png"&gt;
+<img src="/images/swagger3.png">
 :::
 :::
 
@@ -337,5 +337,5 @@ public class SwaggerConfig
 http://ip:端口/doc.html
 ```
 
-&lt;img src="/images/接口文档.png"&gt;
+<img src="/images/接口文档.png">
 

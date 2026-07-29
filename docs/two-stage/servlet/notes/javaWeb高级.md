@@ -142,9 +142,9 @@ Filter 接口中，最后一个方法是 `destroy()`，该方法在 Servlet 容�
 
 和 Servlet 的配置非常相似，Filter 的配置主要有三方面：
 
-&gt; - 确认哪些资源需要本 Filter 进行拦截处理。
-&gt; - 配置 Filter 的初始化参数和值，这些参数在 Filter 的 `init()` 方法中可以读取到。
-&gt; - 给 Filter 取一个名称（一般来说这个配置是不需要的）。在一些特殊的情况下，系统通过这个名字来识别Filter。
+> - 确认哪些资源需要本 Filter 进行拦截处理。
+> - 配置 Filter 的初始化参数和值，这些参数在 Filter 的 `init()` 方法中可以读取到。
+> - 给 Filter 取一个名称（一般来说这个配置是不需要的）。在一些特殊的情况下，系统通过这个名字来识别Filter。
 
 ```java
 @WebFilter(filterName = "firstFilter",
