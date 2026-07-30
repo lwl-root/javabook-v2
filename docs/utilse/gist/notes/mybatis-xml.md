@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mybatis 相关
 ---
 # Mybatis 相关
@@ -219,7 +219,9 @@ SSM 整合时使用，开启 id 主键回填功能。
 ```
 
 ## 7. 结果集一对多映射
+
 ::: code-tabs
+
 @tab 联表查询式
   ```xml
   &lt;resultMap id="EmployeeResultMap" type="xxx.yyy.zzz.outlet.dao.po.Employee"&gt;
@@ -235,7 +237,9 @@ SSM 整合时使用，开启 id 主键回填功能。
     &lt;/association&gt;
   &lt;/resultMap&gt;
   ```
+
 @tab 独立调用式
+
   ```xml
   &lt;resultMap id="EmployeeResultMap" type="xxx.yyy.zzz.outlet.dao.po.Employee"&gt;
     &lt;id ... /&gt;
@@ -251,10 +255,11 @@ SSM 整合时使用，开启 id 主键回填功能。
   &lt;/resultMap&gt;
   ```
 :::
-:::
 
 ## 8. 结果集多对一映射
+
 ::: code-tabs
+
 @tab 联表查询式
   ```xml
   &lt;resultMap id="DepartmentResultMap" type="xxx.yyy.zzz.outlet.dao.po.Department"&gt;
@@ -275,7 +280,9 @@ SSM 整合时使用，开启 id 主键回填功能。
     &lt;/collection&gt;
   &lt;/resultMap &gt;
   ```
+
 @tab 独立调用式
+
   ```xml
   &lt;resultMap id="DepartmentResultMap" type="xxx.yyy.zzz.outlet.dao.po.Department"&gt;
     &lt;id ... /&gt;
@@ -292,12 +299,13 @@ SSM 整合时使用，开启 id 主键回填功能。
   &lt;/resultMap &gt;
   ```
 :::
-:::
 
 ## 9. 注解映射
 
 ::: code-tabs
+
 @tab 无关联关系映射
+
   ```java
   @Results(id = "department", value = {
       @Result(property = "id", column = "deptno"),
@@ -305,7 +313,9 @@ SSM 整合时使用，开启 id 主键回填功能。
       @Result(property = "location", column = "loc")
   })
   ```
+
 @tab 多对一映射
+
   ```java
   @Results(id = "employee", value = {
         @Result(property = "empno", column = "empno"),
@@ -318,6 +328,7 @@ SSM 整合时使用，开启 id 主键回填功能。
         @Result(property = "dept", column = "deptno", one = @One(select = "xxx.yyy.zzz.outlet.dao.DepartmentDao.selectByPK"))
   })
   ```
+
 @tab 一对多映射
 
   ```java
@@ -328,5 +339,4 @@ SSM 整合时使用，开启 id 主键回填功能。
         @Result(property = "employeeList", column = "deptno", many = @Many(select = "xxx.yyy.zzz.outlet.dao.EmployeeDao.selectByDepartmentId"))
   })
   ```
-:::
 :::
