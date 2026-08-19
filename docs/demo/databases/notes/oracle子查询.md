@@ -26,6 +26,7 @@ WHERE expr operator
 子查询语句必须使用小括号嵌套起来，否则执行报错
 
 ::: code-tabs
+
 @tab 正确写法
 ```sql
 -- 查询年龄比jack大的用户
@@ -40,8 +41,9 @@ select * from `user`
 where `age` = select `age` form 
                `user` where `name` = 'jack';
 ```
-:::
-:::
+
+
+
 
 ## 问题二：子查询的书写风格
 一个好的sql语句书写习惯可以规避很多没有必要出现的小问题，提高开发的效率。
@@ -50,8 +52,10 @@ where `age` = select `age` form
 
 ## 问题三：可以使用子查询的位置
 子查询可以使用的位置： `where`、`select`、`having`、`from`
-::: code-tabs
+
+
 @tab where 使用
+
 ```sql
 -- 查询年龄比jack大的用户
 select * from `user`
@@ -59,9 +63,13 @@ where `age` = (select `age` form
                `user` where `name` = 'jack');
 ```
 ::: warning 注意
+
 where条件后面的子查询只能是单行子查询（只能返回一条数据）
+
 :::
+
 @tab select 使用
+
 ```sql
 -- 查询学生的信息以及对应的班级名称
 select `name`,`age`,`class_no`,
@@ -73,7 +81,9 @@ from `student`;
 ::: warning 注意
 select后面的子查询只能是单行子查询（只能返回一条数据）
 :::
+
 @tab having 使用
+
 ```sql
 -- 平均分比一班最高分高的班级号
 select class_no,AVG(score)
@@ -84,7 +94,9 @@ having AVG(score)>=(select MAX(score) from student where class_no=1);
 ::: warning 注意
 having后面的子查询只能是单行子查询（只能返回一条数据）
 :::
+
 @tab from 使用
+
 ```sql
 -- 下面的sql语句中子查询返回的数据被当作一张表放在主查询中使用
 SELECT
@@ -96,14 +108,13 @@ FROM
 在使用子查询作为表的时候推荐使用别名，在mysql中from后面使用子查询需要给子查询返回的数据取别名，否则会报错，但在oracle中可以不取别名。
 > 1248 - Every derived table must have its own alias
 
-:::
-:::
-:::
+
 
 ## 问题四：不可以使用子查询的位置
 在**oracle**中group by分组语句是不可以使用子查询的，但是在mysql中是可以的
-::: code-tabs
+
 @tab oracle中
+
 ```sql
 select item_name
   from item
@@ -113,10 +124,11 @@ select item_name
 ```
 ::: warning 警告
 在oracle中group by后面出现子查询语句会报错
-> ORA-&gt;22818:这里不允许出现子查询表达式
+> ORA->22818:这里不允许出现子查询表达式
 :::
 
 @tab mysql中
+
 ```sql
 select AVG(score)
   from student
@@ -125,8 +137,7 @@ select AVG(score)
 ::: tip 提示
 在mysql中group by后面出现子查询语句会正常执行
 :::
-:::
-::: 
+
 
 ## 问题五：FROM 后面的子查询
 在平时的工作中在from后面出现的子查询十分的常见，我们可以将from后的子查询看成一张新的表。
