@@ -55,7 +55,6 @@ where `age` = select `age` form
 子查询可以使用的位置： `where`、`select`、`having`、`from`
 
 ::: code-tabs
-
 @tab where 使用
 ```sql
 -- 查询年龄比jack大的用户
@@ -63,7 +62,6 @@ select * from `user`
 where `age` = (select `age` form 
                `user` where `name` = 'jack');
 ```
-
 where条件后面的子查询只能是单行子查询（只能返回一条数据）
 
 
@@ -76,7 +74,6 @@ select `name`,`age`,`class_no`,
     where class_no = 1) //这里的班级号暂时写死，后面相关子查询有详细介绍
 from `student`;
 ```
-
 select后面的子查询只能是单行子查询（只能返回一条数据）
 
 
@@ -88,7 +85,6 @@ from student
 group by class_no
 having AVG(score)>=(select MAX(score) from student where class_no=1);
 ```
-
 having后面的子查询只能是单行子查询（只能返回一条数据）
 
 
@@ -100,7 +96,6 @@ SELECT
 FROM
 	( SELECT age FROM student ) AS a
 ```
-
 在使用子查询作为表的时候推荐使用别名，在mysql中from后面使用子查询需要给子查询返回的数据取别名，否则会报错，但在oracle中可以不取别名。
 > 1248 - Every derived table must have its own alias
 
