@@ -63,9 +63,9 @@ select * from `user`
 where `age` = (select `age` form 
                `user` where `name` = 'jack');
 ```
-::: warning 注意
+
 where条件后面的子查询只能是单行子查询（只能返回一条数据）
-:::
+
 
 @tab select 使用
 ```sql
@@ -76,9 +76,9 @@ select `name`,`age`,`class_no`,
     where class_no = 1) //这里的班级号暂时写死，后面相关子查询有详细介绍
 from `student`;
 ```
-::: warning 注意
+
 select后面的子查询只能是单行子查询（只能返回一条数据）
-:::
+
 
 @tab having 使用
 ```sql
@@ -88,9 +88,9 @@ from student
 group by class_no
 having AVG(score)>=(select MAX(score) from student where class_no=1);
 ```
-::: warning 注意
+
 having后面的子查询只能是单行子查询（只能返回一条数据）
-:::
+
 
 @tab from 使用
 ```sql
@@ -100,11 +100,11 @@ SELECT
 FROM
 	( SELECT age FROM student ) AS a
 ```
-::: warning 注意
+
 在使用子查询作为表的时候推荐使用别名，在mysql中from后面使用子查询需要给子查询返回的数据取别名，否则会报错，但在oracle中可以不取别名。
 > 1248 - Every derived table must have its own alias
 
-:::
+
 
 ## 问题四：不可以使用子查询的位置
 在**oracle**中group by分组语句是不可以使用子查询的，但是在mysql中是可以的
