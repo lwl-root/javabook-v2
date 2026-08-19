@@ -42,6 +42,7 @@ where `age` = select `age` form
                `user` where `name` = 'jack';
 ```
 
+:::
 
 
 
@@ -140,6 +141,7 @@ select AVG(score)
 ::: tip 提示
 在mysql中group by后面出现子查询语句会正常执行
 :::
+
 :::
 
 ## 问题五：FROM 后面的子查询
