@@ -62,9 +62,6 @@ select * from `user`
 where `age` = (select `age` form 
                `user` where `name` = 'jack');
 ```
-where条件后面的子查询只能是单行子查询（只能返回一条数据）
-
-
 @tab select 使用
 ```sql
 -- 查询学生的信息以及对应的班级名称
@@ -74,9 +71,6 @@ select `name`,`age`,`class_no`,
     where class_no = 1) //这里的班级号暂时写死，后面相关子查询有详细介绍
 from `student`;
 ```
-select后面的子查询只能是单行子查询（只能返回一条数据）
-
-
 @tab having 使用
 ```sql
 -- 平均分比一班最高分高的班级号
@@ -85,9 +79,6 @@ from student
 group by class_no
 having AVG(score)>=(select MAX(score) from student where class_no=1);
 ```
-having后面的子查询只能是单行子查询（只能返回一条数据）
-
-
 @tab from 使用
 ```sql
 -- 下面的sql语句中子查询返回的数据被当作一张表放在主查询中使用
@@ -96,10 +87,16 @@ SELECT
 FROM
 	( SELECT age FROM student ) AS a
 ```
-在使用子查询作为表的时候推荐使用别名，在mysql中from后面使用子查询需要给子查询返回的数据取别名，否则会报错，但在oracle中可以不取别名。
+:::
+
+::: tip 使用说明
+
+- `where`、`select` 和 `having` 后面的子查询只能是单行子查询（只能返回一条数据）。
+- 在使用子查询作为表时推荐使用别名。MySQL 中 `from` 后面的子查询必须取别名，否则会报错；Oracle 中可以不取别名。
+
 > 1248 - Every derived table must have its own alias
 
-
+:::
 
 ## 问题四：不可以使用子查询的位置
 在**oracle**中group by分组语句是不可以使用子查询的，但是在mysql中是可以的
@@ -115,11 +112,6 @@ select item_name
              from item
             where item_code = 'item_code_0_0_0_10');
 ```
-::: warning 警告
-在oracle中group by后面出现子查询语句会报错
-> ORA->22818:这里不允许出现子查询表达式
-:::
-
 @tab mysql中
 
 ```sql
@@ -127,10 +119,16 @@ select AVG(score)
   from student
  GROUP BY (select class_no from student where id = 1);
 ```
-::: tip 提示
-在mysql中group by后面出现子查询语句会正常执行
 :::
 
+::: warning Oracle 警告
+在 Oracle 中，`group by` 后面出现子查询语句会报错：
+
+> ORA-22818：这里不允许出现子查询表达式
+:::
+
+::: tip MySQL 提示
+在 MySQL 中，`group by` 后面出现子查询语句可以正常执行。
 :::
 
 ## 问题五：FROM 后面的子查询
@@ -183,6 +181,8 @@ order by (select `class_no` from `class`);
 - 行号永远按照默认的顺序生成，即使你对查询的数据进行了排序，行号也是不会改变的。
 - 并且行号只能使用`<`或者`<=`，不能使用`>`或者`>=`。
 
+:::
+
 ::: code-tabs
 @tab 错误写法
 ```sql
@@ -192,7 +192,6 @@ from emp
 where rownum<=3
 order by sal desc
 ```
-sql执行之后发现结果并不是我们想要的，这是因为行号是默认生成的，并不会因为排序而改变。
 @tab 正确写法
 ```sql
 -- 找到员工表中工资最高的前三名,在子查询中进行排序之后在取行号
@@ -200,24 +199,30 @@ select rownum,empon,ename,sal
 from (select * form emp oreder by sal desc)
 where rownum<=3
 ```
-这时发现结果是我们想要的效果，这是因为from后面的子查询被看作是一张新的表，他是已经根据工资降序排列好的，所以他的行号前三对应的数据就是我们想要的数据。
 :::
 
+::: tip 结果说明
+错误写法的结果不是我们想要的，因为行号按默认顺序生成，不会随着排序改变。
+
+正确写法先在 `from` 后面的子查询中完成工资降序排列，再从结果中取前三个行号，因此可以得到预期结果。
+:::
 
 ## 问题八：子查询的执行顺序
 一般先执行主查询在执行子查询，但相关子查询例外。
 
-::: code-tabs
-@tab 相关子查询
-```text
+### 相关子查询
+
 相关子查询的执行依赖于外部查询。多数情况下是子查询的WHERE子句中引用了外部查询的表。
+
 执行过程：
-    1. 从外层查询中取出一个元组，将元组相关列的值传给内层查询。
-    2. 执行内层查询，得到子查询操作的值。
-    3. 外查询根据子查询返回的结果或结果集得到满足条件的行。
-    4. 然后外层查询取出下一个元组重复做步骤1-3，直到外层的元组全部处理完毕。
-```
-1.返回单值：查询所有价格高于平均价格的图书名，作者，出版社和价格。
+
+1. 从外层查询中取出一个元组，将元组相关列的值传给内层查询。
+2. 执行内层查询，得到子查询操作的值。
+3. 外查询根据子查询返回的结果或结果集得到满足条件的行。
+4. 然后外层查询取出下一个元组重复做步骤 1-3，直到外层的元组全部处理完毕。
+
+**返回单值：查询所有价格高于平均价格的图书名、作者、出版社和价格。**
+
 ```sql
 SElECT 图书名，作者，出版社，价格
 FROM Books
@@ -227,7 +232,9 @@ SELECT AVG(价格)
 FROM Books
 )
 ```
-2.返回值列表–查询所有借阅图书的读者信息
+
+**返回值列表：查询所有借阅图书的读者信息。**
+
 ```sql
 SElECT *
 FROM Readers
@@ -238,15 +245,19 @@ FROM [Borrow History]
 )
 ```
 
-@tab 非相关子查询
-```text
+### 非相关子查询
+
 非相关子查询的执行不依赖与外部的查询。
+
 执行过程：
-    1. 执行子查询，其结果不被显示，而是传递给外部查询，作为外部查询的条件使用。
-    2. 执行外部查询，并显示整个结果。　　
+
+1. 执行子查询，其结果不被显示，而是传递给外部查询，作为外部查询的条件使用。
+2. 执行外部查询，并显示整个结果。
+
 非相关子查询一般可以分为：返回单值的子查询和返回一个列表的子查询
-```
+
 查询Booka表中大于该类图书价格平均值的图书信息SElECT 图书名,出版社,类编号,价格
+
 ```sql
 SELECT FROM Books As a
 WHERE 价格 >
@@ -256,7 +267,6 @@ FROM Books AS b
 WHERE a.类编号=b.类编号
 )
 ```
-:::
 
 ::: tip 总结
 - 非相关子查询是独立于外部查询的子查询，子查询总共执行一次，执行完毕后将值传递给外部查询。
