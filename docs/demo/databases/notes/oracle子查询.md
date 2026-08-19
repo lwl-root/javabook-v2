@@ -57,7 +57,6 @@ where `age` = select `age` form
 ::: code-tabs
 
 @tab where 使用
-
 ```sql
 -- 查询年龄比jack大的用户
 select * from `user`
@@ -65,13 +64,10 @@ where `age` = (select `age` form
                `user` where `name` = 'jack');
 ```
 ::: warning 注意
-
 where条件后面的子查询只能是单行子查询（只能返回一条数据）
-
 :::
 
 @tab select 使用
-
 ```sql
 -- 查询学生的信息以及对应的班级名称
 select `name`,`age`,`class_no`,
@@ -85,7 +81,6 @@ select后面的子查询只能是单行子查询（只能返回一条数据）
 :::
 
 @tab having 使用
-
 ```sql
 -- 平均分比一班最高分高的班级号
 select class_no,AVG(score)
@@ -98,7 +93,6 @@ having后面的子查询只能是单行子查询（只能返回一条数据）
 :::
 
 @tab from 使用
-
 ```sql
 -- 下面的sql语句中子查询返回的数据被当作一张表放在主查询中使用
 SELECT
