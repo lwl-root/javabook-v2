@@ -53,6 +53,7 @@ where `age` = select `age` form
 ## 问题三：可以使用子查询的位置
 子查询可以使用的位置： `where`、`select`、`having`、`from`
 
+::: code-tabs
 
 @tab where 使用
 
@@ -113,6 +114,8 @@ FROM
 ## 问题四：不可以使用子查询的位置
 在**oracle**中group by分组语句是不可以使用子查询的，但是在mysql中是可以的
 
+::: code-tabs
+
 @tab oracle中
 
 ```sql
@@ -152,6 +155,7 @@ from (select `name`,`sal`,sal*12 as 年薪 from emp);
 
 ## 问题六：子查询和主查询使用的表
 主查询和子查询使用的表可以是同一张表，也可以不是同一张表。对我们自己来说只要子查询返回的结果主查询可以使用就可以了
+
 
 ::: code-tabs
 @tab 使用不同表的子查询
